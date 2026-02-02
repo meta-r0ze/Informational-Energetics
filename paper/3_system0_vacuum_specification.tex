@@ -1,57 +1,49 @@
 \section{System 0: The Specification of the Vacuum}
 \label{sec:System0_vacuum_specification}
 
-The principle of Informational Energetics, if universal, must apply to the most fundamental layer of reality: the vacuum itself. We construct this specification using the deductive logic of IE. This approach requires analyzing the universe as a physical system subject to the same architectural constraints governing information, energy, and stability that are necessary for any entity to persist. System 0 is the domain-specific application of IE and the field of physics.
-
+The principle of Informational Energetics, if universal, must apply to the most fundamental layer of reality: the vacuum itself. We construct this specification using the deductive logic of IE. This approach requires analyzing the universe as a physical system subject to the same architectural constraints governing information, energy, and stability that are necessary for any entity to persist. System 0, therefore, represents the formal translation of IE's universal principles into the specific language and constraints of fundamental physics.
 
 \subsection{Derivation A: Persistence Requires Finiteness}
-For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory, where assuming a continuous spacetime leads to an infinite energy density. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Persistence Margin} pillars.
+For the vacuum to persist, its definition must be self-consistent. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet divergences in standard Quantum Field Theory, where assuming continuous spacetime leads to infinite energy density in loop integrals. This is the modern analog of the classical UV catastrophe—the vacuum's zero-point energy formally diverges. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Persistence Margin} pillars.
 
 \begin{itemize}
-    \item \textbf{The Logic:} Information is physical and requires energy to store (Landauer's Principle). A continuous volume, containing infinite potential information, would therefore possess infinite energy and instantly collapse into a singularity.
-    \item \textbf{The Requirement:} To prevent this divergence, the substrate must be \textbf{Discrete}. There must exist a fundamental, indivisible unit of information, a ``pixel'' of reality that sets a maximum information density for any given volume.
+    \item \textbf{The Logic:} Information is physical and requires energy to store \cite{landauer_irreversibility_1961}. A continuous volume, containing infinite potential information, would therefore possess infinite energy and instantly collapse into a singularity.
+    \item \textbf{The Requirement:} To prevent this divergence, the substrate must be \textbf{Discrete}. There must exist a fundamental, indivisible unit of information—a ``pixel'' of reality—that sets a maximum information density for any given volume.
     \item \textbf{Specification:} The universe must be a \textbf{Lattice Field}, not a continuous manifold.
 \end{itemize}
 
-
 \subsection{Derivation B: Persistence Requires Unitarity}
-For the vacuum to persist, it must maintain a stable identity over time. This requires that information is perfectly conserved; the system cannot lose its own definition. Since the vacuum \textit{is} the environment, there is no external system to which information can be lost. Therefore, the vacuum must be a perfectly closed and lossless information network. This is the requirement of Unitarity, which maps to the \textbf{Protocol} and \textbf{Identity} pillars.
+For the vacuum to persist, it must maintain a stable identity over time. This requires that information is perfectly conserved. Since the vacuum \textit{is} the environment, there is no external system to which information can be lost. Therefore, the vacuum must be a perfectly closed and lossless information network. This is the requirement of Unitarity, which maps to the \textbf{Protocol} and \textbf{Identity} pillars.
 
 \begin{itemize}
-    \item \textbf{The Logic:} In any information network, from electrical circuits to fiber optics, signal integrity is maximized when the impedance of the source matches the impedance of the load. A mismatch creates reflections, scattering, and irreversible information loss. To create a perfectly lossless network (a prerequisite for unitarity) the system must be perfectly impedance-matched to itself at all points. The ``reader'' of information must have the same geometric structure as the ``writer.''
-    \item \textbf{The Requirement:} This principle, when applied to a geometric lattice, has a precise mathematical translation. The impedance of a lattice is described by its reciprocal dual ($\Lambda^*$). For a perfect, reflectionless transfer of information, the lattice must be \textbf{Self-Dual} ($\Lambda = \Lambda^*$).
+    \item \textbf{The Logic:} In any information network, from electrical circuits to fiber optics, signal integrity is maximized when the impedance of the source matches the impedance of the load. A mismatch creates irreversible information loss. To create a perfectly lossless network, the system must be perfectly impedance-matched to itself at all points. 
+    \item \textbf{The Requirement:} This principle, when applied to a geometric lattice, has a precise mathematical translation. The impedance of a lattice is described by its \textbf{reciprocal lattice} $\Lambda^*$, the Fourier dual that encodes the system's response to external perturbations. For a perfectly reflectionless transfer of information (zero impedance mismatch), the lattice must be \textbf{self-dual}: $\Lambda = \Lambda^*$. Geometrically, this means the lattice looks identical to its own Fourier transform—a rare and highly constrained property. To ensure information density is conserved, it must also be \textbf{Unimodular}.
     \item \textbf{Specification:} The lattice of the vacuum must be \textbf{Unimodular and Self-Dual}.
 \end{itemize}
 
-
 \subsection{Derivation C: Persistence Requires Causality}
-For the vacuum to persist, it must not only exist stably but also \textit{evolve} in a well-defined manner. A static lattice can store information, but a dynamic universe requires processing, the ordered evolution of state over time. This creates a fundamental information-theoretic challenge: how to project the vast state space of a lattice node onto a single, linear temporal axis without ambiguity or paradox. The system's evolution must be strictly causal. This maps to the \textbf{Governor} and \textbf{Temporal Cost} pillars.
+For the vacuum to persist, it must not only exist stably but also \textit{evolve} in a well-defined manner. This creates a fundamental information-theoretic challenge: how to project the vast state space of a lattice node onto a single, linear temporal axis without ambiguity. This maps to the \textbf{Governor} and \textbf{Temporal Cost} pillars.
 
 \subsubsection{The Problem of Causal Aliasing}
-Let the lattice node possess a total internal state capacity of $N$ distinct information channels (degrees of freedom). For the universe to evolve, the state of all $N$ channels at one moment must be mapped to the next via a single system-wide update frequency, or ``clock cycle,'' $\Delta$.
-
-If the system attempts to map too many distinct states ($N$) onto a timeline that is too short ($\Delta$), a causal collision is inevitable. By the \textbf{Pigeonhole Principle}, if there are more ``pigeons'' ($N$ states) than ``pigeonholes'' ($\Delta$ time-slots), at least two distinct states must be mapped to the same moment in time. This creates \textbf{Causal Aliasing}, a condition where the system cannot distinguish cause from effect, leading to a catastrophic failure of temporal ordering.
+Let a lattice node possess a total internal state capacity of $N$ distinct information channels. For the universe to evolve, the state of all $N$ channels at one moment must be mapped to the next via a single system-wide update frequency, $\Delta$. By the \textbf{Pigeonhole Principle}, if there are more states ($N$) than time-slots ($\Delta$), at least two distinct states must be mapped to the same moment, creating \textbf{Causal Aliasing}—a catastrophic failure of temporal ordering.
 
 \subsubsection{The Solution: The Generalized Nyquist Limit}
-To enforce a strict arrow of time, the system must implement a \textbf{Geometric Governor} that strictly prohibits aliasing. This leads to a formal constraint on the projection.
-
-\textbf{Theorem (Generalized Nyquist for Discrete Lattices):} For a bijective (one-to-one) projection from an $N$-channel state space onto a cyclic temporal group $\mathbb{Z}/\Delta\mathbb{Z}$, it is required that:
-\begin{equation}
-    \Delta \geq N
-\end{equation}
+To enforce a strict arrow of time, the system must implement a \textbf{Geometric Governor} that strictly prohibits aliasing. The condition $\Delta = N$ represents a critically saturated channel operating at the Nyquist limit—the minimum sampling rate for perfect signal reconstruction. However, at this critical point, \textbf{any} perturbation (thermal noise, quantum fluctuation) causes aliasing. For a system to persist \textbf{robustly} across cosmic time scales, it must operate with a non-zero margin.
 
 \begin{itemize}
-    \item \textbf{The Requirement:} The update frequency must equal or exceed the information bit-depth of the node.
-    \item \textbf{Specification:} The projection must satisfy $\Delta > N$. Any configuration violating this is filtered by the Causality Potential ($V_C$), which assigns it an infinite entropic cost.
+    \item \textbf{The Requirement:} The update frequency must strictly exceed the information bit-depth of the node, providing exactly one unit of causal "breathing room." This is the universe's temporal error-correction margin.
+    \item \textbf{Specification:} The projection must satisfy the strict inequality $\Delta > N$. Any configuration violating this is filtered by the Causality Potential ($V_C$), which assigns it an infinite entropic cost.
 \end{itemize}
 
-\subsection{Summary: The Minimal Architecture of the Vacuum}
-The derivations above map to the six function pillars of IE and establish three fundamental and non-negotiable properties of a persistent vacuum substrate.
+\subsection{Summary: The Architectural Specification of the Vacuum}
+From the single axiom of persistence, we have derived three non-negotiable architectural constraints for the substrate of reality. These constraints constitute the complete specification of System 0. The vacuum must be:
 
 \begin{enumerate}
-    \item \textbf{Discrete ($\Delta E$ \& $PM$)}: Satisfies the requirement of \textbf{Finiteness}.
-    \item \textbf{Self-Dual ($\Delta I$ \& $MI$)}: Satisfies the requirement of \textbf{Unitarity}.
-    \item \textbf{Causal Projection ($G$ \& $T$)}: Satisfies the requirement of \textbf{Causality}.
+    \item \textbf{Discrete}, to satisfy the requirement of \textbf{Finiteness}.
+    \item \textbf{Unimodular and Self-Dual}, to satisfy the requirement of \textbf{Unitarity}.
+    \item Capable of a \textbf{Causal Projection} satisfying $\Delta > N$, to satisfy the requirement of \textbf{Causality}.
 \end{enumerate}
 
-In the following section, we analyze the mathematical landscape of lattices to derive the unique geometry that fulfills these requirements.
+These are not arbitrary assumptions but the necessary logical consequences of a persistent universe. With this specification defined, the search for the physical substrate is no longer an open exploration but a constrained problem: to find the unique mathematical object that satisfies all three requirements simultaneously. 
+
+In Section~\ref{sec:system1}, we demonstrate that exactly \textbf{one} mathematical structure satisfies all three requirements.
