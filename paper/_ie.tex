@@ -1,0 +1,70 @@
+\documentclass[aps,prd,twocolumn,showpacs,superscriptaddress,groupedaddress,nofootinbib,english]{revtex4-2}  
+
+% Core Math & Symbols
+\usepackage{amsmath, amssymb, bm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Tables & Formatting
+\usepackage{booktabs, tabularx, array}
+\usepackage{siunitx}
+\sisetup{
+    separate-uncertainty = true,  % Forces the ± symbol
+    multi-part-units = single,    % Wraps units: (1.2 ± 0.1) kg
+    sticky-per = true             % Helps with complex units
+}
+\sisetup{separate-uncertainty=true, multi-part-units=single}
+
+\makeatletter
+\let\l@de\l@ngerman
+\makeatother
+\makeatletter
+\let\l@en\l@english
+\makeatother
+\usepackage[ngerman, main=english]{babel}
+
+\usepackage{cancel}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{catchfilebetweentags} 
+
+% Features
+\usepackage[pdfencoding=auto]{hyperref}
+\usepackage[noabbrev]{cleveref} % Load last
+
+
+
+\begin{document}
+
+% Title Area
+\title{The Requirements of Existence: Informational Energetics and the Universal Architecture of Persistence}
+
+\author{Kate Lenore Meyer}
+\affiliation{Independent Researcher} % Or your institution if applicable
+\email{kate.physics@meyerhome.net}
+
+\date{\today}
+
+\input{paper/0_abstract}
+
+\maketitle % Generates the title block
+
+% Main Content
+\input{paper/1_introduction}
+\input{paper/2_ie}
+\input{paper/3_system0_vacuum_specification}
+\input{paper/4_system1_lattice}
+\input{paper/5_system1_table}
+
+\input{paper/6_conclusion}
+
+\appendix
+\input{paper/4_appendix_derivation_of_the_causality_constraint}
+\input{paper/4_appendix_resolution_of_the_distler_garibaldi}
+\input{paper/4_appendix_root_inventory_and_state_partition}
+\input{paper/4_appendix_statistical_mechanics_of_substrate_selection}
+
+% Bibliography
+\bibliography{paper/references}
+
+\end{document}
