@@ -1,0 +1,34 @@
+\crefalias{section}{appendix}
+\section{Geometric Origin of Chiral Fermions}
+\label{app:geometric_origins_of_chiral_fermions}
+
+The Standard Model exhibits a puzzling asymmetry: only left-handed fermions participate in weak interactions. In the $E_8$-Persistence framework, this chirality is not imposed but \textbf{emerges} from the geometric projection of a symmetric structure onto asymmetric spacetime.
+
+\subsection{The Projection Mechanism}
+The $E_8$ lattice is Euclidean with signature $(8,0)$, perfectly symmetric between all eight dimensions. Physical spacetime, however, is Lorentzian with signature $(1,3)$. The projection map:
+\begin{equation}
+    E_8 \subset \mathbb{R}^{8,0} \xrightarrow{\mathcal{P}_{\text{chiral}}} M^{1,3}
+\end{equation}
+involves a \textbf{signature change} that fundamentally alters the geometric structure.
+
+\subsection{Why Projection Creates Chirality}
+\begin{enumerate}
+    \item \textbf{Clifford Algebra Mismatch:} The Clifford algebra of the lattice is $Cl(8,0)$, which admits only real spinors. The Clifford algebra of spacetime is $Cl(1,3) \cong M_4(\mathbb{C})$, which admits complex spinors with definite handedness.
+    \item \textbf{The Chiral Filter:} To project from real $(8,0)$ to complex $(1,3)$ without creating negative-norm states (which violate unitarity), the projection must select only one chiral component. This is encoded in the projector:
+    \begin{equation}
+        P_L = \frac{1 - \gamma^5}{2}
+    \end{equation}
+    where $\gamma^5$ is the volume element of the 4D Lorentzian subspace. This is not an arbitrary choice, it is the \textbf{geometric consequence} of signature reduction.
+\end{enumerate}
+
+\subsection{Distinction from Algebraic Embeddings}
+This mechanism resolves the constraints identified by Distler and Garibaldi. Their "No-Go" theorem rigorously proves that \textit{signature-preserving} algebraic embeddings within $E_8$ cannot accommodate chiral fermions without mirror partners.
+
+Our framework operates in a complementary domain:
+\begin{enumerate}
+    \item \textbf{Method:} Discrete Geometric Projection (vs. Continuous Algebraic Embedding).
+    \item \textbf{Signature:} Changes from $(8,0) \to (1,3)$ (vs. Preserved Signature).
+    \item \textbf{Result:} Mirror fermions are geometrically orthogonal to the observer's timeline, rather than being algebraically eliminated.
+\end{enumerate}
+
+Thus, the chiral asymmetry of the Standard Model is identified as the artifact of projecting a real, symmetric, Euclidean geometry onto a complex, causal, Lorentzian timeline.
