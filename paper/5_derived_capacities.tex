@@ -1,0 +1,37 @@
+
+\subsection{System Summary: The Hardware Specification}
+
+For the purpose of subsequent derivations, we distinguish four derived capacities that define the bandwidth and impedance of this vacuum substrate.
+
+\subsubsection{The Intrinsic Capacity ($H_{sys} = 23$)}
+The sum of the active degrees of freedom available for internal information storage (Chiral + Interaction + Boundary):
+\begin{equation}
+    H_{sys} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{23}
+\end{equation}
+
+\subsubsection{The Embedding Budget ($H_{full} = 31$)}
+The total cost to sustain a persistent structure within the spacetime manifold. Because spinors live on the double cover of the manifold (requiring $720^\circ$ rotation), the system pays the existence cost for the $D=4$ dimensions twice.
+\begin{equation}
+    H_{full} = H_{sys} + 2D = 23 + 8 = \mathbf{31}
+\end{equation}
+
+\subsubsection{The Structural Impedance ($H_{struct} = 188$)}
+The static load of the vacuum background. This value acts as the normalization factor for Vacuum Expectation Values (VEV), representing the geometric pressure against which potentials must be calibrated.
+\begin{equation}
+    H_{struct} = (\Delta \cdot D) + \nu = (43 \times 4) + 16 = \mathbf{188}
+\end{equation}
+
+\subsubsection{The Lattice Capacity ($N = 32$)}
+The total bit-depth of a single lattice node, encompassing both Matter and Mirror sectors. This defines the Causality Limit derived in \cref{sec:fundamental_resonance}.
+\begin{equation}
+    N = 2 \times \nu = 16 + 16 = \mathbf{32}
+\end{equation}
+
+\subsubsection{The Bandwidth Limit ($c_{eff} = 1$)}
+Because the lattice is discrete, information propagates via neighbor-to-neighbor updates. The maximum rate of causality is bounded by the lattice node spacing ($\ell$) divided by the update frequency ($\Delta$).
+
+Consequently, \textbf{Lorentz Invariance} is identified not as a geometric axiom, but as the \textbf{Shannon Channel Capacity} ($C_{max}$) of the substrate. The speed of light $c \equiv 1$ represents the maximum bandwidth of the vacuum protocol.
+\begin{equation}
+    c_{eff} = \frac{\text{Lattice Spacing}}{\text{Update Cycle}} \equiv 1
+\end{equation}
+This enforces the constraints derived in \textbf{\cref{sec:fundamental_resonance_filter3}}: any signal attempting to propagate faster than the protocol allows results in temporal aliasing (Causal Violation) and is filtered by the vacuum's Causality Potential.
