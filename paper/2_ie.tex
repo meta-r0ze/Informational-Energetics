@@ -12,7 +12,8 @@ This framework unifies insights from non-equilibrium thermodynamics, algorithmic
 
 \subsection{The Axiom of Persistence}
 
-The fundamental imperative of persistence is to maximize the duration of existence against environmental entropy. We formalize this as follows:
+The fundamental imperative of persistence is to maximize the duration of existence against environmental entropy. \textit{This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all.}
+We formalize this as follows:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
     \textbf{Persistence Principle}: A system maximizes its total Persistence Value ($P$) by minimizing its \textbf{Entropic Action} ($S_\Phi$) relative to its structural complexity.
@@ -20,20 +21,7 @@ The fundamental imperative of persistence is to maximize the duration of existen
 
 While open systems (like biology) persist by maximizing energy intake, the vacuum is a closed system. Therefore, the persistence criterion shifts: rather than maximizing intake, the vacuum must \textbf{minimize information loss}.
 
-    We define the \textbf{Dissipation Functional} ($\Phi_{\text{drag}}$) as the rate of irreversible information loss. According to Landauer's Principle, processing information requires energy, and erasing information generates heat (entropy). 
-
-\begin{equation}
-\Phi_{\text{drag}}[\psi] = \xi \cdot \mathbf{K}[\psi] \cdot \lambda_{\text{flux}}[\psi]
-\end{equation}
-
-Where:
-\begin{itemize}
-    \item $\mathbf{K}[\psi]$ (\textbf{Structural Complexity}): The information density of the state (Bits). In the physical limit, this corresponds to \textbf{Mass}.
-    \item $\lambda_{\text{flux}}[\psi]$ (\textbf{Transition Flux}): The rate of state erasure or decoherence ($s^{-1}$). This corresponds to \textbf{Time} (Frequency).
-    \item $\xi$ (\textbf{Landauer Coefficient}): The energetic cost of a bit transition ($\xi = k_B T_{\text{eff}} \ln 2$). This defines the thermal scale of the vacuum noise floor, ensuring finite action in the quantum limit.
-\end{itemize}
-
-To satisfy the Axiom, any persistent entity must implement a specific architecture comprising four structural pillars for information management, plus the thermodynamic overhead of operation.
+To satisfy the Axiom, any persistent entity must implement a specific architecture comprising four structural pillars for information management, plus the thermodynamic overhead of operation on its substrate.
 
 \subsection{The Structural Pillars}
 
@@ -76,7 +64,7 @@ These structural pillars constitute the universal architecture of any persistent
     The buffer for existence. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations.
 \end{enumerate}
 
-The specific mapping of IE to a domain varies. Future papers will demonstrate examples such as the pillars mapping term-for-term to the Lagrangian of the Standard Model as well as other systems in physics.
+The mapping of Information Energetics (IE) to specific physical domains is inherently adaptive, reflecting the unique constraints of each persistent system. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework is functionally isomorphic to all systems that persist, a Rosetta Stone for persistent systems.
 
 \subsection{The Universal Architecture: Derivation via Control Theory}
 \label{sec:PillarCompleteness}
@@ -93,7 +81,7 @@ Any feedback control loop requires a specific set of functional blocks to operat
     \item[\textbf{Capacity ($\Delta E$):}] \textbf{The Plant / Actuator} The ability to perform work to correct state deviations.
     \item[\textbf{Identity ($\Delta I$):}] \textbf{Reference Signal (Setpoint)} The definition of the ``target state'' ($S_0$) distinct from the environment.
     \item[\textbf{Protocol ($MI$):}] \textbf{Feedback Loop / Sensor} The transmission channel connecting the Plant state to the Controller.
-    \item[\textbf{Governor ($G$):}] \textbf{Stability Criterion (BIBO)} The negative feedback gain required to prevent unbounded divergence.
+    \item[\textbf{Governor ($G$):}] \textbf{Stability Criterion} The negative feedback gain required to prevent unbounded divergence.
     \item[\textbf{Cost ($T$):}] \textbf{Processing Latency} The irreversible time delay between sensing and actuation.
     \item[\textbf{Margin ($PM$):}] \textbf{Gain/Phase Margin} The buffer against parameter drift or external shock.
 \end{description}
@@ -107,19 +95,19 @@ We demonstrate the necessity of the set $\mathbb{P} = \{\Delta E, \Delta I, MI, 
 \begin{enumerate}
     \item \textbf{Removal of Capacity ($\Delta E \to 0$): The Starvation Mode.}
     Consider a system with a perfect model and protocol but zero energy capacity. It detects the entropic threat but cannot perform the work $W$ required to counter it.
-    \textit{Result:} $\tau \to 0$ due to thermodynamic equilibrium. (The Ghost).
+    \textit{Result:} $\tau \to 0$ due to thermodynamic equilibrium. \textit{The Ghost}.
 
     \item \textbf{Removal of Identity ($\Delta I \to 0$): The Dissolution Mode.}
-    Consider a system with infinite energy but no definition of "Self." The control loop lacks a Reference Signal. The Actuator fires randomly, increasing internal entropy rather than decreasing it.
-    \textit{Result:} $\tau \to 0$ due to loss of boundary. (The Cloud).
+    Consider a system with infinite energy but no definition of ``Self.'' The control loop lacks a Reference Signal. The Actuator fires randomly, increasing internal entropy rather than decreasing it.
+    \textit{Result:} $\tau \to 0$ due to loss of boundary. \textit{The Cloud}.
 
     \item \textbf{Removal of Protocol ($MI \to 0$): The Decoherence Mode.}
     Consider a system where the Plant and Controller are severed. The Controller issues commands based on outdated state data; the Plant acts without instruction. The components become statistically independent.
-    \textit{Result:} $\tau \to 0$ due to fragmentation. (The Schism).
+    \textit{Result:} $\tau \to 0$ due to fragmentation. \textit{The Schism}.
 
     \item \textbf{Removal of Governor ($G \to 0$): The Divergence Mode.}
     Consider a system with positive feedback but no negative feedback constraints. Any fluctuation $\delta$ is amplified: $S_{t+1} = S_t(1 + \alpha)$. The system energy grows exponentially until it exceeds the structural limit of the substrate.
-    \textit{Result:} $\tau \to 0$ due to structural rupture. (The Explosion/Cancer).
+    \textit{Result:} $\tau \to 0$ due to structural rupture. \textit{The Explosion}.
 
     \item \textbf{Removal of Temporal Cost ($T \to 0$): The Zeno Mode.}
     Consider a system that attempts to update instantaneously. By the \textbf{Margolus-Levitin theorem}, a minimum time
@@ -141,6 +129,6 @@ To demonstrate sufficiency, we note that any stable control system requires exac
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
 
-Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse. It is important to note that the system derived here, the Vacuum (System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
+Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of Logistic Maps/Bifurcation. It is important to note that the system derived here, the Vacuum (System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
 
 Unlike biological or economic systems which are in a state of Expansion or Brittle Stasis, the fundamental laws of physics represent a system that has minimized its metabolic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The universe is not currently ``evolving'' new laws; it is persisting within the optimal solution.

@@ -2,7 +2,21 @@
 We present Informational Energetics (IE), a unified framework for modeling the persistence of complex adaptive systems against entropy. By synthesizing algorithmic information theory, 
 non-equilibrium thermodynamics, and control theory, we derive the Universal Architecture of Persistence: a recursive, six-dimensional set of constraints (Capacity, Identity, Protocol, Governor, Temporal Cost, and Persistence Margin) that any system must satisfy to maintain structural coherence.
 
-To validate the framework's universality, we apply IE to the most fundamental persistent system: the vacuum. This paper establishes the theoretical foundation for the $E_8$-Persistence Theory demonstrating that spacetime and the Standard Model are not arbitrary structures but the unique solutions to three fundamental requirements: Finiteness (preventing divergence), Unitarity (conserving information), and Causality (enforcing temporal order). 
+To validate the framework's universality, we apply IE to the most fundamental persistent system: the vacuum. This paper establishes the theoretical foundation for the $E_8$-Persistence Theory demonstrating that spacetime and the Standard Model are not arbitrary structures but the unique solutions to three fundamental requirements: Finiteness (preventing divergence), Unitarity (conserving information), and Causality (enforcing temporal order). The theory makes a falsifiable prediction: all physical constants derive from five geometric integers $\mathbb{S} = \{D{=}4, \Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$ with zero free parameters. We derive these values purely from persistence requirements, without empirical input. Any requirement for parameter tuning would falsify not merely a physical theory, but the fundamental claim that persistence itself has an invariant architecture.
 
-The theory makes a falsifiable prediction: all physical constants derive from five geometric integers $\mathbb{S} = \{D{=}4, \Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$ with zero free parameters. We derive these values purely from persistence requirements, without empirical input. Any requirement for parameter tuning would falsify not merely a physical theory, but the fundamental claim that persistence itself has an invariant architecture.
+% alpha^-1
+\CatchFileBetweenTags{\AlphaInvVal}{calculations/constants.tex}{AlphaInvVal}
+\CatchFileBetweenTags{\AlphaInvExperimentalValue}{calculations/constants.tex}{AlphaInvExperimentalValue}
+We validate this requirement by calculating the persistent Geometric Impedance of the vacuum (fine-structure constant) as the unique sum of the canonical costs defined by these five integers.
+\begin{equation}\label{eq:alpha_inverse}
+\alpha^{-1} = \underbrace{\pi\Delta}_{\Delta E}
++ \,\underbrace{\chi}_{\Delta I}
+- \,\underbrace{\frac{1}{D\Delta - \sigma}}_{MI}
+- \,\underbrace{\frac{\chi}{\Delta}}_{G}
++ \,\underbrace{\frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{T}
++ \,\underbrace{\frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2}}_{PM}
+\end{equation}
+Our parameter-free calculation yields $\alpha^{-1} = \AlphaInvVal \dots$, a value in agreement with the CODATA consensus to within 0.6$\sigma$.
+%This result is further validated by an independent numerical simulation of the $E_8$ substrate, which dynamically recovers the constant to within $0.0007\%$ precision, confirming that it is an emergent property of the lattice geometry, not an externally fitted parameter.
+
 \end{abstract}

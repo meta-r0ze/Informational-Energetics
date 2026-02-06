@@ -14,7 +14,8 @@
     sticky-per = true             % Helps with complex units
 }
 \sisetup{separate-uncertainty=true, multi-part-units=single}
-
+\usepackage{graphicx}
+ 
 \makeatletter
 \let\l@de\l@ngerman
 \makeatother
@@ -35,7 +36,7 @@
 \begin{document}
 
 % Title Area
-\title{The Requirements of Existence: Informational Energetics and the Universal Architecture of Persistence}
+\title{Informational Energetics: A Universal Architecture of Persistence}
 
 \author{Kate Lenore Meyer}
 \affiliation{Independent Researcher}
@@ -54,17 +55,20 @@
 % physics test
 \input{paper/3_system0_vacuum_specification}
 \input{paper/4_system1_lattice}
-\input{paper/5_derived_capacities}
+\input{paper/5_hardware_specification}
 
-\input{paper/6_conclusion}
+\input{paper/6_geometric_impedance}
+%\input{paper/7_numerical_validation}
+
+\input{paper/8_conclusion}
 
 \appendix
 \input{paper/1_appendix_geometric_origins_of_chiral_fermions}
-\input{paper/4_appendix_derivation_of_the_causality_constraint}
-\input{paper/4_appendix_root_inventory_and_state_partition}
-\input{paper/4_appendix_statistical_mechanics_of_substrate_selection}
 
 % Bibliography
 \bibliography{paper/references}
 
 \end{document}
+
+% Submit to nlin.AO (Adaptation and Self-Organizing Systems) or maybe physics.gen-ph (General Physics)
+% For a journal Complexity ideally or Foundations of Physics
