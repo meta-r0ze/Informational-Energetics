@@ -98,8 +98,10 @@ A 4-dimensional manifold can admit a Euclidean $(+,+,+,+)$ or Lorentzian $(-,+,+
     \item \textbf{Lorentzian ($3,1$):} The Clifford algebra is $Cl(3,1) \cong \mathbb{C}(4)$ ($4\times4$ Complex matrices). The introduction of the negative metric signature naturally generates the complex structure. This supports \textbf{Weyl Spinors} with 8 complex components (16 real degrees of freedom), exactly matching the hardware capacity.
 \end{itemize}
 
-\paragraph{Note on Signature Change.}
-This signature-changing projection from the Euclidean $E_8$ lattice $(8,0)$ to Lorentzian spacetime $(3, 1)$ places our construction in a different mathematical domain than standard algebraic embeddings. The requirement for complex information processing ($\nu = 16$) mandates a Lorentzian metric, which naturally decouples the mirror sector from the causal timeline (\cref{app:geometric_origins_of_chiral_fermions}).
+\paragraph{Note on Signature Emergence}
+The apparent contradiction between the Euclidean substrate ($E_8$) required for stability and the Lorentzian signature ($3,1$) observed in spacetime is resolved by the projection mechanism.
+The Euclidean signature ensures a positive-definite energy floor (Finiteness). The Lorentzian signature emerges strictly from the \textbf{Causal Projection}: the temporal dimension is not a spatial coordinate but the \textit{path length} of the update cycle ($\Delta$).
+Geometrically, this distinguishes the temporal axis ($dt$) from the spatial axes ($dx$), effectively performing a discrete Wick rotation ($t \to it$) that introduces the relative sign change characteristic of Minkowski space ($ds^2 = -dt^2 + dx^2$).
 
 \textbf{Conclusion:} The requirement for complex information processing ($\nu=16$) mandates a Lorentzian metric. Physically, \textbf{Time} ($ds^2 < 0$) is the geometric cost required to generate the imaginary unit ($i$) in the algebra.
 
@@ -207,7 +209,13 @@ This integer $N=32$ represents the total number of distinct state channels that 
 \subsubsection{Filter 3: Temporal Atomicity (The Coordination Constraint)}
 \label{sec:fundamental_resonance_filter3}
 
-The temporal modulus $\Delta$ is defined by Filter 1 as the \textbf{fundamental, indivisible clock period}. This atomicity requirement imposes a strict upper bound.
+The temporal modulus $\Delta$ is defined by Filter 1 as the \textbf{fundamental, indivisible clock period}. This atomicity requirement imposes a strict upper bound on the cycle length.
+
+While the physical consequence of this bound is the stabilization of the \textbf{Spinor Double Cover}\footnote{
+    \textbf{Physical Anticipation:} In the derived physics (System 1), fermions live on the spinor double cover of the manifold, requiring a $4\pi$ rotation ($\psi \to -\psi \to \psi$) to return to identity. This implies the effective information content is doubled ($2N$).
+    For the temporal coordinate to resolve this topology without ambiguity, the lattice update cycle $\Delta$ must maintain \textbf{Phase Lock} with the signal. If the non-signaling guard interval ($M = \Delta - N$) exceeds the signal length ($N$), the phase history is lost in the gap. 
+    Mathematically, strict causality requires $\Delta < 2N$. If $\Delta \ge 2N$, the vacuum gap exceeds the particle coherence length, creating \textbf{Topological Aliasing} where the phase winding number becomes undefined, destroying fermionic statistics.
+}, System 1 must depend only the principles of Information Energetics to derive it. We do not assume fermions exist yet; we assume only a system optimizing for persistence.
 
 \begin{itemize}
     \item \textbf{The Mechanism:} The cycle $\Delta$ partitions into $N=32$ active signal channels and $M = \Delta - N$ overhead (guard) intervals.\footnote{In communications theory, guard intervals are timing buffers that prevent inter-symbol interference (ISI) in discrete signaling systems. To function, they must be explicitly scheduled by the protocol.}
@@ -223,43 +231,35 @@ The temporal modulus $\Delta$ is defined by Filter 1 as the \textbf{fundamental,
         M \leq N \quad \Rightarrow \quad (\Delta - N) \leq N \quad \Rightarrow \quad \boxed{\Delta \leq 2N = 64}
     \end{equation}
     (Note: The strict inequality $M < N$ is preferred for stability, but the algebraic constraint of Filter 1 renders the distinction moot, as no Heegner numbers exist between 43 and 67).
-    
-    \item \textbf{Evaluation:}
-    \begin{itemize}
-        \item $\Delta = 43$: $M=11 < 32$. \textbf{Valid.} Surjective mapping possible.
-        \item $\Delta = 67$: $M=35 > 32$. \textbf{Forbidden.} Coordination deficit.
-        \item $\Delta = 163$: $M=131 \gg 32$. \textbf{Forbidden.} Complete coordination breakdown.
-    \end{itemize}
 \end{itemize}
 
 \textbf{Result:} $\Delta = 43$ is the unique solution satisfying Unitarity (Filter 1), Causality (Filter 2), and Temporal Atomicity (Filter 3).
 
-
-
 \subsection{The System Specification}
-The $E_8$-Persistence Lattice fulfills the six pillars of persistence.
+The $E_8$-Persistence theory fulfills the six pillars of persistence.
 
 \begin{enumerate}
     \item \textbf{Capacity ($\Delta E$): Fundamental Resonance ($\Delta=43$).} 
     The maximum non-repeating frequency of the lattice (Heegner Number), representing the bit-depth of the vacuum.
-    
     \item \textbf{Identity ($\Delta I$): Interaction Symmetry ($\sigma=5$).} 
     The geometric rank required to encode the unified force ($SU(5)$ precursor).
-    
     \item \textbf{Protocol ($MI$): Chiral Capacity ($\nu=16$).} 
     The active degrees of freedom available for matter storage (The Weyl Spinor).
-    
     \item \textbf{Governor ($G$): Topological Boundary ($\chi=2$).} 
     The Euler characteristic required for closed loops (stable particles), enforcing the finiteness of the field.
-    
     \item \textbf{Temporal Cost ($T$): Causality ($-1$).} 
     The metric signature requirement for state updates, creating the arrow of time. 
-    
     \item \textbf{Persistence Margin ($PM$): (+3)} 
     The minimum dimensional embedding required to support the projection.
-
-    \item \textbf{Manifold Rank} ($D=4$)
+    \item \textbf{Substrate: Manifold Rank} ($D=4$)
 \end{enumerate}
 
-\subsection{Conclusion: The Invariant Set}
-$\mathbb{S} = \{D=4, \Delta=43, \nu=16, \sigma=5, \chi=2\}$ is the unique \textbf{Characteristic Integers} of a self-dual information processing substrate satisfying persistence, unitarity, and causality constraints within the framework of even lattices and simple Lie groups.
+\subsection{Synthesis: The Characteristic Integers}
+
+We have now completed the derivation of the vacuum's fundamental hardware. The constraints of Finiteness, Unitarity, and Causality have led us not to a family of possibilities, but to a singular mathematical object defined by a unique set of five \textbf{Characteristic Integers}.
+
+\begin{equation}
+    \mathbb{S} = \{D=4, \Delta=43, \nu=16, \sigma=5, \chi=2\}
+\end{equation}
+
+This set represents the complete and immutable specification of System I. These are not free parameters or empirical inputs; they are the derived architectural constants of a persistent reality. The following section (\cref{sec:geometric_impedance}) will use this set as its sole input to perform the theory's first physical calculation.

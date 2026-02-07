@@ -1,16 +1,21 @@
 \section{System II: The Geometric Impedance (\texorpdfstring{$\alpha^{-1}$}{alpha\string^-1})} \label{sec:geometric_impedance}
 
 \CatchFileBetweenTags{\AlphaInvVal}{calculations/constants.tex}{AlphaInvVal}
+
+\CatchFileBetweenTags{\AlphaInvExperimentalValue}{calculations/constants.tex}{AlphaInvExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvAccText}{calculations/constants.tex}{AlphaInvAccText}
+
+\CatchFileBetweenTags{\AlphaInvMorelExperimentalValue}{calculations/constants.tex}{AlphaInvMorelExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvMorelAccText}{calculations/constants.tex}{AlphaInvMorelAccText}
+
 \CatchFileBetweenTags{\VonKlitzingVal}{calculations/constants.tex}{VonKlitzingVal}
 \CatchFileBetweenTags{\VonKlitzingExperimentalValue}{calculations/constants.tex}{VonKlitzingExperimentalValue}
 \CatchFileBetweenTags{\VonKlitzingAccText}{calculations/constants.tex}{VonKlitzingAccText}
 
 Having established the Lattice Substrate (System I), we now determine the vacuum's primary boundary condition: the Fine-Structure Constant ($\alpha$) at the zero-momentum limit ($q^2 \to 0$).
 
-\subsection{The Standard Model Ansatz}
-The Fine-Structure Constant $\alpha \approx 1/137$ is an empirical parameter describing the strength of the electromagnetic interaction. Standard physics offers no mechanism to derive its magnitude; it remains a ``magic number'' required to fit the data, devoid of structural origin.
+In standard physics, $\alpha^{-1} \approx 137$ is an empirical parameter describing the strength of the electromagnetic interaction. Current theory offers no mechanism to derive its magnitude; it remains a ``magic number'' required to fit the data.
 
-\subsection{The E8-Persistence Derivation}
 We derive $\alpha^{-1}$ not as an arbitrary coupling, but as the Geometric Impedance ($Z_{geo}$) of the substrate. It represents the minimum Entropic Action required to sustain a coherent topological defect against the flux of the lattice.
 
 For a topological defect (particle) to exist stably, its geometric structure must balance against the vacuum's resistance. We define this impedance as the Entropic Action cost ($S_\Phi$) per unit of topological charge ($Q_{top}$):
@@ -55,22 +60,23 @@ Summing these irreducible sectors yields the total impedance of the vacuum.
 
 \subsubsection{Sector Independence and Linearity}
 
-The Geometric Impedance sums contributions from distinct geometric sectors. This linear addition is justified by the \textbf{orthogonality} of the underlying geometric structures:
+The Geometric Impedance is calculated as the linear sum of contributions from distinct geometric sectors ($Z_{geo} = \sum Z_i$). This linearity is not an assumption but a consequence of the \textbf{Additivity of Action} applied to orthogonal degrees of freedom.
 
-\textbf{1. Lattice Natural Units:} We adopt units where $\ell = c = \hbar = 1$. In this regime, action is a dimensionless scalar counting the number of fundamental quantum operations.
+\textbf{1. Physical Justification (Additivity):} In physics, the total action of a system is the sum of the actions of its independent components. We adopt \textbf{Lattice Natural Units} ($\ell = c = \hbar = 1$) where action becomes a dimensionless scalar counting the number of fundamental quantum operations.
 
-\textbf{2. Geometric Orthogonality:} The impedance sectors operate on disjoint geometric degrees of freedom within the projection:
+\textbf{2. Geometric Justification (Orthogonality):} The impedance sectors operate on disjoint geometric degrees of freedom within the projection. Because the root system of $E_8$ decomposes into orthogonal spacetime and internal symmetry sublattices ($E_8 \to D_4 \oplus D_4$), there are no interference cross-terms (e.g., $\chi \cdot \Delta$) in the ground state action.
+
+The total impedance decomposes into these independent canonical forms:
 \begin{itemize}
-    \item \textbf{Metric Sector} ($\pi\Delta$): Depends on the temporal projection path (1-form).
-    \item \textbf{Topological Sector} ($\chi$): Depends on the boundary closure (0-form).
-    \item \textbf{Probabilistic Sector} ($N^{-3}$): Depends on the phase space volume (Measure).
+    \item \textbf{Metric Sector} ($\pi\Delta$): The geometric path length of the update cycle (1-form).
+    \item \textbf{Topological Sector} ($\chi$): The discrete boundary closure condition (0-form).
+    \item \textbf{Probabilistic Sector} ($N^{-3}$): The entropic cost of selecting a state from the phase space volume (Measure).
 \end{itemize}
 
-Because these sectors couple to independent invariants of the $E_8 \to D_4$ projection, verified by the decomposition of the root system into orthogonal spacetime and internal symmetry sublattices there are no cross-terms (e.g., $\chi \cdot \Delta$) in the ground state action. The total impedance decomposes as the linear sum of the sector contributions:
+Since these sectors are geometrically orthogonal, the total Entropic Burden is strictly the linear sum of the individual sector costs:
 \begin{equation}
     Z_{geo} = \sum Z_i
 \end{equation}
-
 
 \subsection{The Geometric Impedance Equation}
 \begin{equation}\label{eq:alpha_inverse}
@@ -84,7 +90,7 @@ Because these sectors couple to independent invariants of the $E_8 \to D_4$ proj
 \end{split}
 \end{equation}
 
-\subsection{Derivation A: The Base Geometry (The Minimal Wilson Loop)}
+\subsection{The Base Geometry: Minimal Wilson Loop}
 The dominant contribution to the vacuum impedance ($\approx 99.9\%$) comes from the fundamental geometry of the interaction circuit. In gauge theory, this closed path is known as the \textbf{Wilson Loop}.
 
 For a topological defect to persist in the lattice, it must complete a closed geometric cycle. We derive the impedance of this loop as the sum of the \textbf{Metric Path} and the \textbf{Topological Closure}.
@@ -104,7 +110,7 @@ The total Geometric Impedance is the product of the discrete quantization count 
     Z_{\Delta E} = \text{Geometry} \times \text{Count} = \pi \Delta
 \end{equation}
 
-This factorization, discrete resonance scaling the continuous measure is the structural hallmark of a system where a smooth gauge symmetry emerges from a granular substrate.
+This factorization, discrete resonance scaling the continuous measure, is the structural hallmark of a system where a smooth gauge symmetry emerges from a granular substrate.
 
 \subsubsection{The Topological Boundary (Identity)}
 A Wilson Loop is defined by its closure. For a particle to distinguish itself from the vacuum, its boundary must satisfy the Gauss-Bonnet condition for a closed surface ($\chi=2$).
@@ -120,7 +126,7 @@ The total geometric action of the minimal loop is the sum of these two sectors:
 \end{equation}
 This base value matches the experimental Fine-Structure Constant to within $0.03\%$. The remaining deviation arises from the thermodynamic friction of the lattice.
 
-\subsection{Derivation B: The Thermodynamic Corrections}
+\subsection{The Thermodynamic Corrections}
 The physical lattice is not an abstract ideal; it is discrete, resource-constrained, and subject to thermodynamic friction. We derive the four perturbation terms required to stabilize the ideal knot within the finite $E_8$ projection.
 
 \subsubsection{Alignment Efficiency (Protocol)}
@@ -179,7 +185,7 @@ This floor is defined by the Inverse System Capacity ($1/H_{full}$) diluted over
 
 \begin{itemize}
     \item \textbf{Full Budget ($H_{full} = 31$):} The total structural degrees of freedom.
-    \item \textbf{Weak Aperture ($\sigma+1=6$):} The Interaction Symmetry ($\sigma=5$) plus the Vacuum Unit (1). This is the geometric ``hole" through which mass is endowed.
+    \item \textbf{Weak Aperture ($\sigma+1=6$):} The Interaction Symmetry ($\sigma=5$) plus the Vacuum Unit (1). This is the geometric ``hole'' through which mass is endowed.
     \item \textbf{Resonant Area ($\Delta^2$):} The geometric cross-section of the fundamental resonance.
 \end{itemize}
 
@@ -187,9 +193,7 @@ This floor is defined by the Inverse System Capacity ($1/H_{full}$) diluted over
     Z_{PM} = \frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2} \approx +2.91 \times 10^{-6}
 \end{equation}
 
-\textbf{Physical Consequence:} This term establishes the Geometric Baseline for the Electron. Any charged particle with a coupling lighter than this threshold falls below the resolution limit of the vacuum and spontaneously dissolves into radiation.
-
-This establishes the Geometric Baseline for the Electron mass.
+\textbf{Physical Consequence:} This term establishes the Geometric Baseline for the Electron mass. Any charged particle with a coupling lighter than this threshold falls below the resolution limit of the vacuum and spontaneously dissolves into radiation.
 
 \paragraph{The Scale of Matter (Atomic Length):}
 This resolution floor simultaneously determines the spatial scale of the periodic table. The Bohr Radius ($a_0$) emerges as the ratio of the vacuum's geometric impedance to the electron's mass resolution:
@@ -206,9 +210,12 @@ Summing the geometric components:
 
 \begin{itemize}
     \item \textbf{Geometric Prediction:} \AlphaInvVal
-    \item \textbf{Experimental Average (CODATA 2022):} $137.035999178(8)$ \cite{mohr_codata_2025}
-    \item \textbf{Morel (2020) Value}: $137.035999206(11)$ \cite{morel_determination_2020}
-    \item \textbf{Precision:} The geometric derivation lies within the \textbf{$0.8\sigma$ uncertainty interval} of the experimental consensus.
+
+    \item \textbf{Experimental CODATA Average (2022):} \AlphaInvExperimentalValue
+    \item \textbf{Precision:} \AlphaInvAccText
+
+    \item \textbf{Morel Value (2020):} \AlphaInvMorelExperimentalValue
+    \item \textbf{Precision:} \AlphaInvMorelAccText    
 \end{itemize}
 
 \subsection{Physical Manifestation: The Von Klitzing Constant (\texorpdfstring{$R_K$}{RK})}
@@ -229,7 +236,7 @@ In the Standard Model, $R_K$ is defined phenomenologically as $h/e^2$. In the $E
 \subsubsection{The Geometric Mechanism of Quantization}
 The Quantum Hall Effect is famous for its Topological Protection: the resistance plateaus are perfectly flat ($R = R_K / n$) regardless of impurities or material defects. Standard physics attributes this to the topology of the electron wavefunction (Chern numbers).
 
-The E8-Persistence framework offers a structural explanation for this robustness:
+The $E_8$-Persistence framework offers a structural explanation for this robustness:
 \begin{enumerate}
     \item \textbf{The Single Channel Limit:} $R_K$ represents the impedance of exactly \textbf{one} open transmission channel in the lattice.
     \item \textbf{The Spinor Double Cover:} The factor of 2 in the denominator ($Z_0/2$) arises from the topology of the charge carrier. Fermions are spinors transforming under the double cover of the gauge group. To complete a closed geometric circuit and return to the initial phase, the carrier must traverse the manifold twice ($720^\circ$ rotation). Thus, the measurable resistance is the vacuum impedance shared across two geometric windings.

@@ -30,8 +30,7 @@ The total bit-depth of a single lattice node, encompassing both Matter and Mirro
 \subsubsection{The Bandwidth Limit (\texorpdfstring{$c_{eff} = 1$}{ceff})}
 Because the lattice is discrete, information propagates via neighbor-to-neighbor updates. The maximum rate of causality is bounded by the lattice node spacing ($\ell$) divided by the update frequency ($\Delta$).
 
-Consequently, \textbf{Lorentz Invariance} is identified not as a geometric axiom, but as the \textbf{Shannon Channel Capacity} ($C_{max}$) of the substrate. The speed of light $c \equiv 1$ represents the maximum bandwidth of the vacuum protocol.
-\begin{equation}
-    c_{eff} = \frac{\text{Lattice Spacing}}{\text{Update Cycle}} \equiv 1
-\end{equation}
+Consequently, \textbf{Lorentz Invariance} is identified not as a geometric axiom, but as the \textbf{Shannon Channel Capacity} ($C_{max}$) of the substrate.
+The speed of light $c \equiv 1$ represents the maximum rate of causality: information can propagate exactly \textit{one lattice node spacing} ($\ell$) per \textit{one update cycle} ($\Delta$).
+
 This enforces the constraints derived in \textbf{\cref{sec:fundamental_resonance_filter3}}: any signal attempting to propagate faster than the protocol allows results in temporal aliasing (Causal Violation) and is filtered by the vacuum's Causality Potential.

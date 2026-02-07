@@ -1,9 +1,16 @@
 \section{System 0: The Specification of the Vacuum}
 \label{sec:System0_vacuum_specification}
 
-The principles of Informational Energetics, if universal, must apply to the most fundamental layer of reality: the vacuum itself. We construct this specification using the deductive logic of IE. This approach requires analyzing the universe as a physical system subject to the same architectural constraints governing information, energy, and stability that are necessary for any entity to persist. System 0, therefore, represents the formal translation of IE's universal principles into the specific language and constraints of fundamental physics.
+The principles of Informational Energetics, if truly universal, must apply to the most fundamental layer of reality: the vacuum itself. We now perform the critical act of translation, applying the universal architecture of persistence to this specific domain. This approach treats the universe not as a given, but as a physical system subject to the same architectural constraints governing information, energy, and stability that are necessary for any entity to persist.
 
-\textit{We now translate the six abstract pillars of persistence into concrete mathematical and physical constraints on the vacuum. Each derivation will correspond to two of the pillars, building up a complete specification for a persistent universe.}
+This translation of IE's universal principles into the specific language of physics yields three non-negotiable, abstract requirements for the substrate of reality:
+\begin{itemize}
+    \item \textbf{Finiteness:} To prevent energetic and informational divergence.
+    \item \textbf{Unitarity:} To ensure the lossless conservation of information.
+    \item \textbf{Causality:} To enforce a well-defined temporal evolution.
+\end{itemize}
+
+The remainder of this section will derive these three properties in detail, building the complete abstract specification for a persistent universe.
 
 \subsection{Persistence Requires Finiteness}
 For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory, where assuming a continuous spacetime leads to an infinite energy density. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Persistence Margin} pillars.
@@ -30,18 +37,28 @@ For the vacuum to persist, it must maintain a stable identity over time. This re
     
     To conserve information density throughout the projection, the lattice fundamental domain must have unit volume, making it \textbf{Unimodular}.
 
-     For the network to be truly non-dissipative, its fundamental energy states must be perfectly discrete, preventing infinitesimal energy leakage. Mathematically, this demands that all lattice vector norms are even integers ($\mathbf{v} \cdot \mathbf{v} \in 2\mathbb{Z}$), making the lattice \textbf{Even}.
+    For the information network to be truly lossless, the encoding basis must be discrete and orthogonal, preventing infinitesimal state overlap. Mathematically, this demands that all lattice vector norms are even integers ($\mathbf{v} \cdot \mathbf{v} \in 2\mathbb{Z}$), making the lattice \textbf{Even}.
 
-\textbf{The Information-Theoretic Necessity:} A persistent system must possess a unique, path-independent equilibrium state at every temperature. If the entropy $S = -\sum p_i \ln p_i$ depended on thermal history rather than current state alone, the system would violate the Identity pillar ($\Delta I$), its definition would be ambiguous.
-
-This uniqueness requirement translates to a mathematical constraint: the partition function $Z(\beta) = \text{Tr}(e^{-\beta H})$ must yield consistent state counts under all equivalent parameterizations of the thermal ensemble. These parameterizations are the modular transformations ($\tau \to \tau+1$ and $\tau \to -1/\tau$), which correspond to exchanges of temperature and geometric scales.
-
-An even lattice ensures this consistency. Its theta function $\Theta_\Lambda(\tau) = \sum_{\mathbf{v} \in \Lambda} q^{|\mathbf{v}|^2/2}$ has integer coefficients with no half-integer shifts, making it modular invariant. Any odd-norm vector would introduce a branch cut in the state-counting function, breaking this invariance and representing irreversible information loss (Landauer erasure) at the ground state.
-
+    \textbf{The Information-Theoretic Necessity:}
+    While theoretical physics has long established that self-consistent quantum vacuum must be Even to satisfy \textbf{Spin}\footnote{\textbf{Physical Anticipation:} The necessity of evenness for consistent projection is historically rooted in the analysis of modular forms by Serre \cite{serre_course_1973}, who demonstrated that even, self-dual lattices exist only in dimensions divisible by 8. Physically, this constraint is required to support Spin in a Lorentzian manifold. As established by Green and Schwarz \cite{green_anomaly_1984}, only specific even lattice structures allow for anomaly-free projections, ensuring the preservation of unitarity and the correct definition of fermionic currents.},
+    we derive this constraint here strictly from the \textbf{Identity} pillar of persistence, without assuming a priori physical laws.   
     
-    To prevent information loss via destructive interference, the lattice must be impedance-matched to itself—the read structure must equal the write structure. Mathematically, the lattice must be identical to its reciprocal (Fourier dual), making it \textbf{Self-Dual} ($\Lambda = \Lambda^*$).
+    A persistent system must possess a unique, path-independent equilibrium state at every temperature. If the entropy $S = -\sum p_i \ln p_i$ depended on thermal history rather than current state alone, the system would violate the Identity pillar ($\Delta I$), its definition would be ambiguous.
+    
+    \textit{Mathematical Translation}:The complete statistical description of the system is encoded in the partition function $Z(\beta) = \text{Tr}(e^{-\beta H})$ which enumerates accessible states at inverse temperature $\beta$. For the equilibrium to be unique (history-independent), this state-counting function must be single-valued, it cannot depend on the path taken to reach temperature T.
+    
+    This uniqueness requirement translates to a mathematical constraint: $Z(\beta)$ must yield consistent state counts under all equivalent parameterizations of the thermal ensemble. 
+    
+    % TODO overyly complex...
+    These parameterizations are the modular transformations ($\tau \to \tau+1$ and $\tau \to -1/\tau$), which correspond to exchanges of temperature and geometric scales. \textbf{Crucially, single-valuedness under these transformations is the mathematical expression of path-independence.}
+    
+    An even lattice ensures this consistency. Its theta function $\Theta_\Lambda(\tau) = \sum_{\mathbf{v} \in \Lambda} q^{|\mathbf{v}|^2/2}$ has integer coefficients with no half-integer shifts, making it modular invariant. Any odd-norm vector would introduce a branch cut in the state-counting function, breaking this invariance and representing irreversible information loss (Landauer erasure) at the ground state.
+
+    Having established that the lattice must be Even, we now derive the requirement that it be Self-Dual. To prevent information loss via destructive interference or Landauer erasure, the encoding operation (write) and the decoding operation (read) must be informationally equivalent.      Mathematically, the lattice must be identical to its reciprocal (Fourier dual), making it \textbf{Self-Dual} ($\Lambda = \Lambda^*$). This ensures that the structural metric is its own inverse, allowing for lossless signal propagation without basis transformation penalties.
 
     \item \textbf{Specification:} The lattice of the vacuum must be \textbf{Positive Definite, Unimodular, Even, and Self-Dual}.
+
+    \item \textbf{Note on Metric Signature:} The Positive Definite (Euclidean) condition applies to the substrate lattice in its full dimensionality to ensure a stable energy floor. A Lorentzian signature ($3,1$) at the substrate level would introduce negative norm states (ghosts), violating Finiteness. The observed Lorentzian signature of spacetime is not a property of the lattice itself, but emerges strictly from the \textit{Causal Projection} derived in \cref{sec:causal_projection}. % TODO fix citation, was in the removed appendix
 \end{itemize}
 
 \subsection{Persistence Requires Causality}
@@ -71,4 +88,4 @@ From the Axiom of Persistence, we have derived three non-negotiable architectura
     \item Capable of a \textbf{Causal Projection} satisfying $\Delta > N$, required by Causality.
 \end{enumerate}
 
-These are not arbitrary assumptions, but the necessary logical consequences of a persistent universe. With this specification, the search for the physical substrate is no longer an open exploration but a constrained problem: find the unique mathematical object that satisfies all three requirements simultaneously.
+With this specification, the physical substrate is no longer an open exploration search but a constrained problem: find the unique mathematical object that satisfies all three requirements simultaneously.
