@@ -1,7 +1,7 @@
 \section{Theoretical Context: Informational Energetics}
 \label{sec:IE}
 
-Any system that persists, from a biological cell to the universe itself, must solve the same fundamental problem: how to maintain structural coherence against the constant pressure of environmental entropy. 
+Any system that persists, from a biological cell to the universe itself, must solve the same fundamental problem: how to maintain structural coherence against the constant pressure of environmental entropy.
 
 Informational Energetics (IE) is a theoretical framework designed to derive the universal architecture required to solve this problem. Its purpose is to unify insights from non-equilibrium thermodynamics, algorithmic information theory, and robust control theory into a single, predictive model of persistence.
 
@@ -15,12 +15,12 @@ The foundational premise of IE is the imperative to exist. \textit{This can be v
 
 While open systems (like biology) persist by maximizing energy intake, a closed system like the vacuum must persist by \textbf{minimizing information loss}.
 
-To satisfy the Axiom, any persistent entity must implement a specific architecture comprising four structural pillars for information management, plus the thermodynamic overhead of operation on its substrate.
+To satisfy the axiom, any persistent entity must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
 
 \subsection{The Universal Architecture: Derivation from First Principles}
 \label{sec:PillarDerivation}
 
-To rigorously derive this architecture, we model a persistent entity not as a static object, but as a \textbf{Dynamic Control System} that must regulate its internal state against external fluctuations (Entropy). The stability of any such system is governed by a well-defined set of  mathematical requirements (e.g., Lyapunov Stability, Nyquist Criterion).
+To rigorously derive this architecture, we model a persistent entity not as a static object, but as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy). The stability of any such system is governed by a well-defined set of mathematical requirements (e.g., Lyapunov stability, Nyquist criterion).
 
 \subsubsection{The Necessary Components of Control}
 
@@ -47,8 +47,6 @@ Within this framework, performance comes secondary to persistence. Thermodynamic
 To facilitate this translation between engineering and ontology, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay:
 
 \begin{enumerate}
-    \item \textbf{The Substrate:} \textit{The Medium.} The physical medium that defines the hard limits (e.g., latency, bandwidth) within which the system must operate.
-
     \item \textbf{The Energy Vessel ($\Delta E$):} \textit{The Capacity.} 
     The physical infrastructure required to acquire resources and perform work. It defines the maximum bandwidth, storage limit, and energy throughput of the system. (The Plant)
 
@@ -56,10 +54,10 @@ To facilitate this translation between engineering and ontology, we define the S
     The internal logic or topological structure that distinguishes the system from the environment. It functions as the predictive engine, encoding the system's configuration to reduce environmental uncertainty. (The Setpoint)
 
     \item \textbf{The Coordination Protocol ($MI$):} \textit{The Efficiency.} 
-    The communicative glue regulating the flow between the Vessel and the Model. It ensures coherence and minimizes the entropic loss of signal transmission. Without a protocol, the system fragments into isolated parts. (The Feedback Loop).
+    The communicative glue regulating the flow between the Vessel and the Model. It ensures coherence and minimizes the entropic loss of signal transmission. (The Feedback Loop).
     
     \item \textbf{The Stabilizing Governor ($G$):} \textit{The Stability.} 
-    The constraint mechanism that prevents unbounded divergence. It enforces the operational boundaries necessary to maintain structural integrity against internal pressure. Without a governor, the system consumes itself or explodes. (The Stability Criterion).
+    The constraint mechanism that prevents unbounded divergence. It enforces the operational boundaries necessary to maintain structural integrity against internal pressure. (The Stability Criterion).
     
     \item \textbf{The Temporal Cost ($T$):} \textit{The Overhead.} 
     The entropic cost of state transitions. It represents the irreversible energy expenditure required to update the system's configuration, enforcing the arrow of time. (Processing Latency)
@@ -67,6 +65,8 @@ To facilitate this translation between engineering and ontology, we define the S
     \item \textbf{The Persistence Margin ($PM$):} \textit{The Resolution Floor.} 
     The buffer for existence. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations. (The Gain Margin)
 \end{enumerate}
+
+The system exist ontop of a \textbf{The Substrate:} \textit{The Medium.} The medium that defines the hard limits (e.g., latency, bandwidth) within which the system must operate.
 
 IE provides the lens to view control systems as more than mere instruction, the rigid execution of pre-defined loops, but as the active, energetic defense of an Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.''
 
@@ -86,7 +86,7 @@ This architecture is not merely descriptive. It is a predictive model formalized
 \end{split}
 \end{equation}
 
-The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework is functionally isomorphic to all systems that persist. It serves as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific solutions to the same universal architecture of persistence.
+The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework governs all systems that persist. It serves as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific solutions to the same universal architecture of persistence.
 
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
@@ -95,7 +95,7 @@ We demonstrate the necessity of the set $\mathbb{P} = \{\Delta E, \Delta I, MI, 
 
 \begin{itemize}
     \item \textbf{No Capacity ($\Delta E \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
-    \item \textbf{No Identity ($\Delta I \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (Self definition), causing the actuator to fire randomly, maximizing internal entropy. ($\tau \to 0$ via Loss of Boundary).
+    \item \textbf{No Identity ($\Delta I \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
     \item \textbf{No Protocol ($MI \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
     \item \textbf{No Governor ($G \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
     \item \textbf{No Temporal Cost ($T \to 0$):} The \textit{Zeno Mode}. Instantaneous updates violate the Margolus-Levitin limit \cite{margolus_maximum_1998} ($\Delta E \cdot \Delta t \ge h/4$), requiring infinite energy. ($\tau \to 0$ via Conservation Violation).
@@ -112,5 +112,5 @@ Informational Energetics describes the lifecycle of systems through phases of Ge
 
 Unlike biological or economic systems which are in a state of Expansion or Brittle Stasis, the fundamental laws of physics represent a system that has minimized its metabolic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The universe is not currently ``evolving'' new laws; it is persisting within the optimal solution.
 
-\subsection{The study of complex systems}
-While the field of complex adaptive systems has studied these dynamics for decades, Informational Energetics makes a specific, falsifiable claim: by restricting the focus to only those systems which successfully \textbf{persist}, we can move from qualitative description to a predictive, universal science.
+\subsection{The Study of Complex Systems}
+While the field of complex adaptive systems has studied these dynamics for decades, Informational Energetics makes a specific, falsifiable claim: by restricting the focus to only those systems that successfully \textbf{persist}, we can move from qualitative description to a predictive, universal science.
