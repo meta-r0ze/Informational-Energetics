@@ -99,9 +99,15 @@ A 4-dimensional manifold can admit a Euclidean $(+,+,+,+)$ or Lorentzian $(-,+,+
 \end{itemize}
 
 \paragraph{Note on Signature Emergence}
-The apparent contradiction between the Euclidean substrate ($E_8$) required for stability and the Lorentzian signature ($3,1$) observed in spacetime is resolved by the projection mechanism.
-The Euclidean signature ensures a positive-definite energy floor (Finiteness). The Lorentzian signature emerges strictly from the \textbf{Causal Projection}: the temporal dimension is not a spatial coordinate but the \textit{path length} of the update cycle ($\Delta$).
-Geometrically, this distinguishes the temporal axis ($dt$) from the spatial axes ($dx$), effectively performing a discrete Wick rotation ($t \to it$) that introduces the relative sign change characteristic of Minkowski space ($ds^2 = -dt^2 + dx^2$).
+A critical distinction must be made between the geometry of the substrate and the geometry of the projection. The substrate ($E_8$) is strictly Euclidean (Positive Definite) to ensure a finite energy floor (Finiteness Pillar). However, the observer does not inhabit the static lattice; the observer inhabits the \textit{update stream} of the lattice.
+
+The temporal dimension is not extracted from the spatial dimensions of $E_8$. Instead, it represents the \textbf{Process Dimension}, the sequential ordering of lattice updates. 
+
+Geometrically, the distance in the spatial sector ($dx$) represents a separation of \textit{states}. The distance in the temporal sector ($dt$) represents a separation of \textit{events}. To maintain causality (Causality Pillar), the total information interval ($ds^2$) must remain invariant. 
+\begin{equation}
+    ds^2 = - c^2 dt^2 + dx^2 + dy^2 + dz^2
+\end{equation}
+The negative signature of the temporal component ($ -dt^2 $) arises naturally because time acts as the \textbf{consumption} of information capacity, whereas space acts as the \textbf{storage} of capacity. They are conjugate variables. In the projection $E_8 \rightarrow D_4 \oplus D_4$, the temporal metric emerges not as a spatial coordinate, but as the \textit{causal cost function} required to generate the imaginary structure ($i$) of the Clifford Algebra $Cl(3,1)$. A Euclidean signature $Cl(4,0)$ would imply a static, timeless block universe with no processing capability.
 
 \textbf{Conclusion:} The requirement for complex information processing ($\nu=16$) mandates a Lorentzian metric. Physically, \textbf{Time} ($ds^2 < 0$) is the geometric cost required to generate the imaginary unit ($i$) in the algebra.
 
@@ -180,11 +186,12 @@ Finally, we derive the fundamental frequency of the lattice. This is the only dy
 \label{sec:fundamental_resonance_filter1}
 For information to be conserved (Unitarity), the evolution of a state must be unambiguous and perfectly reversible. We translate this physical requirement into a mathematical one by postulating that the algebraic structure governing the lattice dynamics must be a \textbf{Unique Factorization Domain (UFD)}.
 
-The reason is simple: if factorization were not unique, a state's norm could decompose into different sets of ``prime'' factors, representing an ambiguity in its history and future, a form of information loss forbidden by the Axiom of Persistence.
+The reason is information-theoretic: in a discrete causal set, the \textit{history} of a state is defined by the sequence of algebraic operations (factors) that generated it. If the algebraic field has a class number $h > 1$, the Fundamental Theorem of Arithmetic fails; a single state norm can be decomposed into multiple non-equivalent sets of prime factors.
 
-The \textbf{class number} $h$ of a number field measures its failure to be a UFD. Therefore, Unitarity strictly requires $h=1$. Based on the quantum nature of the system, we identify the governing field as an imaginary quadratic field $\mathbb{Q}(\sqrt{-\Delta})$.
+This creates \textbf{Causal Ambiguity}: the system cannot uniquely reconstruct its past from its current state. This violates the Unitary requirement of information conservation ($ \psi^{\dagger}\psi = 1 $). Therefore, for a universe to preserve its own history (Unitary), the underlying lattice algebra must be a Unique Factorization Domain (UFD), strictly requiring $h=1$.
 
-The Stark-Heegner theorem \cite{stark_complete_1967} is not a physical law, but a mathematical catalog. It provides the complete list of values for $\Delta$ that satisfy the requirement of $h=1$:
+The Stark-Heegner theorem \cite{stark_complete_1967} is a mathematical classification result, not a physical 
+postulate. It provides the complete, finite list of values for $\Delta$ that satisfy the requirement of $h=1$:
 \begin{equation}
     \Delta \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}
 \end{equation}
@@ -220,17 +227,13 @@ While the physical consequence of this bound is the stabilization of the \textbf
 \begin{itemize}
     \item \textbf{The Mechanism:} The cycle $\Delta$ partitions into $N=32$ active signal channels and $M = \Delta - N$ overhead (guard) intervals.\footnote{In communications theory, guard intervals are timing buffers that prevent inter-symbol interference (ISI) in discrete signaling systems. To function, they must be explicitly scheduled by the protocol.}
     
-    \item \textbf{The Constraint:} Because $\Delta$ has no sub-structure (no faster internal clock), each of the $M$ guard intervals must be uniquely controlled by at least one of the $N$ signal channels. Mathematically, this requires a \textbf{Surjective Mapping} from the Signal space to the Overhead space: every guard interval must have a designated controller to trigger its start and end.
     
-    \item \textbf{The Contradiction:} By the \textbf{Pigeonhole Principle}, assigning $N$ controllers to $M$ targets surjectively is impossible when $M > N$. 
-    
-    For example, if the vacuum attempted to settle at $\Delta=67$ ($N=32, M=35$), at least 3 guard intervals would lack a designated controller. This creates a \textbf{Coordination Deficit}, where parts of the cycle are temporally undefined. Resolving this would require a secondary timing layer with resolution $\delta < \Delta$, which violates the definition of $\Delta$ as the fundamental, indivisible clock period established by Filter 1.
-    
-    \item \textbf{The Bound:} Intrinsic coordination requires Signal Dominance:
+    \item \textbf{The Constraint:} Because $\Delta$ has no sub-structure (no faster internal clock), each of the $M$ guard intervals must be uniquely controlled by at least one of the $N$ signal channels. Mathematically, this requires a \textbf{Surjective Mapping} from the Signal Space to the Overhead Space: $f: N \twoheadrightarrow M$.
+    \item \textbf{The Bound:} A surjective map is only possible if the domain is greater than or equal to the codomain ($N \ge M$). Since $M = \Delta - N$, this inequality becomes:
     \begin{equation}
-        M \leq N \quad \Rightarrow \quad (\Delta - N) \leq N \quad \Rightarrow \quad \boxed{\Delta \leq 2N = 64}
+        N \ge \Delta - N \implies \Delta \le 2N
     \end{equation}
-    (Note: The strict inequality $M < N$ is preferred for stability, but the algebraic constraint of Filter 1 renders the distinction moot, as no Heegner numbers exist between 43 and 67).
+    With $N=32$, the hard upper limit for the causal update cycle is $\Delta \le 64$.
 \end{itemize}
 
 \textbf{Result:} $\Delta = 43$ is the unique solution satisfying Unitarity (Filter 1), Causality (Filter 2), and Temporal Atomicity (Filter 3).
