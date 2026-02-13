@@ -7,13 +7,13 @@ Informational Energetics (IE) is a theoretical framework designed to derive the 
 
 \subsection{The Axiom of Persistence}
 
-The foundational premise of IE is the imperative to exist. \textit{This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all.} We formalize this as follows:
+The foundational premise of IE is the imperative to exist. \textit{This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all, whether observed or not.} We formalize this as follows:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
     \textbf{Persistence Principle}: A system maximizes its total Persistence Value ($P$) by minimizing its \textbf{Entropic Action} ($S_\Phi$) relative to its structural complexity.
 \end{mdframed}
 
-While open systems (like biology) persist by maximizing energy intake, a closed system like the vacuum must persist by \textbf{minimizing information loss}.
+While open systems (like biology) persist by maximizing energy intake, a closed system at its ground state persists by minimizing entropic action, as there is no external energy source to offset dissipation.
 
 To satisfy the axiom, any persistent entity must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
 
@@ -24,17 +24,22 @@ To rigorously derive this architecture, we model a persistent entity not as a st
 
 \subsubsection{The Necessary Components of Control}
 
-From robust control theory, any stable feedback loop is known to require exactly six functional components to operate without failure \cite{dorf_modern_2017}:
+From robust control theory, any stable feedback loop requires five functional components \cite{dorf_modern_2017}: Plant, Reference Signal, Sensor, Controller, and Actuator.
+
+However, for \textit{robust} operation under uncertainty, control systems must additionally implement \textbf{gain 
+and phase margins} to prevent instability from perturbations \cite{astrom_feedback_2008}. This sixth element (Margin) 
+is essential for persistence but often treated as a tunable parameter rather than a structural requirement. IE elevates Margin to a fundamental pillar because, without safety buffers, systems fail statistically even when nominally stable. Persistence requires guaranteed survival, not just average stability.
+
 \begin{description}
     \item[\textbf{Plant / Actuator:}] The capacity to perform work on the environment.
     \item[\textbf{Reference Signal (Setpoint):}] A definition of the system's target state, distinct from its environment.
     \item[\textbf{Feedback Loop / Sensor:}] A channel to communicate the current state of the Plant back to the controller.
     \item[\textbf{Stability Criterion:}] A mechanism (e.g., negative feedback) to prevent runaway divergence.
     \item[\textbf{Processing Latency:}] The unavoidable time delay between sensing a deviation and actuating a correction.
-    \item[\textbf{Gain/Phase Margin:}] A buffer of operational capacity to ensure stability against unforeseen perturbations.
+    \item[\textbf{Gain/Phase Margin (Resolution Floor):}] The operational range between the minimum detectable signal (noise floor) and the maximum stable amplification. This defines the system's dynamic range.
 \end{description}
 
-The removal of any one of these components leads to catastrophic system failure as discussed in \cref{sec:proof_of_necessity}. They represent the complete, minimal set required for functional stability.
+The removal of any one of these components leads to catastrophic system failure as discussed in \cref{sec:proof_of_necessity}. They represent the complete, minimal set required for persistence.
 
 \subsubsection{The IE Reframing: From Performance to Persistence}
 Traditional Control Theory, though rooted in information theory and thermodynamics, primarily identifies the functional components required for stability and performance. It typically treats the components of the control loop (the Plant, the Setpoint) as mathematical abstractions. 
@@ -44,7 +49,7 @@ Traditional Control Theory, though rooted in information theory and thermodynami
 Within this framework, performance comes secondary to persistence. Thermodynamic and information-theoretic imperatives are elevated, necessitating terms that reflect a new primary unit of measure: \textbf{Entropic Burden}.
 
 \subsubsection{The Pillars of Persistence}
-To facilitate this translation between engineering and ontology, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay:
+To facilitate this translation between engineering and ontology, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
 
 \begin{enumerate}
     \item \textbf{The Energy Vessel ($\Delta E$):} \textit{The Capacity.} 
@@ -66,16 +71,16 @@ To facilitate this translation between engineering and ontology, we define the S
     The buffer for existence. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations. (The Gain Margin)
 \end{enumerate}
 
-The system exist ontop of \textbf{The Substrate:}: the medium that defines the hard limits (e.g., latency, bandwidth) within which the system must operate.
+Every system operates upon a \textbf{Substrate}: the physical medium imposing hard limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
-IE provides the lens to view control systems as more than mere instruction, the rigid execution of pre-defined loops, but as the active, energetic defense of an Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.''
+IE reframes control systems not as rigid instruction-following, but as active, energetic defense of Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this 'agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this 6-pillar feedback architecture possess the stability required to be observable across cosmic timescales.
 
 \subsubsection{The Sign Convention of Entropic Burden}
 To quantify persistence, we define the \textbf{Total Entropic Impedance} ($Z_{IE}$) as the net resistance the system offers to the flow of information. This is calculated as the sum of structural costs minus the sum of organizational efficiencies.
 
 \begin{itemize}
     \item \textbf{Positive Terms (Costs):} Constraints that require energy to maintain or define (Capacity, Identity, Overhead, Margin). These increase the impedance.
-    \item \textbf{Negative Terms (Gains):} Constraints that organize the flow, effectively increasing the conductance (or reducing the impedance) of the system (Protocol, Governor). In network theory, these act as \textit{Negative Resistance} elements, feeding order back into the loop to stabilize the flux.
+    \item \textbf{Negative Terms (Gains):} Mechanisms that reduce dissipation through improved coordination. The Protocol (MI) corresponds to the Feedback path in the control loop. In standard negative feedback systems, this signal is \textit{subtracted} from the setpoint ($Error = Reference - Feedback$). Mathematically, this manifests as a negative term in the impedance summation, representing the information required to correct deviations. The Governor (G) prevents wasteful divergence. These represent \textbf{structural optimizations}, the difference between a disorganized system (high dissipation) and an organized one (low dissipation), not a violation of thermodynamics but a reduction in entropic burden.
 \end{itemize}
 
 Thus, the general form of the impedance equation is:
@@ -92,7 +97,8 @@ Thus, the general form of the impedance equation is:
 \end{split}
 \end{equation}
 
-The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework governs all systems that persist. It serves as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific solutions to the same universal architecture of persistence.
+The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework suggests that all systems that persist are specific solutions to this same universal architecture. If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
+
 
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
@@ -104,19 +110,20 @@ We demonstrate the necessity of the set $\mathbb{P} = \{\Delta E, \Delta I, MI, 
     \item \textbf{No Identity ($\Delta I \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
     \item \textbf{No Protocol ($MI \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
     \item \textbf{No Governor ($G \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Temporal Cost ($T \to 0$):} The \textit{Zeno Mode}. Instantaneous updates violate the Margolus-Levitin limit \cite{margolus_maximum_1998} ($\Delta E \cdot \Delta t \ge h/4$), requiring infinite energy. ($\tau \to 0$ via Conservation Violation).
-    \item \textbf{No Margin ($PM \to 0$):} The \textit{Fragility Mode}. A system at theoretical criticality survives only if environmental variance $\sigma_{env} = 0$. In reality, the first fluctuation pushes the state outside the basin of attraction. ($\tau \to \text{Random Variable}$).
+    \item \textbf{No Temporal Cost ($T \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($T \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($T \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
+    \item \textbf{No Margin ($PM \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $PM > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($PM \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
 \end{itemize}
 
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
 To demonstrate sufficiency, we note that any stable control system requires exactly these components. Control theory provides no additional fundamental requirements beyond Plant, Setpoint, Feedback, Stability, Latency, and Robustness. Any proposed seventh pillar would necessarily decompose into combinations of these six primitive functions.
 
-\subsection{Note on Systemic State: Quiescent Equilibrium}
+\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Identity ($\Delta I$) over time ($T$). Prediction is the operation of the Model ($\Delta I$) via the Protocol ($MI$). Thus, the six pillars constitute the irreducible basis set.
 
+\subsection{Note on Systemic State: Quiescent Equilibrium}
 Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of Logistic Maps/Bifurcation. It is important to note that the system derived here, the Vacuum (System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
 
 Unlike biological or economic systems which are in a state of Expansion or Brittle Stasis, the fundamental laws of physics represent a system that has minimized its metabolic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The vacuum is not ``evolving'' new laws; it is persisting within the optimal solution.
 
-\subsection{The Study of Complex Systems}
-While the field of complex adaptive systems has studied these dynamics for decades, Informational Energetics makes a specific, falsifiable claim: by restricting the focus to only those systems that successfully \textbf{persist}, we can move from qualitative description to a predictive, universal science.
+\subsection{The Scope of Informational Energetics}
+Informational Energetics makes a specific, falsifiable claim: by restricting the focus from all complex adaptive systems to only those systems that successfully \textbf{persist}, we can move from qualitative description to a predictive, universal science, able to analyze their components, model their lifecycle, predict their stability limits, and apply architectural principles across domains.
