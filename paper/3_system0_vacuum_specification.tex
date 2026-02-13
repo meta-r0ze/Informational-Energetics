@@ -19,7 +19,7 @@ For the vacuum to persist, its definition must be self-consistent. A system defi
     \item \textbf{The Logic:} Information is physical and requires energy to store \cite{landauer_irreversibility_1961}. A continuous volume, containing infinite potential information, would therefore possess infinite energy and instantly collapse into a singularity.
 
     \item \textbf{The Requirement:}
-    To prevent Energetic Divergence, the substrate must be \textbf{Discrete}. There must exist a fundamental, indivisible unit of information that sets a maximum density.
+    To prevent Energetic Divergence, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density.
 
     To prevent Algorithmic Divergence, the substrate must be \textbf{Homogeneous}. The information required to describe the structure must be independent of its size (constant). This requires that the local topology of a storage cell be the same regardless of location, minimizing the structural description to a single, repeating rule.
 
@@ -30,35 +30,33 @@ For the vacuum to persist, its definition must be self-consistent. A system defi
 For the vacuum to persist, it must maintain a stable identity over time. This requires that information is perfectly conserved. Since the vacuum \textit{is} the environment, there is no external system to which information can be lost. Therefore, the vacuum must be a perfectly closed and lossless information network. This is the requirement of Unitarity, which maps to the \textbf{Protocol} and \textbf{Identity} pillars.
 
 \begin{itemize}
-    \item \textbf{The Logic:} In any information network (for example electrical circuits and fiber optics), signal integrity is maximized when the impedance of the source matches the impedance of the load. A mismatch creates irreversible information loss. To create a lossless network, the vacuum must be perfectly impedance-matched to itself at all points. 
-
+    \item \textbf{The Logic:} In any information network, signal integrity is maximized when the impedance of the source matches the load. A mismatch creates irreversible information loss. To create a lossless network, the vacuum must be perfectly impedance-matched to itself at all points. 
+ 
     \item \textbf{The Requirements:}
-    To ensure the system has a stable ground state (a `floor' to the energy well), the structural metric must be \textbf{Positive Definite} (Euclidean). A signature containing negative components (Lorentzian) would allow infinite negative energy states, violating the finiteness requirement.
+    To ensure a stable ground state, the \textit{substrate} metric must be \textbf{Positive Definite} (Euclidean). A Lorentzian signature at this fundamental level would introduce negative norm states (ghosts), violating the Finiteness pillar. (The observed Lorentzian signature of spacetime is a projection artifact, derived in \cref{sec:spinor}).
     
-    To conserve information density throughout the projection, the lattice fundamental domain must have unit volume, making it \textbf{Unimodular}.
+    To conserve information density, the lattice fundamental domain must have unit volume, making it \textbf{Unimodular}.
 
-    For the information network to be truly lossless, the encoding basis must be discrete and orthogonal, preventing infinitesimal state overlap. Mathematically, this demands that all lattice vector norms are even integers ($\mathbf{v} \cdot \mathbf{v} \in 2\mathbb{Z}$), making the lattice \textbf{Even}.
+    For the network to be lossless, the encoding basis must be discrete and orthogonal. Mathematically, this demands that all lattice vector norms are even integers ($\mathbf{v} \cdot \mathbf{v} \in 2\mathbb{Z}$), making the lattice \textbf{Even}.
 
     \textbf{The Information-Theoretic Necessity:}
-    While theoretical physics has long established that self-consistent quantum vacuum must be Even to satisfy \textbf{Spin}\footnote{\textbf{Physical Anticipation:} The necessity of evenness for consistent projection is historically rooted in the analysis of modular forms by Serre \cite{serre_course_1973}, who demonstrated that even, self-dual lattices exist only in dimensions divisible by 8. Physically, this constraint is required to support Spin in a Lorentzian manifold. As established by Green and Schwarz \cite{green_anomaly_1984}, only specific even lattice structures allow for anomaly-free projections, ensuring the preservation of unitarity and the correct definition of fermionic currents.},
+    While theoretical physics has long established that self-consistent quantum vacuum must be Even to satisfy \textbf{Spin}\footnote{
+    \textbf{Physical Anticipation:} The necessity of evenness for consistent projection is historically rooted in the analysis of modular forms by Serre \cite{serre_course_1973}, who demonstrated that even, self-dual lattices exist only in dimensions divisible by 8. Physically, this constraint is required to support Spin in a Lorentzian manifold as established by Green and Schwarz \cite{green_anomaly_1984}, only specific even lattice structures allow for anomaly-free projections, ensuring the preservation of unitarity and the correct definition of fermionic currents.},
     we derive this constraint here strictly from the \textbf{Identity} pillar of persistence, without assuming a priori physical laws.   
-    
-    A persistent system must possess a unique, path-independent equilibrium state at every temperature. If the entropy $S = -\sum p_i \ln p_i$ depended on thermal history rather than current state alone, the system would violate the Identity pillar ($\Delta I$), its definition would be ambiguous.
+
+    A persistent system demands a unique, unambiguous equilibrium state. If the system's entropy ($S = -\sum p_i \ln p_i$) depended on its thermal history rather than its current configuration, the vacuum would lack a stable \textbf{Identity} ($\Delta I$). To enforce this path-independence, the function that counts these states ($Z$) must be modular invariant, a constraint that is mathematically satisfied only if the underlying lattice is \textbf{Even}.
     
     \textit{Mathematical Translation}:The complete statistical description of the system is encoded in the partition function $Z(\beta) = \text{Tr}(e^{-\beta H})$ which enumerates accessible states at inverse temperature $\beta$. For the equilibrium to be unique (history-independent), this state-counting function must be single-valued, it cannot depend on the path taken to reach temperature T.
     
     This uniqueness requirement translates to a mathematical constraint: $Z(\beta)$ must yield consistent state counts under all equivalent parameterizations of the thermal ensemble. 
     
-    % TODO overyly complex...
     These parameterizations are the modular transformations ($\tau \to \tau+1$ and $\tau \to -1/\tau$), which correspond to exchanges of temperature and geometric scales. \textbf{Crucially, single-valuedness under these transformations is the mathematical expression of path-independence.}
     
-    An even lattice ensures this consistency. Its theta function $\Theta_\Lambda(\tau) = \sum_{\mathbf{v} \in \Lambda} q^{|\mathbf{v}|^2/2}$ has integer coefficients with no half-integer shifts, making it modular invariant. Any odd-norm vector would introduce a branch cut in the state-counting function, breaking this invariance and representing irreversible information loss (Landauer erasure) at the ground state.
+    An even lattice ensures this consistency. The Jacobi Theta Function $\Theta_\Lambda(\tau) = \sum_{\mathbf{v} \in \Lambda} q^{|\mathbf{v}|^2/2}$ has integer coefficients with no half-integer shifts, making it modular invariant. Any odd-norm vector would introduce a branch cut in the state-counting function, breaking this invariance and representing irreversible information loss (Landauer erasure) at the ground state.
 
-    Having established that the lattice must be Even, we now derive the requirement that it be Self-Dual. To prevent information loss via destructive interference or Landauer erasure, the encoding operation (write) and the decoding operation (read) must be informationally equivalent.      Mathematically, the lattice must be identical to its reciprocal (Fourier dual), making it \textbf{Self-Dual} ($\Lambda = \Lambda^*$). This ensures that the structural metric is its own inverse, allowing for lossless signal propagation without basis transformation penalties.
+    Having established that the lattice must be Even, we now derive the requirement that it be \textbf{Self-Dual}. To prevent information loss via destructive interference or Landauer erasure, the encoding operation (write) and the decoding operation (read) must be informationally equivalent. Mathematically, the lattice must be identical to its reciprocal (Fourier dual), making it \textbf{Self-Dual} ($\Lambda = \Lambda^*$). This ensures that the structural metric is its own inverse, allowing for lossless signal propagation without basis transformation penalties.
 
     \item \textbf{Specification:} The lattice of the vacuum must be \textbf{Positive Definite, Unimodular, Even, and Self-Dual}.
-
-    \item \textbf{Note on Metric Signature:} The Positive Definite (Euclidean) condition applies to the substrate lattice in its full dimensionality to ensure a stable energy floor. A Lorentzian signature ($3,1$) at the substrate level would introduce negative norm states (ghosts), violating Finiteness. The observed Lorentzian signature of spacetime is not a property of the lattice itself, but emerges strictly from the \textit{Causal Projection} derived in \cref{sec:spinor}.
 \end{itemize}
 
 \subsection{Persistence Requires Causality}

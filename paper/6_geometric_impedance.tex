@@ -27,6 +27,7 @@ For the electromagnetic field, the charge is quantized by the boundary condition
 \textit{An intuitive analogy can be drawn from digital communications. A communications channel has a maximum data rate (Capacity) set by its bandwidth and noise floor. For a signal (a particle) to be transmitted (to persist), it must have a structure that matches the channel's impedance and a power level that exceeds the noise floor (Margin). The `Geometric Impedance' of the vacuum can thus be understood as the total set of structural and energetic requirements a signal must meet to propagate losslessly on the physical substrate.}
 
 \subsection{The System Specification: Irreducible Sectors}
+\label{sec:irreducible-sectors}
 
 We define the Geometric Impedance by instantiating the six pillars of persistence. To maintain unitarity, the mathematical form of each term is strictly dictated by the canonical definition of impedance in its respective domain (Network Theory, Mechanics, or Statistics).
 
@@ -157,7 +158,7 @@ We independently validate this integer derivation by analyzing the continuous pr
 \end{equation}
 To instantiate the discrete topology required for matter ($\chi=2$), the system must pay exactly the Governor cost derived above:
 \begin{equation}
-    137.082 - Z_G = 137.082 - 0.047 \approx 137.035
+    137.082 - Z_G = 137.082 - 0.047 = 137.035 \approx \alpha^{-1}
 \end{equation}
 This confirms that the Governor is the specific cost of locking continuous geometry ($\phi$) into discrete topology (Integers). This structural duality—\textbf{Integer Knots vs. Golden Waves} forms the geometric basis for the flavor mixing disparities derived in Paper III.
 
@@ -167,7 +168,7 @@ State transitions (Time) are not free; they require selecting a specific address
 
 The transition probability is the product of three independent geometric constraints:
 \begin{enumerate}
-    \item \textbf{Volumetric Addressing ($1/N^3$):} The probability of selecting the correct node $(x,y,z)$ from the total state capacity ($N=32$).
+    \item \textbf{Volumetric Addressing ($1/N^3$):} The probability of selecting a single node $(x,y,z)$ from the total state capacity ($N=32$).
     \item \textbf{Boundary Selection ($\chi/\sigma$):} The probability of coupling to the topological boundary. Only signals coupling to the boundary can effect a persistent change.
     \item \textbf{Bandwidth Availability ($1 - \sigma/D\Delta$):} The fraction of manifold capacity remaining after symmetry overhead.
 \end{enumerate}
@@ -281,10 +282,10 @@ This confirms that the ``impedance'' of the vacuum is not a metaphor; it is the 
 
 We formally assert that the derived equation for $\alpha^{-1}$ is not merely consistent with observation, but is the unique solution mandated by the substrate geometry.
 
-\textbf{Theorem:} Given a discrete $E_8$ lattice projected onto a causal $D=4$ manifold subject to the Persistence Principle, the Geometric Impedance $\alpha^{-1}$ is uniquely determined by the linear sum of the irreducible geometric sectors derived in Section C.
+\textbf{Theorem:} Given a discrete $E_8$ lattice projected onto a causal $D=4$ manifold subject to the Persistence Principle, the Geometric Impedance $\alpha^{-1}$ is uniquely determined by the linear sum of the irreducible geometric sectors derived in \Cref{sec:irreducible-sectors}.
 
 \textit{Proof:}
-The Impedance Functional $Z[\Psi]$ must span all available degrees of freedom in the projection to maintain unitarity. As established in the System Specification (Section C), the projection geometry decomposes into exactly five irreducible sectors: Metric (1-Form), Topological (0-Form), Symmetry (Group), Conformal (Scale), and Entropic (Probabilistic).
+The Impedance Functional $Z[\Psi]$ must span all available degrees of freedom in the projection to maintain unitarity. As established in the System Specification \Cref{sec:irreducible-sectors}, the projection geometry decomposes into exactly five irreducible sectors: Metric (1-Form), Topological (0-Form), Symmetry (Group), Conformal (Scale), and Entropic (Probabilistic).
 
 \textbf{Canonical Forms:} The functional forms of the impedance terms are not arbitrary polynomial expansions. They are the \textbf{Canonical Forms} of resistance in their respective domains: Metric (Length), Network (1/Capacity), Mechanical (Strain), and Statistical (1/Probability). There are no coefficients to tune; the integers interact via standard physical laws.
 
