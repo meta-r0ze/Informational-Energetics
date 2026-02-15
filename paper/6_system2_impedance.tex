@@ -39,27 +39,27 @@ For the electromagnetic field, the charge is quantized by the boundary condition
 We define the Geometric Impedance by instantiating the six pillars of persistence. To maintain unitarity, the mathematical form of each term is strictly dictated by the canonical definition of impedance in its respective domain (Network Theory, Mechanics, or Statistics).
 
 \begin{enumerate}
-    \item \textbf{Capacity ($\Delta E$): The Metric Sector.} \\
+    \item \textbf{Capacity ($CAP$): The Metric Sector.} \\
     \textit{Form: Circumference.} 
     The fundamental resonance ($\Delta$) must maintain gauge invariance across the circular manifold interface ($\pi$). The impedance is the geometric path length of the flux loop. \textit{In any wave-based system, impedance relates to the path length over which a phase must remain coherent.}
     
-    \item \textbf{Identity ($\Delta I$): The Topological Sector.} \\
+    \item \textbf{Map ($MAP$): The Topological Sector.} \\
     \textit{Form: Integer Counting.} 
     The topological charge is invariant under continuous deformation. The impedance cost is simply the Euler characteristic ($\chi$) required to distinguish the knot from the vacuum. \textit{Unlike continuous fields that can take fractional values, topological charges are quantized, you pay the full integer cost or nothing at all.}
     
-    \item \textbf{Protocol ($MI$): The Symmetry Sector.} \\
+    \item \textbf{Protocol ($PRO$): The Symmetry Sector.} \\
     \textit{Form: Inverse Admittance.} 
     In network theory, impedance is the reciprocal of admittance (capacity). The alignment of internal symmetry ($\sigma$) with the manifold ($D\Delta$) creates a ``Residual Capacity'' $C_{res} = D\Delta - \sigma$. The geometric impedance is the negative reciprocal, representing the path of least resistance. \textit{Just as electrical impedance $Z = 1/Y$ represents resistance to current flow, geometric impedance represents the vacuum's resistance to symmetry misalignment.}
     
-    \item \textbf{Governor ($G$): The Conformal Sector.} \\
+    \item \textbf{Governor ($GOV$): The Conformal Sector.} \\
     \textit{Form: Linear Strain (Hooke's Law).} 
     The vacuum must enforce the discrete boundary ($\chi$) against the continuous field pressure ($\Delta$). The restoring force (impedance) is proportional to the linear strain ratio: boundary constraint divided by bulk length. \textit{In mechanics, impedance is the ratio of a driving pressure to a resulting displacement; a restoring force.}
     
-    \item \textbf{Temporal Cost ($T$): The Entropic Transition.} \\
+    \item \textbf{Toll ($TOL$): The Entropic Transition.} \\
     \textit{Form: Statistical Probability.} 
     Time evolution in the Standard Model involves a 3-body interaction vertex (decay/scattering). The probability of a specific state configuration occurring in a phase space of size $N$ scales as $P \propto 1/N^3$. In information theory, low probability implies high entropic cost (impedance). \textit{This is the information-theoretic equivalent of a low-probability event requiring high free energy to spontaneously occur.}
     
-    \item \textbf{Resolution Floor ($PM$): The Persistence Margin.} \\
+    \item \textbf{Margin ($MAR$): The Persistence Margin.} \\
     \textit{Form: Energy Density.} 
     The minimum resolvable signal is the Unit Bit ($1$) diluted over the total configuration space volume ($H_{full} \cdot (\sigma+1) \cdot \Delta^2$). This sets the thermodynamic noise floor of the substrate. \textit{In information theory, this is the Shannon limit; the signal energy required to be distinguishable from the thermal noise power of the channel.}
 \end{enumerate}
@@ -89,12 +89,12 @@ Since these sectors are geometrically orthogonal, the total Entropic Burden is s
 \subsection{The Geometric Impedance Equation}
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
-\alpha^{-1} \equiv Z_{geo} = \underbrace{\pi\Delta}_{\Delta E}
-+ \,\underbrace{\chi}_{\Delta I}
-- \,\underbrace{\frac{1}{D\Delta - \sigma}}_{MI}
-- \,\underbrace{\frac{\chi}{\Delta}}_{G} & \\
-+ \,\underbrace{\frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{T}
-+ \,\underbrace{\frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2}}_{PM}
+\alpha^{-1} \equiv Z_{geo} = \underbrace{\pi\Delta}_{CAP}
++ \,\underbrace{\chi}_{MAP}
+- \,\underbrace{\frac{1}{D\Delta - \sigma}}_{PRO}
+- \,\underbrace{\frac{\chi}{\Delta}}_{GOV} & \\
++ \,\underbrace{\frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{TOL}
++ \,\underbrace{\frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2}}_{MAR}
 \end{split}
 \end{equation}
 
@@ -120,10 +120,10 @@ The total Geometric Impedance is the product of the discrete quantization count 
 
 This factorization, discrete resonance scaling the continuous measure, is the structural hallmark of a system where a smooth gauge symmetry emerges from a granular substrate.
 
-\subsubsection{The Topological Boundary (Identity)}
+\subsubsection{The Topological Boundary: Identity (Map)}
 A Wilson Loop is defined by its closure. For a particle to distinguish itself from the vacuum, its boundary must satisfy the Gauss-Bonnet condition for a closed surface ($\chi=2$).
 \begin{equation}
-    Z_{\Delta I} = +\chi
+    Z_{MAP} = +\chi
 \end{equation}
 Without this term, the loop is an open string rather than a persistent knot, preventing charge quantization.
 
@@ -156,7 +156,7 @@ The vacuum must enforce the discrete Topological Boundary ($\chi=2$) against the
 \begin{equation}
     Z_{G} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx -0.04651
 \end{equation}
-This acts as the Ultraviolet Governor, preventing the field energy from diverging at small scales.
+This acts as the Ultraviolet Cutoff (Governor), preventing the field energy from diverging at small scales.
 
 \paragraph{Validation: The Continuous Limit}
 We independently validate this integer derivation by analyzing the continuous projection of $E_8$ via $H_4$ (Golden Ratio) geometry. The continuous vacuum impedance is:
@@ -170,7 +170,7 @@ To instantiate the discrete topology required for matter ($\chi=2$), the system 
 This confirms that the Governor is the specific cost of locking continuous geometry ($\phi$) into discrete topology (Integers). This structural duality—\textbf{Integer Knots vs. Golden Waves} forms the geometric basis for the flavor mixing disparities derived in Paper III.
 
 
-\subsubsection{Electroweak Transition (Temporal Cost)}
+\subsubsection{Electroweak Transition (Toll)}
 State transitions (Time) are not free; they require selecting a specific address in the lattice. The impedance cost $Z_T$ is the probability that a random fluctuation successfully accesses the transition channel. This is Landauer's Limit applied to the lattice geometry.
 
 The transition probability is the product of three independent geometric constraints:
@@ -187,7 +187,7 @@ The transition probability is the product of three independent geometric constra
 \paragraph{Geometric Consistency and the Weak Force}
 We observe that the derived cost $Z_T$ satisfies the relation $Z_T \approx \alpha^2 / 2\sqrt{\sigma}$. This structurally links the lattice geometry to the Weak Interaction, identifying the temporal cost as the specific entropic price of electroweak state transitions ($T \approx \alpha^2 \sin^2 \theta_W$). The slight divergence ($0.5\%$) between the integer derivation and this continuous form represents the Quantization Noise of mapping the irrational symmetry geometry ($\sqrt{5}$) onto the discrete integer lattice.
 
-\subsubsection{Mass Resolution Floor (Persistence Margin)}
+\subsubsection{Mass Resolution Floor (Margin)}
 The lattice has a finite bit-depth. A mass state can only exist if its coupling energy exceeds the thermal noise floor of the substrate.
 This floor is defined by the Inverse System Capacity ($1/H_{full}$) diluted over the Weak Interaction Aperture:
 
@@ -198,7 +198,7 @@ This floor is defined by the Inverse System Capacity ($1/H_{full}$) diluted over
 \end{itemize}
 
 \begin{equation}
-    Z_{PM} = \frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2} \approx +2.91 \times 10^{-6}
+    Z_{MAR} = \frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2} \approx +2.91 \times 10^{-6}
 \end{equation}
 
 \textbf{Physical Consequence:} This term establishes the Geometric Baseline for the Electron mass. Any charged particle with a coupling lighter than this threshold falls below the resolution limit of the vacuum and spontaneously dissolves into radiation.
@@ -208,7 +208,7 @@ This resolution floor simultaneously determines the spatial scale of the periodi
 \begin{equation}
 a_0 = \frac{\hbar}{m_e c \alpha}
 \end{equation}
-Because the electron mass ($m_e$) is fixed by the persistence margin ($PM$) and the coupling ($\alpha$) is fixed by the lattice topology, the \textbf{fundamental scale of chemistry} is structurally locked. This establishes the Angstrom scale ($10^{-10}$ m) as the immutable theater of atomic interaction. While complex atoms vary in effective radius, the underlying unit of atomic architecture is fixed by the lattice resolution.
+Because the electron mass ($m_e$) is fixed by the persistence margin ($MAR$) and the coupling ($\alpha$) is fixed by the lattice topology, the \textbf{fundamental scale of chemistry} is structurally locked. This establishes the Angstrom scale ($10^{-10}$ m) as the immutable theater of atomic interaction. While complex atoms vary in effective radius, the underlying unit of atomic architecture is fixed by the lattice resolution.
 
 \subsection{Numerical Validation}
 Summing the geometric components:
@@ -265,7 +265,7 @@ e = \sqrt{\frac{4\pi \epsilon_0 \hbar c}{Z_\Phi(\pi, \Delta, \chi)}}
 
 This relationship reveals that electric charge is not an intrinsic property of the particle, but a Flow Constraint imposed by the vacuum. Just as a pipe of a specific diameter restricts water flow, the geometric impedance of the lattice ($Z_\Phi$) restricts the information flux of a topological knot to the specific magnitude $e$.
 
-Furthermore, this explains the quantization of charge. Because $Z_\Phi$ is constructed strictly from integer topological invariants ($\chi, \sigma$) and the lattice resonance ($\Delta$), the resulting flow $e$ is structurally forced to be discrete, consistent with the topological boundary condition ($\chi=2$) established in System I.
+Furthermore, this explains the quantization of charge. Because $Z_\Phi$ is constructed strictly from integer topological invariants ($\chi, \sigma$) and the lattice resonance ($\Delta$), the resulting flow $e$ is structurally forced to be discrete, consistent with the topological boundary condition ($\chi=2$) established in System 1.
 
 \subsubsection{The Planck Charge Ratio:}
 This formulation creates a direct scaling link to the natural unit of the vacuum, the Planck Charge ($q_P = \sqrt{4\pi \epsilon_0 \hbar c}$). The elementary charge appears as the Planck charge attenuated by the square root of the lattice impedance:

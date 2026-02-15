@@ -48,30 +48,30 @@ Traditional Control Theory, though rooted in information theory and thermodynami
 
 Within this framework, performance comes secondary to persistence. Thermodynamic and information-theoretic imperatives are elevated, necessitating terms that reflect a new primary unit of measure: \textbf{Entropic Burden}.
 
-\subsubsection{The Pillars of Persistence}
+\subsubsection{The Universal Architecture of Persistence}
 To facilitate this translation between engineering and ontology, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
 
 \begin{enumerate}
-    \item \textbf{The Energy Vessel ($\Delta E$):} \textit{The Capacity.} 
+    \item \textbf{The Capacity ($CAP$):} \textit{The Vessel.} 
     The physical infrastructure required to acquire resources and perform work. It defines the maximum bandwidth, storage limit, and energy throughput of the system. (The Plant)
 
-    \item \textbf{The Information Model ($\Delta I$):} \textit{The Identity.} 
+    \item \textbf{The Map ($MAP$):} \textit{The Model.} 
     The internal logic or topological structure that distinguishes the system from the environment. It functions as the predictive engine, encoding the system's configuration to reduce environmental uncertainty. (The Setpoint)
 
-    \item \textbf{The Coordination Protocol ($MI$):} \textit{The Efficiency.} 
+    \item \textbf{The Protocol ($PRO$):} \textit{The Interface.} 
     The communicative glue regulating the flow between the Vessel and the Model. It ensures coherence and minimizes the entropic loss of signal transmission. (The Feedback Loop).
     
-    \item \textbf{The Stabilizing Governor ($G$):} \textit{The Stability.} 
+    \item \textbf{The Governor ($GOV$):} \textit{The Constraint.}
     The constraint mechanism that prevents unbounded divergence. It enforces the operational boundaries necessary to maintain structural integrity against internal pressure. (The Stability Criterion).
     
-    \item \textbf{The Temporal Cost ($T$):} \textit{The Overhead.} 
+    \item \textbf{The Toll ($TOL$):} \textit{The Temporal Cost.} 
     The entropic cost of state transitions. It represents the irreversible energy expenditure required to update the system's configuration, enforcing the arrow of time. (Processing Latency)
     
-    \item \textbf{The Persistence Margin ($PM$):} \textit{The Resolution Floor.} 
-    The buffer for existence. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations. (The Gain Margin)
+    \item \textbf{The Margin ($MAR$):} \textit{The Buffer.} 
+    The buffer to endure. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations. (The Gain Margin)
 \end{enumerate}
 
-Every system operates upon a \textbf{Substrate}: the physical medium imposing hard limits (bandwidth, latency, noise floor) within which the six pillars must function.
+Every system operates upon a \textbf{Substrate}: the physical medium imposing the rules.  The immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
 IE reframes control systems not as rigid instruction-following, but as active, energetic defense of Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this 6-pillar feedback architecture possess the stability required to be observable across cosmic timescales.
 
@@ -79,8 +79,8 @@ IE reframes control systems not as rigid instruction-following, but as active, e
 To quantify persistence, we define the \textbf{Total Entropic Impedance} ($Z_{IE}$) as the net resistance the system offers to the flow of information. This is calculated as the sum of structural costs minus the sum of organizational efficiencies.
 
 \begin{itemize}
-    \item \textbf{Positive Terms (Costs):} Constraints that require energy to maintain or define (Capacity, Identity, Overhead, Margin). These increase the impedance.
-    \item \textbf{Negative Terms (Gains):} Mechanisms that reduce dissipation through improved coordination. The Protocol (MI) corresponds to the Feedback path in the control loop. In standard negative feedback systems, this signal is \textit{subtracted} from the setpoint ($Error = Reference - Feedback$). Mathematically, this manifests as a negative term in the impedance summation, representing the information required to correct deviations. The Governor (G) prevents wasteful divergence. These represent \textbf{structural optimizations}, the difference between a disorganized system (high dissipation) and an organized one (low dissipation), not a violation of thermodynamics but a reduction in entropic burden.
+    \item \textbf{Positive Terms (Costs):} Constraints that require energy to maintain or define (Capacity, Map, Overhead, Margin). These increase the impedance.
+    \item \textbf{Negative Terms (Gains):} Mechanisms that reduce dissipation through improved coordination. The Protocol (PRO) corresponds to the Feedback path in the control loop. In standard negative feedback systems, this signal is \textit{subtracted} from the setpoint ($Error = Reference - Feedback$). Mathematically, this manifests as a negative term in the impedance summation, representing the information required to correct deviations. The Governor (GOV) prevents wasteful divergence. These represent \textbf{structural optimizations}, the difference between a disorganized system (high dissipation) and an organized one (low dissipation), not a violation of thermodynamics but a reduction in entropic burden.
 \end{itemize}
 
 Thus, the general form of the impedance equation is:
@@ -88,12 +88,12 @@ Thus, the general form of the impedance equation is:
 \label{eq:IE_pillars}
 \begin{split}
 {} & Z_{IE} = \\ 
-&  \underbrace{\Delta E}_{\text{Capacity}}
-+ \underbrace{\Delta I}_{\text{Identity}}
-- \underbrace{MI}_{\text{Efficiency}}
-- \underbrace{G}_{\text{Stability}}
-+ \underbrace{T}_{\text{Overhead}}
-+ \underbrace{PM}_{\text{Margin}}
+&  \underbrace{CAP}_{\text{Capacity}}
++ \underbrace{MAP}_{\text{Map}}
+- \underbrace{PRO}_{\text{Protocol}}
+- \underbrace{GOV}_{\text{Governor}}
++ \underbrace{TOL}_{\text{Toll}}
++ \underbrace{MAR}_{\text{Margin}}
 \end{split}
 \end{equation}
 
@@ -103,22 +103,22 @@ The mapping of IE to specific physical domains is inherently adaptive. While the
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
 
-We demonstrate the necessity of the set $\mathbb{P} = \{\Delta E, \Delta I, MI, G, T, PM\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system $S$ where exactly one pillar is removed ($S' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
+We demonstrate the necessity of the set $\mathbb{P} = \{CAP, MAP, MI, GOV, TOL, MAR\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system $S$ where exactly one pillar is removed ($S' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 
 \begin{itemize}
-    \item \textbf{No Capacity ($\Delta E \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
-    \item \textbf{No Identity ($\Delta I \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
-    \item \textbf{No Protocol ($MI \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
-    \item \textbf{No Governor ($G \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Temporal Cost ($T \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($T \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($T \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
-    \item \textbf{No Margin ($PM \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $PM > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($PM \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
+    \item \textbf{No Capacity ($CAP \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
+    \item \textbf{No Identity ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
+    \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
+    \item \textbf{No Governor ($GOV \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
+    \item \textbf{No Temporal Cost ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
+    \item \textbf{No Margin ($MAR \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $MAR > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($MAR \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
 \end{itemize}
 
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
 To demonstrate sufficiency, we note that any stable control system requires exactly these components. Control theory provides no additional fundamental requirements beyond Plant, Setpoint, Feedback, Stability, Latency, and Robustness. Any proposed seventh pillar would necessarily decompose into combinations of these six primitive functions.
 
-\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Identity ($\Delta I$) over time ($T$). Prediction is the operation of the Model ($\Delta I$) via the Protocol ($MI$). Thus, the six pillars constitute the irreducible basis set.
+\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the MAP ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
 Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of Logistic Maps/Bifurcation. It is important to note that the system derived here, the Vacuum (System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.

@@ -36,7 +36,7 @@ The $E_8$ lattice ($D=8$) is the unique solution where $S_{config} = k_B \ln(1) 
 
 \subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:derivation_b}
-A static 8-dimensional block cannot process information; processing requires a flow (Input vs. Output). The system must break the $E_8$ symmetry to distinguish the ``Observer'' (Spacetime) from the ``System'' (Internal States).
+The $E_8$ lattice cannot process information by itself. Processing requires a flow (Input vs. Output). The system must break the $E_8$ symmetry to distinguish the ``Observer'' (Spacetime) from the ``System'' (Internal States).
 
 \subsubsection{The Symmetric Decomposition (Space vs. Charge)}
 \label{sec:symmetricdecompostion}
@@ -45,7 +45,7 @@ The projection must preserve the self-duality property in the subsystems to main
     E_8 \to D_4 \oplus D_4
 \end{equation}
 
-While other decompositions exist (e.g., $E_8 \to A_8$), the $D_4 \oplus D_4$ split is the unique decomposition among maximal rank subgroups that preserves the self-duality of the subspaces \cite{conway_sphere_1988}. By Conway \& Sloane [8] (Ch 4, \S 4.7), other maximal subgroups (e.g., $A_8$, $D_8$) fail to preserve the integer norm condition required for a unitary lattice projection without introducing scaling factors that break self-duality.
+While other decompositions exist (e.g., $E_8 \to A_8$), the $D_4 \oplus D_4$ split is the unique decomposition among maximal rank subgroups that preserves the self-duality of the subspaces \cite{conway_sphere_1988}. By Conway \& Sloane, other maximal subgroups (e.g., $A_8$, $D_8$) fail to preserve the integer norm condition required for a unitary lattice projection without introducing scaling factors that break self-duality.
 
 This decomposition partitions the 8 dimensions into two orthogonal sectors with distinct physical roles:
 \begin{enumerate}
@@ -59,14 +59,14 @@ This structural partition explains why the universe appears 4-dimensional while 
 
 We must determine the information capacity (Bit-Depth) of the lattice nodes. What is the minimal geometric structure required to define a persistent, distinguishable signal on the lattice?
 
-The $E_8 \to D_4 \oplus D_4$ decomposition creates a local geometry governed by $Spin(8)$. However, this structure faces a critical information-theoretic limitation that prevents it from satisfying the \textbf{Identity} and \textbf{Causality} pillars.
+The $E_8 \to D_4 \oplus D_4$ decomposition creates a local geometry governed by $Spin(8)$. However, this structure faces critical information-theoretic limitations that prevent it from satisfying the \textbf{Identity} and \textbf{Causality} pillars.
 
 \begin{enumerate}
-    \item \textbf{The Distinguishability Constraint (Identity):} 
-    The spinor representations of $Spin(8)$ are mathematically \textbf{Real} (Self-Conjugate), meaning they lack complex phase information. In signal processing terms, this means a state vector is identical to its conjugate ($\psi = \bar{\psi}$). A system built on this logic cannot distinguish a signal from its inverse (Phase Ambiguity). To support a stable Identity, the system requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$), allowing for the encoding of phase information distinct from amplitude.
+    \item \textbf{The Identity Constraint:} 
+    The spinor representations of $Spin(8)$ are mathematically \textbf{Real}, meaning a state vector is identical to its conjugate ($\psi = \bar{\psi}$). In signal processing terms, this means a system built on this logic cannot distinguish a signal from its inverse (Phase Ambiguity), because it lacks complex phase information. To support a stable Identity, the system requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$), allowing for the encoding of phase information distinct from amplitude.
     
-    \item \textbf{The Directionality Constraint (Causality):} 
-    To support the \textbf{Causality} pillar (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Chirality}, the ability to distinguish Left-handed projections from Right-handed projections. Odd-dimensional rotation groups (like $Spin(9)$) possess complex spinors but lack chiral distinction.
+    \item \textbf{The Causality Constraint:} 
+    To support the \textbf{Causality} pillar (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Chirality}, the ability to distinguish Left-handed projections from Right-handed projections. Spin(8) is \textbf{Achiral}. Odd-dimensional rotation groups (like $Spin(9)$) possess complex spinors but are also achiral.
     
     \item \textbf{The Minimal Extension:} 
     We seek the minimal geometric group rank that satisfies both conditions:
@@ -74,80 +74,78 @@ The $E_8 \to D_4 \oplus D_4$ decomposition creates a local geometry governed by 
         \item Complex (to encode Phase/Identity)
         \item Chiral (to encode Flow/Causality)
     \end{itemize}
-
-    The smallest group containing $Spin(8)$ that supports both complex and chiral representations is $Spin(10)$. $Spin(9)$ admits complex spinors but lacks chiral decomposition; $Spin(10)$ is the minimal even-dimensional extension.
 \end{enumerate}
+The smallest group containing $Spin(8)$ that supports both complex and chiral representations is $Spin(10)$. No intermediate group between $Spin(8)$ and $Spin(10)$ admits both properties.
 
 The size of the fundamental data packet (spinor) in this minimal valid geometry is:
 \begin{equation}
     \nu = 2^{\frac{10}{2}-1} = 2^4 = \mathbf{16}
 \end{equation}
 
-Thus, $\nu = 16$ is not an arbitrary particle count; it is the minimum sufficient geometric Bit-Depth required to encode complex, directed information on the lattice.
+Thus, $\nu = 16$ is not an arbitrary particle count; it is the geometric Bit-Depth sufficient to encode complex, directed information on the lattice.
 
 \paragraph{Physical Correlate:} 
 This geometry, established strictly to satisfy informational constraints, necessarily manifests as the existence of \textbf{Fermions} (Matter). The Complex requirement ($\psi \neq \bar{\psi}$) creates the distinction between Matter and Antimatter. The Chiral requirement creates the Parity violation observed in the Weak Interaction. These are not inputs to the theory, but inevitable consequences of the system's requirement for directed information processing.
 
-\paragraph{The Total State Space ($N$)}
+\paragraph{The Total Node Capacity ($N$)}
 \label{sec:spacen}
-The projection creates two orthogonal sectors (Matter and Mirror) to preserve self-duality. Consequently, the total information capacity of a single lattice node is the sum of these two chiral halves:
+We determine the total information capacity of a single lattice node by summing the degrees of freedom of its constituent sectors.
+
+As derived in \cref{sec:symmetricdecompostion}, the projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. In \cref{sec:chiralcapacity}, we established that each sector requires a bit-depth of $\nu=16$ to support complex, chiral information. 
+
+Because the projection preserves the \textbf{Self-Duality} of the substrate, the two sectors must remain informationally symmetric (balanced capacity). Therefore, the total channel capacity $N$ is simply the sum of the two sectors:
 \begin{equation}
-    N = \nu_{\text{matter}} + \nu_{\text{mirror}} = 16 + 16 = \mathbf{32}
+    N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
 \end{equation}
-This integer $N = 32$ represents the total number of distinct state channels that must be mapped onto the temporal dimension without collision.
 
+This integer $N = 32$ represents the total number of distinct state channels that the system must map onto the temporal dimension without collision.
 
-\subsection{The Encoding Architecture (Metric Signature)}
+\subsection{The Operating System (Metric Signature)}
 \label{sec:metric_signature}
 
-Having established a 4D manifold with $\nu=16$ channel capacity, we must determine how to encode information on this substrate without loss (\textbf{Protocol} pillar) or ambiguity (\textbf{Identity} pillar).
+\subsubsection{The Goal}
+We have established a manifold with $D=4$ dimensions and a signal capacity of $\nu=16$ channels. The system must now instantiate an algebraic \textit{Metric Signature} capable of encoding these 16 data channels onto the 4-dimensional geometry without loss or ambiguity.
 
-The encoding architecture is determined by the \textbf{metric signature}, the algebraic structure governing how information states combine and transform. We show that the requirements of lossless encoding uniquely determine this signature.
-
-\subsubsection{The Encoding Requirements}
-The decomposition $E_8 \to D_4 \oplus D_4$ produces a 16-dimensional real representation. To embed this information into a 4-dimensional spacetime manifold, the algebra must support:
+\subsubsection{The Requirements}
+To map the 16-channel signal onto a 4-dimensional manifold, the metric algebra must satisfy two strict encoding constraints:
 \begin{enumerate}
-    \item \textbf{Complex Structure:} The ability to represent 16 real dimensions as 8 complex dimensions ($16\mathbb{R} \to 8\mathbb{C}$). This acts as a geometric compression scheme.
-    \item \textbf{Chiral Decomposition:} The ability to split these 8 complex dimensions into two orthogonal 4-dimensional subspaces ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
+    \item \textbf{Complex Compression (Identity):} The 16 real channels must be compressed into 8 complex degrees of freedom ($16\mathbb{R} \to 8\mathbb{C}$). This requires the algebra to natively generate a geometric imaginary unit ($i$) to encode phase information.
+    \item \textbf{Chiral Sorting (Causality):} The system must distinguish ``Input'' from ``Output'' to enforce the arrow of time. This requires the algebra to support orthogonal projectors ($P_L, P_R$) that split the signal into directed halves ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
 \end{enumerate}
 
-These are purely geometric encoding requirements. We now demonstrate that satisfying them in 4 dimensions uniquely determines the metric signature by analyzing the \textbf{Clifford Algebra} $Cl(p,q)$ and its \textbf{Pseudoscalar} (Volume Element) $\omega = e_1 e_2 e_3 e_4$.
+\subsubsection{The Search Space}
+A 4-dimensional manifold admits two fundamental metric signatures. We test each against the requirements:
 
 \begin{itemize}
-    \item \textbf{Euclidean ($4,0$):} In a space with metric $(+,+,+,+)$, the pseudoscalar squares to positive unity:
-    \begin{equation}
-        \omega^2 = e_1 e_2 e_3 e_4 e_1 e_2 e_3 e_4 = +1
-    \end{equation}
-    Because $\omega^2 \neq -1$, the algebra $Cl(4,0)$ lacks a geometric imaginary unit. It is isomorphic to $M_2(\mathbb{H})$ (Quaternions). Quaternionic spinors are symplectic (Real), meaning the encoding cannot support the complex compression required for $\nu=16$. Furthermore, the chiral projectors $P_{\pm} = \frac{1}{2}(1 \pm \omega)$ are Real, preventing the phase separation required for distinct Left/Right states.
-    
-    \item \textbf{Lorentzian ($3,1$):} In a space with metric $(-,+,+,+)$, the inclusion of a timelike basis vector $e_0$ (where $e_0^2 = -1$) alters the pseudoscalar properties. The volume element $\omega = e_0 e_1 e_2 e_3$ squares to negative unity:
-    \begin{equation}
-        \omega^2 = (e_0 e_1 e_2 e_3)(e_0 e_1 e_2 e_3) = -1
-    \end{equation}
-    This allows $\omega$ to function as the \textbf{Geometric Imaginary Unit} ($i \equiv \omega$). This naturally generates the complex structure $\mathbb{C}$ required to compress the 16 real states into 8 complex states. Consequently, the chiral projectors $P_{\pm} = \frac{1}{2}(1 \pm i)$ become orthogonal complex operators, enabling the distinct encoding of Left and Right chiral states ($\nu_L + \nu_R$).
+    \item \textbf{Option A: Euclidean Metric $(+,+,+,+)$.} 
+    In a space where all dimensions are spatial, the volume element (pseudoscalar $\omega$) squares to positive unity ($\omega^2 = +1$). 
+    \item \textbf{Option B: Lorentzian Metric $(-,+,+,+)$.} 
+    In a space with one temporal dimension, the volume element squares to negative unity ($\omega^2 = -1$).
 \end{itemize}
 
+\subsubsection{The Unique Solution}
+The Euclidean metric fails the encoding test. Because $\omega^2 = +1$, the algebra is strictly Real (quaternionic). It cannot generate the imaginary unit $i$ required for compression, nor can it support complex chiral projectors. A universe with this signature would be a static, real-valued block with no capacity for phase or flow.
+
+The \textbf{Lorentzian Metric} is the unique valid solution: $(1,3)$ is equivalent to $(3,1)$ by reordering, and $(2,2)$ fails because $\omega^2 = +1$ in split signature, restoring the real algebra. Because $\omega^2 = -1$, the volume element functions as the geometric imaginary unit ($i \equiv \omega$). This naturally generates the complex structure required to compress the signal ($\nu=16$) and the chiral structure required to sort it.
+
+\textbf{Conclusion:} The signature $(3,1)$ is not an arbitrary choice of physics; it is the only algebraic structure capable of processing the system's information content. Physically, the negative sign of Time ($dt^2 < 0$) is the geometric cost required to generate the imaginary unit $i$.
+
 \paragraph{Physical Consequence (Matter and Antimatter)}
-Once these algebraic structures are established to satisfy the encoding requirement, they manifest in physics as fundamental properties of matter. The \textbf{Matter/Antimatter} distinction emerges from the complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit. \textbf{Chirality} emerges from the orthogonal projectors. These are not postulates, but unavoidable consequences of encoding a 16-dimensional lattice state onto a 4-dimensional Lorentzian manifold.
+Once these algebraic structures are established to satisfy the encoding requirement, they manifest in physics as fundamental properties of matter. The \textbf{Matter/Antimatter} distinction emerges from the complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit. \textbf{Chirality} emerges from the orthogonal projectors. These are not postulates, but unavoidable consequences of encoding a 16-dimensional state of an 8-dimensional lattice onto a 4-dimensional Lorentzian manifold.
 
-\paragraph{Note on Metric Emergence (The Cost of Processing)}
-This derivation clarifies that "Time" ($dt^2 < 0$) is not a spatial dimension. It is the \textbf{Algebraic Generator} of the complex unit $i$.
-To maintain Unitarity (Information Conservation), the total information content of an interval must be invariant. Because Time represents the \textit{consumption} of calculation capacity (processing), while Space represents the \textit{allocation} of capacity (storage), they act as conjugate variables with opposite metric signs. The invariant interval $ds^2 = -dt^2 + dx^2$ is the conservation law of the processing substrate.
+\subsubsection{The Spatial Degrees of Freedom (\texorpdfstring{$D_{space} = 3$}{Dspace3})}
+\label{sec:spatial_freedom}
 
+Finally, we determine the dimensionality of the spatial sector. The Causality pillar enforced a Lorentzian metric $(3,1)$, separating the manifold into one temporal dimension and three spatial dimensions.
 
-\subsubsection{The Chiral Diode (The Arrow of Time)}
-\label{sec:chiral_diode}
+This value $D_{space}=3$ is not arbitrary; it is the \textbf{Topological Stability Threshold} required by the \textbf{Persistence Margin} pillar.
 
-To enforce causal order, the lattice must distinguish ``Past'' from ``Future.'' The $E_8$ root system possesses a total capacity of $N=32$ degrees of freedom, decomposing symmetrically as:
-\begin{equation}
-    E_8 \to D_4 \oplus D_4 \quad \Rightarrow \quad N = \nu_L + \nu_R = 16 + 16 = 32
-\end{equation}
-However, a fully symmetric channel allows information to flow bidirectionally (standing waves), which prohibits the formation of a temporal gradient.
+\begin{itemize}
+    \item \textbf{The Knotting Condition:} For a topological defect (a particle) to persist as a distinct entity from the vacuum, it must possess a non-trivial winding number (it must be a "knot" in the field).
+    \item \textbf{The Constraint:} Knot theory dictates that a closed loop cannot be knotted in fewer than 3 dimensions (in 2D, any loop is equivalent to a circle). If the spatial embedding were $D < 3$, the topological defect would self-intersect and collapse.
+\end{itemize}
 
-\textbf{The Mechanism:} The truncation is the geometric consequence of the \textbf{Signature Change} from Euclidean ($8,0$) to Lorentzian ($3,1$) geometry. The introduction of the timelike metric signature ($-+++$) mathematically necessitates the splitting of the 32-component real spinor into two complex Weyl spinors ($16_L + 16_R$).
-
-To preserve norm positivity along the negative-signature temporal axis, the projection must couple exclusively to one chiral sector. This acts as a \textbf{Geometric Diode}: only signals propagating ``with the grain'' of the chiral projector are permitted to drive state updates, thereby enforcing the Arrow of Time.
-
+Thus, the integer $3$ represents the minimum spatial embedding required to prevent the topological collapse of the Identity. This geometric constraint manifests in the impedance calculation (\cref{sec:geometric_impedance}) as the phase space volume scaling ($N^{D_{space}} = N^3$), defining the probabilistic measure of the node.
 
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:derivation_d}
@@ -179,24 +177,34 @@ The invariant $\chi=2$ is the \emph{necessary and sufficient} condition for \tex
 
 \subsubsection{The Interaction Symmetry (\texorpdfstring{$\sigma=5$}{sigma=5})}
 \label{sec:sigma}
+
+We derive the interaction rank $\sigma$ from the independence of \textbf{Configuration} (Location) and \textbf{Definition} (Boundary).
+
 \begin{enumerate}
-    \item \textbf{Geometric Necessity (Degrees of Freedom):}
-    While the minimal Grand Unified Theory group $SU(5)$ specifies $\sigma=5$ algebraically
-    \footnote{Algebraic Confirmation (The Container): We observe that this geometric derivation ($\sigma=5$) perfectly predicts the rank of the minimal Grand Unified Theory group, $SU(5)$ \cite{georgi_unity_1974}, which unifies the Standard Model forces. In our framework, this is not a coincidence but a consequence: the gauge group is simply the symmetry group of the geometric degrees of freedom.}, we derive this value from pure geometry:
-
-    A persistent particle must be defined by two orthogonal property sets: \textbf{Location} (Where it is) and \textbf{Boundary} (What it is).
+    \item \textbf{Geometric Necessity (The State Vector):}
+    A persistent particle state $\psi$ is fully defined only when we specify both its external coordinates and its internal topology. The minimal embedding vector space $V$ must span these two distinct domains.
+    
     \begin{itemize}
-        \item \textbf{Spatial Freedom ($D_{space} = 3$):} The minimal dimensions required to define translation in a causal manifold ($D-1$).
-        \item \textbf{Topological Freedom ($\chi = 2$):} The minimal dimensions required to define a closed, simply-connected boundary surface (The Sphere).
-
+        \item \textbf{Spatial Freedom ($D_{space} = 3$):} 
+        The \textbf{Causality} pillar requires that one dimension of the $D=4$ manifold be allocated to the update stream (Time). This leaves $D-1=3$ dimensions for spatial configuration. (Note: This segregation is required by the Causality pillar regardless of the specific metric signature derived later).
+        
+        \item \textbf{Topological Freedom ($D_{boundary} = 2$):} 
+        The \textbf{Identity} pillar requires the particle to be distinguished from the vacuum by a closed boundary. As derived in the Topological Boundary section, the unique simply-connected solution is the sphere ($S^2$). While a sphere is embedded in 3 dimensions, it is a 2-manifold; it requires exactly \textbf{2 intrinsic parameters} (e.g., $\theta, \phi$) to specify the topological state at the boundary.
     \end{itemize}
-    Since translation operations commute with boundary deformations, these sectors are orthogonal. Thus, the minimal embedding vector space $V$ must span their sum:
-    \begin{equation}
-        \sigma = \dim(V) = 3 \text{ (Space)} + 2 \text{ (Boundary)} = \mathbf{5}
-    \end{equation}
-\end{enumerate}
-This dual convergence identifies $\sigma=5$ as the inevitable Interaction Order.
 
+    \item \textbf{The Orthogonality Condition:}
+    A fundamental requirement of the \textbf{Homogeneity} defined in System 0 is that the internal definition of a particle (its boundary topology) must be independent of its location. 
+    
+    Mathematically, this requires the total state space to be a \textbf{Direct Product} of the spatial manifold and the internal boundary manifold ($V_{total} = V_{space} \times V_{boundary}$). Because the boundary definition does not depend on position, their vector spaces are orthogonal.
+    
+    The dimension of the minimal interaction embedding is the sum of these independent sectors:
+    \begin{equation}
+        \sigma = \dim(V_{space}) + \dim(V_{boundary}) = 3 + 2 = \mathbf{5}
+    \end{equation}
+    
+    \item \textbf{Algebraic Confirmation:} 
+    This geometric value $\sigma=5$ matches the \textbf{Dimension of the Fundamental Representation} of $SU(5)$, the minimal Grand Unified Theory group \cite{georgi_unity_1974}. In this framework, the 5-component GUT vector is simply the algebraic representation of the geometric degrees of freedom derived above.
+\end{enumerate}
 
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
@@ -220,11 +228,7 @@ These nine \textbf{Heegner numbers} are the only candidates for the fundamental 
 
 \subsubsection{Filter 2: Causality (The ``Bandwidth'' Constraint)}
 \label{sec:fundamental_resonance_filter2}
-To apply the causality constraint, we must first determine the total information capacity ($N$) of the $E_8$ lattice substrate. The symmetric decomposition of the lattice, $E_8 \rightarrow D_4 \oplus D_4$, creates two orthogonal 4-dimensional sectors. Each sector supports a chiral spinor representation of dimension $\nu = 16$. The total state space of a single lattice node is therefore the sum of these two chiral halves:
-\begin{equation}
-    N = \nu_{\text{matter}} + \nu_{\text{mirror}} = 16 + 16 = 32
-\end{equation}
-This integer $N=32$ represents the total number of distinct state channels that must be mapped onto the temporal dimension without collision. With this capacity now defined, we can apply the causal filter.
+To apply the causality constraint, we use the total information capacity ($N$) of the $E_8$ lattice substrate. This integer $N=32$ represents the total number of distinct state channels that must be mapped onto the temporal dimension without collision.
 
 \begin{itemize}
     \item \textbf{The Problem:} The system must map these $N=32$ parallel channels onto the serial timeline defined by $\Delta$. If the timeline cycle ($\Delta$) is shorter than the number of channels ($N$), the \textbf{Pigeonhole Principle} forces at least two distinct states to map to the same time coordinate. This creates ``Causal Aliasing'' (a signal collision), which destroys the history of the system.
@@ -240,7 +244,7 @@ This integer $N=32$ represents the total number of distinct state channels that 
 The temporal modulus $\Delta$ is defined by Filter 1 as the \textbf{fundamental, indivisible clock period}. This atomicity requirement imposes a strict upper bound on the cycle length.
 
 While the physical consequence of this bound is the stabilization of the \textbf{Spinor Double Cover}\footnote{
-    \textbf{Physical Anticipation:} In the derived physics (System 1), fermions live on the spinor double cover of the manifold, requiring a $4\pi$ rotation ($\psi \to -\psi \to \psi$) to return to identity. This implies the effective information content is doubled ($2N$).
+    \textbf{Physical Anticipation:} Fermions live on the spinor double cover of the manifold, requiring a $4\pi$ rotation ($\psi \to -\psi \to \psi$) to return to identity. This implies the effective information content is doubled ($2N$).
     For the temporal coordinate to resolve this topology without ambiguity, the lattice update cycle $\Delta$ must maintain \textbf{Phase Lock} with the signal. If the non-signaling guard interval ($M = \Delta - N$) exceeds the signal length ($N$), the phase history is lost in the gap. 
     Mathematically, strict causality requires $\Delta < 2N$. If $\Delta \ge 2N$, the vacuum gap exceeds the particle coherence length, creating \textbf{Topological Aliasing} where the phase winding number becomes undefined, destroying fermionic statistics.
 }, System 1 must depend only the principles of Information Energetics to derive it. We do not assume fermions exist yet; we assume only a system optimizing for persistence.
@@ -259,37 +263,32 @@ While the physical consequence of this bound is the stabilization of the \textbf
     \begin{equation}
         N \ge M \implies N \ge (\Delta - N) \implies \Delta \le 2N
     \end{equation}
-    With $N=32$, the hard upper limit for the atomic update cycle is $\Delta \le 64$.
+    With $N=32$, the hard upper limit for the atomic update cycle is $\Delta \le 64$. This eliminates both $67$ and $163$, leaving $\Delta = 43$ as the unique solution.
 \end{itemize}
 
 \textbf{Result:} $\Delta = 43$ is the unique solution satisfying Unitarity (Filter 1), Causality (Filter 2), and Temporal Atomicity (Filter 3).
 
 \subsection{The System Specification}
 \label{sec:system1spec}
-The $E_8$-Persistence theory fulfills the six pillars of persistence ontop of a substrate.
+The $E_8$-Persistence theory fulfills the six pillars of persistence with a substrate.
 
 \begin{itemize}
     \item \textbf{Substrate: Manifold Rank} ($D=4$)
-    \item \textbf{Capacity ($\Delta E$): Fundamental Resonance ($\Delta=43$).} 
-    The maximum non-repeating frequency of the lattice (Heegner Number), representing the bit-depth of the vacuum.
-    \item \textbf{Identity ($\Delta I$): Interaction Symmetry ($\sigma=5$).} 
-    The geometric rank required to encode the unified force ($SU(5)$ precursor).
-    \item \textbf{Protocol ($MI$): Chiral Capacity ($\nu=16$).} 
-    The active degrees of freedom available for matter storage (The Weyl Spinor).
-    \item \textbf{Governor ($G$): Topological Boundary ($\chi=2$).} 
-    The Euler characteristic required for closed loops (stable particles), enforcing the finiteness of the field.
-    \item \textbf{Temporal Cost ($T$): Causality ($-1$).} 
-    The metric signature requirement for state updates, creating the arrow of time. 
-    \item \textbf{Persistence Margin ($PM$): ($+3$)} 
-    The dimensional embedding required to support the projection.   
+    \item \textbf{Capacity ($CAP$): Fundamental Resonance ($\Delta=43$).} The maximum non-repeating frequency of the lattice (Heegner Number), representing the bit-depth of the vacuum.
+    \item \textbf{Map ($MAP$): Interaction Symmetry ($\sigma=5$).} The geometric rank required to encode the unified force ($SU(5)$ precursor).
+    \item \textbf{Protocol ($PRO$): Chiral Capacity ($\nu=16$).} The active degrees of freedom available for matter storage (The Weyl Spinor).
+    \item \textbf{Governor ($GOV$): Topological Boundary ($\chi=2$).} The Euler characteristic required for closed loops (stable particles), enforcing the finiteness of the field.
+    \item \textbf{Toll ($TOL$): Metric Signature ($-1$).} The causal cost of state updates, enforcing the Arrow of Time via the Lorentzian signature.
+    \item \textbf{Margin ($MAR$): Spatial Embedding ($D_{space}=3$).} The minimum spatial dimensionality required to support stable topological knots ($N^3$ Volumetric scaling).
 \end{itemize}
 
-\subsection{Synthesis: The Characteristic Integers}
+\subsection{Conclusion: The Geometric Singularity}
+We have now completed the derivation of the vacuum's fundamental hardware. The constraints of Finiteness, Unitarity, and Causality have led us not to a family of possibilities, but they converge on a single, overdetermined geometric object: the $E_8$ lattice projected onto a causal $D=4$ manifold.
 
-We have now completed the derivation of the vacuum's fundamental hardware. The constraints of Finiteness, Unitarity, and Causality have led us not to a family of possibilities, but to a singular mathematical object defined by a unique set of five \textbf{Characteristic Integers}.
+This projection is not specified by adjustable parameters. It is characterized by five derived invariants—integers that represent how the geometry answers the persistence requirements:
 
 \begin{equation}
     \mathbb{S} = \{D=4, \Delta=43, \nu=16, \sigma=5, \chi=2\}
 \end{equation}
 
-This set represents the complete and immutable specification of System I. These are not free parameters or empirical inputs; they are the derived architectural constants of a persistent reality. \Cref{sec:geometric_impedance} will use this set as its sole input to perform the theory's first physical calculation.
+This set represents the complete and immutable specification of System 1. These are not free parameters or empirical inputs; they are the derived architectural constants of a persistent reality. \Cref{sec:geometric_impedance} will calculate the vacuum's geometric impedance from this unified structure as its sole input to perform the theory's first physical calculation.
