@@ -71,7 +71,7 @@ To facilitate this translation between engineering and ontology, we define the S
     The buffer to endure. It represents the minimum resolution limit required to distinguish a signal from thermal background noise, or the reserve capacity required to survive fluctuations. (The Gain Margin)
 \end{enumerate}
 
-Every system operates upon a \textbf{Substrate}: the physical medium imposing the rules.  The immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
+Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
 IE reframes control systems not as rigid instruction-following, but as active, energetic defense of Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this 6-pillar feedback architecture possess the stability required to be observable across cosmic timescales.
 
@@ -103,14 +103,14 @@ The mapping of IE to specific physical domains is inherently adaptive. While the
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
 
-We demonstrate the necessity of the set $\mathbb{P} = \{CAP, MAP, MI, GOV, TOL, MAR\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system $S$ where exactly one pillar is removed ($S' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
+We demonstrate the necessity of the set $\mathbb{P} = \{CAP, MAP, PRO, GOV, TOL, MAR\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system $S$ where exactly one pillar is removed ($S' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 
 \begin{itemize}
     \item \textbf{No Capacity ($CAP \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
-    \item \textbf{No Identity ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
+    \item \textbf{No Map ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
     \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
     \item \textbf{No Governor ($GOV \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Temporal Cost ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
+    \item \textbf{No Toll ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
     \item \textbf{No Margin ($MAR \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $MAR > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($MAR \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
 \end{itemize}
 
