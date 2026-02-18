@@ -1,7 +1,7 @@
 \section{System 1: The Projection, The \texorpdfstring{$E_8 \rightarrow D_4 \oplus D_4$}{E8toD4D4} geometric projection that uniquely satisfies the System 0 specification}
 \label{sec:system1}
 
-Having established that the vacuum must be a Finite, Even, Self-Dual, and Causal information processing substrate we now identify the one unique mathematical structure that satisfies these constraints.
+Having established that the vacuum must be a Finite, Even, Self-Dual, and Causal information processing substrate we now identify the unique mathematical structure that satisfies these constraints.
 
 Through a process of elimination we first determine the geometry of the lattice itself before projecting it into spacetime.
 
@@ -14,27 +14,27 @@ We first determine which of the dimensions satisfies the specification.
 \label{sec:kneserstheorem}
 The requirement of an even, self-dual lattice is remarkably restrictive. A result from lattice theory, Kneser's Theorem \cite{kneser_klassenzahlen_1957}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
 
-\[ D \in \{8, 16, 24, \dots\} \]
-This strictly eliminates any lattice solution in dimensions $D<8$, including $D=4$ (Standard Relativity). Superstring Theory ($D=10$) also cannot support a self-dual unitarity condition without auxiliary structures.
+\[ n \in \{8, 16, 24, \dots\} \]
+This strictly eliminates any lattice solution in dimensions $n<8$, including $n=4$ (Standard Relativity). Superstring Theory ($n=10$) also cannot support a self-dual unitarity condition without auxiliary structures.
 
 \subsubsection{The Principle of Algorithmic Determinism}
 \label{sec:principleofalgorithmicdeterminism}
 
 To satisfy the \textbf{Map} and \textbf{Unitarity} pillars, the substrate geometry must be intrinsic and self-defining. It cannot depend on arbitrary selection parameters or external boundary conditions.
 
-We constrain the population of even, self-dual lattices permitted by Kneser's Theorem ($D = 8k$) through the lens of \textbf{Algorithmic Complexity}:
+We constrain the population of even, self-dual lattices permitted by Kneser's Theorem ($n = 8k$) through the lens of \textbf{Algorithmic Complexity}:
 
 \begin{itemize}
-    \item \textbf{D=8:} A unique solution exists (The $E_8$ lattice).
-    \item \textbf{D=16:} Two distinct non-isomorphic solutions exist ($E_8 \oplus E_8$ and $D_{16}^+$).
-    \item \textbf{D=24:} Twenty-four distinct solutions exist (The Niemeier lattices).
+    \item \textbf{n=8:} A unique solution exists (The $E_8$ lattice).
+    \item \textbf{n=16:} Two distinct non-isomorphic solutions exist ($E_8 \oplus E_8$ and $D_{16}^+$).
+    \item \textbf{n=24:} Twenty-four distinct solutions exist (The Niemeier lattices).
 \end{itemize}
 
-A vacuum established at $D=16$ would possess a \textbf{Specification Complexity} of $H = \log_2(2) = 1$ bit. This represents the information required to distinguish between the two topological isomers. 
+A vacuum established at $n=16$ would possess a \textbf{Specification Complexity} of $H = \log_2(2) = 1$ bit. This represents the information required to distinguish between the two topological isomers. 
 
 However, because the vacuum satisfies \textbf{Unitarity} (it is a closed system with no environment), there is no external observer or ``meta-law'' to hold this selection bit. If the vacuum geometry is not unique, it requires an initial condition parameter to define its structure. This implies a ``pre-geometric'' memory, violating the definition of the vacuum as the fundamental ground state.
 
-The $E_8$ lattice ($D=8$) is the unique solution where the Specification Complexity is zero ($H = \log_2(1) = 0$). It is selected not merely for its low dimensionality, but because it is the only self-dual geometry that is \textbf{Self-Defining}. It requires no external parameters to distinguish it from a set of alternatives; its existence is a deterministic consequence of the constraints.
+The $E_8$ lattice ($n=8$) is the unique solution where the Specification Complexity is zero ($H = \log_2(1) = 0$). It is selected not merely for its low dimensionality, but because it is the only self-dual geometry that is \textbf{Self-Defining}. It requires no external parameters to distinguish it from a set of alternatives; its existence is a deterministic consequence of the constraints.
 
 \subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:projection}
@@ -216,33 +216,25 @@ This creates \textbf{Causal Ambiguity}: the system cannot uniquely reconstruct i
 
 The Stark-Heegner theorem \cite{stark_complete_1967} is a mathematical classification result, not a physical 
 postulate. It provides the complete, finite list of values for $\Delta$ that satisfy the requirement of $h=1$:
+
 \begin{equation}
     \Delta \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}
 \end{equation}
+
 These nine \textbf{Heegner numbers} are the only candidates for the fundamental resonance of a unitary universe.
 
 \subsubsection{Filter 2: Causality (The ``Bandwidth'' Constraint)}
 \label{sec:fundamental_resonance_filter2}
-To apply the causality constraint, we use the total information capacity ($N$) of the $E_8$ lattice substrate. This integer $N=32$ represents the total number of distinct state channels that must be mapped onto the temporal dimension without collision.
+In \cref{sec:Delta_gt_N} we established that $\Delta > (N = 32)$ due to Causality. Applying this constraint to the set of Heegner numbers leaves:
 
-\begin{itemize}
-    \item \textbf{The Problem:} The system must map these $N=32$ parallel channels onto the serial timeline defined by $\Delta$. If the timeline cycle ($\Delta$) is shorter than the number of channels ($N$), the \textbf{Pigeonhole Principle} forces at least two distinct states to map to the same time coordinate. This creates ``Causal Aliasing'' (a signal collision), which destroys the history of the system.
-
-    \item \textbf{The Constraint:}: To ensure every state has a unique temporal address and to maintain a non-zero persistence margin against fluctuations, the projection must satisfy the strict inequality $\Delta > N$. Therefore, we require $\Delta > 32$.
-    
-    \item \textbf{Remaining Candidates:} Applying this constraint to the set of Heegner numbers leaves: $\{43, 67, 163\}$.
-\end{itemize}
+\begin{equation}
+    \Delta \in \{43, 67, 163\}
+\end{equation}
 
 \subsubsection{Filter 3: Temporal Atomicity (The Coordination Constraint)}
 \label{sec:fundamental_resonance_filter3}
 
 The temporal modulus $\Delta$ is defined by Filter 1 as the \textbf{fundamental, indivisible clock period}. This atomicity requirement imposes a strict upper bound on the cycle length.
-
-While the physical consequence of this bound is the stabilization of the \textbf{Spinor Double Cover}\footnote{
-    \textbf{Physical Correlation:} Fermions live on the spinor double cover of the manifold, requiring a $4\pi$ rotation ($\psi \to -\psi \to \psi$) to return to identity. This implies the effective information content is doubled ($2N$).
-    For the temporal coordinate to resolve this topology without ambiguity, the lattice update cycle $\Delta$ must maintain \textbf{Phase Lock} with the signal. If the non-signaling guard interval ($M = \Delta - N$) exceeds the signal length ($N$), the phase history is lost in the gap. 
-    Mathematically, strict causality requires $\Delta < 2N$. If $\Delta \ge 2N$, the vacuum gap exceeds the particle coherence length, creating \textbf{Topological Aliasing} where the phase winding number becomes undefined, destroying fermionic statistics.
-}, System 1 must depend only the principles of Information Energetics to derive it. We do not assume fermions exist yet; we assume only a system optimizing for persistence.
 
 \begin{itemize}
     \item \textbf{The Mechanism (Signal vs. Overhead):} 
@@ -252,7 +244,7 @@ While the physical consequence of this bound is the stabilization of the \textbf
     Because $\Delta$ is atomic (possessing no faster internal clock), the $M$ overhead intervals cannot be self-regulating; they must be causally bridged by the active signal states. If an overhead interval exists without a corresponding signal controller, the system experiences an \textbf{Acausal Gap}—a period of time defined by the metric but undefined by the state.
     
     \item \textbf{The Proof (Surjective Mapping):} 
-    Because the fundamental cycle $\Delta$ is discrete (composed of indivisible integer timesteps), the temporal structure can be analyzed using \textbf{set-theoretic methods} specifically, by examining the mappings between finite sets of states and intervals.
+    Because the fundamental cycle $\Delta$ is discrete (composed of indivisible integer timesteps), the temporal structure can be analyzed using \textbf{set-theoretic methods}, specifically by examining the mappings between finite sets of states and intervals.
     
     To maintain causal continuity, every overhead interval must be mapped to at least one controlling signal state. Mathematically, let $S$ be the set of signal states ($|S|=N$) and $O$ be the set of overhead intervals ($|O|=M$). The system requires a \textbf{Surjective Function} $f: S \twoheadrightarrow O$.
     
@@ -260,16 +252,13 @@ While the physical consequence of this bound is the stabilization of the \textbf
     \begin{equation}
         N \ge M \implies N \ge (\Delta - N) \implies \Delta \le 2N
     \end{equation}
-    With $N=32$, the hard upper limit for the atomic update cycle is $\Delta \le 64$. This eliminates both $67$ and $163$, leaving $\Delta = 43$ as the unique solution.
-
-    \textit{Falsification expanded}: For $\Delta=67$, we would require a surjective map $f: 32 \twoheadrightarrow 35$, which is impossible by the Pigeonhole Principle, at least 3 overhead intervals would lack controllers, creating acausal gaps that violate the Map pillar.
+    \textbf{Result:} With $N=32$, the hard upper limit for the atomic update cycle is $\Delta \le 64$. This eliminates both $67$ and $163$, leaving $\Delta = 43$ as the unique solution.
 \end{itemize}
-
-\textbf{Result:} $\Delta = 43$ is the unique solution satisfying Unitarity (Filter 1), Causality (Filter 2), and Temporal Atomicity (Filter 3).
 
 \subsection{The System Specification}
 \label{sec:system1spec}
-We have now identify a unique geometric substrate that satisfies architectural requirements (System 0) and fulfills the IE requirements for a substrate with six pillars of persistence.
+We have now identified a unique geometric substrate that satisfies the architectural requirements of System 0 and
+fulfills the IE requirements for a substrate with six pillars of persistence.
 
 \begin{itemize}
     \item \textbf{Substrate: Manifold Rank} ($D=4$)
@@ -277,7 +266,7 @@ We have now identify a unique geometric substrate that satisfies architectural r
     \item \textbf{Map ($MAP$): Interaction Symmetry ($\sigma=5$).} The geometric rank required to encode the unified force ($SU(5)$ precursor).
     \item \textbf{Protocol ($PRO$): Chiral Capacity ($\nu=16$).} The active degrees of freedom available for matter storage (The Weyl Spinor).
     \item \textbf{Governor ($GOV$): Topological Boundary ($\chi=2$).} The Euler characteristic required for closed loops (stable particles), enforcing the finiteness of the field.
-    \item \textbf{Toll ($TOL$): Metric Signature ($-1$).} The causal cost of state updates, enforcing the Arrow of Time via the Lorentzian signature.
+    \item \textbf{Toll ($TOL$): Metric Signature ($\tau = -1$).} The causal cost of state updates, enforcing the Arrow of Time via the Lorentzian signature.
     \item \textbf{Margin ($MAR$): Spatial Embedding ($D_{space}=3$).} The minimum spatial dimensionality required to support stable topological knots ($N^3$ Volumetric scaling).
 \end{itemize}
 
@@ -285,28 +274,29 @@ We have now identify a unique geometric substrate that satisfies architectural r
 \CatchFileBetweenTags{\InvLEmbed}{calculations/constants.tex}{InvLEmbed}
 \CatchFileBetweenTags{\InvLSubstrate}{calculations/constants.tex}{InvLSubstrate}
 
-\subsection{The Derived Loads}
+\subsubsection{The Derived Loads}
 \label{sec:lattice_loads}
 
 We define three derived information loads that characterize the lattice substrate's computational structure for use in derivation of the constants. These accompany the Total Node Capacity (N) from \cref{sec:totalnodecapacity}.
 
-\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \InvLIntrinsic$}{Lintrinsic})}
+\paragraph{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \InvLIntrinsic$}{Lintrinsic})}
 The information content required to specify a particle's internal state, its chiral configuration ($\nu$), interaction charges ($\sigma$), and topological boundary ($\chi$):
 
 \begin{equation}
     L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{\InvLIntrinsic}
 \end{equation}
 
-\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \InvLEmbed$}{Lembed})}
+\paragraph{The Embedding Load (\texorpdfstring{$L_{embed} = \InvLEmbed$}{Lembed})}
 The total configuration space, defined as the sum of the internal state ($L_{intrinsic}$) and the manifold address space.
 
-\textbf{The Spinor Double-Cover ($2D=8$):} Since fermions inhabit the $Spin(4)$ double cover of the $D=4$ manifold, each spatial coordinate requires an additional parity bit to distinguish the two sheets of the cover (the sign under $2\pi$ rotation). This necessitates an embedding cost of $2D=8$ to uniquely specify the state in the manifold.
+\textbf{The Spinor Double-Cover ($2D = 8$)}: Because fermions inhabit the $Spin(4)$ double cover of the $D=4$
+manifold, the coordinate system requires an additional bit per dimension to distinguish the two sheets of the cover (resolving the sign ambiguity under $2\pi$ rotation). This necessitates an embedding cost of $2D = 8$ to uniquely specify the state address in the manifold.
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\InvLEmbed}
 \end{equation}
 
-\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \InvLSubstrate$}{Loverhead})}
+\paragraph{The Substrate Load (\texorpdfstring{$L_{substrate} = \InvLSubstrate$}{Loverhead})}
 The vacuum's intrinsic structural complexity, combining:
 
 \begin{itemize}
@@ -320,11 +310,6 @@ The vacuum's intrinsic structural complexity, combining:
 \end{equation}
 
 \subsection{Conclusion: \texorpdfstring{$E_8$}{E8}-Persistence theory}
-The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} do not permit a family of solutions; they converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold.
+The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} do not permit a family of solutions; they converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold. This unique geometric structure is accompanied by the set of Characteristic Integers: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$.
 
-This is not a model with adjustable parameters. It is the only architecture capable of persistent existence. The entire structure is characterized by five derived integers that are geometry invariants:
-\begin{equation}
-    \mathbb{S} = \{D=4, \Delta=43, \nu=16, \sigma=5, \chi=2\}
-\end{equation}
-
-With a unique substrate for other systems to persist on top of, we have now established the foundation of $E_8$-Persistence theory. In \cref{sec:geometric_impedance}, we will use $\mathbb{S}$ as our sole input to derive the fine-structure constant $\alpha^{-1}$, producing the theory's first quantitative prediction for comparison with experiment.
+With a unique substrate for other systems to persist on top of, we have now established the foundation of $E_8$-Persistence theory. In \cref{sec:geometric_impedance}, we will derive the fine-structure constant $\alpha^{-1}$, producing the theory's first quantitative prediction for comparison with experimental data.

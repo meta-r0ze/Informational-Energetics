@@ -1,20 +1,18 @@
 \begin{abstract}
-We present Informational Energetics (IE), a unified framework for modeling the persistence of complex adaptive systems against entropy. By synthesizing algorithmic information theory, non-equilibrium thermodynamics, and control theory, we derive the Universal Architecture of Persistence: a recursive, six-dimensional set of constraints (Capacity, Map, Protocol, Governor, Toll, and  Margin) that any system at any scale must satisfy to maintain structural coherence.
+We present Informational Energetics (IE), a unified framework for modeling the persistence of complex adaptive systems against entropy. By synthesizing information theory, non-equilibrium thermodynamics, and control theory, we derive the Universal Architecture of Persistence: a recursive, six-dimensional set of constraints (Capacity, Map, Protocol, Governor, Toll, and  Margin) that any system at any scale must satisfy to maintain structural coherence.
 
-To validate the framework's universality, we apply IE to the most fundamental persistent system: the vacuum. This paper establishes the theoretical foundation for the $E_8$-Persistence Theory demonstrating that spacetime and the Standard Model are not arbitrary structures but the unique solutions to fundamental requirements: Finiteness (preventing divergence), Unitarity (conserving information), and Causality (enforcing temporal order). We show, without using any empirical input, that an $E_8$ lattice projected onto spacetime is the unique solution to these persistence requirements. The theory makes a falsifiable prediction: all physical constants derive from this geometry, whose invariants are the integers $\mathbb{S} = \{D{=}4, \Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$ with zero free parameters. Any requirement for parameter tuning would falsify not merely a physical theory, but the fundamental claim that persistence itself has an invariant architecture.
+To validate the framework's universality, we apply IE to the most fundamental persistent system: the vacuum. This paper establishes the theoretical foundation for the $E_8$-Persistence Theory by demonstrating that spacetime and the Standard Model are the unique solutions to fundamental requirements: Finiteness (preventing divergence), Unitarity (conserving information), and Causality (enforcing temporal order). We show that the unique solution is an $E_8$ lattice projected onto $4D$ spacetime whose invariants are the integers $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$.
 
-% alpha^-1
 \CatchFileBetweenTags{\AlphaInvVal}{calculations/constants.tex}{AlphaInvVal}
 \CatchFileBetweenTags{\AlphaInvExperimentalValue}{calculations/constants.tex}{AlphaInvExperimentalValue}
-We validate this prediction by calculating the persistent Geometric Impedance of the vacuum (fine-structure constant) as the unique sum of the canonical costs.
+The theory makes a falsifiable prediction: all physical constants derive from this geometry with zero free parameters. We validate this prediction by defining the Geometric Impedance. This yields the value of the Fine-Structure Constant ($\alpha^{-1}$) and structurally fixes the Von Klitzing Constant ($R_K$) and the Elementary Charge ($e$) as necessary consequences.
 \begin{equation}
-\alpha^{-1} = \underbrace{\pi\Delta}_{CAP}
-+ \,\underbrace{\chi}_{MAP}
-- \,\underbrace{\frac{1}{D\Delta - \sigma}}_{PRO}
-- \,\underbrace{\frac{\chi}{\Delta}}_{GOV}
-+ \,\underbrace{\frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{TOL}
-+ \,\underbrace{\frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2}}_{MAR}
+\alpha^{-1} = \underbrace{\pi\Delta}_{\text{Capacity}}
++ \,\underbrace{\chi}_{\text{Map}}
+- \,\underbrace{\frac{1}{D\Delta - \sigma}}_{\text{Protocol}}
+- \,\underbrace{\frac{\chi}{\Delta}}_{\text{Governor}}
++ \,\underbrace{\frac{1}{N^{D_{space}}} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{\text{Toll}}
++ \,\underbrace{\frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2}}_{\text{Margin}}
 \end{equation}
-
 Our parameter-free calculation yields $\alpha^{-1} = \AlphaInvVal \dots$, a value in agreement with the CODATA 2022 consensus to within 1.68$\sigma$ and within $0.58\sigma$ of the Morel 2020 value.
 \end{abstract}

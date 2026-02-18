@@ -1,13 +1,3 @@
-
-\section{The Bandwidth Limit (\texorpdfstring{$c_{eff} = 1$}{ceff})}
-Because the lattice is discrete, information propagates via neighbor-to-neighbor updates. The maximum rate of causality is bounded by the lattice node spacing ($\ell$) divided by the update frequency ($\Delta$).
-
-Consequently, \textbf{Lorentz Invariance} is identified not as a geometric axiom, but as the \textbf{Shannon Channel Capacity} ($C_{max}$) of the substrate.
-The speed of light $c \equiv 1$ represents the maximum rate of causality: information can propagate exactly \textit{one lattice node spacing} ($\ell$) per \textit{one update cycle} ($\Delta$).
-
-This enforces the constraints derived in \textbf{\cref{sec:fundamental_resonance_filter3}}: any signal attempting to propagate faster than the protocol allows results in temporal aliasing (Causal Violation) and is filtered by the vacuum's Causality Potential.
-
-
 \section{System 2: The Geometric Impedance (\texorpdfstring{$\alpha^{-1}$}{alpha\string^-1}), the  cost of sustaining topological charge against the lattice flux}
 \label{sec:geometric_impedance}
 
@@ -33,14 +23,20 @@ For a topological defect (particle) to exist stably, its geometric structure mus
 \begin{equation}
     \alpha^{-1} \equiv Z_{geo} = \frac{S_\Phi}{Q_{top}}
 \end{equation}
-For the electromagnetic field, the charge is quantized by the boundary condition $\chi = 2$. The total impedance is the sum of the geometric costs required to maintain this charge against the entropic flux of the lattice.
+
+\textbf{Definition of Entropic Action:} In the IE framework, Action represents the \textbf{information-theoretic cost} of maintaining a field configuration against the lattice's entropic flux. 
+
+For a discrete lattice substrate, this cost is measured as the minimum number of elementary operations (lattice updates, link traversals, or symmetry transformations) required to sustain the configuration. In Lattice Natural Units ($\ell = \hbar = c = 1$), each elementary operation contributes exactly 1 unit of action, making action dimensionless and directly proportional to computational complexity.
+
+For the electromagnetic field, the charge is quantized by the boundary condition $\chi = 2$. The total impedance is the sum of the elementary operation costs required to maintain this charge.
 
 \textit{An intuitive analogy can be drawn from digital communications. A communications channel has a maximum data rate (Capacity) set by its bandwidth and noise floor. For a signal (a particle) to be transmitted (to persist), it must have a structure that matches the channel's impedance and a power level that exceeds the noise floor (Margin). The `Geometric Impedance' of the vacuum can thus be understood as the total set of structural and energetic requirements a signal must meet to propagate losslessly on the physical substrate.}
 
 \subsection{The System Specification: Irreducible Sectors}
 \label{sec:irreducible-sectors}
 
-We define the Geometric Impedance by instantiating the six pillars of persistence. To maintain unitarity, the mathematical form of each term is strictly dictated by the canonical definition of impedance in its respective domain (Network Theory, Mechanics, or Statistics).
+We define the Geometric Impedance by instantiating the six pillars of persistence.  Critically we do not 
+\textit{choose} these forms to fit the observed value and every term is a simple elementary arithmetic expression that is a result of the discrete lattice geometry. To maintain unitarity, the mathematical form of each term is strictly dictated by the canonical definition of impedance in its respective domain (Network Theory, Mechanics, or Statistics).
 
 \begin{enumerate}
     \item \textbf{Capacity ($CAP$): The Metric Sector.} \\
@@ -49,7 +45,7 @@ We define the Geometric Impedance by instantiating the six pillars of persistenc
     
     \item \textbf{Map ($MAP$): The Topological Sector.} \\
     \textit{Form: Integer Counting.} 
-    The topological charge is invariant under continuous deformation. The impedance cost is simply the Euler characteristic ($\chi$) required to distinguish the knot from the vacuum. \textit{Unlike continuous fields that can take fractional values, topological charges are quantized, you pay the full integer cost or nothing at all.}
+    The topological charge is invariant under continuous deformation. The impedance cost is simply the Euler characteristic ($\chi$) required to distinguish the knot from the vacuum. \textit{Unlike continuous fields that can take fractional values, topological charges are quantized, paying the full embedding integer cost.}
     
     \item \textbf{Protocol ($PRO$): The Symmetry Sector.} \\
     \textit{Form: Inverse Admittance.} 
@@ -61,11 +57,13 @@ We define the Geometric Impedance by instantiating the six pillars of persistenc
     
     \item \textbf{Toll ($TOL$): The Entropic Transition.} \\
     \textit{Form: Statistical Probability.} 
-    Time evolution in the Standard Model involves a 3-body interaction vertex (decay/scattering). The probability of a specific state configuration occurring in a phase space of size $N$ scales as $P \propto 1/N^3$. In information theory, low probability implies high entropic cost (impedance). \textit{This is the information-theoretic equivalent of a low-probability event requiring high free energy to spontaneously occur.}
+    The probability of selecting a specific state configuration from the phase space of size $N$ scales as $P \propto 1/N^{D_{space}} = 1/N^3$ due to volumetric addressing in three spatial dimensions. 
+
+    In the Standard Model, this geometric factor manifests as the dominance of 3-body interaction vertices in decay and scattering processes. In information theory, low probability implies high entropic cost (impedance). \textit{This is the information-theoretic equivalent of a low-probability event requiring high free energy to spontaneously occur.}
     
     \item \textbf{Margin ($MAR$): The Persistence Margin.} \\
     \textit{Form: Energy Density.} 
-    The minimum resolvable signal is the Unit Bit ($1$) diluted over the total configuration space volume ($H_{full} \cdot (\sigma+1) \cdot \Delta^2$). This sets the thermodynamic noise floor of the substrate. \textit{In information theory, this is the Shannon limit; the signal energy required to be distinguishable from the thermal noise power of the channel.}
+    The minimum resolvable signal is the Unit Bit ($1$) diluted over the total configuration space volume ($L_{embed} \cdot (\sigma+1) \cdot \Delta^2$). This sets the thermodynamic noise floor of the substrate. \textit{In information theory, this is the Shannon limit; the signal energy required to be distinguishable from the thermal noise power of the channel.}
 \end{enumerate}
 
 Summing these irreducible sectors yields the total impedance of the vacuum.
@@ -74,7 +72,17 @@ Summing these irreducible sectors yields the total impedance of the vacuum.
 
 The Geometric Impedance is calculated as the linear sum of contributions from distinct geometric sectors ($Z_{geo} = \sum Z_i$). This linearity is not an assumption but a consequence of the \textbf{Additivity of Action} applied to orthogonal degrees of freedom.
 
-\textbf{1. Physical Justification (Additivity):} In physics, the total action of a system is the sum of the actions of its independent components. We adopt \textbf{Lattice Natural Units} ($\ell = c = \hbar = 1$) where action becomes a dimensionless scalar counting the number of fundamental quantum operations.
+\textbf{1. Physical Justification (Discrete Additivity):} We adopt \textbf{Lattice Natural Units} ($\ell = c = \hbar = 1$). In this regime, the total action is a dimensionless count of elementary operations. The lattice structure enforces three constraints that determine all coefficients:
+
+\begin{itemize}
+    \item \textbf{Discreteness:} Operations are atomic. A lattice link either exists (1) or doesn't (0). Fractional operations ($0 < k < 1$) are undefined.
+    \item \textbf{Minimality:} The fundamental operation is irreducible. Multiple sub-steps ($k > 1$) would imply the operation isn't fundamental, contradicting the substrate definition.
+    \item \textbf{Additivity:} Independent operations sum linearly. The cost of $N$ independent steps is $N$, not $kN$ for some $k \neq 1$.
+\end{itemize}
+
+These are not assumptions but consequences of working on a discrete, fundamental lattice substrate. The coefficients are 1 because the unit of action \textit{is} the fundamental operation.
+
+Furthermore, the speed of light $c \equiv 1$ is identified as the \textbf{Shannon Channel Capacity} ($C_{max}$) of the substrate: the maximum rate of causality where information propagates exactly \textit{one lattice node spacing} ($\ell$) per \textit{one update cycle} ($\Delta$).
 
 \textbf{2. Geometric Justification (Orthogonality):} The impedance sectors operate on disjoint geometric degrees of freedom within the projection. Because the root system of $E_8$ decomposes into orthogonal spacetime and internal symmetry sublattices ($E_8 \to D_4 \oplus D_4$), there are no interference cross-terms (e.g., $\chi \cdot \Delta$) in the ground state action.
 
@@ -91,6 +99,7 @@ Since these sectors are geometrically orthogonal, the total Entropic Burden is s
 \end{equation}
 
 \subsection{The Geometric Impedance Equation}
+Before showing a step-by-step derivation, we will show the final formula for geometric impedance.
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
 \alpha^{-1} \equiv Z_{geo} = \underbrace{\pi\Delta}_{CAP}
@@ -98,7 +107,7 @@ Since these sectors are geometrically orthogonal, the total Entropic Burden is s
 - \,\underbrace{\frac{1}{D\Delta - \sigma}}_{PRO}
 - \,\underbrace{\frac{\chi}{\Delta}}_{GOV} & \\
 + \,\underbrace{\frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right)}_{TOL}
-+ \,\underbrace{\frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2}}_{MAR}
++ \,\underbrace{\frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2}}_{MAR}
 \end{split}
 \end{equation}
 
@@ -115,14 +124,14 @@ The metric sector measures the geometric action required for the gauge field to 
 
 \textbf{2. Continuous Topology ($\pi$):} The emergent electromagnetic field is a $U(1)$ gauge field. To form a closed Wilson Loop (the minimal interaction circuit), the field must integrate over the circular gauge manifold. 
 
-In the continuum limit ($\lambda \gg \ell$), the \textbf{minimal Wilson loop}—representing the fundamental quantum of gauge holonomy—carries a geometric weight of $\pi$ in the effective action. This corresponds to the half-period of the circular gauge manifold, arising from the requirement to couple unitarily to the spinor current.
+In the continuum limit ($\lambda \gg \ell$), the lattice resonance $\Delta$ acts as the effective \textbf{geometric diameter} of the fundamental interaction cycle (the maximum causal separation of states within one temporal period).
 
-The total Geometric Impedance is the product of the discrete quantization count and the continuous geometric measure:
+For a particle (topological defect) to maintain coherence, the gauge field must integrate over the full boundary of its interaction cycle. The geometric impedance is simply the \textbf{circumference} of this fundamental loop:
 \begin{equation}
-    Z_{\Delta E} = \text{Geometry} \times \text{Count} = \pi \Delta
+    Z_{Capacity} = \text{Circumference} = \pi \times \text{Diameter} = \pi \Delta
 \end{equation}
 
-This factorization, discrete resonance scaling the continuous measure, is the structural hallmark of a system where a smooth gauge symmetry emerges from a granular substrate.
+This factorization—continuous geometry ($\pi$) scaling the discrete resonance diameter ($\Delta$)—is the structural hallmark of a system where a smooth gauge symmetry emerges from a granular substrate.
 
 \subsubsection{The Topological Boundary: Identity (Map)}
 A Wilson Loop is defined by its closure. For a particle to distinguish itself from the vacuum, its boundary must satisfy the Gauss-Bonnet condition for a closed surface ($\chi=2$).
@@ -139,80 +148,94 @@ The total geometric action of the minimal loop is the sum of these two sectors:
 This base value matches the experimental Fine-Structure Constant to within $0.03\%$. The remaining deviation arises from the thermodynamic friction of the lattice.
 
 \subsection{The Thermodynamic Corrections}
-The physical lattice is not an abstract ideal; it is discrete, resource-constrained, and subject to thermodynamic friction. We derive the four perturbation terms required to stabilize the ideal knot within the finite $E_8$ projection.
+
+The physical lattice is not an abstract ideal; it is discrete, resource-constrained, and subject to thermodynamic friction. Before deriving the perturbation terms required to stabilize the ideal knot, we must first define the total informational capacity of the local manifold, which serves as the baseline for these corrections.
+
+\subsubsection{Defining Manifold Channel Capacity}
+From System 1, the substrate is a D=4 dimensional manifold with a fundamental temporal cycle (resonance) of $\Delta=43$. The total number of unique spacetime channels available for information to flow within a single temporal cycle is the product of these degrees of freedom. Therefore, define the \textbf{Manifold Channel Capacity} as
+\begin{equation}
+    C_M = D\Delta = 4 \times 43 = 172
+\end{equation}
+This value represents the theoretical maximum number of distinct information pathways the local spacetime geometry can support per fundamental update cycle. The subsequent thermodynamic terms are derived as costs or efficiencies relative to this total available capacity.
 
 \subsubsection{Alignment Efficiency (Protocol)}
 The lattice possesses 5-fold internal symmetry ($\sigma=5$) which must project onto a 4-dimensional spacetime manifold ($D=4$). This geometric mismatch creates friction. The system minimizes this drag by aligning the manifold geometry ($D\Delta$) with the internal symmetry axes. 
 
-The available degrees of freedom for this alignment are defined by the Residual Capacity:
+This geometric mismatch consumes a portion of the Manifold Channel Capacity, representing an overhead. The remaining ``Residual Capacity'' available for information transfer is the total capacity minus this symmetric overhead:
 \begin{equation}
-    C_{res} = D\Delta - \sigma = 172 - 5 = 167
+    C_{res} = C_M - \sigma = D\Delta - \sigma = 172 - 5 = 167
 \end{equation}
+
 In network theory, Impedance ($Z$) is the inverse of Admittance (Capacity). Since $C_{res}$ represents the admittance available for alignment, the impedance reduction is the reciprocal:
 \begin{equation}
-    Z_{MI} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx -0.00599
+    Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx -0.00599
 \end{equation}
-\textbf{Physical Consequence:} This term structurally locks the Gauge Sector to the Flavor Sector. If removed, the Weak Mixing Angle would decouple from the Cabibbo Angle, violating the Gatto-Sartori-Tonin (GST) Relation. 
-\textit{Forward Link:} This term structurally locks the Electromagnetic force to the Weak force (See Paper III: The GST Relation).
+\textbf{Physical Consequence:} This term structurally locks the Electromagnetic force to the Weak force, and the Gauge Sector to the Flavor Sector. If removed, the Weak Mixing Angle would decouple from the Cabibbo Angle, violating the Gatto-Sartori-Tonin Relation.
 
 \subsubsection{Stabilizing Potential (Governor)}
-The vacuum must enforce the discrete Topological Boundary ($\chi=2$) against the continuous Field Pressure ($\Delta=43$). This conflict creates a negative pressure on the system. By Hooke's Law, the restoring force is proportional to the strain ratio:
+The vacuum must enforce the discrete Topological Boundary ($\chi=2$) against the continuous Field Pressure generated by the lattice resonance ($\Delta=43$).
+
+\textbf{Definition of Field Pressure:} In a causal lattice, the fundamental loop consists of $\Delta$ discrete state updates per cycle. A continuous field naturally seeks to distribute its energy flux equiprobably across all available temporal slots (maximizing entropy). Thus, $\Delta$ represents the total \textit{informational pressure} or bulk length of the cycle against which the topology must hold.
+
+This conflict creates a structural strain. By Hooke's Law, the restoring force (impedance) is proportional to the linear strain ratio: the boundary constraint ($\chi$) divided by the bulk causal length ($\Delta$).
 \begin{equation}
     Z_{G} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx -0.04651
 \end{equation}
-This acts as the Ultraviolet Cutoff (Governor), preventing the field energy from diverging at small scales.
+This negative impedance acts as the Ultraviolet Cutoff (Governor), preventing the field energy from diverging at small scales by penalizing high-frequency fluctuations that violate the topological boundary.
 
 \paragraph{Validation: The Continuous Limit}
 We independently validate this integer derivation by analyzing the continuous projection of $E_8$ via $H_4$ (Golden Ratio) geometry. The continuous vacuum impedance is:
 \begin{equation}
     \alpha^{-1}_{cont} = (D \cdot \sigma) \cdot \phi^4 \approx 137.082
 \end{equation}
-To instantiate the discrete topology required for matter ($\chi=2$), the system must pay exactly the Governor cost derived above:
+To instantiate the discrete topology required for matter ($\chi = 2$), the system must incorporate the Governor stabilizing potential:
 \begin{equation}
     137.082 - Z_G = 137.082 - 0.047 = 137.035 \approx \alpha^{-1}
 \end{equation}
-This confirms that the Governor is the specific cost of locking continuous geometry ($\phi$) into discrete topology (Integers). This structural duality—\textbf{Integer Knots vs. Golden Waves} forms the geometric basis for the flavor mixing disparities derived in Paper III.
-
+This confirms that the Governor is the specific cost of locking continuous geometry ($\phi$) into discrete topology (Integers).
 
 \subsubsection{Electroweak Transition (Toll)}
 State transitions (Time) are not free; they require selecting a specific address in the lattice. The impedance cost $Z_T$ is the probability that a random fluctuation successfully accesses the transition channel. This is Landauer's Limit applied to the lattice geometry.
 
-The transition probability is the product of three independent geometric constraints:
+This impedance cost is the inverse of the probability of a successful state transition, which requires satisfying three independent constraints simultaneously:
 \begin{enumerate}
-    \item \textbf{Volumetric Addressing ($1/N^3$):} The probability of selecting a single node $(x,y,z)$ from the total state capacity ($N=32$).
-    \item \textbf{Boundary Selection ($\chi/\sigma$):} The probability of coupling to the topological boundary. Only signals coupling to the boundary can effect a persistent change.
-    \item \textbf{Bandwidth Availability ($1 - \sigma/D\Delta$):} The fraction of manifold capacity remaining after symmetry overhead.
+    \item \textbf{State Selection ($1/N^3$):} A transition requires selecting one specific configuration. Given the $N=32$ state channels and the $D_{space}=3$ spatial dimensions for addressing, the probability of selecting a single state in the volumetric phase space scales as $1/N^3$. This is the entropic cost of localization.
+    \item \textbf{Boundary Coupling ($\chi/\sigma$):} For a transition to be persistent (i.e., update the particle's state), the interaction must couple to its topological boundary. The boundary itself is defined by $\chi=2$ degrees of freedom (e.g., spherical coordinates). The interaction is mediated by the force symmetry, which has $\sigma=5$ degrees of freedom. The probability of a random interaction successfully coupling to the boundary is therefore the ratio of the target degrees of freedom to the interacting degrees of freedom, $P_{couple} = \chi/\sigma$.
+    \item \textbf{Channel Availability ($1 - \sigma/D\Delta$):} The transition must occur through an available spacetime channel. As defined previously, the Manifold Channel Capacity is $C_M = D\Delta$. The symmetry overhead $\sigma$ renders a fraction of these channels unavailable. The probability of selecting an open channel is thus the fraction of remaining capacity, $P_{avail} = (C_M-\sigma)/C_M = 1 - \sigma/D\Delta$.
 \end{enumerate}
+The total impedance is the product of these three factors, representing the total entropic cost of a single, localized, persistent state transition.
 
 \begin{equation}
-    Z_{T} = \frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right) \approx +1.185 \times 10^{-5}
+    Z_{TOL} = \frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{D\Delta} \right) \approx +1.185 \times 10^{-5}
 \end{equation}
 
 \paragraph{Geometric Consistency and the Weak Force}
 We observe that the derived cost $Z_T$ satisfies the relation $Z_T \approx \alpha^2 / 2\sqrt{\sigma}$. This structurally links the lattice geometry to the Weak Interaction, identifying the temporal cost as the specific entropic price of electroweak state transitions ($T \approx \alpha^2 \sin^2 \theta_W$). The slight divergence ($0.5\%$) between the integer derivation and this continuous form represents the Quantization Noise of mapping the irrational symmetry geometry ($\sqrt{5}$) onto the discrete integer lattice.
 
 \subsubsection{Mass Resolution Floor (Margin)}
-The lattice has a finite bit-depth. A mass state can only exist if its coupling energy exceeds the thermal noise floor of the substrate.
-This floor is defined by the Inverse System Capacity ($1/H_{full}$) diluted over the Weak Interaction Aperture:
-
+The lattice has a finite bit-depth, defining a resolution limit or noise floor. For a state to persist, its signal (informational content) must be distinguishable from this floor. The Margin is the cost required to overcome this noise. It is defined by the total informational content of the particle ($L_{embed}$) being sustained against the diluting effects of the substrate's degrees of freedom. This dilution occurs over a specific interaction aperture and cross-section.
 \begin{itemize}
-    \item \textbf{Full Budget ($H_{full} = 31$):} The total structural degrees of freedom.
-    \item \textbf{Weak Aperture ($\sigma+1=6$):} The Interaction Symmetry ($\sigma=5$) plus the Vacuum Unit (1). This is the geometric ``hole'' through which mass is endowed.
-    \item \textbf{Resonant Area ($\Delta^2$):} The geometric cross-section of the fundamental resonance.
+    \item \textbf{Embed Budget ($L_{embed} = 31$):} This is the total information content of the particle state that must be sustained, as derived in Eq. (14). The impedance is thus inversely proportional to this value ($1/L_{embed}$).
+    \item \textbf{Interaction Aperture ($\sigma+1=6$):} The interaction that sustains the particle occurs through the available geometric degrees of freedom. These consist of the $\sigma=5$ force-mediating symmetries plus the single, fundamental degree of freedom of the substrate itself (the scalar field). The total aperture for the interaction is thus $\sigma+1$.
+    \item \textbf{Geometric Cross-Section ($\Delta^2$):} In a causal lattice, an interaction propagates across a 2D surface (a wavefront) defined by one spatial and one temporal dimension. Within one fundamental resonance cycle, the maximum extent of this causal diamond is $\Delta$ in the temporal dimension and $\Delta$ in the spatial dimension (since $c=1$, distance=time). The effective geometric cross-section of the interaction is therefore $\Delta \times \Delta = \Delta^2$.
 \end{itemize}
-
+The total Margin impedance is the inverse of the signal budget, diluted over the product of the interaction aperture and the geometric cross-section.
 \begin{equation}
-    Z_{MAR} = \frac{1}{H_{full} \cdot (\sigma + 1) \cdot \Delta^2} \approx +2.91 \times 10^{-6}
+    Z_{MAR} = \frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2} \approx +2.91 \times 10^{-6}
 \end{equation}
 
 \textbf{Physical Consequence:} This term establishes the Geometric Baseline for the Electron mass. Any charged particle with a coupling lighter than this threshold falls below the resolution limit of the vacuum and spontaneously dissolves into radiation.
 
 \paragraph{The Scale of Matter (Atomic Length):}
-This resolution floor simultaneously determines the spatial scale of the periodic table. The Bohr Radius ($a_0$) emerges as the ratio of the vacuum's geometric impedance to the electron's mass resolution:
+This resolution floor simultaneously determines the spatial scale of the periodic table. The Bohr Radius ($a_0$) emerges as the ratio of the vacuum's geometric impedance (signal strength) to the electron's mass resolution (noise floor).
+
+We identify the electron mass $m_e$ as the physical manifestation of the persistence margin: $m_e$ is set by $Z_{MAR}$ as the minimal resolvable coupling energy. The fine-structure constant is the inverse geometric impedance ($\alpha = 1/Z_{geo}$). Substituting these structural definitions into the Bohr radius formula reveals the vacuum's \textbf{Dynamic Range}—the signal-to-noise ratio of the lattice:
 \begin{equation}
-a_0 = \frac{\hbar}{m_e c \alpha}
+a_0 = \frac{\hbar}{c} \cdot \frac{Z_{geo}}{m_e} \propto \frac{Z_{geo}}{Z_{MAR}}
 \end{equation}
-Because the electron mass ($m_e$) is fixed by the persistence margin ($MAR$) and the coupling ($\alpha$) is fixed by the lattice topology, the \textbf{fundamental scale of chemistry} is structurally locked. This establishes the Angstrom scale ($10^{-10}$ m) as the immutable theater of atomic interaction. While complex atoms vary in effective radius, the underlying unit of atomic architecture is fixed by the lattice resolution.
+(The proportionality absorbs dimensionful constants; in natural units $\hbar = c = 1$, this is the pure ratio $Z_{geo}/Z_{MAR}$.)
+
+Because the electron mass is fixed by the persistence margin ($MAR$) and the coupling is fixed by the lattice topology, the \textbf{fundamental scale of chemistry} is structurally locked. This establishes the Angstrom scale ($10^{-10}$ m) as the immutable theater of atomic interaction. While complex atoms vary in effective radius, the underlying unit of atomic architecture is fixed by the lattice resolution.
 
 \subsection{Numerical Validation}
 Summing the geometric components:
@@ -271,14 +294,14 @@ This relationship reveals that electric charge is not an intrinsic property of t
 
 Furthermore, this explains the quantization of charge. Because $Z_\Phi$ is constructed strictly from integer topological invariants ($\chi, \sigma$) and the lattice resonance ($\Delta$), the resulting flow $e$ is structurally forced to be discrete, consistent with the topological boundary condition ($\chi=2$) established in System 1.
 
-\subsubsection{The Planck Charge Ratio:}
+\subsection{The Planck Charge Ratio:}
 This formulation creates a direct scaling link to the natural unit of the vacuum, the Planck Charge ($q_P = \sqrt{4\pi \epsilon_0 \hbar c}$). The elementary charge appears as the Planck charge attenuated by the square root of the lattice impedance:
 \begin{equation}
 e = \frac{q_P}{\sqrt{Z_\Phi}} \approx \frac{q_P}{11.7}
 \end{equation}
 Physically, this suggests that the electron represents the \textbf{Safe Load Limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts the propagating charge to $\approx 8.5\%$ of this maximum to prevent dielectric breakdown of the lattice. This geometric throttling naturally aligns with the Schwinger Limit of QED; any field attempting to drive a flux higher than this impedance floor spontaneously resolves into pair production, enforcing the capacity limit.
 
-\subsubsection{The Stiffness of the Medium (\texorpdfstring{$Z_0$}{Z0})}
+\subsection{The Stiffness of the Medium (\texorpdfstring{$Z_0$}{Z0})}
 
 This framework recontextualizes the Characteristic Impedance of Free Space ($Z_0 \approx 376.73 \Omega$). In standard physics, $Z_0 = \mu_0 c$. In Informational Energetics, $Z_0$ represents the \textbf{Transmission Resistance} of the lattice substrate itself.
 
