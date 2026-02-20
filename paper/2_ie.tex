@@ -31,12 +31,12 @@ and phase margins} to prevent instability from perturbations \cite{astrom_feedba
 is essential for persistence but often treated as a tunable parameter rather than a structural requirement. IE elevates Margin to a fundamental pillar because, without safety buffers, systems fail statistically even when nominally stable. Persistence requires guaranteed survival, not just average stability.
 
 \begin{description}
-    \item[\textbf{Plant / Actuator:}] The capacity to perform work on the environment.
-    \item[\textbf{Reference Signal (Setpoint):}] A definition of the system's target state, distinct from its environment.
-    \item[\textbf{Feedback Loop / Sensor:}] A channel to communicate the current state of the Plant back to the controller.
-    \item[\textbf{Stability Criterion:}] A mechanism (e.g., negative feedback) to prevent runaway divergence.
-    \item[\textbf{Processing Latency:}] The unavoidable time delay between sensing a deviation and actuating a correction.
-    \item[\textbf{Gain/Phase Margin (Resolution Floor):}] The operational range between the minimum detectable signal (noise floor) and the maximum stable amplification. This defines the system's dynamic range.
+    \item[\textbf{Plant / Actuator}] The capacity to perform work on the environment.
+    \item[\textbf{Reference Signal (Setpoint)}] A definition of the system's target state, distinct from its environment.
+    \item[\textbf{Feedback Loop / Sensor}] A channel to communicate the current state of the Plant back to the controller.
+    \item[\textbf{Stability Criterion}] A mechanism (e.g., negative feedback) to prevent runaway divergence.
+    \item[\textbf{Processing Latency}] The unavoidable time delay between sensing a deviation and actuating a correction.
+    \item[\textbf{Gain/Phase Margin (Resolution Floor)}] The operational range between the minimum detectable signal (noise floor) and the maximum stable amplification. This defines the system's dynamic range.
 \end{description}
 
 The removal of any one of these components leads to catastrophic system failure as discussed in \cref{sec:proof_of_necessity}. They represent the complete, minimal set required for persistence.
@@ -75,30 +75,22 @@ Every system operates upon a \textbf{Substrate}: the physical medium imposing th
 
 IE reframes control systems not as rigid instruction-following, but as active, energetic defense of Identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this 6-pillar feedback architecture possess the stability required to be observable across cosmic timescales.
 
-\subsubsection{The Sign Convention of Entropic Burden}
-To quantify persistence, we define the \textbf{Total Entropic Impedance} ($Z_{IE}$) as the net resistance the system offers to the flow of information. This is calculated as the sum of structural costs minus the sum of organizational efficiencies.
-
-\begin{itemize}
-    \item \textbf{Positive Terms (Costs):} Constraints that require energy to maintain or define (Capacity, Map, Overhead, Margin). These increase the impedance.
-    \item \textbf{Negative Terms (Gains):} Mechanisms that reduce dissipation through improved coordination. The Protocol (PRO) corresponds to the Feedback path in the control loop. In standard negative feedback systems, this signal is \textit{subtracted} from the setpoint ($Error = Reference - Feedback$). Mathematically, this manifests as a negative term in the impedance summation, representing the information required to correct deviations. The Governor (GOV) prevents wasteful divergence. These represent \textbf{structural optimizations}, the difference between a disorganized system (high dissipation) and an organized one (low dissipation), not a violation of thermodynamics but a reduction in entropic burden.
-\end{itemize}
-
-Thus, the general form of the impedance equation is:
-\begin{equation}
-\label{eq:IE_pillars}
-\begin{split}
-{} & Z_{IE} = \\ 
-&  \underbrace{CAP}_{\text{Capacity}}
-+ \underbrace{MAP}_{\text{Map}}
-- \underbrace{PRO}_{\text{Protocol}}
-- \underbrace{GOV}_{\text{Governor}}
-+ \underbrace{TOL}_{\text{Toll}}
-+ \underbrace{MAR}_{\text{Margin}}
-\end{split}
-\end{equation}
-
 The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum and the geometric derivation of the fine-structure constant ($\alpha^{-1}$), the IE framework states that all systems that persist are specific solutions to this same universal architecture. If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
 
+\subsubsection{The Entropic Balance Sheet}
+
+To quantify persistence, we distinguish between components that consume resources (Structural Burdens) and components that reduce dissipation (Organizational Efficiencies). 
+\begin{itemize}
+    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries (CAP, MAR), storing internal models (MAP), and the irreversible cost of state updates (TOL). These terms increase the impedance.
+
+    \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol (PRO) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor (GOV) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
+\end{itemize}
+The \textbf{Net Entropic Impedance} ($Z_{IE}$) is the algebraic sum of these contributions:
+
+\begin{equation}
+    Z_{IE} = \underbrace{(CAP + MAP + TOL + MAR)}_{\text{Structural Costs}} 
+           - \underbrace{(PRO + GOV)}_{\text{Organizational Gains}}
+\end{equation}
 
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
@@ -118,7 +110,7 @@ Since the removal of any component results in termination, the set $\mathbb{P}$ 
 
 To demonstrate sufficiency, we note that any stable control system requires exactly these components. Control theory provides no additional fundamental requirements beyond Plant, Setpoint, Feedback, Stability, Latency, and Robustness. Any proposed seventh pillar would necessarily decompose into combinations of these six primitive functions.
 
-\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the MAP ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
+\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Map ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
 Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of Logistic Maps/Bifurcation. It is important to note that the system derived here, the Vacuum (System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
