@@ -1,17 +1,20 @@
 \section{System 2: The Geometric Impedance (\texorpdfstring{$\alpha^{-1}$}{alpha\string^-1}), the  cost of sustaining topological charge against the lattice flux}
 \label{sec:system2_geometric_impedance}
 
-\CatchFileBetweenTags{\AlphaInvVal}{calculations/constants.tex}{AlphaInvVal}
+\CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-\CatchFileBetweenTags{\AlphaInvExperimentalValue}{calculations/constants.tex}{AlphaInvExperimentalValue}
-\CatchFileBetweenTags{\AlphaInvAccText}{calculations/constants.tex}{AlphaInvAccText}
+\CatchFileBetweenTags{\AlphaInvExperimentalValue}{constants.tex}{AlphaInvExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvAccText}{constants.tex}{AlphaInvAccText}
 
-\CatchFileBetweenTags{\AlphaInvMorelExperimentalValue}{calculations/constants.tex}{AlphaInvMorelExperimentalValue}
-\CatchFileBetweenTags{\AlphaInvMorelAccText}{calculations/constants.tex}{AlphaInvMorelAccText}
+\CatchFileBetweenTags{\AlphaInvMorelExperimentalValue}{constants.tex}{AlphaInvMorelExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvMorelAccText}{constants.tex}{AlphaInvMorelAccText}
 
-\CatchFileBetweenTags{\VonKlitzingVal}{calculations/constants.tex}{VonKlitzingVal}
-\CatchFileBetweenTags{\VonKlitzingExperimentalValue}{calculations/constants.tex}{VonKlitzingExperimentalValue}
-\CatchFileBetweenTags{\VonKlitzingAccText}{calculations/constants.tex}{VonKlitzingAccText}
+\CatchFileBetweenTags{\AlphaInvParkerExperimentalValue}{constants.tex}{AlphaInvParkerExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvParkerAccText}{constants.tex}{AlphaInvParkerAccText}
+
+\CatchFileBetweenTags{\VonKlitzingVal}{constants.tex}{VonKlitzingVal}
+\CatchFileBetweenTags{\VonKlitzingExperimentalValue}{constants.tex}{VonKlitzingExperimentalValue}
+\CatchFileBetweenTags{\VonKlitzingAccText}{constants.tex}{VonKlitzingAccText}
 
 Having established the Lattice Substrate (System 1), we now determine the vacuum's primary boundary condition: the Fine-Structure Constant ($\alpha$) at the zero-momentum limit ($q^2 \to 0$).
 
@@ -199,7 +202,7 @@ State transitions (Time) are not free; they require selecting a specific address
 
 This impedance cost is the inverse of the probability of a successful state transition, which requires satisfying three independent constraints simultaneously:
 \begin{enumerate}
-    \item \textbf{State Selection ($1/N^3$):} A transition requires selecting one specific configuration. Given the $N=32$ state channels and the $D_{space}=3$ spatial dimensions for addressing, the probability of selecting a single state in the volumetric phase space scales as $1/N^3$. This is the entropic cost of localization.
+    \item \textbf{State Selection ($1/N^3$):} The lattice substrate encodes state transitions as three-point interactions, reflecting the fundamental vertex structure of quantum fields. Each leg of the interaction requires independent selection from the $N=32$ available chiral channels, yielding the $1/N^3$ suppression as the entropic cost of selecting one specific transition from the available configuration space.
     \item \textbf{Boundary Coupling ($\chi/\sigma$):} For a transition to be persistent (i.e., update the particle's state), the interaction must couple to its topological boundary. The boundary itself is defined by $\chi=2$ degrees of freedom (e.g., spherical coordinates). The interaction is mediated by the force symmetry, which has $\sigma=5$ degrees of freedom. The probability of a random interaction successfully coupling to the boundary is therefore the ratio of the target degrees of freedom to the interacting degrees of freedom, $P_{couple} = \chi/\sigma$.
     \item \textbf{Channel Availability ($1 - \sigma/D\Delta$):} The transition must occur through an available spacetime channel. As defined previously, the Manifold Channel Capacity is $C_M = D\Delta$. The symmetry overhead $\sigma$ renders a fraction of these channels unavailable. The probability of selecting an open channel is thus the fraction of remaining capacity, $P_{avail} = (C_M-\sigma)/C_M = 1 - \sigma/D\Delta$.
 \end{enumerate}
@@ -244,12 +247,33 @@ Summing the geometric components:
 \end{equation}
 
 \begin{itemize}
-    \item \textbf{Experimental CODATA Average (2022):} \AlphaInvExperimentalValue
+    \item \textbf{CODATA Average (2022):} \AlphaInvExperimentalValue
     \item \textbf{Precision:} \AlphaInvAccText
 
-    \item \textbf{Morel Value (2020):} \AlphaInvMorelExperimentalValue
+    \item \textbf{Morel (2020):} \AlphaInvMorelExperimentalValue
     \item \textbf{Precision:} \AlphaInvMorelAccText    
+
+    \item \textbf{Parker (2018):} \AlphaInvParkerExperimentalValue
+    \item \textbf{Precision:} \AlphaInvParkerAccText    
 \end{itemize}
+
+\begin{comment}
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Source} & \textbf{Value ($\alpha^{-1}$)} & \textbf{$\Delta$} \\
+\midrule
+IE & $\qty{\AlphaInvVal \pm 0.0}{}$ & --- \\
+CODATA (2022) & \AlphaInvExperimentalValue & $1.68\sigma$ \\
+Morel  (2020) & \AlphaInvMorelExperimentalValue & $0.58\sigma$ \\
+Parker (2018) & \AlphaInvParkerExperimentalValue & $6.16\sigma$ \\
+\bottomrule
+\end{tabular}
+\caption{Numerical comparison of the IE theoretical derivation against experimental standards.}
+\label{tab:alpha_comparison}
+\end{table}
+\end{comment}
 
 \subsection{Physical Manifestation: The Von Klitzing Constant (\texorpdfstring{$R_K$}{RK})}
 To check the interpretation of $\alpha^{-1}$ as a physical impedance rather than merely a dimensionless coupling, we derive the Quantum of Resistance, the Von Klitzing Constant measured in the Quantum Hall Effect (QHE).

@@ -15,6 +15,12 @@
 }
 \sisetup{separate-uncertainty=true, multi-part-units=single}
 \usepackage{graphicx}
+\graphicspath{{calculations/}}
+
+\makeatletter
+\providecommand*{\input@path}{}
+\g@addto@macro\input@path{{calculations/}} % Add your folder here
+\makeatother
  
 \makeatletter
 \let\l@de\l@ngerman
@@ -28,6 +34,7 @@
 \usepackage{mdframed}
 \usepackage{xcolor}
 \usepackage{catchfilebetweentags} 
+\usepackage{verbatim}
 
 % Features
 \usepackage[pdfencoding=auto]{hyperref}
@@ -44,29 +51,31 @@
 
 \date{\today}
 
-\input{paper/0_abstract}
+\input{0_abstract}
 
 \maketitle % Generates the title block
 
 % Main Content
-\input{paper/1_introduction}
-\input{paper/2_ie}
+\input{1_introduction}
+\input{2_ie}
 
-% physics test
-\input{paper/3_system0_specification}
-\input{paper/4_system1_projection}
-\input{paper/5_system2_impedance}
+% Physics Test
+\input{3_system0_specification}
+\input{4_system1_projection}
+\input{5_system2_impedance}
 
-\input{paper/6_conclusion}
-
-\appendix
-\input{paper/1_appendix_geometric_origins_of_chiral_fermions}
+\input{6_conclusion}
 
 % Bibliography
-\bibliography{paper/references}
+\bibliography{references}
+
+\appendix
+\input{1_appendix_geometric_origins_of_chiral_fermions}
 
 \end{document}
 
 % Submit to nlin.AO (Adaptation and Self-Organizing Systems) or maybe physics.gen-ph (General Physics)
 % For a journal Complexity ideally or Foundations of Physics
-% Follow up would be simply applying IE to the "Error-Threshold" Paradox which it solves.
+% Follow idea would be applying IE to the "Error-Threshold" Paradox which it solves.
+
+\typeout{get arXiv to do 4 passes: Label(s) may have changed. Rerun}
