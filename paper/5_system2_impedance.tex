@@ -182,7 +182,7 @@ Since the six pillars operate on disjoint geometric degrees of freedom within th
 
 \textbf{Why linear?} In lattice natural units ($\hbar = \ell = c = 1$), action is a dimensionless count of elementary operations. The lattice enforces three constraints: \textit{discreteness} (operations are atomic), \textit{minimality} (no sub-steps), and \textit{additivity} (independent costs sum). Cross-terms would require interference between orthogonal sectors; the $D_4 \oplus D_4$ decomposition forbids this.
 
-The speed of light $c \equiv 1$ sets the maximum rate of causal propagation: information traverses exactly one lattice spacing per update cycle. This maximal propagation rate is the relativistic analogue of the Shannon channel capacity the fundamental bound on information transfer through the substrate.
+The speed of light $c \equiv 1$ sets the maximum rate of causal propagation: information traverses exactly one lattice spacing per update cycle. This maximal propagation rate is the relativistic analogue of the Shannon channel capacity: the fundamental bound on information transfer through the substrate.
 
 With $\hbar = \ell = c = 1$, all coefficients in \cref{eq:alpha_inverse} are fixed integers or geometric constants; no continuous parameters remain available for tuning.
 
@@ -212,13 +212,7 @@ Summing the geometric components:
     \alpha^{-1}_{calc} = \mathbf{\AlphaInvVal}
 \end{equation}
 
-Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$).
-
-The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $0.58\sigma$, but deviates by $\sim 3\sigma$ from Fan (2023). The deviation between the geometric prediction and the Fan (2023) extraction is consistent with the expected quantization noise of projecting continuous geometry onto a discrete integer lattice, a systematic effect that pure kinematic measurements do not inherit.
-
-Morel's kinematic recoil measures the literal macroscopic impedance of the lattice substrate. Fan's measurement relies heavily on extracting $\alpha$ via the Standard Model's 5-loop (10th-order) QED perturbative expansion. Because QED assumes a continuous spacetime manifold, evaluating infinite-resolution continuous loop integrals introduces systematic deviation when approximating a fundamentally discrete integer lattice (the $E_8 \to D_4$ projection). 
-
-By deriving $\alpha^{-1}$ purely from discrete geometric invariants without perturbative continuous loops, the theory provides a structural vote in the current metrological debate: it predicts that pure kinematic measurements represent the true hardware limit of the vacuum, and that future consensus will converge toward the Morel value.
+Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). CODATA (2022) is not an independent measurement, it synthesizes all available experimental data into a recommended value, and its uncertainty reflects the tension between conflicting inputs rather than a single clean result.
 
 \begin{table}[h]
 \centering
@@ -226,18 +220,21 @@ By deriving $\alpha^{-1}$ purely from discrete geometric invariants without pert
 \toprule
 \textbf{Source} & \textbf{Value ($\alpha^{-1}$)} & \textbf{$\sigma$} \\
 \midrule
-E8 & \qty{\AlphaInvVal} & - \\
 Morel  (2020) & \AlphaInvMorelExperimentalValue & $0.58$ \\
-CODATA (2022) & \AlphaInvExperimentalValue & $1.68$ \\
 Fan (2023) & \AlphaInvFanExperimentalValue & $3.09$\\
 Parker (2018) & \AlphaInvParkerExperimentalValue & $6.16$ \\
+CODATA (2022) & \AlphaInvExperimentalValue & $1.68$ \\
 \bottomrule
 \end{tabular}
 \caption{Numerical comparison of the $E_8$-Persistence theory theoretical derivation against experimental values.}
 \label{tab:alpha_comparison}
 \end{table}
 
-\paragraph{Corollary: Quantization of Charge}
+The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $0.58\sigma$, but deviates by $\sim 3\sigma$ from Fan (2023). The deviation may reflect a fundamental difference in methodology: Fan extracts $\alpha$ via 5-loop QED assuming continuous spacetime, while the geometric derivation assumes discrete lattice structure. The $\sim 3\sigma$ tension is consistent with the scale of quantization noise expected from this mismatch.
+
+By deriving $\alpha^{-1}$ purely from discrete geometric invariants without perturbative continuous loops, the theory provides a structural prediction in the current metrological debate: it predicts that pure kinematic measurements probe the substrate directly, and that future consensus will converge toward the Morel value.
+
+\subsection{Corollary: Quantization of Charge}
 The geometric impedance $Z_{geo}$ fixes the electromagnetic coupling $\alpha$. By the standard definition $\alpha = e^2/(4\pi\epsilon_0\hbar c)$, the elementary charge is:
 \begin{equation}
 e = \sqrt{\frac{4\pi\epsilon_0\hbar c}{Z_{geo}}}
@@ -266,8 +263,7 @@ Combining these:
     \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingExperimentalValue
     \item \textbf{Precision:} \VonKlitzingAccText
 \end{itemize}
-This precision reflects the internal geometric consistency of the derivation rather than an independent experimental test: since $R_K$ and $\alpha^{-1}$ are related by definition in the Standard Model, this result confirms that the geometric impedance is self-consistent with the electromagnetic sector, not that it 
-constitutes a second independent measurement.
+This precision confirms the geometric framework's internal consistency: $R_K$ and $\alpha^{-1}$ are related by definition in the Standard Model, and both emerge from the same substrate geometry in $E_8$-Persistence. This is not a second independent measurement but a confirmation of geometric self-consistency.
 
 The flatness of QHE plateaus ($R = R_K/n$ regardless of impurities) reflects the lattice's discrete bit-depth: resistance is quantized by channel count, offering a structural origin for the topological protection traditionally attributed to electron wavefunction topology (Chern numbers) \cite{thouless_quantized_1982, kohmoto_topological_1985}.
 
@@ -285,8 +281,8 @@ e = \frac{q_P}{\sqrt{Z_{geo}}} \approx \frac{q_P}{\ChargeAtten}
 \paragraph{Safe Load Limit:} The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \ChargeRatioPct$ of this maximum. 
 
 \paragraph{Vacuum Breakdown as Capacity Limit (Schwinger Limit):} 
-The Schwinger critical field $E_c = m_e^2 c^3/e\hbar$ marks where external electric fields spontaneously produce $e^+e^-$ pairs. The Coulomb field of an elementary charge evaluated at the reduced Compton wavelength $\lambdabar_C = \hbar/m_e c$ is precisely $\alpha$ times weaker:
+The Schwinger critical field $E_c = m_e^2 c^3/e\hbar$ marks where external electric fields spontaneously produce $e^+e^-$ pairs. The Coulomb field of an elementary charge evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$ is precisely $\alpha$ times weaker:
 \begin{equation}
-\frac{e}{4\pi\epsilon_0 \lambdabar_C^2} = \alpha E_c = \frac{E_c}{Z_{geo}}
+\frac{e}{4\pi\epsilon_0 \lambdabar^2} = \alpha E_c = \frac{E_c}{Z_{geo}}
 \end{equation}
 The geometric impedance $Z_{geo} \approx 137$ therefore represents the \textbf{safety factor} between the characteristic field of a fundamental charge and the vacuum breakdown threshold. Any localized excitation attempting to concentrate flux beyond this margin hits the non-linear Schwinger ceiling, resolving into particle-antiparticle pairs, enforcing the substrate's capacity limit.
