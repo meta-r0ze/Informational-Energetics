@@ -1,5 +1,5 @@
 \section{System 0: The Specification, The architectural requirements for persistence: Finiteness, Unitarity, Causality}
-\label{sec:System0_vacuum_specification}
+\label{sec:System0_vacuum_requirements}
 The principles of Informational Energetics, if truly universal, must apply to the most fundamental layer of reality: the vacuum itself. We now perform the critical act of translation of the universal architecture of persistence to this specific domain to determine the unique configuration that minimizes the Net Entropic Impedance ($Z_{IE}$) to its theoretical floor. In this view, the universe is not a static given, but a self-optimizing physical system subject to the same architectural constraints governing information, energy, and stability necessary for any entity to persist.
 
 The translation of IE's six universal pillars into the specific language of physics yields three non-negotiable requirements for the substrate of reality:
@@ -9,9 +9,10 @@ The translation of IE's six universal pillars into the specific language of phys
     \item \textbf{Causality:} ($GOV, TOL$) To enforce a well-defined temporal evolution.
 \end{itemize}
 
-The remainder of this section will derive these three properties in detail, building the complete abstract specification for a persistent universe.
+The remainder of this section will derive these three properties in detail, building the complete requirements for a persistent universe.
 
 \subsection{Persistence Requires \texorpdfstring{$CAP, MAR$}{CAPMAR} via Finiteness}
+\label{sec:finiteness}
 For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Persistence Margin} pillars.
 
 \begin{itemize}
@@ -24,7 +25,7 @@ For the vacuum to persist, its definition must be self-consistent. A system defi
 To minimize Algorithmic Complexity, the substrate must be \textbf{Homogeneous}. In Algorithmic Information Theory, the structural complexity of a random graph scales with its size ($K(S) \propto N$). For the universe to be scalable without additional processing overhead, its Kolmogorov Complexity must be $O(1)$, independent of size. This requires that the local topology be the same regardless of location, minimizing the structural description to a single, repeating rule.
 
 \begin{itemize}
-    \item \textbf{The Requirement:} The universe must be a \textbf{Lattice}, a structure that is both discrete (finite) and translationally invariant (ordered) rather than a continuous manifold or a random graph.
+    \item \textbf{The Requirement:} The universe must be a \textbf{Lattice}, a structure that is both discrete (finite) and has a constant structure in every direction (regular) rather than a continuous manifold or a random graph.
 \end{itemize}
 
 \subsection{Persistence Requires \texorpdfstring{$MAP, PRO$}{I MI} via Unitarity}
@@ -35,7 +36,7 @@ For the vacuum to persist, it must maintain a stable Map over time. This require
 \begin{equation}
     |\mathbf{v}|^2 \geq 0 \quad \forall \mathbf{v} \neq 0
 \end{equation}
-A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|\mathbf{v}_1|^2 + |\mathbf{v}_2|^2 = 0$), which violates the \textbf{Finiteness} pillar. Therefore, the \textbf{substrate} must be Euclidean.\footnote{The \textbf{observed} Lorentzian signature of spacetime ($-,+,+,+$) emerges from the causal projection to encode complex chiral states, see \cref{sec:metric_signature}.}
+A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|\mathbf{v}_1|^2 + |\mathbf{v}_2|^2 = 0$), which violates the \textbf{Finiteness} pillar. Therefore, the \textbf{substrate} must be Euclidean.\footnote{The \textbf{observed} Lorentzian signature $(-,+,+,+)$ emerges from the causal projection derived in \cref{sec:metric_signature}. The Euclidean substrate here concerns informational stability of the Map, distinct from the energetic vacuum stability of Lorentzian QFT, which is not in question.}
 
 \subsubsection{Lattice Must Be Mappable to a Torus}
 To satisfy \textbf{Finiteness}, the system must be spatially bounded. To satisfy \textbf{Protocol} (Unitarity), it must be closed (no edges). While a sphere satisfies closure, a regular lattice cannot be mapped onto curved geometry without defects. The unique topology that satisfies Finiteness (bounded), Unitarity (closed), and Invariance (flat) is the \textbf{Torus} ($T^n$).
@@ -59,7 +60,7 @@ By the Poisson Summation formula, the partition function transforms as:
 \end{equation}
 For the Map to remain invariant ($Z_{\Lambda} = Z_{\Lambda^*}$), the lattice must be \textbf{Self-Dual} ($\Lambda = \Lambda^*$). This strictly enforces \textbf{Unimodularity} ($\text{vol}(\Lambda) = 1$), as the only scalar satisfying $V = 1/V$ is $1$. Any other volume introduces an irreversible scaling factor, violating Unitarity.
 
-\textbf{Specification:} The lattice of the vacuum must be \textbf{Positive Definite, Unimodular, Even, and Self-Dual}.
+\textbf{Requirements:} The lattice of the vacuum must be \textbf{Positive Definite, Unimodular, Even, and Self-Dual}.
 
 \subsection{Persistence Requires \texorpdfstring{$GOV, TOL$}{GT} via Causality}
 \label{sec:Delta_gt_N}
@@ -74,11 +75,11 @@ For the vacuum to persist, it must not only exist stably but also \textit{evolve
     \item \textbf{The Requirement:}
     By the Pigeonhole Principle, if $\Delta \leq N$, multiple distinct states must map to the same temporal coordinate. This results in \textbf{Causal Aliasing}: distinct information states become indistinguishable in time, destroying the system's ability to maintain a well-defined history. 
 
-    \item \textbf{Specification:}
+    \item \textbf{Requirement:}
     To enforce a strict arrow of time and satisfy the \textbf{Causality} requirement, the projection must satisfy the \textbf{Persistence Inequality}: $\Delta > N$. The temporal container must strictly exceed the information content it holds.
 \end{itemize}
 
-\subsection{Summary: The Architectural Specification of the Vacuum}
+\subsection{Summary: The Architectural Requirement of the Vacuum}
 From applying IE, we have derived three non-negotiable architectural constraints for the substrate of reality: \textbf{Finiteness, Unitarity, and Causality}. These constraints constitute the complete specification of System 0. These constraints imply the following requirements:
 
 \begin{enumerate}

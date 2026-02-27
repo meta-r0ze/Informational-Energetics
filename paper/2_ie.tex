@@ -7,12 +7,12 @@ Informational Energetics (IE) is a theoretical framework designed to derive the 
 
 \subsection{The Selection Principle}
 
-The foundational premise of IE is not teleological but \textbf{selectionist}: configurations that fail to persist leave no trace, while configurations that persist constitute the observable universe. This is not a statement about what systems ``want,'' but about what remains after entropic selection.
+The foundational premise of IE is \textbf{selectionist} rather than teleological: configurations that fail to persist leave no trace, while configurations that persist constitute the observable universe. This is not a statement about what systems ``want,'' but about what remains after entropic selection.
 
-We formalize this as the \textbf{Persistence Filter}:
+We formalize this as the \textbf{Selection Principle}:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
-    \textbf{Selection Principle}: Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable. The Persistence Value ($P$) quantifies this selection: $P \propto 1/S_\Phi$.
+    Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable. The Persistence Value ($P$) quantifies this selection: $P \propto 1/S_\Phi$.
 \end{mdframed}
 
 This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all, whether observed or not.
@@ -24,7 +24,7 @@ While open systems (such as biological organisms) persist by maintaining a non-e
 
 To persist, any system must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
 
-To rigorously derive this architecture, we model a persistent entity not as a static object, but as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy). The stability of any such system is governed by a well-defined set of mathematical requirements (e.g., Lyapunov stability, Nyquist criterion).
+To rigorously derive this architecture, we model a persistent entity as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy). The stability of any such system is governed by a well-defined set of mathematical requirements (e.g., Lyapunov stability, Nyquist criterion).
 
 \subsubsection{The Necessary Components of Control}
 
@@ -61,7 +61,7 @@ To facilitate this translation between engineering and ontology, we define the S
     The irreducible energy cost of state transitions and information erasure (Landauer’s Limit). (Processing Latency)
    
     \item \textbf{The Margin ($MAR$):} \textit{The Buffer.}
-    The structural and energetic reserves held to absorb stochastic shocks. It defines the system's 'Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin)
+    The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin)
 \end{enumerate}
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
@@ -74,7 +74,7 @@ The mapping of IE to specific physical domains is inherently adaptive. While the
 
 To quantify persistence, we distinguish between components that consume resources (Structural Burdens) and components that reduce dissipation (Organizational Efficiencies). 
 \begin{itemize}
-    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries (CAP, MAR), storing internal models (MAP), and the irreversible cost of state updates (TOL). These terms increase the impedance.
+    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries (CAP, MAR), storing internal models (MAP), and the irreversible cost of state updates (TOL). These terms increase impedance.
 
     \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol (PRO) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor (GOV) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
@@ -98,7 +98,7 @@ We demonstrate the necessity of the set $\mathbb{P}$ = $\{CAP,$ $MAP$, $PRO$, $G
     \item \textbf{No Map ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
     \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
     \item \textbf{No Governor ($GOV \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Toll ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating the \textbf{Finiteness} pillar. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
+    \item \textbf{No Toll ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating a \textbf{Finiteness} constraint. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
     \item \textbf{No Margin ($MAR \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $MAR > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($MAR \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
 \end{itemize}
 

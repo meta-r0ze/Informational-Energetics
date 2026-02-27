@@ -2,21 +2,11 @@
 \section{Geometric Origin of Chiral Fermions}
 \label{app:geometric_origins_of_chiral_fermions}
 
-Distler and Garibaldi \cite{distler_there_2010} provided a rigorous service to the field of physics by demonstrating that a continuous, algebraic embedding of the Standard Model within $E_8$ cannot accommodate chiral fermions without introducing unobserved ``mirror fermions.''
+Distler and Garibaldi \cite{distler_there_2010} demonstrated that a signature-preserving embedding of the Standard Model within $E_8$ cannot accommodate chiral fermions without unobserved mirror partners. Their theorem holds for all embeddings where the algebraic structure remains Euclidean $(8,0)$.
 
-The $E_8$-Persistence framework circumvents this ``No-Go'' theorem by operating in a fundamentally different mathematical domain: \textbf{Geometric Projection} rather than Algebraic Embedding. The chirality of the Standard Model emerges not from the Lie algebra itself, but from the metric signature change required to project the Euclidean lattice onto a causal Lorentzian manifold.
+The $E_8$-Persistence theory employs Metric Projection $(8,0) \to (1,3)$, derived in \cref{sec:metric_signature}, which lies outside this assumption. As established there, the mirror sector retains Euclidean signature $(4,0)$ and therefore lacks a timelike generator.
 
-This appendix summarizes the derivation in \cref{sec:metric_signature} within the context of the Distler-Garibaldi constraints, demonstrating that our mechanism does not contradict their theorem but lies outside its assumptions.
+\subsection{Formal Resolution}
+The Distler-Garibaldi constraint assumes a \textit{signature-preserving} embedding. We explicitly break this assumption. The projection $\pi: \mathfrak{e}_8 \to \mathfrak{so}(1,3)$ induces a kernel $\text{ker}(\pi)$ containing the mirror states. Because $\text{ker}(\pi)$ lacks a timelike generator $\partial_t$, states $\psi \in \text{ker}(\pi)$ satisfy the stationary condition $\hat{H}\psi = 0$, rendering them \textit{kinematic shadows} relative to the Lorentzian observer. Mirror fermions are therefore \textit{kinematically suppressed}: they neither propagate on the observable 4D manifold nor contribute to zero-point vacuum energy, as $\omega = 0$ renders their zero-point contribution $\frac{1}{2}\hbar\omega$ identically null.
 
-\subsection{The Distler-Garibaldi Constraint}
-The theorem holds for all \textbf{signature-preserving} embeddings, where the algebraic structure of the vacuum remains Euclidean or Compact ($8,0$). Under these conditions, the embedding is achiral; for every left-handed fermion, a right-handed mirror partner must exist to preserve the symmetry of the group.
-
-\subsection{The Geometric Resolution: Signature-Induced Chirality}
-
-The $E_8$-Persistence theory utilizes \textbf{Metric Projection} involving a signature change ($8,0 \to 3,1$). By explicitly changing the metric signature, the projector $P_L$ acts as a \textbf{Chiral Filter}.
-
-The introduction of the time-like metric axis forces the decoupling of the ``Mirror'' sector to preserve norm positivity. The mirror fermions required by $E_8$ symmetry still exist in the mathematical structure of the lattice, but they reside in the orthogonal $D_4$ complement (Sector A).
-
-Crucially, the temporal metric signature ($dt^2 < 0$) is unique to the spacetime sector (Sector B). The mirror sector remains purely Euclidean ($4,0$) relative to the observer. Lacking a timelike coordinate, the mirror states possess no generator for time evolution ($\partial_t \psi_{mirror} = 0$).
-
-Therefore, the mirror fermions are \textbf{geometrically orthogonal} to the observer's timeline. They are not erased; they are causally disconnected. They cannot propagate as dynamic fields in the Lorentzian manifold, effectively rendering the observable physics chiral without violating the underlying $E_8$ symmetry.
+This mechanism establishes chirality as a \textit{geometric filter} rather than an algebraic input, satisfying the Distler-Garibaldi constraint by violation of its premise: the preservation of the Euclidean metric.
