@@ -13,7 +13,7 @@ The remainder of this section will derive these three properties in detail, buil
 
 \subsection{Persistence Requires \texorpdfstring{$CAP, MAR$}{CAPMAR} via Finiteness}
 \label{sec:finiteness}
-For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Persistence Margin} pillars.
+For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory. IE resolves this by enforcing finiteness as a primary requirement of existence. This corresponds to the \textbf{Capacity} and \textbf{Margin} pillars.
 
 \begin{itemize}
     \item \textbf{The Logic:} Information is physical and requires energy to store \cite{landauer_irreversibility_1961}. A continuous volume, containing infinite potential information, would therefore possess infinite energy and instantly collapse into a singularity.
@@ -28,8 +28,10 @@ To minimize Algorithmic Complexity, the substrate must be \textbf{Homogeneous}. 
     \item \textbf{The Requirement:} The universe must be a \textbf{Lattice}, a structure that is both discrete (finite) and has a constant structure in every direction (regular) rather than a continuous manifold or a random graph.
 \end{itemize}
 
-\subsection{Persistence Requires \texorpdfstring{$MAP, PRO$}{I MI} via Unitarity}
-For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. Since the vacuum \textit{is} the environment, there is no external system to which information can be lost. Therefore, the vacuum must be a perfectly closed and lossless information network. This is the requirement of Unitarity, which maps to the \textbf{Protocol} and \textbf{Map} pillars.
+\subsection{Persistence Requires \texorpdfstring{$MAP, PRO$}{MAPPRO} via Unitarity}
+For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. Because the vacuum is the totality of the system, it possesses no external 
+environment. It cannot offload entropy, nor can it rely on an external configuration memory to store its structural parameters. Therefore, the vacuum must be a perfectly closed and lossless information network, a \textbf{Closure Constraint} that makes Unitarity a structural necessity, not merely a mathematical 
+convenience. This maps to the \textbf{Protocol} and \textbf{Map} pillars.
 
 \subsubsection{Lattice Must Be Positive Definite}
 \textit{Information-Theoretic Justification}: In a metric space, the norm $|\mathbf{v}|^2 = g_{\mu\nu}v^\mu v^\nu$ represents the information distance from the origin (reference state). For the system to have a well-defined minimum energy configuration (stable ground state), this distance must satisfy:
@@ -52,7 +54,7 @@ A stable Map requires path independence, which in turn requires evenness. A pers
 This requires $Z(\beta)$ to be single-valued under the modular transformation $T: \tau \to \tau+1$. The Jacobi Theta Function, $\Theta_\Lambda(\tau) = \sum e^{i \pi \tau |\mathbf{v}|^2}$, counts these states. For \textbf{Even} lattices ($|\mathbf{v}|^2 = 2n$), the exponent $2\pi i n \tau$ is invariant under the shift. However, any odd-norm vector ($|\mathbf{v}|^2 = 2n+1$) introduces a sign inversion ($\Theta \to -\Theta$), rendering the Map multi-valued. Thus, the lattice must be \textbf{Even}.
 
 \subsubsection{Lattice Must Be Self-Dual and Unimodular (Read/Write Symmetry)}
-To prevent information loss via destructive interference or Landauer erasure, the encoding operation (write) and the decoding operation (read) must be informationally equivalent. This is enforced by the modular $S$-transformation ($S: \tau \to -1/\tau$), which maps the lattice to its reciprocal (Fourier dual).
+To prevent information loss via destructive interference or Landauer erasure, the encoding operation (write) and the decoding operation (read) must be informationally equivalent. This is enforced by the modular transformation $S: \tau \to -1/\tau$, which maps the lattice to its reciprocal (Fourier dual).
 
 By the Poisson Summation formula, the partition function transforms as:
 \begin{equation}

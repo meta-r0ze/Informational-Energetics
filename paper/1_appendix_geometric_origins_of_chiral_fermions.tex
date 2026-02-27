@@ -1,12 +1,17 @@
 \crefalias{section}{appendix}
 \section{Geometric Origin of Chiral Fermions}
-\label{app:geometric_origins_of_chiral_fermions}
+\label{app:geometric_origin_of_chiral_fermions}
 
 Distler and Garibaldi \cite{distler_there_2010} demonstrated that a signature-preserving embedding of the Standard Model within $E_8$ cannot accommodate chiral fermions without unobserved mirror partners. Their theorem holds for all embeddings where the algebraic structure remains Euclidean $(8,0)$.
 
-The $E_8$-Persistence theory employs Metric Projection $(8,0) \to (1,3)$, derived in \cref{sec:metric_signature}, which lies outside this assumption. As established there, the mirror sector retains Euclidean signature $(4,0)$ and therefore lacks a timelike generator.
+The $E_8$-Persistence theory employs the symmetric decomposition $E_8 \to D_4 \oplus D_4$ (derived in \cref{sec:symmetric_decomposition}) coupled with the Metric Projection $(8,0) \to (1,3)$ (derived in \cref{sec:metric_signature}), which falls outside this assumption. As established in \cref{sec:metric_signature}, the internal symmetry sector retains the original Euclidean signature $(4,0)$ and therefore lacks a timelike generator.
 
 \subsection{Formal Resolution}
-The Distler-Garibaldi constraint assumes a \textit{signature-preserving} embedding. We explicitly break this assumption. The projection $\pi: \mathfrak{e}_8 \to \mathfrak{so}(1,3)$ induces a kernel $\text{ker}(\pi)$ containing the mirror states. Because $\text{ker}(\pi)$ lacks a timelike generator $\partial_t$, states $\psi \in \text{ker}(\pi)$ satisfy the stationary condition $\hat{H}\psi = 0$, rendering them \textit{kinematic shadows} relative to the Lorentzian observer. Mirror fermions are therefore \textit{kinematically suppressed}: they neither propagate on the observable 4D manifold nor contribute to zero-point vacuum energy, as $\omega = 0$ renders their zero-point contribution $\frac{1}{2}\hbar\omega$ identically null.
 
-This mechanism establishes chirality as a \textit{geometric filter} rather than an algebraic input, satisfying the Distler-Garibaldi constraint by violation of its premise: the preservation of the Euclidean metric.
+The Distler-Garibaldi constraint assumes a \textit{signature-preserving} embedding. We explicitly violate this assumption. Rather than an algebraic homomorphism, we perform a geometric subspace restriction onto the observable Lorentzian manifold $SO(1,3)$. The orthogonal degrees of freedom—which contain the mirror states—reside strictly within the Euclidean internal sector. 
+
+Because this Euclidean sector lacks a macroscopic timelike generator $\partial_t$ (a direct consequence of the \textbf{Causality} requirement in \cref{sec:metric_signature}), the mirror states $\psi_{mirror}$ satisfy the stationary condition $\partial_t \psi_{mirror} = 0$, rendering them \textit{kinematic shadows} relative to the Lorentzian observer.
+
+Mirror fermions are therefore \textit{kinematically suppressed}: they neither propagate on the observable 4D manifold nor contribute to zero-point vacuum energy, as $\omega = 0$ renders their zero-point contribution null.
+
+This mechanism establishes chirality as a \textit{geometric filter} rather than an algebraic input, satisfying the Distler-Garibaldi constraint by violating its premise: the preservation of the Euclidean metric.

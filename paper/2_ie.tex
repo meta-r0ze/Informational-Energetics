@@ -17,7 +17,7 @@ We formalize this as the \textbf{Selection Principle}:
 
 This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all, whether observed or not.
 
-While open systems (such as biological organisms) persist by maintaining a non-equilibrium steady state through the continuous flux of energy and matter from their environment, for a closed system persistence operates as a filter: configurations minimize entropic action or dissolve, as there is no external energy source to offset dissipation.
+While open systems (such as biological organisms) persist by maintaining a non-equilibrium steady state through the continuous flux of energy and matter from their environment, closed systems persist by minimizing entropic action, as there is no external energy source to offset dissipation. A closed system would dissolve without the ability to minimize entropic action.
 
 \subsection{The Universal Architecture: Derivation from First Principles}
 \label{sec:PillarDerivation}
@@ -37,12 +37,12 @@ Implicit in physical implementations, but typically treated as a constraint rath
 IE reframes these elements into six existential pillars, the complete, minimal set required for persistence. The removal of any pillar leads to catastrophic system failure (\cref{sec:proof_of_necessity}).
 
 \subsubsection{The IE Reframing: From Performance to Persistence}
-Traditional Control Theory, though rooted in information theory and thermodynamics, primarily identifies the functional components required for stability and performance. It typically treats the components of the control loop (the Plant, the Setpoint) as mathematical abstractions. 
+Though rooted in information theory and thermodynamics, traditional Control Theory primarily identifies the functional components required for stability and performance, treating the components of the control loop as only mathematical abstractions.
 
 \textbf{The contribution of IE is to recontextualize these components as existential requirements and unify them within a predictive, quantitative model of persistence.} Performance comes secondary to persistence. Thermodynamic and information-theoretic imperatives are elevated, necessitating terms that reflect a new primary unit of measure: \textbf{Entropic Burden}.
 
 \subsubsection{The Universal Architecture of Persistence}
-To facilitate this translation between engineering and ontology, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
+To facilitate the translation from ontology to engineering, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
 
 \begin{enumerate}
     \item \textbf{The Capacity ($CAP$):} \textit{The Vessel.} 
@@ -55,7 +55,7 @@ To facilitate this translation between engineering and ontology, we define the S
     The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path).
     
     \item \textbf{The Governor ($GOV$):} \textit{The Constraint.}
-    The non-linear constraint mechanism that prevents unbounded divergence or 'runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter).
+    The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter).
     
     \item \textbf{The Toll ($TOL$):} \textit{The Temporal Cost.}
     The irreducible energy cost of state transitions and information erasure (Landauer’s Limit). (Processing Latency)
@@ -66,9 +66,9 @@ To facilitate this translation between engineering and ontology, we define the S
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
-IE reframes control systems not as rigid instruction-following, but as active, energetic defense of identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this 6-pillar feedback architecture possess the stability required to be observable across cosmic timescales.
+IE reframes control systems not as rigid instruction-following, but as active, energetic defense of identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this six pillar architecture possess the stability required to be observable across cosmic timescales.
 
-The mapping of IE to specific physical domains is inherently adaptive. While the present work \textit{demonstrates} this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
+The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
 
 \subsubsection{The Entropic Balance Sheet}
 
@@ -96,7 +96,7 @@ We demonstrate the necessity of the set $\mathbb{P}$ = $\{CAP,$ $MAP$, $PRO$, $G
 \begin{itemize}
     \item \textbf{No Capacity ($CAP \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
     \item \textbf{No Map ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
-    \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The Plant and Controller become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
+    \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The CAP and MAP become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
     \item \textbf{No Governor ($GOV \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
     \item \textbf{No Toll ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating a \textbf{Finiteness} constraint. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
     \item \textbf{No Margin ($MAR \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $MAR > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($MAR \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
@@ -109,9 +109,15 @@ To demonstrate sufficiency, we note that any stable control system requires exac
 \textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Map ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
-Informational Energetics describes the lifecycle of systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of Logistic Maps/Bifurcation. It is important to note that the system derived next (the Vacuum requirements, System 0), represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
 
-Unlike biological or economic systems which are in a state of Expansion or Brittle Stasis, the fundamental laws of physics represent a system that has minimized its metabolic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The vacuum is not ``evolving'' new laws; it is persisting within the optimal solution.
+Informational Energetics broadly describes the lifecycle of complex systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of logistic bifurcation. However, it is important to note that the system derived next (the Vacuum requirements, System 0) represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
+
+In IE, a crucial distinction exists between a \textit{substrate} and the \textit{transient systems} it hosts. Hosted systems, whether biological organisms, economic markets, or the visible universe itself, progress through active lifecycles, consuming available capacity through expansion until eventual energetic collapse. 
+
+A persistent substrate, however, cannot be in a state of expansion or brittle stasis. The fundamental laws of physics represent a system that has minimized its entropic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived in the following sections are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The vacuum is not ``evolving'' new laws; it is persisting within the optimal solution, serving as the quiescent stage upon which all other systems play out their lifecycles.
 
 \subsection{The Scope of Informational Energetics}
-Informational Energetics makes a specific, falsifiable claim: by restricting the focus from all complex adaptive systems to only those systems that successfully \textbf{persist}, we can move from qualitative description to a predictive, universal science, able to analyze their components, model their lifecycle, predict their stability limits, and apply architectural principles across domains.
+For decades, the study of Complex Adaptive Systems has excelled at qualitative description but struggled to yield predictive, parameter-free laws. Informational Energetics diagnoses this stagnation as a problem of scope: by restricting focus from \textit{all} complex systems to \textit{only} those that successfully \textbf{persist} against entropy, selection principles replace intractable generality with exact structural constraints.
+
+IE makes a specific, falsifiable claim: that by restricting focus to persistent systems, we can derive exact structural constraints. This paper tests this claim in fundamental physics; extension to 
+other domains remains future work.
