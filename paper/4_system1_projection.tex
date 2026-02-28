@@ -211,24 +211,26 @@ The geometric value $\sigma=5$ dictates the dimension of the fundamental represe
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
 
-We derive the fundamental period of the lattice, the temporal bit-depth of the vacuum. Three independent 
-constraints must be simultaneously satisfied.
+We derive the fundamental period of the lattice, the temporal bit-depth of the vacuum. Three independent constraints must be simultaneously satisfied.
 
 \subsubsection{Unitarity and The Unique Factorization Domain Constraint}
 \label{sec:fundamental_resonance_filter1}
-For information to be conserved (Unitarity), the evolution of a state must be unambiguous and perfectly reversible. We translate this physical requirement into a mathematical one by postulating that the algebraic structure governing the lattice dynamics must be a \textbf{Unique Factorization Domain (UFD)}.
 
-The reason is information-theoretic: in a discrete causal set, the \textit{history} of a state is defined by the sequence of algebraic operations (factors) that generated it. As established in \cref{sec:metric_signature}, time is incorporated as the geometric imaginary unit ($i \equiv \omega$) from the Lorentzian metric signature. Consequently, discrete causal updates over $\Delta$ temporal steps operate algebraically within an imaginary quadratic field over the rational numbers. If this algebraic field $\mathbb{Q}[\sqrt{-\Delta}]$ has a class number $h > 1$, the Fundamental Theorem of Arithmetic fails; a single state norm can be decomposed into multiple non-equivalent sets of prime factors.
+For information to be conserved (Unitarity), the evolution of a state must be unambiguous and perfectly reversible. To enforce this, we must examine the algebraic structure of the system's fundamental causal updates.
 
-This creates \textbf{Causal Ambiguity}: the system cannot uniquely reconstruct its past from its current state. This violates the Unitary requirement of information conservation ($ \psi^{\dagger}\psi = 1 $). Therefore, for a universe to preserve its own history (Unitarity), the underlying lattice algebra must be a UFD, strictly requiring a class number of $h=1$.
+While the substrate is an 8-dimensional geometric structure, the fundamental state transition, a signal propagating from one node to another, defines a 1-dimensional spatial trajectory evolving over 1-dimensional time. Because the vacuum possesses a fundamental temporal cycle, this sequence of updates must eventually close, forming a periodic $(1+1)D$ causal loop of length $\Delta$. 
 
-The Stark-Heegner theorem \cite{stark_complete_1967} is a mathematical classification result, not a physical postulate. It provides the complete list of values for $\Delta$ that satisfy the requirement of $h=1$:
+For the system to preserve Unitarity, the history of a state traversing this causal loop must be uniquely reconstructable. Mathematically, this requires the algebraic field governing the discrete cycle to be a Unique Factorization Domain (a class number of $h=1$). 
+
+If the field has a class number $h > 1$, multiple distinct causal histories map to the exact same macroscopic state. This manifests as \textbf{Causal Degeneracy}: the vacuum would be unable to map an output state back to its specific input history, violating the unitary requirement that the evolution operator be uniquely invertible ($\hat{U}^\dagger \hat{U} = I$). 
+
+As rigorously derived in \cref{app:algebraic_geometry_causal_loop} via the theory of Complex Multiplication on elliptic curves, this discrete geometric requirement strictly limits the temporal period $\Delta$. The Stark-Heegner theorem \cite{stark_complete_1967} provides the complete list of discriminants $\Delta$ that satisfy this $h=1$ Unitarity constraint:
 
 \begin{equation}
     \Delta \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}
 \end{equation}
 
-These nine \textbf{Heegner numbers} are the only candidates for the fundamental resonance of a unitary universe.
+These nine \textbf{Heegner numbers} are the only valid candidates for the temporal resonance of a unitary causal loop.
 
 \subsubsection{Causality (The ``Bandwidth'') Constraint}
 \label{sec:fundamental_resonance_filter2}
