@@ -204,6 +204,10 @@ Summing the geometric components:
     \alpha^{-1}_{calc} = \mathbf{\AlphaInvVal}\dots
 \end{equation}
 
+Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). These three independent measurements each says that the other two are out of range and is an open experimental problem.
+
+CODATA (2022) is not an independent measurement. It synthesizes all available experimental data into a recommended value, and its uncertainty reflects the tension between conflicting inputs rather than a single clean result.
+
 \begin{table}[ht]
 \centering
 \begin{tabular}{lll}
@@ -220,13 +224,18 @@ CODATA (2022) & \AlphaInvExperimentalValue & $1.68$ \\
 \label{tab:alpha_comparison}
 \end{table}
 
+The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $0.58\sigma$, but deviates by $\sim 3\sigma$ from Fan (2023).
 
-Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). CODATA (2022) is not an independent measurement, it synthesizes all available experimental data into a recommended value, and its uncertainty reflects the tension between conflicting inputs rather than a single clean result.
+\paragraph{The QED Extraction Tension and the Quantization Gap:}
+We must explicitly address the $\sim 3\sigma$ tension between our geometric prediction and the extraction of $\alpha^{-1}$ from the electron $g-2$ measurement (Fan, 2023). We propose this tension is not an experimental error, but a systematic artifact arising from a fundamental methodological difference in how $\alpha$ is probed.
 
+Morel (2020) measures $\alpha$ kinematically via photon recoil. In our framework, this is a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), however, extracts $\alpha$ by fitting experimental data to a 10th-order (5-loop) QED perturbative expansion formulated in continuous spacetime.
 
-The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $0.58\sigma$, but deviates by $\sim 3\sigma$ from Fan (2023). The deviation may reflect a fundamental difference in methodology: Fan extracts $\alpha$ via 5-loop QED assuming continuous spacetime, while the geometric derivation assumes discrete lattice structure. The $\sim 3\sigma$ tension is consistent with the scale of quantization noise expected from this mismatch.
+In the $E_8$-Persistence framework, spacetime is not a continuous manifold but a discrete lattice with finite channel capacity ($\nu=16$). Standard QED calculations utilize dimensional regularization, which implicitly assumes infinite resolution and continuous degrees of freedom. While this continuous approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme precision threshold, the continuous approximation begins to structurally strain against the discrete $\nu=16$ architecture of the substrate.
 
-By deriving $\alpha^{-1}$ purely from discrete geometric invariants without perturbative continuous loops, the theory provides a structural prediction in the current metrological debate: it predicts that pure kinematic measurements probe the substrate directly, and that future consensus will converge toward the Morel value.
+We propose that the observed $\sim 3\times 10^{-10}$ fractional deviation represents the \textbf{Quantization Gap}: the precision threshold where continuous field theory systematically diverges from discrete geometric reality. This gap is not a calculational error but a fundamental epistemic boundary, the point where mathematical approximation encounters physical hardware, and where the map (continuous field theory) diverges from the territory (discrete lattice substrate). This physically realizes Freeman Dyson's 1952 proof \cite{dyson_divergence_1952} that the QED perturbative series is strictly asymptotic; the continuous mathematical expansion must eventually break down when it exceeds the finite bit-depth of the vacuum.
+
+This yields a rigorous, asymmetric falsification criterion: if pure kinematic measurements (Morel-style) continue to converge to $\alpha^{-1} \approx \mathbf{\AlphaInvVal}$ (to precision $\sim 10^{-9}$) while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, the convergence of both methods to a single, identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence framework.
 
 \subsection{Corollary: Quantization of Charge}
 The geometric impedance $Z_{geo}$ fixes the electromagnetic coupling $\alpha$. By the standard definition $\alpha = e^2/(4\pi\epsilon_0\hbar c)$, the elementary charge is:

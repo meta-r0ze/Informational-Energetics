@@ -16,7 +16,7 @@ The requirement of an even, self-dual lattice is remarkably restrictive. A resul
 This strictly eliminates any fundamental lattice solution in dimensions $n<8$. This yields a profound physical consequence: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an 
 emergent projection of a higher-dimensional structure.
 
-Furthermore, this excludes $n=10$ (Superstring Theory) as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod{8}$, a 10-dimensional lattice cannot satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). To recover these properties, String Theory must introduce auxiliary structures (e.g., Calabi-Yau compactifications or appended internal spaces). Under Informational Energetics, these ad hoc additions require external configuration memory, the selection of which compactification manifold is not determined by the theory's intrinsic constraints, violating the \textbf{Closure Constraint}. The substrate must solve the constraints natively; it cannot borrow structure from outside.
+Furthermore, this excludes $n=10$ (Superstring Theory) as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod{8}$, a 10-dimensional lattice cannot satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). To recover these properties, String Theory must introduce auxiliary structures (e.g., Calabi-Yau compactifications or appended internal spaces). The selection of which compactification manifold to use is not determined by the theory's intrinsic constraints, requiring external configuration memory and directly violating the Closure Constraint (Section~\ref{subsec:closure}).
 
 \subsubsection{The Principle of Algorithmic Determinism}
 \label{sec:principleofalgorithmicdeterminism}
@@ -33,7 +33,7 @@ We constrain the population of possible lattices through the lens of \textbf{Alg
 
 A vacuum established at $n=16$ would possess a \textbf{Specification Complexity} of $H = \log_2(2) = 1$ bit. This represents the information required to distinguish between the two topological isomers. 
 
-However, by the \textbf{Closure Constraint}, the vacuum possesses no \textbf{external configuration memory} to hold this selection bit. If the vacuum geometry is not mathematically unique, it requires an arbitrary initial condition parameter to define its structure. This implies a ``pre-geometric'' memory, explicitly violating the definition of the vacuum as the fundamental ground state.
+However, by the \textbf{Closure Constraint} (\cref{subsec:closure}), the vacuum possesses no \textbf{external configuration memory} to hold this selection bit. If the vacuum geometry is not mathematically unique, it requires an arbitrary initial condition parameter to define its structure. This implies a ``pre-geometric'' memory, explicitly violating the definition of the vacuum as the fundamental ground state.
 
 The $E_8$ lattice ($n=8$) is the unique solution where the Specification Complexity is zero ($H = \log_2(1) = 0$). It is selected not merely for its low dimensionality, but because it is the only self-dual geometry that is \textbf{Self-Defining}. It requires no external parameters to distinguish it from a set of alternatives; its existence is a deterministic consequence of the constraints.
 
@@ -43,21 +43,21 @@ The $E_8$ lattice cannot process information by itself. Processing requires a fl
 
 \subsubsection{The Symmetric Decomposition (Space vs. Charge)}
 \label{sec:symmetric_decomposition}
-The projection must preserve the self-duality property in the subsystems to maintain local conservation. The unique symmetric splitting of $E_8$ is:
-\begin{equation}
-    E_8 \to D_4 \oplus D_4
-\end{equation}
 
-The maximal rank subgroups of $E_8$ include $A_8$, $D_8$, and $D_4 \oplus D_4$\cite{conway_sphere_1988}. The first two fail the self-duality 
-preservation requirement:
+The projection must preserve the self-duality property in the subsystems to maintain local probability conservation. 
+
+The Conway-Sloane classification of sphere packings and lattices \cite{conway_sphere_1988} establishes that the maximal rank-8 subgroups of $E_8$ are strictly limited to $A_8$, $D_8$, and $D_4 \oplus D_4$. We formally evaluate each:
+
 \begin{itemize}
-    \item $A_8$ yields a root lattice with $\det = 9$, requiring scaling factors that violate unimodularity.
-    \item $D_8^+$ contains vectors of norm 1 (odd), violating the Evenness requirement established in 
-    \cref{sec:kneserstheorem}.
+    \item \textbf{The $A_8$ No-Go:} The $A_8$ root lattice yields a determinant of 9. A self-dual decomposition strictly requires unimodularity ($\det = 1$). $A_8$ introduces an irreversible scaling factor that violates the Unitarity requirement.
+    
+    \item \textbf{The $D_8$ No-Go:} While the $D_8^+$ lattice is unimodular, it contains coordinate vectors of norm 1 (odd). As derived in Section \cref{sec:kneserstheorem}, an odd-norm vector introduces a phase inversion ($\Theta \to -\Theta$), rendering the Map multi-valued and violating the Evenness constraint required for path independence.
 \end{itemize}
-Only $D_4 \oplus D_4$ preserves both self-duality and evenness while maintaining the integer norm condition $\mathbb{Z}[\mathbf{v}] \subset \Lambda^*$, making it the unique valid decomposition \cite{conway_sphere_1988}.
 
-This $D_4 \oplus D_4$ decomposition partitions the 8 dimensions into two orthogonal sectors with distinct physical roles:
+Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} symmetric splitting that preserves both self-duality and evenness while maintaining the integer norm condition $\mathbb{Z}[\mathbf{v}] \subset \Lambda^*$. 
+
+This unique decomposition partitions the 8 dimensions into two orthogonal sectors with distinct physical roles:
+
 \begin{enumerate}
     \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. Since the $D_4$ root system has rank 4 (four mutually orthogonal simple roots), it naturally projects onto a 4-dimensional coordinate manifold, fixing \textbf{D=4} for spacetime.
     \item \textbf{Sector B (Internal Symmetry):} The second $D_4$ lattice encodes the internal state (charge, spin, isospin) at each coordinate, consuming all four dimensions via the rank decomposition $(2,1,1)$ of $SU(3) \times SU(2) \times U(1)$. These dimensions do not manifest as spatial directions but as the \textbf{Gauge Symmetries} of the Standard Model.
@@ -90,7 +90,7 @@ The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\
     \end{itemize}
 \end{enumerate}
 
-Because the $Spin(8)$ chiral spinors lack complex structure, and $Spin(9)$ complex spinors lack chirality, the minimal extension that simultaneously supports Complex, Chiral representations (Weyl-Dirac spinors) is $Spin(10)$.
+Because the $Spin(8)$ chiral spinors lack complex structure, and $Spin(9)$ complex spinors lack chirality, the unique minimal extension that simultaneously supports Complex, Chiral representations (Weyl-Dirac spinors) is $Spin(10)$.
 
 The size of the fundamental data packet (spinor) in this minimal valid geometry is:
 \begin{equation}
@@ -216,19 +216,19 @@ We derive the fundamental period of the lattice, the temporal bit-depth of the v
 \subsubsection{Unitarity and The Unique Factorization Domain Constraint}
 \label{sec:fundamental_resonance_filter1}
 
-For information to be conserved (Unitarity), the evolution of a state must be unambiguous and perfectly reversible. To enforce this, we must examine the algebraic structure of the system's fundamental causal updates.
+For information to be conserved (Unitarity), the evolution of a state must be unambiguous and perfectly reversible. A rigorous derivation is provided in \cref{app:algebraic_geometry_causal_loop}, so here we give an overview:
 
-While the substrate is an 8-dimensional geometric structure, the fundamental state transition, a signal propagating from one node to another, defines a 1-dimensional spatial trajectory evolving over 1-dimensional time. Because the vacuum possesses a fundamental temporal cycle, this sequence of updates must eventually close, forming a periodic $(1+1)D$ causal loop of length $\Delta$. 
-
-For the system to preserve Unitarity, the history of a state traversing this causal loop must be uniquely reconstructable. Mathematically, this requires the algebraic field governing the discrete cycle to be a Unique Factorization Domain (a class number of $h=1$). 
-
-If the field has a class number $h > 1$, multiple distinct causal histories map to the exact same macroscopic state. This manifests as \textbf{Causal Degeneracy}: the vacuum would be unable to map an output state back to its specific input history, violating the unitary requirement that the evolution operator be uniquely invertible ($\hat{U}^\dagger \hat{U} = I$). 
-
-As rigorously derived in \cref{app:algebraic_geometry_causal_loop} via the theory of Complex Multiplication on elliptic curves, this discrete geometric requirement strictly limits the temporal period $\Delta$. The Stark-Heegner theorem \cite{stark_complete_1967} provides the complete list of discriminants $\Delta$ that satisfy this $h=1$ Unitarity constraint:
-
+\begin{itemize}
+    \item The fundamental state transition defines a 1-dimensional spatial trajectory evolving over 1-dimensional time.
+    \item A sequence of updates must eventually close, forming a periodic $(1+1)D$ causal loop of length $\Delta$.
+    \item Because time acts as the geometric imaginary unit \cref{sec:metric_signature} discrete causal updates operate within a ring of complex integers.
+    \item To preserve Unitarity, the history of a state traversing this causal loop must be uniquely reconstructable.
+    \item Unique reconstructability requires the ring of complex numbers to be a Unique Factorization Domain (UFD).
+    \item The Stark-Heegner Theorem states that the ring is a UFD only for
 \begin{equation}
     \Delta \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}
 \end{equation}
+\end{itemize}
 
 These nine \textbf{Heegner numbers} are the only valid candidates for the temporal resonance of a unitary causal loop.
 
