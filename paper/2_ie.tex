@@ -9,11 +9,20 @@ Informational Energetics (IE) is a theoretical framework designed to derive the 
 
 The foundational premise of IE is \textbf{selectionist} rather than teleological: configurations that fail to persist leave no trace, while configurations that persist constitute the observable universe. This is not a statement about what systems ``want,'' but about what remains after entropic selection.
 
-We formalize this as the \textbf{Selection Principle}:
+We formalize this as:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
-    Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable. The Persistence Value ($P$) quantifies this selection: $P \propto 1/S_\Phi$.
+    The \textbf{Selection Principle}: Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable. The Persistence Value ($P$) quantifies this selection: $P \propto 1/S_\Phi$.
 \end{mdframed}
+
+The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. Formally, it is the time-integrated Net Entropic Impedance:
+
+\begin{equation}\label{eq:entropic_action}
+    S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
+\end{equation}
+
+where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum in \cref{eq:entropic_balance}. For systems in 
+\textbf{Quiescent Equilibrium}, where entropic drag is minimized to the theoretical floor and $Z_{IE}$ is constant, $S_\Phi$ approaches its minimum value $Z_{IE} \cdot \tau$, consistent with the system maintaining a stable configuration. \textbf{Note:} The full development of $S_\Phi$ as a variational principle for field-theoretic systems (including the derivation of the Lagrangian structure), is deferred to future work.
 
 This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all, whether observed or not.
 
@@ -42,6 +51,7 @@ Though rooted in information theory and thermodynamics, traditional Control Theo
 \textbf{The contribution of IE is to recontextualize these components as existential requirements and unify them within a predictive, quantitative model of persistence.} Performance comes secondary to persistence. Thermodynamic and information-theoretic imperatives are elevated, necessitating terms that reflect a new primary unit of measure: \textbf{Entropic Burden}.
 
 \subsubsection{The Universal Architecture of Persistence}
+\label{sec:universal_architecture_of_persistence}
 To facilitate the translation from ontology to engineering, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
 
 \begin{enumerate}
@@ -82,6 +92,7 @@ To quantify persistence, we distinguish between components that consume resource
 The \textbf{Net Entropic Impedance} ($Z_{IE}$) is the algebraic sum of these contributions:
 
 \begin{equation}
+\label{eq:entropic_balance}
 \begin{split}
     Z_{IE} &= \underbrace{(CAP + MAP + TOL + MAR)}_{\text{Structural Costs}} \\
            &- \underbrace{(PRO + GOV)}_{\text{Organizational Gains}}
@@ -109,6 +120,7 @@ To demonstrate sufficiency, we note that any stable control system requires exac
 \textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Map ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
+\label{sec:quiescent}
 
 Informational Energetics broadly describes the lifecycle of complex systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of logistic bifurcation. However, it is important to note that the system derived next (the Vacuum requirements, System 0) represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
 

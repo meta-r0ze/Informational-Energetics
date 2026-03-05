@@ -27,7 +27,7 @@ The $E_8$-Persistence theory substrate presents a natural \textbf{impedance} to 
     \alpha^{-1} \equiv Z_{geo} = \frac{S_\Phi}{Q_{top}}
 \end{equation}
 
-where $S_\Phi$ is the Entropic Action and $Q_{top} = \chi/2 = 1$ is the unit topological charge (Section~\ref{sec:topological_boundary}, $\chi = 2$ for the sphere).
+where $S_\Phi$ is the Entropic Action and $Q_{top} = \chi/2 = 1$ is the unit topological charge (\cref{sec:topological_boundary}, $\chi = 2$ for the sphere).
 
 On a discrete lattice substrate, Entropic Action is dimensionless: it counts the minimum number of elementary operations (lattice updates, link traversals, or symmetry transformations) required to sustain a field configuration against the vacuum's entropic flux.\footnote{An intuitive analogy: a communications channel has a maximum data rate set by its bandwidth and noise floor. For a signal to propagate, it must match the channel's impedance and exceed the noise floor. The Geometric Impedance is the total set of structural requirements a signal must meet to propagate losslessly on the physical substrate.} 
 
@@ -54,29 +54,40 @@ For a topological defect to persist in the lattice, it must complete a closed ge
 
 \subsubsection{The Resonant Circumference (Capacity)}
 \textit{Form: Circumference of the resonant cycle.}
-The metric sector measures the geometric action for a topological defect to maintain coherence around the fundamental cycle. The lattice provides a discrete period of $\Delta = 43$ updates; to form a closed path, the excitation must integrate over this distance.
 
-In the continuum limit ($\lambda \gg \ell$), where the correlation length vastly exceeds the lattice spacing, $\Delta$ acts as the \textbf{geometric diameter} of the fundamental interaction cycle, the maximum causal separation of states within one temporal period. The impedance is the circumference:
+The metric sector measures the geometric action for a topological defect to maintain coherence around the fundamental cycle.  Causality requires a discrete temporal cycle of length $\Delta$. The Map pillar requires information to propagate as a continuous phase front with complex structure (\cref{sec:metric_signature}). The vacuum substrate is a self-dual lattice with toroidal topology (\cref{sec:torus}).
 
+\textbf{Derivation:} In the continuum limit ($\lambda \gg \ell$), where the correlation length vastly exceeds the lattice spacing, $\Delta$ acts as the \textbf{geometric diameter} of the fundamental causal cycle. This follows from the Persistence Inequality: $\Delta > N = 32$, ensuring the temporal container exceeds the information content, which in the continuum approximation gives $\Delta$ as the maximum causal separation.
+
+The $E_8 \to D_4 \oplus D_4$ projection preserves the $\mathrm{Spin}(8)$ rotational symmetry in each sector. The self-duality constraint ($\Lambda = \Lambda^*$) requires that the lattice be invariant under Fourier transform, which in the continuum limit corresponds to \textbf{circular symmetry}, the unique rotationally invariant closed curve in 2D (the Fourier transform of a radial function is radial).
+
+
+For a phase front to return to its initial state after $\Delta$ updates, the path must be \textbf{geodesically closed}. On a rotationally symmetric 2D surface (the causal plane of \cref{sec:fundamental_resonance}), the unique geodesic circle with diameter $\Delta$ has circumference $C = \pi\Delta$.
+
+The functional form is therefore \textbf{uniquely determined}:
 \begin{equation}
     Z_{CAP} = \pi\Delta
 \end{equation}
 
-This factorization, continuous geometry ($\pi$) scaling discrete resonance ($\Delta$), is the hallmark of smooth symmetry emerging from granular substrate.
+This continuum approximation is valid for $\Delta \gg 1$; discrete corrections of order $(\pi^2/24N^2) \sim 2\times10^{-3}$ are below current experimental precision but represent a falsifiable prediction 
+at higher accuracy.
+
+This factorization, continuous geometry ($\pi$) scaling discrete resonance ($\Delta$) is the hallmark of smooth symmetry emerging from granular substrate. Alternative geometries (square: $4\Delta$, area: $\pi\Delta^2/4$) violate rotational symmetry or dimensional consistency required by self-duality and information propagation.
 
 \subsubsection{The Topological Boundary: Identity (Map)}
-\textit{Form: Inverse of available alignment capacity.}
+\textit{Form: Topological invariant of the boundary constraint.}
 
 A Wilson Loop is defined by its closure. For a particle to distinguish itself from the vacuum, its boundary must satisfy the Gauss-Bonnet condition (as established in \cref{sec:topological_boundary}) for a closed surface ($\chi=2$).
 \begin{equation}
     Z_{MAP} = +\chi
 \end{equation}
-Without this term, the loop is an open string rather than a persistent knot, preventing charge quantization.
+
+Without this term, the loop is an open string rather than a persistent knot, preventing charge quantization. The functional form is the \textbf{unique integer invariant} satisfying exact quantization and minimal non-trivial boundary.
 
 \subsubsection{Synthesis: The Base Impedance}
 The total geometric action of the minimal loop is the sum of these two sectors:
 \begin{equation}
-    Z_{base} = \pi(43) + 2 \approx \mathbf{137.088\dots}
+    Z_{base} = \pi \cdot 43 + 2 \approx \mathbf{137.088\dots}
 \end{equation}
 This base value matches the experimental Fine-Structure Constant to within $0.03\%$. The remaining deviation arises from the thermodynamic friction of the lattice.
 
@@ -100,40 +111,45 @@ Since impedance is the inverse of admittance, and efficient alignment reduces th
     Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx -0.00599
 \end{equation}
 
-\textbf{Structural Consequence:} This term couples the external spacetime sector to the internal symmetry sector. Without it, the geometric projection $E_8 \to D_4 \oplus D_4$ would decouple, violating the self-duality required by Unitarity.
+The functional form is the \textbf{minimal natural form} consistent with orthogonal decomposition, channel capacity, and impedance duality; linearity is selected by the statelessness requirement of the Protocol pillar.
+
+\textit{Structural Consequence:} This term couples the external spacetime sector to the internal symmetry sector. Without it, the geometric projection $E_8 \to D_4 \oplus D_4$ would decouple, violating the self-duality required by Unitarity.
 
 
 \subsubsection{Stabilizing Potential (Governor)}
 \textit{Form: Boundary-to-bulk strain ratio.}
 
-The discrete Topological Boundary ($\chi=2$) must constrain the resonant excitation distributed across $\Delta=43$ temporal slots. A continuous distribution would maximize entropy across all slots; the boundary enforces localization, creating structural strain.
+The discrete Topological Boundary ($\chi=2$) must constrain the resonant excitation distributed across $\Delta=43$ temporal slots. In the absence of the boundary constraint, the excitation would maximize entropy via uniform distribution across all slots. This uniform distribution is the maximum-entropy baseline against which the Governor's restoring force is measured; the boundary enforces localization, creating structural strain.
 
 The restoring force scales with the strain ratio: boundary constraint divided by bulk length:
 \begin{equation}
     Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx -0.04651
 \end{equation}
 
+The functional form is the \textbf{minimal natural form} consistent with boundary-value structure, discrete-to-continuum scaling, and negative feedback.
+
 The negative sign indicates that efficient constraint reduces total impedance—the system expends less action when the topological boundary is strictly enforced.
 
-
 \subsubsection{Entropic Transition (Toll)}
-State transitions require selecting a specific address in the lattice. By the homogeneity requirement \cref{sec:finiteness}, coupling probability is uniform across symmetry degrees of freedom. The transition must satisfy three constraints operating on orthogonal degrees of freedom:
+\textit{Form: Joint entropic cost of state selection across orthogonal degrees of freedom.}
 
-\begin{enumerate}
-    \item \textbf{State Selection ($1/N^3$):} The lattice substrate encodes state transitions as three-point interactions, reflecting the fundamental vertex structure of quantum fields. Each leg of the interaction requires independent selection from the $N=32$ available chiral channels, yielding $1/N^3$ as the entropic cost of selecting one specific transition from the available configuration space.
-    
-    \item \textbf{Boundary Coupling ($\chi/\sigma$):} The interaction must couple to the topological boundary ($\chi=2$) through the available symmetry degrees of freedom ($\sigma=5$).
-    
-    \item \textbf{Channel Availability ($1 - \sigma/R_M$):} The transition must occur through an available spacetime address ($R_M$), accounting for symmetry overhead ($\sigma$).
-\end{enumerate}
+The Toll pillar requires the irreducible cost of state transitions, bounded below by Landauer erasure. The lattice has $N = 32$ chiral channels (\cref{sec:total_node_capacity}).
 
-Since these constraints operate on orthogonal degrees of freedom (spatial, symmetry, spacetime), their probabilities multiply. The total impedance is:
+\textbf{Derivation:} On a self-dual lattice, the \textbf{simplest nontrivial interaction} involves three sites: two inputs and one output (or vice versa). This is the minimal vertex that preserves information flow while allowing non-trivial dynamics. Two-point interactions are trivial (propagation only). Four-point interactions are excluded for two reasons: asymmetric four-point vertices distinguish a central site, breaking the translational homogeneity of \cref{sec:finiteness}; symmetric four-point vertices (equivalent legs) require additional coupling constants not present in the substrate's characteristic integers, violating the exhaustion of invariants.
+
+Each leg of the three-point vertex selects independently from $N = 32$ channels. By the homogeneity requirement, coupling probability is uniform across symmetry degrees of freedom. The \textbf{joint probability} of selecting one specific configuration is $(1/N)^3 = 1/N^3$.
+
+The interaction must couple to the topological boundary $\chi = 2$ through the available $\sigma = 5$ symmetry degrees of freedom, giving relative coupling strength $\chi/\sigma$. The transition must occur through an available spacetime address $R_M = 172$, with fraction $(1 - \sigma/R_M)$ of addresses not consumed by symmetry overhead.
+
+Since these three constraints operate on \textbf{disjoint degrees of freedom} (channel selection, boundary coupling, spacetime availability), their probabilities multiply. The functional form is therefore \textbf{uniquely determined}:
 \begin{equation}
-    Z_{TOL} = \frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot 
-    \left( 1 - \frac{\sigma}{R_M} \right) \approx 1.185 \times 10^{-5}
+    Z_{TOL} = \frac{1}{N^3} \cdot \frac{\chi}{\sigma} \cdot \left( 1 - \frac{\sigma}{R_M} \right) \approx 1.185 \times 10^{-5}
 \end{equation}
 
+Alternative forms ($1/N^2$ for pairwise interactions, $1/N^4$ for four-point, or additive combinations) violate either the minimal vertex principle or probability bounds.
+
 \subsubsection{Resolution Floor (Margin)}
+\textit{Form: Charge divided by configuration volume.}
 
 For a state to persist, its informational content must exceed the substrate's resolution limit. The Margin is the cost to distinguish signal from this background noise floor.
 
@@ -143,8 +159,8 @@ The signal budget is the total information required to specify a persistent defe
     \item \textbf{Configuration Space ($L_{embed} = 31$):} The total information content of the embedded state, comprising spinor capacity, interaction charges, and topological boundary (\cref{sec:lembed}).
     
     \item \textbf{Interaction Aperture ($\sigma + 1 = 6$):} 
-    Finiteness mandates a discrete lattice of two geometric primitives: Links (1-forms) and Nodes (0-forms). A persistent defect couples to the vacuum through the $\sigma = 5$ interaction symmetries on the Links, and sustains its topological charge ($Q_{top} = \chi/2 = 1$) on the Node. The total hardware degrees of freedom is thus $\sigma + 1 = 6$.
-    
+    A discrete lattice comprises two irreducible geometric primitives: Links (1-forms) connecting nodes, and Nodes (0-forms) themselves. This is a mathematical property of lattice structure, independent of field content. A persistent defect couples to the vacuum through the $\sigma = 5$ interaction symmetries on the Links, and occupies the Node as a distinct geometric locus. The total hardware degrees of freedom is thus $\sigma + 1 = 6$.
+        
     \item \textbf{Spacetime Extent ($\Delta^2$):} The causal volume of one resonance cycle, spanning $\Delta$ temporal steps and $\Delta$ spatial units (since $c \equiv 1$).
 \end{itemize}
 
@@ -154,15 +170,16 @@ The noise floor is the unit signal diluted over the total configuration volume; 
     \approx 2.91 \times 10^{-6}
 \end{equation}
 
-\textbf{Physical Consequences:}
-\paragraph{Electron Mass as Resolution Floor:}
+The functional form is therefore \textbf{uniquely determined} as the unique inverse-density measure of the substrate's resolution floor.
+
+\paragraph{\textit{Physical Consequence: Electron Mass as Resolution Floor.}}
 $Z_{MAR}$ establishes the electron as the \textit{minimum resolvable coupling} of the substrate: any charged configuration with coupling lighter than this threshold cannot maintain a stable topological boundary against the vacuum flux. This doesn't set the absolute mass, but $Z_{MAR}$ fixes the \textit{ratio}:
 \begin{equation}
 \frac{m_e}{M_P} \propto \frac{Z_{MAR}}{Z_{geo}}
 \end{equation}
 The Planck/electron mass hierarchy is therefore a geometric consequence of the substrate's signal-to-noise ratio, not a free parameter.
 
-\paragraph{The Scale of Matter (Atomic Length):}
+\paragraph{\textit{Physical Consequence: The Scale of Matter (Atomic Length).}}
 This resolution floor simultaneously determines the spatial scale of the periodic table. The Bohr Radius ($a_0$) emerges as the ratio of the vacuum's geometric impedance (signal strength) to the electron's mass resolution (noise floor).
 
 The fine-structure constant is the inverse geometric impedance ($\alpha = 1/Z_{geo}$). Substituting these structural definitions into the Bohr radius formula reveals the vacuum's \textbf{Dynamic Range}—the signal-to-noise ratio of the lattice:
@@ -180,6 +197,8 @@ Since the six pillars operate on disjoint geometric degrees of freedom within th
     Z_{geo} = \sum_{i=1}^{6} Z_i
 \end{equation}
 
+The term $Z_{PRO}$ mediates between the orthogonal $D_4 \oplus D_4$ sectors by operating on the \textbf{residual capacity} $(R_M - \sigma)$ that spans both subspaces. It is the coupling term precisely because it measures the alignment cost of information flow across the sector boundary, while the sectors themselves remain geometrically disjoint.
+
 \textbf{Why linear?} In lattice natural units ($\hbar = \ell = c = 1$), action is a dimensionless count of elementary operations. The lattice enforces three constraints: \textit{discreteness} (operations are atomic), \textit{minimality} (no sub-steps), and \textit{additivity} (independent costs sum). Cross-terms would require interference between orthogonal sectors; the $D_4 \oplus D_4$ decomposition forbids this.
 
 The speed of light $c \equiv 1$ sets the maximum rate of causal propagation: information traverses exactly one lattice spacing per update cycle. This maximal propagation rate is the relativistic analogue of the Shannon channel capacity: the fundamental bound on information transfer through the substrate.
@@ -192,9 +211,33 @@ A standard quantum field theory calculation of $\alpha$ requires an infinite per
 
 This truncation is not an approximation, but a structural requirement of the $E_8$-Persistence framework. The equation is uniquely determined by two constraints:
 
-\textbf{1. The Six Pillars:} The six sectors correspond one-to-one with the Universal Architecture of Persistence. Each term's canonical form is dictated by its operational domain: Circumference (CAP), Integer counting (MAP), Inverse admittance (PRO), Strain ratio (GOV), Joint probability (TOL), Inverse density (MAR).
+\textbf{1. The Six Pillars:} The six sectors correspond one-to-one with the Universal Architecture of Persistence. The functional forms range from mathematically forced to physically natural:
 
-\textbf{2. Exhaustion of Invariants:} The characteristic integers $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ completely exhaust the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection. 
+\begin{itemize}
+    \item \textbf{MAP = $\chi$}: Rigorously unique---the Euler characteristic 
+    $\chi = 2$ is the maximal integer for simply connected closed surfaces, 
+    and linear counting is required for exact quantization.
+    
+    \item \textbf{CAP = $\pi\Delta$}: Geometrically forced by rotational 
+    symmetry and geodesic closure in the continuum limit (discrete 
+    corrections $O(10^{-3})$ are below current experimental precision).
+    
+    \item \textbf{TOL multiplicative structure}: Probability-theoretically 
+    forced by independence of orthogonal constraints; the three-point 
+    vertex is the minimal nontrivial interaction.
+    
+    \item \textbf{PRO = $-1/(R_M-\sigma)$}: Denominator form forced by 
+    self-duality and capacity exhaustion; linearity selected by statelessness 
+    requirement.
+    
+    \item \textbf{GOV = $-\chi/\Delta$}: Strain ratio plausible under 
+    uniform distribution assumption.
+    
+    \item \textbf{MAR = $1/(L_{embed}(\sigma+1)\Delta^2)$}: Product structure 
+    forced by independence; $(\sigma+1)$ factor from lattice primitives.
+\end{itemize}
+
+\textbf{2. Exhaustion of Invariants:} The characteristic integers $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ completely exhaust the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection. Note that $\nu = 16$ enters the $\alpha^{-1}$ equation only through $N = 2\nu = 32$, the total node capacity derived in \cref{sec:total_node_capacity}; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure.
 
 Because the pillars operate on orthogonal degrees of freedom, there are no geometric cross-terms. No additional invariants exist to construct further terms. The summation $\alpha^{-1} = \sum_{i=1}^{6} Z_i$ is therefore the unique, minimal, and complete basis of persistence consistent with the substrate geometry.
 
@@ -204,7 +247,7 @@ Summing the geometric components:
     \alpha^{-1}_{calc} = \mathbf{\AlphaInvVal}\dots
 \end{equation}
 
-Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). These three independent measurements each says that the other two are out of range and is an open experimental problem.
+Recent experimental values in \cref{tab:alpha_comparison} do not form a simple consensus, reflecting ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). That three independent measurements each say that the other two are out of range is an open experimental problem.
 
 CODATA (2022) is not an independent measurement. It synthesizes all available experimental data into a recommended value, and its uncertainty reflects the tension between conflicting inputs rather than a single clean result.
 
@@ -268,7 +311,7 @@ Combining these:
 \end{itemize}
 This precision confirms the geometric framework's internal consistency: $R_K$ and $\alpha^{-1}$ are related by definition in the Standard Model, and both emerge from the same substrate geometry in $E_8$-Persistence. This is not a second independent measurement but a confirmation of geometric self-consistency.
 
-The flatness of QHE plateaus ($R = R_K/n$ regardless of impurities) reflects the lattice's discrete bit-depth: resistance is quantized by channel count, offering a structural origin for the topological protection traditionally attributed to electron wavefunction topology (Chern numbers) \cite{thouless_quantized_1982, kohmoto_topological_1985}.
+\textit{Physical consequence: The flatness of QHE plateaus.} $R = R_K/n$, regardless of impurities, reflects the lattice's discrete bit-depth: resistance is quantized by channel count, offering a structural origin for the topological protection traditionally attributed to electron wavefunction topology (Chern numbers) \cite{thouless_quantized_1982, kohmoto_topological_1985}.
 
 \CatchFileBetweenTags{\ChargeAtten}{constants.tex}{ChargeAtten}
 \CatchFileBetweenTags{\ChargeRatioPct}{constants.tex}{ChargeRatioPct}
@@ -281,9 +324,9 @@ The elementary charge appears as the Planck charge attenuated by the square root
 e = \frac{q_P}{\sqrt{Z_{geo}}} \approx \frac{q_P}{\ChargeAtten}
 \end{equation}
 
-\paragraph{Safe Load Limit:} The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \ChargeRatioPct$ of this maximum. 
+\paragraph{\textit{Physical consequence: Safe Load Limit.}} The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \ChargeRatioPct$ of this maximum. 
 
-\paragraph{Vacuum Breakdown as Capacity Limit (Schwinger Limit):} 
+\paragraph{\textit{Physical consequence: Vacuum Breakdown as Capacity Limit (Schwinger Limit).}} 
 The Schwinger critical field $E_c = m_e^2 c^3/e\hbar$ marks where external electric fields spontaneously produce $e^+e^-$ pairs. The Coulomb field of an elementary charge evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$ is precisely $\alpha$ times weaker:
 \begin{equation}
 \frac{e}{4\pi\epsilon_0 \lambdabar^2} = \alpha E_c = \frac{E_c}{Z_{geo}}
