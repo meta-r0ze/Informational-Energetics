@@ -7,12 +7,10 @@ Informational Energetics (IE) is a theoretical framework designed to derive the 
 
 \subsection{The Selection Principle}
 
-The foundational premise of IE is \textbf{selectionist} rather than teleological: configurations that fail to persist leave no trace, while configurations that persist constitute the observable universe. This is not a statement about what systems ``want,'' but about what remains after entropic selection.
-
-We formalize this as:
+The foundational premise of IE is \textbf{selectionist} rather than teleological: configurations that fail to persist leave no trace, while configurations that persist constitute the observable universe. This is not a statement about what systems ``want,'' but about what remains after entropic selection. We formalize this as:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
-    The \textbf{Selection Principle}: Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable. The Persistence Value ($P$) quantifies this selection: $P \propto 1/S_\Phi$.
+    The \textbf{Selection Principle}: Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable.
 \end{mdframed}
 
 The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. Formally, it is the time-integrated Net Entropic Impedance:
@@ -21,10 +19,7 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
 \end{equation}
 
-where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum in \cref{eq:entropic_balance}. For systems in 
-\textbf{Quiescent Equilibrium}, where entropic drag is minimized to the theoretical floor and $Z_{IE}$ is constant, $S_\Phi$ approaches its minimum value $Z_{IE} \cdot \tau$, consistent with the system maintaining a stable configuration. \textbf{Note:} The full development of $S_\Phi$ as a variational principle for field-theoretic systems (including the derivation of the Lagrangian structure), is deferred to future work.
-
-This can be viewed as a generalization of the Anthropic Principle, shifting the focus from the conditions required for observers to the more fundamental conditions required for any structure to exist at all, whether observed or not.
+where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum (\cref{eq:entropic_balance}, below). For systems in \textbf{Quiescent Equilibrium}, where entropic drag is minimized to the theoretical floor and $Z_{IE}$ is constant, $S_\Phi$ approaches its minimum value $Z_{IE} \cdot \tau$, consistent with the system maintaining a stable configuration. (Rooted in algorithmic information theory, $Z_{IE}$ represents the operational rate of the system; consequently, the integrated Entropic Action $S_\Phi$ evaluates to a strictly dimensionless count of elementary state transitions, distinguishing it from traditional physical action). \textbf{Note:} The full development of $S_\Phi$ as a variational principle for field-theoretic systems (including the derivation of the Lagrangian structure), is deferred to future work.
 
 While open systems (such as biological organisms) persist by maintaining a non-equilibrium steady state through the continuous flux of energy and matter from their environment, closed systems persist by minimizing entropic action, as there is no external energy source to offset dissipation. A closed system would dissolve without the ability to minimize entropic action.
 
@@ -37,7 +32,7 @@ To rigorously derive this architecture, we model a persistent entity as a \textb
 
 \subsubsection{The Necessary Components of Control}
 
-From robust control theory, any stable feedback loop requires four functional components \cite{dorf_modern_2017}: the Plant (the system to be controlled), the Sensor (measuring the output), the Controller (computing the correction), and the Actuator (implementing the correction). The desired behavior is specified by a Reference Signal (Setpoint).
+From robust control theory, any stable feedback loop requires specific functional components \cite{dorf_modern_2017}: the Plant (the system to be controlled), the Sensor (measuring the output), the Controller (computing the correction), and the Actuator (implementing the correction), with the desired behavior specified by a Reference Signal (Setpoint).
 
 For \textit{robust} operation under uncertainty, control systems must additionally implement gain and phase margins to prevent instability from perturbations \cite{astrom_feedback_2008}. These margins are typically treated as tunable parameters rather than structural requirements.
 
@@ -76,60 +71,62 @@ To facilitate the translation from ontology to engineering, we define the Six Pi
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
-IE reframes control systems not as rigid instruction-following, but as active, energetic defense of identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the agency of persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this six pillar architecture possess the stability required to be observable across cosmic timescales.
+IE reframes control systems not as rigid instruction-following, but as active, energetic defense of identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the structural capacity for persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this six pillar architecture possess the stability required to be observable across cosmic timescales.
 
 The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
 
 \subsubsection{The Entropic Balance Sheet}
+\label{sec:entropic_balance_sheet}
 
-To quantify persistence, we distinguish between components that consume resources (Structural Burdens) and components that reduce dissipation (Organizational Efficiencies). 
+To quantify persistence, we distinguish between dissipation and coordination: structural burdens increase the system's entropic footprint (positive contributions to $Z_{IE}$), while organizational 
+mechanisms reduce net dissipation relative to the uncoordinated baseline (negative contributions). This 
+parallels the negative feedback signal in control theory, where the error $\epsilon = R - F$ is reduced by the 
+feedback term.
+
 \begin{itemize}
-    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries (CAP, MAR), storing internal models (MAP), and the irreversible cost of state updates (TOL). These terms increase impedance.
+    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and the irreversible cost of state updates ($Z_{TOL}$). These terms increase impedance.
 
-    \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol (PRO) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor (GOV) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
+    \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
-    
+
 The \textbf{Net Entropic Impedance} ($Z_{IE}$) is the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
 \begin{split}
-    Z_{IE} &= \underbrace{(CAP + MAP + TOL + MAR)}_{\text{Structural Costs}} \\
-           &- \underbrace{(PRO + GOV)}_{\text{Organizational Gains}}
+    Z_{IE} &= \underbrace{(Z_{CAP} + Z_{MAP} + Z_{TOL} + Z_{MAR})}_{\text{Structural Costs}} \\
+           &- \underbrace{(Z_{PRO} + Z_{GOV})}_{\text{Organizational Gains}}
 \end{split}
 \end{equation}
 
 \subsection{Proof of Necessity: The Failure Modes}
 \label{sec:proof_of_necessity}
 
-We demonstrate the necessity of the set $\mathbb{P}$ = $\{CAP,$ $MAP$, $PRO$, $GOV$, $TOL$, $MAR\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system $S$ where exactly one pillar is removed ($S' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
-
+We demonstrate the necessity of the set of pillars $\mathbb{P} = \{\mathrm{CAP}, \mathrm{MAP}, \mathrm{PRO}, \mathrm{GOV}, \mathrm{TOL}, \mathrm{MAR}\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
-    \item \textbf{No Capacity ($CAP \to 0$):} The \textit{Starvation Mode}. The system detects threats but lacks the energy to counter them. ($\tau \to 0$ via Equilibrium).
-    \item \textbf{No Map ($MAP \to 0$):} The \textit{Dissolution Mode}. The system lacks a reference signal (self-definition), causing the actuator to fire randomly and maximizing internal entropy. ($\tau \to 0$ via loss of boundary).
-    \item \textbf{No Protocol ($PRO \to 0$):} The \textit{Decoherence Mode}. The CAP and MAP become statistically independent; commands are based on outdated states. ($\tau \to 0$ via Fragmentation).
-    \item \textbf{No Governor ($GOV \to 0$):} The \textit{Divergence Mode}. Positive feedback loops amplify fluctuations without constraint, exceeding structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Toll ($TOL \to 0$):} The \textit{Zeno Mode} (after Zeno's paradox of infinite subdivision). Instantaneous updates ($TOL \to 0$) result in a \textbf{Logical Singularity}. Information processing requires state transitions. A transition time of zero ($TOL \to 0$) implies infinite processing bandwidth; by the Shannon-Hartley theorem, this would require infinite signal power ($C \to \infty$), explicitly violating a \textbf{Finiteness} constraint. Physically, this is bounded by the Margolus-Levitin limit \cite{margolus_maximum_1998}, which establishes that the time $\Delta t$ required to transition between orthogonal states satisfies $\Delta t \ge \frac{h}{4\Delta E}$. A zero-cost transition collapses the distinction between cause and effect, rendering the state space non-computable ($\tau \to 0$ via \textbf{Causal Collapse}).
-    \item \textbf{No Margin ($MAR \to 0$):} The \textit{Fragility Mode}. Persistence requires a safety factor defined by $MAR > k \cdot \sigma_{env}$, where $\sigma_{env}$ represents the variance of environmental fluctuations. A system at theoretical criticality ($MAR \to 0$) survives only in a perfectly static environment. In any real-world substrate, the first non-zero fluctuation pushes the system state outside its basin of attraction, resulting in immediate failure ($\tau \to \text{Random Variable}$).
+    \item \textbf{No Capacity:} \textit{Starvation.} Detects threats but lacks energy to respond. ($\tau \to 0$ via Equilibrium).
+    \item \textbf{No Map:} \textit{Dissolution.} Lacks self-definition; random capacity activation maximizes internal entropy. ($\tau \to 0$ via Boundary Loss).
+    \item \textbf{No Protocol:} \textit{Decoherence.} Components decouple; actions are based on statistically independent, outdated states. ($\tau \to 0$ via Fragmentation).
+    \item \textbf{No Governor:} \textit{Divergence.} Unconstrained positive feedback loops exceeds structural limits. ($\tau \to 0$ via Explosion).
+    \item \textbf{No Toll:} \textit{Zeno Collapse (after Zeno's paradox of infinite subdivision).} Instantaneous updates require infinite bandwidth (violating Finiteness/Margolus-Levitin limits\cite{margolus_maximum_1998}), collapsing the distinction between cause and effect. ($\tau \to 0$ via Causal Collapse).
+    \item \textbf{No Margin:} \textit{Fragility.} Operating at theoretical criticality leaves zero buffer for environmental variance; the first fluctuation causes failure. ($\tau \to 0$ via Random Shock).
 \end{itemize}
 
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
-To demonstrate sufficiency, we note that any stable control system requires exactly these components. Control theory provides no additional fundamental requirements beyond Plant, Setpoint, Feedback, Stability, Latency, and Margin. Any proposed seventh pillar would necessarily decompose into combinations of these six primitive functions.
+\subsection{Argument for Sufficiency}
+\label{sec:sufficiency}
 
-\textit{Note on Sufficiency:} Complex cognitive functions often cited in systems theory, such as \textbf{Memory} or \textbf{Prediction}, are not distinct pillars but emergent properties of this fundamental set. Memory is the persistence of the Map ($MAP$) over time ($TOL$). Prediction is the operation of the MAP ($MAP$) via the Protocol ($PRO$). Thus, the six pillars constitute the irreducible basis set.
+The six pillars map one-to-one onto the canonical components of a fundamental robust control loop. Control theory provides no additional \emph{primitive} requirements beyond these six for a closed-loop system; advanced topologies (e.g., feedforward networks, state observers) mathematically decompose into combinations of these basic functions. We therefore conjecture that this set is minimal: any proposed seventh pillar decomposes into combinations of these six primitive functions. As partial evidence, note that complex cognitive functions often cited as distinct requirements, such as Memory (persistence of $MAP$ over time, $TOL$) or Prediction ($MAP$ operation via $PRO$), are emergent properties of the fundamental set, not independent primitives.
+
+A formal proof of minimality from first principles is deferred to future work; the framework's predictive power presented here in the three systems provides empirical support for this conjecture.
 
 \subsection{Note on Systemic State: Quiescent Equilibrium}
 \label{sec:quiescent}
 
-Informational Energetics broadly describes the lifecycle of complex systems through phases of Genesis, Expansion, Stasis, and Collapse via the mathematics of logistic bifurcation. However, it is important to note that the system derived next (the Vacuum requirements, System 0) represents a specific thermodynamic state known as \textbf{Quiescent Equilibrium}.
-
-In IE, a crucial distinction exists between a \textit{substrate} and the \textit{transient systems} it hosts. Hosted systems, whether biological organisms, economic markets, or the visible universe itself, progress through active lifecycles, consuming available capacity through expansion until eventual energetic collapse. 
-
-A persistent substrate, however, cannot be in a state of expansion or brittle stasis. The fundamental laws of physics represent a system that has minimized its entropic drag to the absolute theoretical floor ($S_\Phi \to 0$). The geometric invariants derived in the following sections are not evolving parameters; they are the \textbf{Fixed Point Attractors} of the vacuum's self-optimization. The vacuum is not ``evolving'' new laws; it is persisting within the optimal solution, serving as the quiescent stage upon which all other systems play out their lifecycles.
+\textbf{Quiescent Equilibrium:} Informational Energetics models the lifecycle of complex systems (Genesis to Collapse) via the mathematics of logistic bifurcation. However, this paper defines the \textit{Quiescent Equilibrium} of the vacuum—the thermodynamic floor where entropic action ($S_\Phi$) is minimized to its absolute limit ($S_{min}$). The geometric invariants derived hereafter are the \textit{fixed-point attractors} of this self-optimization.
 
 \subsection{The Scope of Informational Energetics}
 For decades, the study of Complex Adaptive Systems has excelled at qualitative description but struggled to yield predictive, parameter-free laws. Informational Energetics diagnoses this stagnation as a problem of scope: by restricting focus from \textit{all} complex systems to \textit{only} those that successfully \textbf{persist} against entropy, selection principles replace intractable generality with exact structural constraints.
 
-IE makes a specific, falsifiable claim: that by restricting focus to persistent systems, we can derive exact structural constraints. This paper tests this claim in fundamental physics; extension to 
-other domains remains future work.
+IE makes a specific, falsifiable claim: that by restricting focus to persistent systems, we can derive exact structural constraints. This paper tests this claim in fundamental physics; extension to other domains remains a program to be validated, not a result established here.
