@@ -14,9 +14,9 @@ Topologically, a discrete, periodic $(1+1)D$ causal plane forms a 2-dimensional 
 
 The causal plane is spanned by one spatial step ($\delta x$) and one temporal step ($\delta t$). As derived in \cref{sec:metric_signature}, the Lorentzian metric signature assigns the temporal dimension a geometric imaginary character: $\delta t = i \cdot \delta x$ (in natural units $c=1$). 
 
-Consequently, the causal lattice tiles the complex plane $\mathbb{C}$ with a real spatial period $\omega_1 = 1$ and a geometric imaginary temporal period. This defines a complex lattice $\Lambda = \mathbb{Z} \cdot 1 \oplus \mathbb{Z} \cdot \tau$, yielding the elliptic curve $\mathbb{C}/\Lambda$ governed strictly by the complex modular parameter $\tau$.
+Consequently, the causal lattice tiles the complex plane $\mathbb{C}$ with a real spatial period $\omega_1 = 1$ and a geometric imaginary temporal period. This defines a complex lattice $\Lambda = \mathbb{Z} \cdot 1 \oplus \mathbb{Z} \cdot z$, yielding the elliptic curve $\mathbb{C}/\Lambda$ governed strictly by the complex modular parameter $z$.
 
-Because the trajectory is physically constrained to the discrete, self-dual structure of the underlying $E_8$ lattice, $\tau$ cannot be a generic continuous complex variable. The discrete, self-dual lattice structure constrains $\tau$ to a Complex Multiplication (CM) point—a fixed point of a M\"obius transformation with integer coefficients acting on the moduli space. This requires $\tau$ to satisfy a quadratic equation $a\tau^2 + b\tau + c = 0$ with $a, b, c \in \mathbb{Z}$ and discriminant $b^2 - 4ac = -D < 0$.
+Because the trajectory is physically constrained to the discrete, self-dual structure of the underlying $E_8$ lattice, $z$ cannot be a generic continuous complex variable. The discrete, self-dual lattice structure constrains $z$ to a Complex Multiplication (CM) point—a fixed point of a M\"obius transformation with integer coefficients acting on the moduli space. This requires $z$ to satisfy a quadratic equation $az^2 + bz + c = 0$ with $a, b, c \in \mathbb{Z}$ and discriminant $b^2 - 4ac = -D < 0$.
 
 \subsection{Lemma 1: The Identification of Period and Discriminant (\texorpdfstring{$D = \Delta$}{D=Delta})}
 
@@ -26,11 +26,11 @@ To utilize the theory of Complex Multiplication, we must formally bridge the phy
 
 \textbf{Proof:}
 \begin{enumerate}
-    \item \textbf{Lattice Basis:} The causal loop defines a complex torus $\mathbb{C}/\Lambda$ with lattice basis $\{1, \tau\}$, where the real axis represents the spatial step and the imaginary axis represents the temporal step.
+    \item \textbf{Lattice Basis:} The causal loop defines a complex torus $\mathbb{C}/\Lambda$ with lattice basis $\{1, z\}$, where the real axis represents the spatial step and the imaginary axis represents the temporal step.
     
-    \item \textbf{The Geometric Norm:} The temporal period $\Delta$ dictates that the state history closes exactly after $\Delta$ discrete updates. Algebraically, this requires the temporal generator $\tau$ to satisfy $\tau^2 + \Delta = 0$, placing the system in the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
+    \item \textbf{The Geometric Norm:} The temporal period $\Delta$ dictates that the state history closes exactly after $\Delta$ discrete updates. Algebraically, this requires the temporal generator $z$ to satisfy $z^2 + \Delta = 0$, placing the system in the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
     
-    \item \textbf{Self-Duality Constraint:} To preserve the self-duality of the parent $E_8$ substrate ($\Lambda = \Lambda^*$), the partition function $Z_\Lambda(\tau) = \Theta_\Lambda(\tau)/\eta(\tau)^8$ must be invariant under the modular inversion $S: \tau \to -1/\tau$. This restricts $\tau$ strictly to the ring of integers $\mathcal{O}_K$ of the field $K$.
+    \item \textbf{Self-Duality Constraint:} To preserve the self-duality of the parent $E_8$ substrate ($\Lambda = \Lambda^*$), the partition function $Z_\Lambda(z) = \Theta_\Lambda(z)/\eta(z)^8$ must be invariant under the modular inversion $S: z \to -1/z$. This restricts $z$ strictly to the ring of integers $\mathcal{O}_K$ of the field $K$.
     
     \item \textbf{The Discriminant Mapping:} From Step 2, the causal loop resides in the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$. By the theory of algebraic number fields, the fundamental discriminant of $K$ equals $-\Delta$ when $\Delta \equiv 3 \pmod{4}$, and $-4\Delta$ otherwise. Inspection of the Stark-Heegner candidates surviving the Causality constraint $\Delta > N = 32$ — namely $\{43, 67, 163\}$ — confirms that each strictly satisfies $\Delta \equiv 3 \pmod{4}$. Therefore, the fundamental discriminant of $K$ is exactly $-\Delta$, and the magnitude of the CM discriminant $D = |\text{disc}(K)| = \Delta$ exactly, with no fractional remainder. $\blacksquare$
     
