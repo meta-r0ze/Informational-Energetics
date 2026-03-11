@@ -25,7 +25,7 @@ In the $E_8$-Persistence theory, this magnitude is not arbitrary. The vacuum sub
 
 \textbf{Scope of Derivation:} In standard Quantum Field Theory, coupling constants ``run'' with energy scale. This section derives the \textit{bare geometric impedance} of the vacuum substrate at its fundamental resolution floor (Quiescent Equilibrium). This invariant baseline represents the fixed structural limit of the geometry; the emergence of scale-dependent dynamics and renormalization is the subject of subsequent papers in this series which depend upon this foundational calculation.
 
-In Quiescent Equilibrium, the time-integrated Entropic Action (\cref{eq:entropic_action}) reduces from a continuous dynamic integral to a static discrete sum. For a persistent topological defect evaluated over a single fundamental temporal cycle ($\tau = 1$ in lattice units), the Entropic Action $S_{\Phi,defect}$ simply counts the minimum number of elementary operations required to sustain the configuration:
+In Quiescent Equilibrium, the time-integrated Entropic Action (\cref{eq:entropic_action}) reduces from a continuous dynamic integral to a static discrete sum. For a persistent topological defect evaluated over a single fundamental temporal cycle ($\tau = 1$ in lattice units), the Entropic Action $S_{\Phi,defect}$ counts the minimum number of elementary operations required to sustain the configuration:
 \begin{equation}
     \alpha^{-1} \equiv Z_{geo} = \frac{S_{\Phi,\text{defect}}}{Q_{top}}
 \end{equation}
@@ -71,7 +71,7 @@ The functional form is therefore \textbf{uniquely determined}:
     Z_{CAP} = \pi\Delta
 \end{equation}
 
-While the underlying coordinate substrate is discrete, Information Theory dictates that phase information (the Map) operates on a continuous target space ($S^1$). Therefore, the geometric action required for phase closure is exactly bounded by the continuous geometry $\pi$, rather than a discretized sum. The exact theoretical impedance relies on this continuous symmetry limit, establishing a precise topological bound rather than an approximation.
+While the underlying coordinate substrate is discrete, Information Theory dictates that phase information (the Map) operates on a continuous target space ($S^1$). Because Unitarity and self-duality strictly require exact Fourier invariance, the geometric action required for phase closure cannot be a discrete polygon approximation (which would introduce fractional lattice errors). Instead, the exact theoretical impedance relies on this continuous symmetry limit, establishing the continuous geometry $\pi$ as a precise topological bound rather than a macroscopic approximation.
 
 This factorization, continuous geometry ($\pi$) scaling discrete resonance ($\Delta$) is the hallmark of smooth symmetry emerging from granular substrate. Alternative geometries (square: $4\Delta$, area: $\pi\Delta^2/4$) violate rotational symmetry or dimensional consistency required by self-duality and information propagation.
 
@@ -197,7 +197,7 @@ The Planck/electron mass hierarchy is therefore a geometric consequence of the s
 \paragraph{\textit{Physical Consequence: The Scale of Matter (Atomic Length).}}
 This resolution floor simultaneously determines the spatial scale of the periodic table. The Bohr Radius ($a_0$) emerges as the ratio of the vacuum's geometric impedance (signal strength) to the electron's mass resolution (noise floor).
 
-The fine-structure constant is the inverse geometric impedance ($\alpha = 1/Z_{geo}$). Substituting these structural definitions into the Bohr radius formula reveals the vacuum's \textbf{Dynamic Range}—the signal-to-noise ratio of the lattice:
+The fine-structure constant is the inverse geometric impedance ($\alpha = 1/Z_{geo}$). Substituting these structural definitions into the Bohr radius formula reveals the vacuum's \textbf{Dynamic Range}, the signal-to-noise ratio of the lattice:
 \begin{equation}
 a_0 = \frac{\hbar}{c} \cdot \frac{Z_{geo}}{m_e} \propto \frac{Z_{geo}}{Z_{MAR}}
 \end{equation}
@@ -260,13 +260,13 @@ Recent experimental values in \Cref{tab:alpha_comparison} do not form a simple c
 \toprule
 \textbf{Source} & \textbf{Value ($\alpha^{-1}$)} & \textbf{Dev.} \\
 \midrule
-Morel  (2020) & \AlphaInvMorelExperimentalValue & $0.58\sigma$ \\
-Fan (2023) & \AlphaInvFanExperimentalValue & $3.09\sigma$\\
-Parker (2018) & \AlphaInvParkerExperimentalValue & $6.16\sigma$ \\
-CODATA (2022) & \AlphaInvExperimentalValue & $1.68\sigma$ \\
+Morel  (2020) & \AlphaInvMorelExperimentalValue & $0.58 \sigma$ \\
+Fan (2023) & \AlphaInvFanExperimentalValue & $3.09 \sigma$\\
+Parker (2018) & \AlphaInvParkerExperimentalValue & $6.16 \sigma$ \\
+CODATA (2022) & \AlphaInvExperimentalValue & $1.68 \sigma$ \\
 \bottomrule
 \end{tabular}
-\caption{Numerical comparison of the $E_8$-Persistence theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
+\caption{Numerical comparison of the $E_8$-Persistence Theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
 
@@ -279,7 +279,7 @@ Morel (2020) measures $\alpha$ kinematically. In our framework, this is a direct
 
 Standard QED calculates this expansion utilizing dimensional regularization, which implicitly assumes continuous spacetime and infinite resolution. In the $E_8$-Persistence framework, spacetime is a discrete lattice with finite channel capacity ($\nu=16$). While the continuous QED approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime assumption underlying dimensional regularization may introduce systematic bias when the loop-order complexity approaches the substrate's finite channel capacity.
 
-We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This aligns with Freeman Dyson's 1952 proof \cite{dyson_divergence_1952} that the QED perturbative series is fundamentally asymptotic due to vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
+We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This aligns with Freeman Dyson's 1952 proof \cite{dyson_divergence_1952} that the QED perturbative series is fundamentally divergent due to vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
 
 This breakdown scale can be heuristically estimated by comparing Feynman diagram multiplicity to the substrate's channel capacity. The number of QED diagrams grows factorially with loop order; at 5-loop precision, the electron anomalous magnetic moment calculation requires evaluating 12,672 distinct diagrams. Simultaneously, the available combinatorial state space of the fundamental causal loop scales as $\nu^n = 16^n$. At $n=4$ to $n=5$, the factorial diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65,536$), marking the threshold where the continuous expansion saturates the substrate's discrete bit-depth.
 

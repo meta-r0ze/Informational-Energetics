@@ -40,12 +40,14 @@ The $E_8$ lattice is selected not merely for its low dimensionality, but because
 
 This unique self-consistent solution is selected prior to the emergence of time, eliminating any argument of spontaneous symmetry breaking which would require fluctuations, transition rates, and a dynamical framework that does not yet exist and which the substrate must first generate.
 
+\textit{The optimality of the $E_8$ lattice extends beyond self-duality: Viazovska's proof establishes it as the densest sphere packing in eight dimensions \cite{viazovska_sphere_2017}, the unique solution to a geometric extremization problem. This reinforces its status as the substrate requiring zero selection information. $E_8$ is not merely self-defining, but geometrically optimal.}
+
 \subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:projection}
 
 The $E_8$ lattice cannot process information by itself. Processing requires a flow (Input vs. Output). The projection must break the $E_8$ symmetry to distinguish the ``Observer'' (Spacetime) from the ``System'' (Internal States).
 
-\subsubsection{The Symmetric Decomposition (Space vs. Charge)}
+\subsubsection{The Symmetric Decomposition (External Spacetime vs. Internal Symmetry)}
 \label{sec:symmetric_decomposition}
 
 The projection must be compatible with the self-duality of the parent $E_8$ lattice to maintain local probability conservation. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any symmetric decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a specific glue group whose coset structure exactly reconstructs the self-dual parent. To avoid unbalancing the Unitarity requirement, the state space must be partitioned into two symmetric sectors that can support this exact quotient structure.
@@ -54,7 +56,7 @@ The projection must be compatible with the self-duality of the parent $E_8$ latt
 We evaluate rank-4 root sublattices that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ are not simply-laced; their root lattices contain roots of two distinct lengths, violating the Evenness requirement. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the only mathematically viable candidates.
 
 \begin{itemize}
-    \item \textbf{The $A_4$ No-Go (Encoding Mismatch):} The $A_4 \oplus A_4$ subsystem has an index of 5 in the $E_8$ lattice. In an information-theoretic framework, its quotient group ($\mathbb{Z}_5$) requires mapping a 5-state system onto binary hardware channels. Local hardware encoding of a 5-element group requires a discrete register of $\lceil \log_2(5) \rceil = 3$ bits, but this necessarily introduces $2^3 - 5 = 3$ phantom codewords with no geometric referent. Under the Closure Constraint, the substrate admits no extraneous structural data; these unphysical states would constitute auxiliary configuration memory, explicitly violating the requirement that the vacuum be entirely self-defining.
+    \item \textbf{The $A_4$ No-Go (Encoding Mismatch):} The $A_4 \oplus A_4$ orthogonal subsystem has an index of 5 in the parent $E_8$ lattice. In an information-theoretic framework, this quotient group ($E_8 / (A_4 \oplus A_4) \cong \mathbb{Z}_5$) requires mapping a 5-state system onto binary hardware channels. Local hardware encoding of a 5-element group requires a discrete register of $\lceil \log_2(5) \rceil = 3$ bits, but this necessarily introduces $2^3 - 5 = 3$ phantom codewords with no geometric referent. Under the Closure Constraint, the substrate admits no extraneous structural data; these unphysical states would constitute auxiliary configuration memory, explicitly violating the requirement that the vacuum be entirely self-defining.
     
     \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$. Because 4 is a perfect power of two ($\log_2(4) = 2$ exact bits), its quotient group ($\mathbb{Z}_2 \times \mathbb{Z}_2$) can be encoded perfectly without fractional loss, satisfying Unitarity. Furthermore, $D_4$ (the root lattice of $\mathfrak{so}(8)$) is the unique rank-4 even lattice that supports Triality. This provides the exact geometric symmetry required to subsequently construct the Map and Causality pillars (\cref{sec:chiralcapacity}).
 \end{itemize}
@@ -96,9 +98,7 @@ The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\
     \end{itemize}
 \end{enumerate}
 
-Because the $Spin(8)$ chiral spinors lack complex structure, and $Spin(9)$ complex spinors lack chirality, the unique minimal extension that simultaneously supports Complex, Chiral representations (Weyl-Dirac spinors) is $Spin(10)$. 
-
-Crucially, this does not imply that the $D_4$ substrate geometrically embeds a $Spin(10)$ gauge group. The substrate system strictly prohibits this, as $Spin(10)$ (rank 5) exceeds the structural capacity of the internal $D_4$ sector (rank 4). Rather, $Spin(10)$ strictly defines the \textbf{informational payload size} required to encode a persistent signal. The size of this fundamental data packet is given by the Weyl spinor dimension formula $\nu = 2^{n/2-1}$ for $n$-dimensional chiral spinors:
+Because the $Spin(8)$ chiral spinors lack complex structure, and $Spin(9)$ complex spinors lack chirality, the unique minimal extension that simultaneously supports Complex, Chiral representations (Weyl-Dirac spinors) is $Spin(10)$. Crucially, this does not imply that the $D_4$ substrate geometrically embeds a $Spin(10)$ gauge group. The substrate system strictly prohibits this, as $Spin(10)$ (rank 5) exceeds the structural capacity of the internal $D_4$ sector (rank 4). Rather, $Spin(10)$ strictly defines the \textbf{informational payload size} required to encode a persistent signal. The size of this fundamental data packet is given by the Weyl spinor dimension formula $\nu = 2^{n/2-1}$ for $n$-dimensional chiral spinors:
 
 \begin{equation}
     \nu = 2^{\frac{10}{2}-1} = 2^4 = \mathbf{16}
@@ -110,10 +110,11 @@ Thus, $\nu = 16$ is established as the fundamental bit-depth of the vacuum's har
 
 \subsection{The Total Node Capacity (\texorpdfstring{$N$}{N})}
 \label{sec:total_node_capacity}
-We derive the total information capacity of a single lattice node, which constrains the state space of all subsequent 
-derivations.
+We derive the total information capacity of a single lattice node, which constrains the state space of all subsequent derivations.
 
-The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. As derived above, the internal sector requires a bit-depth of $\nu=16$. Because the projection must be compatible with the \textbf{Self-Duality} of the parent $E_8$ substrate, the Spacetime sector must remain informationally symmetric to the Internal sector. Because information capacity (bit-depth) is additive across independent orthogonal sub-spaces, the total channel capacity $N$ is simply the sum of the two sectors:
+The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. As derived above, the internal sector requires a bit-depth of $\nu=16$. Because the projection must be compatible with the \textbf{Self-Duality} of the parent $E_8$ substrate, the Spacetime sector must remain informationally symmetric to the Internal sector. Because the parent $E_8$ substrate is exactly self-dual ($\Lambda = \Lambda^*$), the projection cannot introduce an informational asymmetry between the spacetime manifold and the internal state space without violating local probability conservation. Therefore, the maximal channel capacity supported by the geometric structure of Sector B strictly dictates the required reciprocal capacity of Sector A. Because information capacity (bit-depth) is additive across independent orthogonal sub-spaces, the total channel capacity $N$ is simply the sum of the two sectors:
+
+
 \begin{equation}
     N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
 \end{equation}
@@ -217,19 +218,11 @@ We derive the fundamental period of the lattice, the temporal bit-depth of the v
 \subsubsection{Unitarity and The Unique Factorization Domain Constraint}
 \label{sec:fundamental_resonance_filter1}
 
-To apply this Unitarity constraint, we must map the physical period $\Delta$ to the algebraic structure of the causal loop. As proven formally in \cref{app:algebraic_geometry_causal_loop}, a $(1+1)D$ causal sequence on a self-dual lattice forms an elliptic curve. For the evolution operator to be uniquely invertible (Unitary), this curve must possess Complex Multiplication (CM) with a class number of $h=1$. The self-duality of the substrate strictly mandates that the geometric period of the loop ($\Delta$) must equal the algebraic CM discriminant ($D$). 
-
-Consequently, the Unitarity requirement restricts the temporal period $\Delta$ strictly to the Stark-Heegner numbers (the unique solutions for $h=1$): $\{1, 2, 3, 7, 11, 19, 43, 67, 163\}$.
-
-These nine \textbf{Heegner numbers} are the only valid candidates for the temporal resonance of a unitary causal loop.
+To apply this Unitarity constraint, we must map the physical period $\Delta$ to the algebraic structure of the causal loop. As proven formally in \cref{app:algebraic_geometry_causal_loop}, a $(1+1)D$ causal sequence on a self-dual lattice forms an elliptic curve. For the evolution operator to be uniquely invertible (Unitary), this curve must possess Complex Multiplication (CM) with a class number of $h=1$. The self-duality of the substrate mandates that the geometric period of the loop ($\Delta$) must equal the algebraic CM discriminant ($D$). Consequently, the Unitarity requirement restricts the temporal period $\Delta$ strictly to the Stark-Heegner numbers (the unique solutions for $h=1$): $\{1,$ $2,$ $3,$ $7,$ $11,$ $19,$ $43,$ $67,$ $163\}$.
 
 \subsubsection{Causality (The ``Bandwidth'') Constraint}
 \label{sec:fundamental_resonance_filter2}
-In \cref{sec:causality} we established that $\Delta \ge N = 32$ is required to satisfy Causality. Applying this constraint to the set of Heegner numbers leaves:
-
-\begin{equation}
-    \Delta \in \{43, 67, 163\}
-\end{equation}
+To satisfy Causality we apply the constraint \linebreak $\Delta \ge N = 32$ (established in \cref{sec:causality}) leaving: $\Delta \in \{43, 67, 163\}$
 
 \subsubsection{The Self-Clocking Constraint (Causal Continuity)}
 \label{sec:fundamental_resonance_filter3}
@@ -293,7 +286,7 @@ Because the chiral signal states are dynamic entities within the $D=4$ manifold,
 \end{equation}
 
 \subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \InvLSubstrate$}{Loverhead})}
-The vacuum's intrinsic structural complexity.   This sets the substrate capacity—the total information the vacuum must process per fundamental cycle. 
+The vacuum's intrinsic structural complexity. This sets the substrate capacity, the total information the vacuum must process per fundamental cycle. 
 
 \begin{itemize}
     \item \textbf{$\nu = 16$:} Channel infrastructure. The spinor information at each site.
@@ -312,17 +305,17 @@ We have now identified a unique solution that satisfies the architectural requir
 \begin{itemize}
     \item[] \textbf{Substrate: The $E_8$ Manifold.} The $D_4 \oplus D_4$ decomposition of $E_8$ fixes $D=4$ as the unique dimensionality supporting Finiteness and Causality.
 
-    \item \textbf{Capacity ($CAP$): The Operational Envelope ($N=32$).} The $N=32$ chiral channels within each $\Delta=43$ cycle define the total state-transition budget. The clock period sets the envelope; the channel count determines what fills it.
+    \item \textbf{Capacity: The Operational Envelope ($N=32$).} The $N=32$ chiral channels within each $\Delta=43$ cycle define the total state-transition budget. The clock period sets the envelope; the channel count determines what fills it.
 
-    \item \textbf{Map ($MAP$): The Persistent Embedding ($\sigma=5$).} The sum of spatial ($D_{\text{space}}=3$) and topological ($D_{\text{boundary}}=2$) degrees of freedom required to uniquely embed a persistent entity in the manifold.
+    \item \textbf{Map: The Persistent Embedding ($\sigma=5$).} The sum of spatial ($D_{\text{space}}=3$) and topological ($D_{\text{boundary}}=2$) degrees of freedom required to uniquely embed a persistent entity in the manifold.
     
-    \item \textbf{Protocol ($PRO$): The Chiral Bit-Depth ($\nu=16$).} The minimal spinor dimension admitting complex structure and chirality, enabling lossless information propagation. Required by Unitarity for read/write symmetry.
+    \item \textbf{Protocol: The Chiral Bit-Depth ($\nu=16$).} The minimal spinor dimension admitting complex structure and chirality, enabling lossless information propagation. Required by Unitarity for read/write symmetry.
 
-    \item \textbf{Governor ($GOV$): The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing charge quantization and preventing field divergence. Required by Finiteness.
+    \item \textbf{Governor: The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing binary partition of state and preventing field divergence. Required by Finiteness.
 
-    \item \textbf{Toll ($TOL$): The causal cost of persistence ($\tau = -1$, $M=11$).} Structurally, the Lorentzian metric ($\tau = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
+    \item \textbf{Toll: The causal cost of persistence ($\tau = -1$, $M=11$).} Structurally, the Lorentzian metric ($\tau = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
 
-    \item \textbf{Margin ($MAR$): The Resolution Floor ($L_{embed}=31$).} The total embedding dimension sets the geometric noise floor below which signals dissolve into the substrate. In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal (the electron mass, derived in Section~\ref{sec:system2_geometric_impedance}) is the proof of solvency. The vacuum persists because its resolution limit is exactly minimally sufficient.
+    \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} The total embedding dimension sets the geometric noise floor below which signals dissolve into the substrate. In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal (the electron mass, derived in Section~\ref{sec:system2_geometric_impedance}) is the proof of solvency. The vacuum persists because its resolution limit is exactly minimally sufficient.
 \end{itemize}
 
 \subsection{Conclusion: \texorpdfstring{$E_8$}{E8}-Persistence theory}

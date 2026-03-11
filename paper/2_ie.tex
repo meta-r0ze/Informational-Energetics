@@ -5,12 +5,12 @@ Any system that persists, from a biological cell to the universe itself, must so
 
 Informational Energetics (IE) is a theoretical framework designed to derive the universal architecture required to solve this problem. It unifies insights from non-equilibrium thermodynamics, algorithmic information theory, and robust control theory into a single, predictive model of persistence.
 
-\textbf{The Selection Principle.} Configurations populate state space transiently; not all persist. Those with minimal Entropic Action ($S_\Phi$) relative to their structural complexity remain observable at timescales longer than those that don't.
+\textbf{The Selection Principle.} Configurations populate state space transiently; not all persist. For any given level of structural complexity, those configurations that minimize their Entropic Action ($S_\Phi$) remain observable at timescales longer than those that don't.
 
-This is not teleological: configurations do not \emph{seek} minimization. It is a filter, what fails to minimize $S_\Phi$ leaves no detectable signal, and what remains constitutes the observable universe. We formalize this as:
+This is not teleological: configurations do not \emph{seek} minimization. It is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what remains constitutes the observable universe. We formalize this as:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
-    The \textbf{Selection Principle}: Among all possible configurations, only those that minimize \textbf{Entropic Action} ($S_\Phi$) relative to structural complexity remain observable.
+    The \textbf{Selection Principle}: Among all configurations capable of encoding a given structural complexity, only those that minimize \textbf{Entropic Action} ($S_\Phi$) remain observable.
 \end{mdframed}
 
 The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. Formally, it is the time-integrated Net Entropic Impedance:
@@ -19,7 +19,7 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
 \end{equation}
 
-where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum (\cref{eq:entropic_balance}, below). For systems in \textbf{Quiescent Equilibrium}, where entropic drag is minimized to the theoretical floor and $Z_{IE}$ is constant, $S_\Phi$ approaches its minimum value $Z_{IE} \cdot \tau$, consistent with the system maintaining a stable configuration. (Rooted in algorithmic information theory, $Z_{IE}$ represents the operational rate of the system; consequently, the integrated Entropic Action $S_\Phi$ evaluates to a strictly dimensionless count of elementary state transitions, distinguishing it from traditional physical action). \textbf{Note:} The full development of $S_\Phi$ as a variational principle for field-theoretic systems (including the derivation of the Lagrangian structure), is deferred to future work.
+where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum (\cref{eq:entropic_balance}, below). For spatially distributed systems, $Z_{IE}(t)$ represents the volumetric integration of the system's local dissipation density. For systems in \textbf{Quiescent Equilibrium}, where entropic drag is minimized to the theoretical floor and $Z_{IE}$ is constant, $S_\Phi$ approaches its minimum value $Z_{IE} \cdot \tau$, consistent with the system maintaining a stable configuration. (Rooted in algorithmic information theory, $Z_{IE}$ represents the operational rate of the system; consequently, the integrated Entropic Action $S_\Phi$ evaluates to a strictly dimensionless count of elementary state transitions, distinguishing it from traditional physical action). \textbf{Note:} The full development of $S_\Phi$ as a dynamic variational principle for field-theoretic systems (including the derivation of the Lagrangian structure) is deferred to the companion paper, \textit{Informational Energetics: Entropic Action}.
 
 While open systems (such as biological organisms) persist by maintaining a non-equilibrium steady state through the continuous flux of energy and matter from their environment, closed systems persist by minimizing entropic action, as there is no external energy source to offset dissipation. A closed system would dissolve without the ability to minimize entropic action.
 
@@ -75,8 +75,6 @@ IE reframes control systems not as rigid instruction-following, but as active, e
 
 The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. IE proposes a Rosetta Stone: the laws governing vacuum, cell, or network as specific instances of the same architectural principles.
 
-If validated, IE would serve as a \textbf{Rosetta Stone}, establishing that the laws governing a vacuum, a biological cell, or a computational network are specific instances of the same architectural principles.
-
 \subsubsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}
 
@@ -126,7 +124,7 @@ A formal proof of minimality from first principles is deferred to future work; t
 \subsection{Note on Systemic State: Quiescent Equilibrium}
 \label{sec:quiescent}
 
-\textbf{Quiescent Equilibrium:} Informational Energetics models the lifecycle of complex systems (Genesis to Collapse) via the mathematics of logistic bifurcation. However, this paper defines the \textit{Quiescent Equilibrium} of the vacuum—the thermodynamic floor where entropic action ($S_\Phi$) is minimized to its absolute limit ($S_{min}$). The geometric invariants derived hereafter are the \textit{fixed-point attractors} of this self-optimization.
+\textbf{Quiescent Equilibrium:} Informational Energetics models the lifecycle of complex systems (Genesis to Collapse) via the mathematics of logistic bifurcation. However, this paper defines the \textit{Quiescent Equilibrium} of the vacuum, the thermodynamic floor where entropic action ($S_\Phi$) is minimized to its absolute limit ($S_{min}$).
 
 \subsection{The Scope of Informational Energetics}
 For decades, the study of Complex Adaptive Systems has excelled at qualitative description but struggled to yield predictive, parameter-free laws. Informational Energetics diagnoses this stagnation as a problem of scope: by restricting focus from \textit{all} complex systems to \textit{only} those that successfully \textbf{persist} against entropy, selection principles replace intractable generality with exact structural constraints.
