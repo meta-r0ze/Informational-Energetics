@@ -47,33 +47,39 @@ Though rooted in information theory and thermodynamics, traditional Control Theo
 
 \subsubsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
-To facilitate the translation from ontology to engineering, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.
+To facilitate the translation from ontology to engineering, we define the Six Pillars of Persistence not as arbitrary design choices, but as the universal architectural requirements for any entity that successfully resists entropic decay. The mapping from control components to IE pillars is structural: each control function translates to an existential requirement when recontextualized as persistence rather than performance.  The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines. IE reveals that these disparate theorems mathematically interlock because they describe the necessary facets of a single, universal architecture of persistence.
 
 \begin{enumerate}
     \item \textbf{The Capacity ($CAP$):} \textit{The Vessel.} 
-    The physical infrastructure required to acquire resources, process energy, and perform work. It defines the system's kinetic potential and its ability to act on the environment. (The Plant/Actuator).
+    The physical infrastructure required to acquire resources, process energy, and perform work. It defines the system's kinetic potential and its ability to act on the environment. (The Plant/Actuator). 
+    \textit{Foundational Theorem (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, providing the physical basis for the strict \textbf{Finiteness} requirement of the Capacity pillar. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
 
     \item \textbf{The Map ($MAP$):} \textit{The Model.}
-    The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Reference Signal/Setpoint).
+    The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Reference Signal/Setpoint). 
+    \textit{Foundational Theorem (The Good-Regulator Theorem \cite{conant_every_1970}):} Conant and Ashby proved mathematically that ``every good regulator of a system must be a model of that system.'' A system cannot persistently regulate against environmental entropy without encoding a structural map of its environment.
 
     \item \textbf{The Protocol ($PRO$):} \textit{The Interface.}
-    The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path).
+    The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path). 
+    \textit{Foundational Theorem (Shannon's Source-Channel Separation Theorem \cite{shannon_communication_1949}):} Shannon established that optimal communication over a noisy channel requires decoupling the source data (the Map) from the error-correcting transmission encoding (the Protocol). Systemic coherence demands an independent protocol layer.
     
     \item \textbf{The Governor ($GOV$):} \textit{The Constraint.}
-    The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter).
+    The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
+    \textit{Foundational Theorem (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
     \item \textbf{The Toll ($TOL$):} \textit{The Temporal Cost.}
-    The irreducible energy cost of state transitions and information erasure (Landauer’s Limit). (Processing Latency)
+    The irreducible energy cost of state transitions and information erasure. (Processing Latency). 
+    \textit{Foundational Theorem (Landauer's Principle \cite{landauer_irreversibility_1961}):} Any irreversible logical operation, such as erasing a bit, must dissipate at least $k_B T \ln 2$ of energy to the environment. State transitions carry an inescapable thermodynamic toll.
    
     \item \textbf{The Margin ($MAR$):} \textit{The Buffer.}
-    The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin)
+    The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
+    \textit{Foundational Theorem (Nyquist-Bode Stability Margins \cite{nyquist_regeneration_1932}):} A feedback system operating at theoretical criticality has zero tolerance for variance. Nyquist proved that physical control loops must maintain strict gain and phase margins away from the critical threshold, or the first stochastic environmental fluctuation will cause terminal divergence.
 \end{enumerate}
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
 IE reframes control systems not as rigid instruction-following, but as active, energetic defense of identity. While a simple instruction (Open-Loop) dictates a path without regard for the environment, a control system (Closed-Loop) possesses the structural capacity for persistence. It does not just ``do''; it ``remains.'' From a stochastic perspective, this `agency' is a \textbf{structural filter}: in a high-entropy environment, only those configurations that implement this six pillar architecture possess the stability required to be observable across cosmic timescales.
 
-The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. IE proposes a Rosetta Stone: the laws governing vacuum, cell, or network as specific instances of the same architectural principles.
+The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the fundamental substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture. IE proposes a Rosetta Stone: the laws governing vacuum, cell, or network as specific instances of the same architectural principles.  
 
 \subsubsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}
