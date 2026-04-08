@@ -4,16 +4,20 @@
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
 \CatchFileBetweenTags{\AlphaInvExperimentalValue}{constants.tex}{AlphaInvExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvSigma}{constants.tex}{AlphaInvSigma}
 \CatchFileBetweenTags{\AlphaInvAccText}{constants.tex}{AlphaInvAccText}
 
 \CatchFileBetweenTags{\AlphaInvMorelExperimentalValue}{constants.tex}{AlphaInvMorelExperimentalValue}
 \CatchFileBetweenTags{\AlphaInvMorelAccText}{constants.tex}{AlphaInvMorelAccText}
+\CatchFileBetweenTags{\AlphaInvMorelSigma}{constants.tex}{AlphaInvMorelSigma}
 
 \CatchFileBetweenTags{\AlphaInvParkerExperimentalValue}{constants.tex}{AlphaInvParkerExperimentalValue}
 \CatchFileBetweenTags{\AlphaInvParkerAccText}{constants.tex}{AlphaInvParkerAccText}
+\CatchFileBetweenTags{\AlphaInvParkerSigma}{constants.tex}{AlphaInvParkerSigma}
 
 \CatchFileBetweenTags{\AlphaInvFanExperimentalValue}{constants.tex}{AlphaInvFanExperimentalValue}
 \CatchFileBetweenTags{\AlphaInvFanAccText}{constants.tex}{AlphaInvFanAccText}
+\CatchFileBetweenTags{\AlphaInvFanSigma}{constants.tex}{AlphaInvFanSigma}
 
 \CatchFileBetweenTags{\VonKlitzingVal}{constants.tex}{VonKlitzingVal}
 \CatchFileBetweenTags{\VonKlitzingExperimentalValue}{constants.tex}{VonKlitzingExperimentalValue}
@@ -21,7 +25,7 @@
 
 The Fine-Structure Constant ($\alpha^{-1} \approx 137$) is the most precisely measured coupling in physics, yet standard quantum field theory offers no mechanism to derive its magnitude from first principles; it remains an axiomatic input.
 
-In the $E_8$-Persistence theory, this magnitude is not arbitrary. The vacuum substrate presents a natural impedance to sustaining topological structure, measured in elementary operations per unit charge. This is the \textbf{Geometric Impedance} ($Z_{geo}$), and $\alpha^{-1}$ is its exact value.
+In the $E_8$-Persistence theory the vacuum substrate presents a natural impedance to sustaining topological structure, measured in elementary operations per unit charge. This is the \textbf{Geometric Impedance} ($Z_{geo}$), and $\alpha^{-1}$ is its exact value.
 
 \textbf{Scope of Derivation:} In standard Quantum Field Theory, coupling constants ``run'' with energy scale. This section derives the \textit{bare geometric impedance} of the vacuum substrate at its fundamental resolution floor (Quiescent Equilibrium). This invariant baseline represents the fixed structural limit of the geometry; the emergence of scale-dependent dynamics and renormalization is the subject of subsequent papers in this series which depend upon this foundational calculation.
 
@@ -94,7 +98,7 @@ This base value matches the experimental Fine-Structure Constant to within $0.03
 
 \subsection{The Thermodynamic Corrections}
 
-The physical lattice is not an abstract ideal; it is discrete, resource-constrained, and subject to thermodynamic friction. As derived in \cref{sec:manifold_resolution}, thermodynamic costs scale with the fraction of $RM$ utilized.
+The physical lattice is discrete, resource-constrained, and subject to thermodynamic friction. As derived in \cref{sec:manifold_resolution}, thermodynamic costs scale with the fraction of $RM$ utilized.
 
 \subsubsection{Alignment Efficiency (Protocol)}
 \textit{Form: Linear strain ratio — boundary constraint divided by bulk length.}
@@ -140,8 +144,7 @@ As strictly required by the Entropic Balance Sheet (\cref{sec:entropic_balance_s
     Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx -0.04651
 \end{equation}
 
-This functional form is not an approximation; it is the unique exact linear constraint density permitted on a homogeneous, closed periodic loop.
-
+This functional form is the unique exact linear constraint density permitted on a homogeneous, closed periodic loop.
 
 \subsubsection{Entropic Transition (Toll)}
 \textit{Form: Joint entropic cost of state selection across orthogonal degrees of freedom.}
@@ -222,9 +225,9 @@ With $\hbar = \ell = c = 1$, all coefficients in \cref{eq:alpha_inverse} are fix
 
 \subsection{Completeness and Uniqueness of the Finite Sum}
 
-A standard quantum field theory framework treats $\alpha$ as a fundamental input parameter or a running coupling requiring experimental measurement. In contrast, the IE framework derives its geometric impedance as a strictly finite, six-term sum.
+A standard quantum field theory framework treats $\alpha$ as a fundamental input parameter or a running coupling requiring experimental measurement. In contrast, the $E_8$-Persistence theory derives its geometric impedance as a strictly finite, six-term sum.
 
-This truncation is not an approximation, but a structural requirement of the $E_8$-Persistence framework. The equation is uniquely determined by two constraints:
+This truncation is a structural requirement. The equation is uniquely determined by two constraints:
 
 \textbf{1. The Six Pillars:} The six sectors correspond one-to-one with the Universal Architecture of Persistence. The functional forms range from mathematically forced to physically natural:
 
@@ -260,40 +263,40 @@ Recent experimental values in \Cref{tab:alpha_comparison} do not form a simple c
 \toprule
 \textbf{Source} & \textbf{Value ($\alpha^{-1}$)} & \textbf{Dev.} \\
 \midrule
-Morel  (2020) & \AlphaInvMorelExperimentalValue & $0.58 \sigma$ \\
-Fan (2023) & \AlphaInvFanExperimentalValue & $3.09 \sigma$\\
-Parker (2018) & \AlphaInvParkerExperimentalValue & $6.16 \sigma$ \\
-CODATA (2022) & \AlphaInvExperimentalValue & $1.68 \sigma$ \\
+Morel  (2020) & \AlphaInvMorelExperimentalValue & $\AlphaInvMorelSigma \sigma$ \\
+Fan (2023) & \AlphaInvFanExperimentalValue & $\AlphaInvFanSigma \sigma$\\
+Parker (2018) & \AlphaInvParkerExperimentalValue & $\AlphaInvParkerSigma \sigma$ \\
+CODATA (2022) & \AlphaInvExperimentalValue & $\AlphaInvSigma \sigma$ \\
 \bottomrule
 \end{tabular}
 \caption{Numerical comparison of the $E_8$-Persistence Theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
 
-The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $0.58\sigma$, but deviates by $\sim 3\sigma$ from Fan (2023).
+The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $\AlphaInvMorelSigma \sigma$, but deviates by $\AlphaInvFanSigma \sigma$ from Fan (2023).
 
 \paragraph{The QED Extraction Tension and the Quantization Gap:} 
-We must explicitly address the $\sim 3\sigma$ tension between our geometric prediction and the Fan (2023) measurement. We do not claim this tension confirms our framework; rather, we identify a structural reason why such a systematic offset might arise.
+We must explicitly address the $\AlphaInvFanSigma \sigma$ tension between our geometric prediction and the Fan (2023) measurement. We do not claim this tension confirms our framework; rather, we identify a structural reason why such a systematic offset might arise.
 
 Morel (2020) measures $\alpha$ kinematically. In our framework, this is a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), however, extracts $\alpha$ by fitting experimental data to a 10th-order (5-loop) QED perturbative expansion. 
 
-Standard QED calculates this expansion utilizing dimensional regularization, which implicitly assumes continuous spacetime and infinite resolution. In the $E_8$-Persistence framework, spacetime is a discrete lattice with finite channel capacity ($\nu=16$). While the continuous QED approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime assumption underlying dimensional regularization may introduce systematic bias when the loop-order complexity approaches the substrate's finite channel capacity.
+Standard QED calculates this expansion utilizing dimensional regularization, which implicitly assumes continuous spacetime and infinite resolution. In the $E_8$-Persistence theory, spacetime is a discrete lattice with finite channel capacity ($\nu=16$). While the continuous QED approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime assumption underlying dimensional regularization may introduce systematic bias when the loop-order complexity approaches the substrate's finite channel capacity.
 
 We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This aligns with Freeman Dyson's 1952 proof \cite{dyson_divergence_1952} that the QED perturbative series is fundamentally divergent due to vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
 
 This breakdown scale can be heuristically estimated by comparing Feynman diagram multiplicity to the substrate's channel capacity. The number of QED diagrams grows factorially with loop order; at 5-loop precision, the electron anomalous magnetic moment calculation requires evaluating 12,672 distinct diagrams. Simultaneously, the available combinatorial state space of the fundamental causal loop scales as $\nu^n = 16^n$. At $n=4$ to $n=5$, the factorial diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65,536$), marking the threshold where the continuous expansion saturates the substrate's discrete bit-depth.
 
-This yields a rigorous, asymmetric falsification criterion: if pure kinematic measurements continue to converge to $\alpha^{-1} \approx \mathbf{\AlphaInvVal}$ while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, the convergence of both methods to a single, identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence framework.
+This yields a rigorous, asymmetric falsification criterion: if pure kinematic measurements continue to converge to $\alpha^{-1} \approx \mathbf{\AlphaInvVal}$ while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, the convergence of both methods to a single, identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence theory.
 
 \subsection{Corollary: Quantization of Charge}
 The geometric impedance $Z_{geo}$ fixes the electromagnetic coupling $\alpha$. By the standard definition $\alpha = e^2/(4\pi\epsilon_0\hbar c)$, the elementary charge is:
 \begin{equation}
 e = \sqrt{\frac{4\pi\epsilon_0\hbar c}{Z_{geo}}}
 \end{equation}
-Charge is not an intrinsic property but a \textit{flow constraint}: the geometric impedance restricts information flux through a $\chi=2$ topological defect to discrete values. Quantization follows from integer invariants, not field-theoretic anomaly.
+Charge is a \textit{flow constraint}: the geometric impedance restricts information flux through a $\chi=2$ topological defect to discrete values. Quantization follows from integer invariants, not field-theoretic anomaly.
 
 \subsection{The Von Klitzing Constant (\texorpdfstring{$R_K$}{RK})}
-While the relation $R_K = Z_0 / 2\alpha$ is a known algebraic identity in standard electromagnetism, the $E_8$-Persistence framework provides a novel structural interpretation for its components. Specifically, the factor of 2 emerges geometrically from the Spinor Double Cover, it is the winding number required for a spinor to return to its initial phase after traversing the manifold, not a mere artifact of SI unit conventions.
+While the relation $R_K = Z_0 / 2\alpha$ is a known algebraic identity in standard electromagnetism, the $E_8$-Persistence theory provides a novel structural interpretation for its components. Specifically, the factor of 2 emerges geometrically from the Spinor Double Cover, it is the winding number required for a spinor to return to its initial phase after traversing the manifold, not a mere artifact of SI unit conventions.
 
 A geometric impedance should manifest as a measurable physical resistance. The Quantum Hall Effect provides exactly this test: it measures the resistance of a single quantum channel with parts-per-billion precision, independently of $\alpha^{-1}$.  Three structural facts of the substrate yield $R_K$ directly:
 
@@ -322,7 +325,7 @@ Combining these yields the strict geometric relationship $R_K / Z_0 = \alpha_{ge
 \CatchFileBetweenTags{\ChargeRatioPct}{constants.tex}{ChargeRatioPct}
 
 \subsection{The Planck Charge Ratio}
-The ratio $e/q_P \approx 0.085$ is a known numerical identity but has lacked structural explanation: why should the electromagnetic coupling set the attenuation between natural and observed charge? In the $E_8$-Persistence framework this is not coincidence but necessity, the geometric impedance $Z_{geo}$ enforces a safety margin between operating charge and substrate breakdown.
+The ratio $e/q_P \approx 0.085$ is a known numerical identity but has lacked structural explanation: why should the electromagnetic coupling set the attenuation between natural and observed charge? In the $E_8$-Persistence theory this is a necessity, the geometric impedance $Z_{geo}$ enforces a safety margin between operating charge and substrate breakdown.
 
 The elementary charge appears as the Planck charge attenuated by the square root of the lattice impedance:
 \begin{equation}
