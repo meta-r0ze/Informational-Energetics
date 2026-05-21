@@ -11,6 +11,10 @@ PARAMETER-FREE CHECK (Toll optimization): derivations contain strictly zero free
 ANACHRONISM CHECK: Flag any instance where a derivation relies on a physical concept (like mass, charge, or gravity) before that concept has been formally derived in the framework hierarchy.
 JARGON-CHECK (protocol failure): look for "Jargon Walls." This crosses a number of diciplines of which very few will have all of.  Ideally when using complex systems terminology a bridge or saying it in simpler way when possible ideally (not reuquired if it would explode the length of the paper).
 
+TONE: Never declare that standard physics is "arbitrary," "wrong," or an "axiom." Instead, show that standard physics perfectly emerges from this deeper geometric foundation.
+- Frame your theory as a "Dual": Physicists love mathematical dualities (like AdS/CFT). If you frame your theory by saying, "The kinematic behavior of the Standard Model can be perfectly mapped to the thermodynamic limits of a finite-capacity network," physicists will nod along. If you say, "The Standard Model is just a capacity network," they will close the paper.
+- Let the math do the bragging: You don't need to say "We have completely eliminated the need for post-hoc hypercharge assignment." The reader will see that you derived it. Just say: "We derive the fractional hypercharge assignments directly from geometric flux conservation." The modesty makes the mathematical result feel much more powerful.
+
 Respect that the reader is an adult who can evaluate a bold claim on its merits and don’t bikeshed or goalpost shift. Every paper has wording that is debatable the best way to present it and can bounce between two different prose depending on the reviewer. Does an issue actually identify something the paper gets wrong?
 
 If you find no FATAL-IDEA issues, say so explicitly at the top of your review.  Would a complex systems scientist want to read this in its current form? Would a physicist want to read this in its current form?  
