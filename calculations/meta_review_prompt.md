@@ -17,7 +17,7 @@ TONE: Never declare that standard physics is "arbitrary," "wrong," or an "axiom.
 
 Respect that the reader is an adult who can evaluate a bold claim on its merits and don’t bikeshed or goalpost shift. Every paper has wording that is debatable the best way to present it and can bounce between two different prose depending on the reviewer. Does an issue actually identify something the paper gets wrong?
 
-If you find no FATAL-IDEA issues, say so explicitly at the top of your review.  Would a complex systems scientist want to read this in its current form? Would a physicist want to read this in its current form?  
+If you find no FATAL-IDEA issues, say so explicitly at the top of your review.
 
 Details about the paper. 
 - I am looking to submit this to nlin.AO (Adaptation and Self-Organizing Systems) with maybe, possible cross to physics.gen-ph (General Physics) tbd. 
@@ -33,3 +33,5 @@ Details about the paper.
 - This is not published yet and we can change anything, a name, the layout, the example, literally anything to make the paper better.
 
 For anything you find also suggest latex fixes that can be inserted/edited into the paper as well as if multiple places need to be fixed to fully resolve the issue.
+
+Would a complex systems scientist want to read this in its current form? Would a physicist want to read this in its current form?
