@@ -68,7 +68,8 @@ For a topological defect to persist in the lattice, it must complete a closed ge
 
 \subsection{The Resonant Circumference (Capacity)}
 \textit{Form: The geometric action of the causal bounding horizon.}
-Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. In a discrete system, maintaining a persistent localized identity requires enclosing a volume of information within a defined causal boundary.
+
+Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. Without this propagation cost, a topological defect would instantly delocalize and propagate eternally at the maximum bandwidth limit ($c=1$).
 
 \textbf{Derivation:} Because the causal cycle restricts propagation to a $(1+1)\text{D}$ plane (one spatial dimension, one temporal), the defect's maximal influence region is geometrically represented as a $2\text{D}$ disk. The temporal period $\Delta$ sets the diameter of this disk (representing the maximum spatial separation across the causal horizon), and the isotropic boundary is the continuous circumference enclosing it.
 
@@ -82,9 +83,9 @@ The boundary must therefore be perfectly isotropic, the geometric analogue of Ny
 \subsection{Topological Boundary (Map)}
 \textit{Form: The integer topological invariant of the boundary constraint.}
 
-To satisfy the Map pillar, a localized information state must prevent its internal data from dissolving into the background vacuum. The state must be topologically closed.
+The Map is the boundary constraint required to prevent internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
 
-\textbf{Derivation:} As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of 'Inside' versus 'Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+\textbf{Derivation:} As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
     Z_{MAP} = +\chi = 2
 \end{equation}
@@ -94,12 +95,12 @@ Because $\chi$, the Euler characteristic is a pure topological invariant, it is 
 \subsection{Alignment Efficiency (Protocol)}
 \textit{Form: The negative reciprocal of the residual coordination capacity.}
 
-The Protocol pillar mediates the flow of phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) subspaces of the $D_4 \oplus D_4$ projection. Misalignment between these sectors creates thermodynamic friction; maximizing alignment efficiency minimizes the net entropic burden.
+The Protocol mediates the flow of phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) channels. Without this alignment cost, these channels would completely decouple, fragmenting the vacuum into isolated, unrelated subspaces.
 
 \textbf{Derivation:} The manifold resolution $R_M = D\Delta = 172$ is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
 
 \begin{equation}
-    C_{res} = R_M - \sigma = (4 \times 43) - 5 = 167
+    C_{res} = R_M - \sigma = (4 \cdot 43) - 5 = 167
 \end{equation}
 
 Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}):
@@ -111,8 +112,9 @@ The linear form is mandated by statelessness: the Protocol coordinates instantan
 
 \subsection{Stabilizing Potential (Governor)}
 \textit{Form: The negative ratio of the topological boundary to the causal cycle.}
-The Governor prevents runaway entropic divergence by constraining the resonant excitation across the temporal cycle. 
 
+The Governor prevents runaway entropic divergence by constraining the resonant excitation across the temporal cycle. Without this stabilizing cost, local phase excitations on the causal loop would undergo unbounded, runaway feedback, overflowing the local node capacity.
+ 
 \textbf{Derivation:} To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
 
 Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
@@ -121,21 +123,27 @@ Because the loop is closed and periodic, it possesses no endpoint boundaries (no
 \end{equation}
 
 
-\subsection{Entropic Transition: Logic Gate Probability (Toll)}
+\subsection{Entropic Transition (Toll)}
 \textit{Form: The ratio of persistence-preserving states to total interaction states.}
 
-The Toll is the thermodynamic cost of a state transition: the probability that a generic interaction lands in a configuration that preserves the defect rather than dissolving it into the vacuum.
+The Toll is the entropic cost of executing a state transition. Without this update cost, the network's logical transitions would execute without a sequential causal history.
 
 On a self-dual lattice, the minimal nontrivial interaction is a 3-point vertex (a logic gate). Two-point interactions are trivial (propagation only); four-point interactions require asymmetric centers violating homogeneity (\cref{sec:finiteness}). 
 
-\textbf{Derivation:} Let the node's channel capacity be represented by an $N$-dimensional vector space $V$. A 3-point vertex represents a bilinear transition operator mapping incoming states to an outgoing state ($V \otimes V \to V$). The state space of all possible transition operators is the rank-3 tensor space $V^* \otimes V^* \otimes V$. By linear algebra, the dimension of this space—representing the total unconstrained configuration space of the transition—is strictly $\dim(V^* \otimes V^* \otimes V) = N^3$. 
+\textbf{Derivation:} A 3-point vertex has three independent legs. By the homogeneity requirement, each leg independently selects from the node's $N = 32$ available channels. The total unconstrained configuration space for the vertex's channel combinations is therefore $N \cdot N \cdot N = N^3$. 
 
-The total unconstrained phase space $\Omega_{total}$ for a local 3-point event is therefore the product of three independent geometric factors: the $N^3$ operator degrees of freedom, the $\sigma$ interaction dimensions mediating the event, and the $R_M$ spacetime addresses where it can occur:
+The total phase space $\Omega_{total}$ for a local 3-point event is the product of three orthogonal combinatorial factors: the $N^3$ channel combinations, the $\sigma = 5$ active interaction degrees of freedom, and the $R_M$ manifold coordinate addresses:
 \begin{equation}
     \Omega_{total} = N^3 \cdot \sigma \cdot R_M
 \end{equation}
 
-Three independent constraints carve out the valid persistence subset. \textit{Channel Identity:} exactly one channel combination preserves the defect's internal state. \textit{Topological Coupling:} the $\chi = 2$ boundary presents exactly 2 valid directional targets (Inside vs.\ Outside). \textit{Collision Avoidance:} the updated state cannot occupy the $\sigma$ addresses already consumed by the interaction's own geometric embedding, leaving $(R_M - \sigma)$ valid landing addresses. These constraints are orthogonal, so their counts multiply:
+The valid persistence subset is defined by the intersection of three geometric constraints. Because these constraints operate on disjoint subspaces, the cardinality of their intersection is the exact product of their invariant limits:
+
+\begin{enumerate}
+    \item \textbf{State Identity Projection ($1$):} The interaction must act as the identity operator on the state's internal channel configuration, yielding exactly $1$ valid mapping to preserve state stability.
+    \item \textbf{Topological Flux Invariant ($\chi = 2$):} The interaction boundary is constrained by the topological manifold. The number of independent, non-vanishing flux orientations through this closed boundary is defined strictly by its Euler characteristic ($\chi = 2$).
+    \item \textbf{Coordinate Non-Degeneracy ($R_M - \sigma$):} To avoid causal aliasing, the transition target cannot project onto the $\sigma$ coordinates already occupied by the interaction's own geometric embedding. The valid output is strictly restricted to the orthogonal residual subspace, which has exactly $(R_M - \sigma)$ coordinates.
+\end{enumerate}
 
 \begin{equation}
     \Omega_{valid} = 1 \cdot \chi \cdot (R_M - \sigma)
@@ -146,22 +154,23 @@ The entropic cost (Toll) of a state transition is exactly the phase-space ratio 
     Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \CompTOL
 \end{equation}
 
-\subsection{Resolution Floor: Quantization Noise (Margin)}
+\subsection{Resolution Floor (Margin)}
 \textit{Form: The reciprocal of the orthogonal configuration phase-space volume.}
 
-The Margin defines the absolute resolution floor of the discrete substrate, the ``quantization noise'' below which any signal dissolves into the vacuum.
+The Margin defines the absolute resolution floor of the discrete substrate. Below this margin the system is unable to distinguish structured state information from ambient background fluctuations.
 
 \textbf{Derivation:} The minimum resolvable signal is exactly 1 quantum of information diluted across the total configuration volume ($V_{config}$). Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, these sectors are statistically independent, meaning their configuration volumes combine via their Cartesian product.
 
-The spacetime component of this configuration volume is defined by the fundamental causal domain of the closed update cycle. As established in Appendix B, preserving Unitarity requires mapping the causal loop to an elliptic curve (a complex 2-torus $T^2 = \mathbb{C}/\Lambda$) characterized by modular inversion symmetry. This symmetry forces the spatial and temporal generators of the fundamental domain to be orthogonally symmetric with length $\Delta$. The coordinate-free symplectic volume (area) of this fundamental domain is strictly:
-\begin{equation}
-    \text{Vol}(T^2) = \int_{0}^{\Delta}\int_{0}^{\Delta} dx \wedge dt = \Delta^2
-\end{equation}
-
-The total joint configuration phase space is therefore the Cartesian product of three independent factors: the $L_{embed} = 31$ complete state vector, the active interaction aperture $(\sigma + 1) = 6$, and the causal volume $\Delta^2$:
+This total joint configuration phase space is the product of three independent, mathematically forced factors:
 \begin{equation}
     V_{config} = L_{embed} \cdot (\sigma + 1) \cdot \Delta^2
 \end{equation}
+where:
+\begin{enumerate}
+    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect. Because its defining properties are strictly orthogonal information channels—internal identity ($\nu=16$, $\chi=2$), geometric anchor ($\sigma=5$), and kinematic phase space ($2D=8$, specifying position and transition rate), their data capacities combine via direct sum: $L_{embed} = \nu + \sigma + \chi + 2D = 31$.
+    \item \textbf{The Interaction Aperture ($(\sigma + 1) = 6$):} The exact cardinality of the active closed neighborhood on the discrete lattice. A localized interaction operator must span the $\sigma = 5$ active links mediating the flow, plus exactly $1$ central vertex hosting the state's occupancy.
+    \item \textbf{The Causal Area ($\Delta^2$):} Because causality restricts information propagation to a $(1+1)\text{D}$ plane at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a spatial horizon of length $\Delta$. The resulting macroscopic spacetime area is strictly $\Delta \cdot \Delta = \Delta^2$.
+\end{enumerate}
 
 The Margin impedance is the reciprocal, the exact informational resolution limit of a single localized quantum:
 
@@ -192,18 +201,23 @@ a_0 = \frac{\hbar}{c} \cdot \frac{Z_{geo}}{m_e} \propto \frac{Z_{geo}}{Z_{MAR}}
 Because the electron mass is fixed by the persistence margin ($MAR$) and the coupling is fixed by the lattice topology, the \textbf{fundamental scale of chemistry} is structurally locked: the Angstrom scale ($10^{-10}$ m) is the immutable theater of atomic interaction. While complex atoms vary in effective radius, the underlying unit of atomic architecture is fixed by the lattice resolution.
 
 
-\subsection{Sector Independence and Linearity}
-Because the six pillars operate on disjoint geometric degrees of freedom within the $E_8 \to D_4 \oplus D_4$ projection, the total Entropic Burden is strictly additive:
+\subsection{Substrate Orthogonality and the Additive Baseline}
+
+While macroscopic control systems exhibit non-linear cross-coupling due to shared, continuous state spaces, the vacuum substrate at the absolute resolution floor (Quiescent Equilibrium) strictly diagonalizes the lowest-order action. Because the six pillars operate on geometrically orthogonal subspaces within the $E_8 \to D_4 \oplus D_4$ projection, their existential constraints are statistically independent. Consequently, by the principles of algorithmic information theory, their joint entropic impedance is strictly additive:
 \begin{equation}
     Z_{geo} = \sum_{i=1}^{6} Z_i
 \end{equation}
-The term $Z_{PRO}$ mediates between the orthogonal $D_4 \oplus D_4$ sectors by operating on the residual capacity $(R_M - \sigma)$ that spans both subspaces. It is the coupling term precisely because it measures the alignment cost of information flow across the sector boundary, while the sectors themselves remain geometrically disjoint.
 
-Linearity follows from three lattice constraints: \textit{discreteness} (operations are atomic), \textit{minimality} (no sub-steps), and \textit{additivity} (independent costs sum). Cross-terms would require interference between orthogonal sectors; the $D_4 \oplus D_4$ decomposition forbids this.
+These degrees of freedom map to disjoint geometric domains: Capacity and Margin to metric volume, Map to topological boundaries, Governor to temporal constraint density, and Toll to combinatorial channel selection. The interaction term $Z_{PRO}$ mediates between the $D_4 \oplus D_4$ sectors by operating on the residual coordination capacity $(R_M - \sigma)$ that spans the boundary, quantifying the interface alignment cost without violating sector disjointness.
+
+\textbf{Truncation of Non-Linear Cross-Terms:} 
+Macroscopic network theory would predict higher-order recursive loops to generate non-linear cross-terms in this summation. In this framework, such recursive interactions do exist, but they manifest dynamically as the scale-dependent \textit{running} of the coupling constant (renormalization). 
+
+The value derived herein is exclusively the \textit{bare} geometric impedance—the atomic, lowest-order resolution limit of the lattice. At this indivisible structural floor, operations are discrete and minimal. Because the substrate lacks the local hardware capacity to resolve sub-steps beneath the fundamental cycle $\Delta$, sub-step interference cross-terms are physically forbidden by finite bit-depth, rigidly locking the baseline evaluation to strict linearity.
 
 
 \subsection{Completeness and Uniqueness of the Finite Sum}
-Standard QFT requires the bare $\alpha$ as an empirically measured input. The $E_8$-Persistence theory instead derives it as a strictly finite, parameter-free structural sum at Quiescent Equilibrium. The truncation at six terms is a structural requirement, not a truncation of a series.
+Standard QFT requires the bare $\alpha$ as an empirically measured input. The $E_8$-Persistence theory instead derives it as a strictly finite, parameter-free structural sum at Quiescent Equilibrium. The six terms are a structural requirement, not a truncation of a series.
 
 Two constraints uniquely determine the equation. First, the six pillars exhaust the architectural degrees of freedom: each term corresponds one-to-one with a component of the Universal Architecture, and the functional form of each is forced by the geometric and information-theoretic requirements derived in \cref{sec:System0_vacuum_requirements}. Second, the characteristic integers $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection. Note that $\nu=16$ enters only through $N = 2\nu = 32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure (\cref{sec:total_node_capacity}).
 
@@ -219,7 +233,7 @@ Summing the geometric components:
 
 Because $\pi$ is the sole non-integer constant, all other terms being exact rational combinations of the characteristic integers, the precision of the prediction is limited only by the evaluation of $\pi$.
 
-Recent experimental values in \Cref{tab:alpha_comparison} do not form a simple consensus and reflect ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). That these independent measurements are mutually exclusive is an open problem in standard metrology. CODATA (2022) synthesizes these conflicting inputs and its uncertainty reflects this tension.
+Recent experimental values (\Cref{tab:alpha_comparison}) do not form a simple consensus and reflect ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}$ via the electron anomalous magnetic moment ($g-2$). That these independent measurements are mutually exclusive is an open problem in standard metrology. CODATA (2022) synthesizes these conflicting inputs and its uncertainty reflects this tension.
 
 \begin{table}[ht]
 \centering
@@ -233,20 +247,19 @@ Parker (2018) & \AlphaInvParkerExperimentalValue & $\AlphaInvParkerSigma \sigma$
 CODATA (2022) & \AlphaInvExperimentalValue & $\AlphaInvSigma \sigma$ \\
 \bottomrule
 \end{tabular}
-\caption{Numerical comparison of the $E_8$-Persistence Theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
+\caption{Comparison of the $E_8$-Persistence Theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
-
-The $E_8$-Persistence derivation strongly aligns with the Rubidium recoil measurement of Morel (2020) to within $\AlphaInvMorelSigma \sigma$, but deviates by $\AlphaInvFanSigma \sigma$ from Fan (2023).
 
 \paragraph{The QED Extraction Tension and the Quantization Gap:}
 $E_8$-Persistence predicts the \emph{Quantization Gap} between kinematic measurements and high-order perturbative QED extractions when loop complexity approaches the substrate's finite channel capacity. The $\AlphaInvFanSigma \sigma$ deviation observed in Fan (2023) is consistent with this predicted threshold.
 
-Morel (2020) measures $\alpha$ kinematically. In our framework, this is a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), however, extracts $\alpha$ by fitting experimental data to a 10th-order (5-loop) QED perturbative expansion. 
+Morel (2020) measures $\alpha$ kinematically. This would be a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), however, extracts $\alpha$ by fitting experimental data to a 10th-order (5-loop) QED perturbative expansion. 
 
 Standard QED calculates this expansion utilizing dimensional regularization, which implicitly assumes continuous spacetime and infinite resolution. In the $E_8$-Persistence theory, spacetime is a discrete lattice with finite channel capacity ($\nu=16$). While the continuous QED approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime assumption underlying dimensional regularization may introduce systematic bias when the loop-order complexity approaches the substrate's finite channel capacity.
 
-We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This aligns with Freeman Dyson's 1952 proof \cite{dyson_divergence_1952} that the QED perturbative series is fundamentally divergent due to vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
+We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. 
+This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent, though the mechanism here is distinct: finite substrate capacity rather than vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
 
 This breakdown scale can be heuristically estimated by comparing Feynman diagram multiplicity to the substrate's channel capacity. The number of QED diagrams grows factorially with loop order; at 5-loop precision, the electron anomalous magnetic moment calculation requires evaluating 12,672 distinct diagrams. Simultaneously, the available combinatorial state space of the fundamental causal loop scales as $\nu^n = 16^n$. At $n=4$ to $n=5$, the factorial diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65,536$), marking the threshold where the continuous expansion saturates the substrate's discrete bit-depth.
 
