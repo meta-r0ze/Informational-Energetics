@@ -34,20 +34,19 @@ The Fine-Structure Constant ($\alpha^{-1} \approx 137$) is one of the most preci
 
 In the $E_8$-Persistence theory, the vacuum substrate presents a natural impedance to sustaining topological structure, measured in elementary operations per unit charge. We define this as the \textbf{Geometric Impedance} ($Z_{geo}$) and identify it physically with $\alpha^{-1}$.
 
-\textbf{Scope of Derivation:} In standard Quantum Field Theory, coupling constants ``run'' with the energy scale. This section exclusively derives the \textit{bare geometric impedance} of the vacuum substrate at its fundamental resolution floor (Quiescent Equilibrium). This invariant baseline represents the fixed structural limit of the geometry at absolute minimal entropy. We do not attempt to derive scale-dependent dynamical scattering in this text; the emergence of running couplings and renormalization from this geometric baseline is the subject of subsequent papers in this series.
+\subsection{Scope of Derivation}
+The $\alpha^{-1}$ derived herein is the bare geometric impedance of the vacuum substrate at its fundamental resolution floor (Quiescent Equilibrium), decoupled from dynamical equations of motion. It represents the absolute minimum thermodynamic tax required to maintain structural coherence with zero external flux. Scale-dependent dynamics (running couplings and renormalization) must conform to this geometric baseline; their dynamic derivation is the subject of subsequent papers in this series.
 
-In Quiescent Equilibrium, the time-integrated Entropic Action (\cref{eq:entropic_action}) reduces from a continuous dynamic integral to a static discrete sum. For a persistent topological defect evaluated over a single fundamental temporal cycle ($\tau = 1$ in lattice units), the Entropic Action $S_{\Phi,defect}$ counts the minimum number of elementary operations required to sustain the configuration:
+In Quiescent Equilibrium, the Entropic Action ($S_{\Phi,defect}$) reduces to a static discrete sum over a single fundamental cycle ($\tau = 1$). For a persistent topological defect, this counts the minimum elementary operations required to sustain the configuration:
 \begin{equation}
     \alpha^{-1} \equiv Z_{geo} = \frac{S_{\Phi,\text{defect}}}{Q_{top}}
 \end{equation}
-where $S_{\Phi,\text{defect}}$ is the Entropic Action required to sustain the localized defect, and $Q_{top} = \chi/2 = 1$ is the unit topological charge (\cref{sec:topological_boundary}, $\chi=2$ for the sphere).
+\noindent where $Q_{top} = \chi/2 = 1$ is the unit topological charge (\cref{sec:topological_boundary}). On a discrete lattice, Entropic Action is dimensionless: it counts elementary operations (lattice updates, link traversals, symmetry transformations) required to sustain a field configuration against the vacuum's entropic flux.\footnote{An intuitive analogy: a communications channel has a maximum data rate set by its bandwidth and noise floor. For a signal to propagate, it must match the channel's impedance and exceed the noise floor. The Geometric Impedance is the total set of structural requirements a signal must meet to propagate losslessly on the physical substrate.}
 
-On a discrete lattice substrate, Entropic Action is dimensionless: it counts the minimum number of elementary operations (lattice updates, link traversals, or symmetry transformations) required to sustain a field configuration against the vacuum's entropic flux.\footnote{An intuitive analogy: a communications channel has a maximum data rate set by its bandwidth and noise floor. For a signal to propagate, it must match the channel's impedance and exceed the noise floor. The Geometric Impedance is the total set of structural requirements a signal must meet to propagate losslessly on the physical substrate.} 
-
-Since electromagnetic charge is quantized by the boundary condition $\chi = 2$, a charge-bearing defect can only \textbf{persist} if it pays the operational cost across all six pillars of the Universal Architecture. 
+Since charge is quantized by the boundary condition $\chi = 2$, a charge-bearing defect can only \textbf{persist} if it pays the operational cost across all six pillars.
 
 \subsection{The Geometric Impedance Equation}
-Each term is derived below with zero empirical tuning parameters; the sole non-integer coefficient, $\pi$, is the unique topological constant. The framework's strict architectural limits: exhausting the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection, forbidding cross-terms via geometric orthogonality, and fixing signs via the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), strongly constrain the valid functional forms, yielding the following summation:
+Each term is derived below with zero empirical tuning parameters; the sole non-integer coefficient, $\pi$, is the unique topological constant. The framework's strict architectural limits: exhausting the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection, forbidding cross-terms via geometric orthogonality, and fixing signs via the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), uniquely determine the valid functional forms, yielding the following summation:
 
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
@@ -182,8 +181,8 @@ The Margin impedance is the reciprocal, the exact informational resolution limit
 \end{equation}
 
 
-\subsubsection{\textit{Physical Consequence: Electron Mass as Resolution Floor.}}
-$Z_{MAR}$ establishes the electron as the \textit{minimum resolvable coupling} of the substrate: any charged configuration with coupling lighter than this threshold cannot maintain a stable topological boundary against the vacuum flux. This fixes the mass \textit{ratio}:
+\subsubsection{\textit{Physical Consequence: The Fundamental Mass Quantum (Electron Mass).}}
+$Z_{MAR}$ establishes the theoretical resolution floor for a stable topological boundary, manifesting physically as the electron. Any charged configuration with a coupling lighter than this threshold cannot maintain stability against the vacuum flux. This fixes the mass \textit{ratio}:
 \begin{equation}
 \frac{m_e}{M_P} \propto \frac{Z_{MAR}}{Z_{geo}}
 \end{equation}
@@ -258,8 +257,7 @@ Morel (2020) measures $\alpha$ kinematically. This would be a direct macroscopic
 
 Standard QED calculates this expansion utilizing dimensional regularization, which implicitly assumes continuous spacetime and infinite resolution. In the $E_8$-Persistence theory, spacetime is a discrete lattice with finite channel capacity ($\nu=16$). While the continuous QED approximation is extraordinarily successful at lower loop orders, 5-loop QED achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime assumption underlying dimensional regularization may introduce systematic bias when the loop-order complexity approaches the substrate's finite channel capacity.
 
-We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. 
-This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent, though the mechanism here is distinct: finite substrate capacity rather than vacuum instability. Our framework provides a structural hardware mechanism for this divergence: the continuous mathematical expansion breaks down when the computational complexity of the field interaction exceeds the finite bit-depth of the vacuum.
+We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent. Our framework provides a rigorous structural mechanism for this behavior: it acts as the information-theoretic limit where a continuous mathematical approximation attempts to resolve state configurations that exceed the Shannon channel capacity of the discrete underlying hardware.
 
 This breakdown scale can be heuristically estimated by comparing Feynman diagram multiplicity to the substrate's channel capacity. The number of QED diagrams grows factorially with loop order; at 5-loop precision, the electron anomalous magnetic moment calculation requires evaluating 12,672 distinct diagrams. Simultaneously, the available combinatorial state space of the fundamental causal loop scales as $\nu^n = 16^n$. At $n=4$ to $n=5$, the factorial diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65,536$), marking the threshold where the continuous expansion saturates the substrate's discrete bit-depth.
 
