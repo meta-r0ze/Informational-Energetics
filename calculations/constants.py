@@ -3,6 +3,7 @@
 import math
 import argparse
 from decimal import getcontext
+from sympy import symbols, Rational, latex, simplify, UnevaluatedExpr
 
 from experimental_values import PAPER1_REFS, PAPER3_REFS
 REFS = {**PAPER1_REFS, **PAPER3_REFS}
@@ -34,6 +35,21 @@ def run_global_audit(results_dict, refs, latex_mode=False):
     run_global_audit_tier(results_dict, refs, tier1_checklist, latex_mode, "bosonic")
     run_global_audit_tier(results_dict, refs, tier2_checklist, latex_mode, "spectrum")
     run_global_audit_tier(results_dict, refs, tier1_checklist + tier2_checklist, latex_mode, "combined")
+
+## TODO convert the various equations into objects with symbols and then printing them out is cleaner
+def test():
+    DELTA_SYM, NU_SYM, SIGMA_SYM, CHI_SYM, D_SYM = symbols('Delta nu sigma chi D', integer=True, positive=True)
+    N_sym = 2*NU_SYM
+    R_M_sym = D_SYM*DELTA_SYM
+
+    # Build with explicit 1
+    Z_TOL = (1 * D_SYM * (R_M_sym - SIGMA_SYM)) / (N_sym**3 * SIGMA_SYM * R_M_sym)
+
+    print("LaTeX (symbolic):", latex(Z_TOL))
+    Z_TOL_num = Z_TOL.subs({DELTA_SYM: 43, NU_SYM: 16, SIGMA_SYM: 5, CHI_SYM: 2, D_SYM: 4})
+    print("LaTeX (numeric): ", latex(Z_TOL_num))
+    print("Evaluated:       ", float(Z_TOL_num))
+
 
 def main():
     parser = argparse.ArgumentParser(description="Calculate E8 Persistence Constants")
