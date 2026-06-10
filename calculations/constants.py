@@ -38,7 +38,7 @@ def run_global_audit(results_dict, refs, latex_mode=False):
 def main():
     parser = argparse.ArgumentParser(description="Calculate E8 Persistence Constants")
     parser.add_argument('--latex', action='store_true', help='Output in catchfilebetweentags format')
-    parser.add_argument('--paper', type=int, default=1, choices=[1, 3], help='Select paper variant (e.g., 1 or 3)')
+    parser.add_argument('--paper', type=int, default=-1, choices=[1, 3], help='Select paper variant (e.g., 1 or 3 or -1 for all)')
     args = parser.parse_args()
 
     LATEX_MODE = args.latex
