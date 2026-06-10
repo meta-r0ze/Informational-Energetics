@@ -84,10 +84,10 @@ def main():
 
     AlphaInv_CAP = PI * DELTA
     AlphaInv_MAP = CHI
-    AlphaInv_PRO = -1 / ((D * DELTA) - SIGMA)
+    AlphaInv_PRO = -(1.0 / (R_M - SIGMA))
     AlphaInv_GOV = -(CHI / DELTA)
-    AlphaInv_TOL = (CHI * (R_M - SIGMA)) / (pow(N, 3) * SIGMA * R_M)
-    AlphaInv_MAR = 1 / (L_EMBED * (SIGMA + 1) * pow(DELTA, 2))
+    AlphaInv_TOL = (1.0 * CHI * (R_M - SIGMA)) / (N**3 * SIGMA * R_M)
+    AlphaInv_MAR = 1.0 / (L_EMBED * (SIGMA + 1) * DELTA**2)
     # Summation
     ALPHA_INV_GEO = AlphaInv_CAP + AlphaInv_MAP + AlphaInv_PRO + AlphaInv_GOV + AlphaInv_TOL + AlphaInv_MAR
     ALPHA_GEO = 1.0 / ALPHA_INV_GEO
