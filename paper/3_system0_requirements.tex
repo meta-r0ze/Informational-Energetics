@@ -14,14 +14,17 @@ Within IE the vacuum is the minimal persistent substrate from which all observab
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR} via Finiteness}
 \label{sec:finiteness}
 
-For the vacuum to persist, its definition must be self-consistent. A system defined by infinite properties contains no information and cannot maintain a stable structure. In physics, such inconsistencies manifest as energetic divergences, as exemplified by the Ultraviolet (UV) Catastrophe in standard Quantum Field Theory. IE resolves this by enforcing \textbf{Finiteness} as a primary requirement of existence, corresponding to the Capacity and Margin pillars. This requirement imposes three structural properties on the substrate:
+By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor stability, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity pillar enforces a finite state-space; the Margin pillar enforces finite reserves against fluctuation. Together they require the substrate to be discrete, homogeneous, and a lattice.
 
-\subsubsection{Discrete (Indivisible Unit)} A continuous volume admits infinite descriptive complexity. Under the Closure Constraint, no external algorithm exists to compress this to finite Kolmogorov complexity, so the substrate cannot be self-defining. Therefore, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density.
+\subsubsection{Discrete (Indivisible Unit)}
+\label{subsubsec:discrete}
+A continuous volume admits infinite descriptive complexity. Under the Closure Constraint, no external algorithm exists to compress this to finite Kolmogorov complexity, so the substrate cannot be self-defining. Therefore, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density.
 
-\subsubsection{Homogeneous (Direction-Independent)} To minimize algorithmic complexity, the substrate must be \textbf{Homogeneous}. In Algorithmic Information Theory, the structural complexity of a random graph scales with its size ($K(S) \propto N$). For the universe to be scalable without additional processing overhead, its Kolmogorov Complexity must be $O(1)$, independent of size (Closure Constraint). This requires that the local topology be the same regardless of location and direction.
+\subsubsection{Homogeneous (Direction-Independent)}
+\label{subsubsec:homogeneous}
+To minimize algorithmic complexity, the substrate must be \textbf{Homogeneous}. In Algorithmic Information Theory, the structural complexity of a random graph scales with its size ($K(S) \propto N$). For the universe to be scalable without additional processing overhead, its Kolmogorov Complexity must be $O(1)$, independent of size (Closure Constraint). This requires that the local topology be the same regardless of location and direction.
 
 \subsubsection{Lattice (Discrete + Homogeneous)} A structure that is both discrete (finite information density) and homogeneous (constant structure in every direction) is a \textbf{Lattice}. This excludes continuous manifolds (infinite description) and random graphs (non-constant complexity).
-
 
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{MAP}, \mathrm{PRO}$}{MAP, PRO} via Unitarity}
 \label{sec:unitarity}
@@ -29,6 +32,7 @@ For the vacuum to persist, its definition must be self-consistent. A system defi
 For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. By the Closure Constraint (\cref{subsec:closure}), the vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. This requirement imposes four structural properties on the substrate:
 
 \subsubsection{Lattice Must Be Positive Definite}
+\label{subsec:positive_definite}
 \textit{Information-Theoretic Justification}: In a metric space, the norm $|\mathbf{v}|^2 = g_{\mu\nu}v^\mu v^\nu$ represents the information distance from the origin (reference state). For the system to have a well-defined minimum energy configuration (stable ground state), this distance must satisfy:
 \begin{equation}
     |\mathbf{v}|^2 \geq 0 \quad \forall \mathbf{v} \neq 0

@@ -26,6 +26,7 @@ Details about the paper.
 
 - The abstract should answer 'what', the introduction should answer 'why'
 - Each system depends on only what is below it.  For example IE is a general framework that depends on information theory and system 1, the substrate doesn’t “know”  about general relativity, electromagnetic charge or other higher level concepts and can’t depend on them.  It can only depend on system 0 and IE and info theory etc.
+- The Closure Constraint should be applied consistently.
 - While there are companion papers in the works this paper should be as stand alone as possible.
 
 - Do not flag the alpha^-1 equation in the abstract.
