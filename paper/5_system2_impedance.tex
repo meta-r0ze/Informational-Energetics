@@ -3,12 +3,12 @@
 
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-\CatchFileBetweenTags{\CompCAP}{constants.tex}{CompCAP}
-\CatchFileBetweenTags{\CompMAP}{constants.tex}{CompMAP}
-\CatchFileBetweenTags{\CompPRO}{constants.tex}{CompPRO}
-\CatchFileBetweenTags{\CompGOV}{constants.tex}{CompGOV}
-\CatchFileBetweenTags{\CompTOL}{constants.tex}{CompTOL}
-\CatchFileBetweenTags{\CompMAR}{constants.tex}{CompMAR}
+\CatchFileBetweenTags{\AlphaInvCAP}{constants.tex}{AlphaInvCAP}
+\CatchFileBetweenTags{\AlphaInvMAP}{constants.tex}{AlphaInvMAP}
+\CatchFileBetweenTags{\AlphaInvPRO}{constants.tex}{AlphaInvPRO}
+\CatchFileBetweenTags{\AlphaInvGOV}{constants.tex}{AlphaInvGOV}
+\CatchFileBetweenTags{\AlphaInvTOL}{constants.tex}{AlphaInvTOL}
+\CatchFileBetweenTags{\AlphaInvMAR}{constants.tex}{AlphaInvMAR}
 
 \CatchFileBetweenTags{\AlphaInvExperimentalValue}{constants.tex}{AlphaInvExperimentalValue}
 \CatchFileBetweenTags{\AlphaInvSigma}{constants.tex}{AlphaInvSigma}
@@ -78,7 +78,7 @@ By the Homogeneity requirement \cref{subsubsec:homogeneous}, the substrate admit
 The geometric constant $\pi$ enters the derivation here as the exact geometric invariant of the Euclidean substrate, the ratio of the isotropic circumference to its diameter. Because the entropic cost (action) of sustaining a topological defect scales strictly with the boundary required to distinguish it from the vacuum, not the enclosed bulk area, the cost of sustaining this maximal bounding horizon is exactly the geometric action of its closed path (the perimeter):
 
 \begin{equation}
-    Z_{CAP} = \pi\Delta \approx \CompCAP
+    Z_{CAP} = \pi\Delta \approx \AlphaInvCAP
 \end{equation}
 
 \subsection{Topological Boundary (Map)}
@@ -108,7 +108,7 @@ The Protocol mediates the flow of phase information across the orthogonal spacet
 
 Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}):
 \begin{equation}
-    Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \CompPRO
+    Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \AlphaInvPRO
 \end{equation}
 The linear form is mandated by statelessness: the Protocol coordinates instantaneously, with no recursive memory that would permit higher-order couplings.
 
@@ -123,7 +123,7 @@ The Governor prevents runaway entropic divergence by constraining the resonant e
 
 Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
 \begin{equation}
-    Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \CompGOV
+    Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \AlphaInvGOV
 \end{equation}
 
 
@@ -156,7 +156,7 @@ The valid persistence subset is defined by the intersection of three geometric c
 
 The entropic cost (Toll) of a state transition is exactly the phase-space ratio of finding a valid persistence configuration within the total interaction space:
 \begin{equation}
-    Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \CompTOL
+    Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \AlphaInvTOL
 \end{equation}
 
 \subsection{Resolution Floor (Margin)}
@@ -183,7 +183,7 @@ The Margin impedance is the reciprocal, the exact informational resolution limit
 \begin{equation}
 \begin{split}
     Z_{MAR} &= \frac{1}{V_{config}} = \frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2} \\
-    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \CompMAR
+    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \AlphaInvMAR
 \end{split}
 \end{equation}
 
