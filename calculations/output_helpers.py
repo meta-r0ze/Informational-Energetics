@@ -1,12 +1,10 @@
 #!python3
 import math
-from experimental_values import REFS
+
+from experimental_values import PAPER1_REFS, PAPER3_REFS
+REFS = {**PAPER1_REFS, **PAPER3_REFS}
 
 PI = math.pi
-
-# ==========================================
-# 1. HELPER FUNCTIONS
-# ==========================================
 
 def format_float_latex(num, precision=9):
     """

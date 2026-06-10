@@ -18,16 +18,8 @@ class MeasuredVal:
         if self.value == 0: return 0.0
         return abs(self.uncertainty / self.value)
 
-REFS = {
-    # --- Fundamental Constants (CODATA 2022) ---
-    "me": MeasuredVal(
-        0.51099895000,
-        0.00000000015,
-        11,
-        "MeV",
-        "mohr_codata_2025",
-    ),
-
+PAPER1_REFS = {
+    # paper 1
     "alpha_inv": MeasuredVal(
         137.035999177,
         0.000000021,
@@ -35,7 +27,6 @@ REFS = {
         "",
         "mohr_codata_2025"
     ),
-
     "alpha_inv_morel": MeasuredVal(
         137.035999206,
         0.000000011,
@@ -59,7 +50,13 @@ REFS = {
         "",
         "fan_measurement_2023"
     ),
-
+    "me": MeasuredVal(
+        0.51099895000,
+        0.00000000015,
+        11,
+        "MeV",
+        "mohr_codata_2025",
+    ),
     "rk": MeasuredVal(
         25812.80745,
         0.00001,
@@ -67,7 +64,10 @@ REFS = {
         "\\Omega",
         "mohr_codata_2025"
     ),
+}
 
+PAPER3_REFS = {
+    # Paper 3
     "Mp": MeasuredVal(
         1.22091e19,
         0.00001e19,

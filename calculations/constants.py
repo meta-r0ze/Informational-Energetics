@@ -4,7 +4,8 @@ import math
 import argparse
 from decimal import getcontext
 
-from experimental_values import REFS
+from experimental_values import PAPER1_REFS, PAPER3_REFS
+REFS = {**PAPER1_REFS, **PAPER3_REFS}
 from output_helpers import (
     PI, print_section, print_derivation, run_global_audit_tier, to_latex_sci
 )
@@ -37,9 +38,11 @@ def run_global_audit(results_dict, refs, latex_mode=False):
 def main():
     parser = argparse.ArgumentParser(description="Calculate E8 Persistence Constants")
     parser.add_argument('--latex', action='store_true', help='Output in catchfilebetweentags format')
+    parser.add_argument('--paper', type=int, default=1, choices=[1, 3], help='Select paper variant (e.g., 1 or 3)')
     args = parser.parse_args()
 
     LATEX_MODE = args.latex
+    PAPER_NUM = args.paper
     
     # ==========================================
     # 2. SYSTEM I: INVARIANTS
@@ -79,38 +82,38 @@ def main():
     # ==========================================
     print_section("SYSTEM II: THE GEOMETRIC IMPEDANCE (Table II Audit)", LATEX_MODE)
 
-    comp_CAP = PI * DELTA
-    comp_MAP = CHI
-    comp_PRO = -1 / ((D * DELTA) - SIGMA)
-    comp_GOV = -(CHI / DELTA)
-    comp_TOL = (CHI * (R_M - SIGMA)) / (pow(N, 3) * SIGMA * R_M)
-    comp_MAR = 1 / (L_EMBED * (SIGMA + 1) * pow(DELTA, 2))
+    AlphaInv_CAP = PI * DELTA
+    AlphaInv_MAP = CHI
+    AlphaInv_PRO = -1 / ((D * DELTA) - SIGMA)
+    AlphaInv_GOV = -(CHI / DELTA)
+    AlphaInv_TOL = (CHI * (R_M - SIGMA)) / (pow(N, 3) * SIGMA * R_M)
+    AlphaInv_MAR = 1 / (L_EMBED * (SIGMA + 1) * pow(DELTA, 2))
     # Summation
-    ALPHA_INV_GEO = comp_CAP + comp_MAP + comp_PRO + comp_GOV + comp_TOL + comp_MAR
+    ALPHA_INV_GEO = AlphaInv_CAP + AlphaInv_MAP + AlphaInv_PRO + AlphaInv_GOV + AlphaInv_TOL + AlphaInv_MAR
     ALPHA_GEO = 1.0 / ALPHA_INV_GEO
 
     # Table breakdown for human mode
     if not LATEX_MODE:
         print(f"{'COMPONENT':<25} | {'FORMULA':<25} | {'VALUE':<15}")
         print("-" * 70)
-        print(f"{'Capacity':<25} | {'π * Δ':<25} | {comp_CAP:+.8f}")
-        print(f"{'Map':<25} | {'χ':<25} | {comp_MAP:+.8f}")
-        print(f"{'Protocol':<25} | {'-1/(DΔ - σ)':<25} | {comp_PRO:+.8f}")
-        print(f"{'Governor':<25} | {'-χ/Δ':<25} | {comp_GOV:+.8f}")
-        print(f"{'Toll':<25} | {'Eq 16a':<25} | {comp_TOL:+.8e}")
-        print(f"{'Margin':<25} | {'Eq 16b':<25} | {comp_MAR:+.8e}")
+        print(f"{'Capacity':<25} | {'π * Δ':<25} | {AlphaInv_CAP:+.8f}")
+        print(f"{'Map':<25} | {'χ':<25} | {AlphaInv_MAP:+.8f}")
+        print(f"{'Protocol':<25} | {'-1/(DΔ - σ)':<25} | {AlphaInv_PRO:+.8f}")
+        print(f"{'Governor':<25} | {'-χ/Δ':<25} | {AlphaInv_GOV:+.8f}")
+        print(f"{'Toll':<25} | {'Eq 16a':<25} | {AlphaInv_TOL:+.8e}")
+        print(f"{'Margin':<25} | {'Eq 16b':<25} | {AlphaInv_MAR:+.8e}")
         print("-" * 70)
         print(f"{'TOTAL IMPEDANCE':<25} | {'SUM':<25} | {ALPHA_INV_GEO:.9f}")
         print("-" * 70)
         print("")
     else:
         # Export components for Table II generation
-        print(f"%<*CompCAP>{comp_CAP:.5f}%</CompCAP>")
-        print(f"%<*CompMAP>{comp_MAP:.5f}%</CompMAP>")
-        print(f"%<*CompPRO>{comp_PRO:.5f}%</CompPRO>")
-        print(f"%<*CompGOV>{comp_GOV:.5f}%</CompGOV>")
-        print(f"%<*CompTOL>{to_latex_sci(comp_TOL)}%</CompTOL>")
-        print(f"%<*CompMAR>{to_latex_sci(comp_MAR)}%</CompMAR>")
+        print(f"%<*AlphaInvCAP>{AlphaInv_CAP:.5f}%</AlphaInvCAP>")
+        print(f"%<*AlphaInvMAP>{AlphaInv_MAP:.5f}%</AlphaInvMAP>")
+        print(f"%<*AlphaInvPRO>{AlphaInv_PRO:.5f}%</AlphaInvPRO>")
+        print(f"%<*AlphaInvGOV>{AlphaInv_GOV:.5f}%</AlphaInvGOV>")
+        print(f"%<*AlphaInvTOL>{to_latex_sci(AlphaInv_TOL)}%</AlphaInvTOL>")
+        print(f"%<*AlphaInvMAR>{to_latex_sci(AlphaInv_MAR)}%</AlphaInvMAR>")
         print("")
 
     print_derivation(
@@ -195,6 +198,9 @@ def main():
         # Output tags specifically for the text formulation
         print(f"%<*ChargeAtten>{CHARGE_ATTENUATION:.1f}%</ChargeAtten>")
         print(f"%<*ChargeRatioPct>{CHARGE_RATIO_PCT:.1f}\\%%</ChargeRatioPct>")
+
+    if PAPER_NUM == 1:
+        return
 
 
     # ==========================================
@@ -341,7 +347,7 @@ def main():
     # 3. Thermodynamic Noise Correction (Generation Partitioning)
     # The Persistence Margin (PM) is partitioned across the 3 generation channels.
     N_GEN = SIGMA - CHI
-    NOISE_CORRECTION = 1.0 - (comp_MAR / N_GEN)
+    NOISE_CORRECTION = 1.0 - (AlphaInv_MAR / N_GEN)
     V_MEV_PHYS = V_MEV_TOP * NOISE_CORRECTION
     
     # Final Physical VEV
@@ -412,7 +418,7 @@ def main():
     )
 
     # --- Electron Yukawa (y_e) ---
-    YE_BARE = comp_MAR
+    YE_BARE = AlphaInv_MAR
     PROJECTION_COEFF = SIGMA / D  # 1.25
     SELF_ENERGY_CORRECTION = 1.0 + (PROJECTION_COEFF * ALPHA_GEO)
     YE_CORRECTED = YE_BARE * SELF_ENERGY_CORRECTION
@@ -432,14 +438,14 @@ def main():
 
     # --- Jarlskog Invariant (Time Asymmetry) ---
     PHI = (1 + math.sqrt(5)) / 2
-    J_GEO = pow(PHI, 2) * comp_TOL * COORDINATE_OVERHEAD
+    J_GEO = pow(PHI, 2) * AlphaInv_TOL * COORDINATE_OVERHEAD
 
     print_derivation(
         name="Jarlskog Invariant (J)",
         tag="Jarlskog",
         formula_sym="phi^2 * T_geo",
         latex_sym=r"\phi^2 \cdot T_{geo}",
-        formula_num=f"{PHI:.4f}^2 * {comp_TOL:.4e}",
+        formula_num=f"{PHI:.4f}^2 * {AlphaInv_TOL:.4e}",
         result=J_GEO,
         latex_mode=LATEX_MODE,
         ref_key="jarlskog",
