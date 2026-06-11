@@ -80,7 +80,6 @@ def main():
     L_SUBSTRATE = (DELTA * D) + NU
     N = 2 * NU
     R_M = D * DELTA
-    COORDINATE_OVERHEAD = 1.0 - (1.0 / (D * DELTA))
 
     if LATEX_MODE:
         # Output basic invariants as tags
@@ -89,7 +88,6 @@ def main():
         print(f"%<*InvLSubstrate>{L_SUBSTRATE}%</InvLSubstrate>")
         print(f"%<*InvN>{N}%</InvN>")
         print(f"%<*InvRM>{R_M}%</InvRM>")
-        print(f"%<*InvCoordinateOverhead>{COORDINATE_OVERHEAD}%</InvCoordinateOverhead>")
     elif not LATEX_MODE:
         print(f"Capacities: L_INTRINSIC={L_INTRINSIC}, L_EMBED={L_EMBED}, N={N}, RM={R_M}")
 
@@ -223,6 +221,10 @@ def main():
     # 4. SYSTEM IV: THE GEOMETRIC CONTROL ARCHITECTURE
     # ==========================================
     print_section("SYSTEM IV: THE GEOMETRIC CONTROL ARCHITECTURE", LATEX_MODE)
+
+    COORDINATE_OVERHEAD = 1.0 - (1.0 / (D * DELTA))
+    if LATEX_MODE:
+        print(f"%<*InvCoordinateOverhead>{COORDINATE_OVERHEAD}%</InvCoordinateOverhead>")
 
     # --- Strong Coupling ---
     numerator_s = (NU*COORDINATE_OVERHEAD) + (1.0 / D)
