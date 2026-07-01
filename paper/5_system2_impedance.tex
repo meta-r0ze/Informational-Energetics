@@ -38,14 +38,14 @@ where $S_{\Phi,\text{defect}}$ is the localized entropic action of the defect, a
 
 Charge is not a postulated particle property but an emergent quantization of information flux. The topological boundary $\chi=2$ (Section~\ref{sec:topological_boundary}) enforces a binary partition: information is either inside the defect or outside it. This $U(1)$ boundary invariant quantizes the flux through the defect. The unit charge is $Q_{top}=1$.
 
-Because the substrate is the only persistent system with no external reference, the impedance it presents to sustaining this unit charge is the only available measure of coupling strength. The geometric impedance $Z_{geo}$ therefore governs how strongly a unit of topological charge couples to the lattice dynamics.
+Because the substrate is the only persistent system with no external reference, the strictly dimensionless information-theoretic resistance it presents to sustaining this unit charge is the only available measure of coupling strength. This pure number, defined here as the geometric impedance $Z_{geo}$, therefore governs how strongly a unit of topological charge couples to the lattice dynamics.
 
 The Fine-Structure Constant ($\alpha^{-1} \approx 137$) is one of the most precisely measured couplings in physics. Standard quantum field theory treats it as an empirically measured parameter; its specific magnitude lacks a first-principles derivation. In standard quantum field theory, this dimensionless coupling value is parameterized in SI units as $\alpha = e^2/(4\pi\epsilon_0\hbar c)$. Here the geometric impedance $Z_{geo}$ is identified with the inverse baseline coupling $\alpha^{-1} \equiv Z_{geo}$
 
 Scale-dependent dynamics (running couplings and renormalization) must conform to this geometric baseline. The companion paper demonstrates that minimizing the Entropic Action on the $E_8$ lattice yields dynamics that remain strictly within these bounds, recovering the Standard Model and General Relativity as effective field theories.
 
 \subsection{The Geometric Impedance Equation}
-Each term is derived below with zero empirical tuning parameters; the sole non-integer coefficient, $\pi$, is the unique topological constant. The framework's strict architectural limits: exhausting the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection, forbidding cross-terms via geometric orthogonality, and fixing signs via the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), uniquely determine the valid functional forms, yielding the following summation:
+The valid functional form of $Z_{geo}$ is uniquely determined by the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}). Each term will be derived from the Characteristic Integers with zero empirical parameters; the sole non-integer coefficient, $\pi$, is the unique topological constant. Additivity of terms is guaranteed by strict architectural limits of \texorpdfstring{$E_8$}{E8} Persistence Theory: exhausting the independent invariants of the $E_8 \to D_4 \oplus D_4$ projection and forbidding cross-terms via geometric orthogonality.
 
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
@@ -59,23 +59,61 @@ Each term is derived below with zero empirical tuning parameters; the sole non-i
 \end{equation}
 
 \subsection{The Fundamental Causal Circuit}
-The dominant contribution to the vacuum impedance ($\approx 99.9\%$) comes from the fundamental geometry of the interaction circuit. In dynamical gauge theory, the physical manifestation of this closed path is the Wilson Loop.
+\label{subsec:causal_circuit}
 
-For a topological defect to persist in the lattice, it must complete a closed geometric cycle. We derive the impedance of this loop as the sum of the \textbf{Resonant Circumference} and the \textbf{Topological Boundary}.
+The dominant contribution to the vacuum impedance ($\approx 99.9\%$) comes from the fundamental geometry of the interaction circuit. For a topological defect to persist in the lattice, it must complete a closed geometric cycle; the fundamental cycle $\Delta$ is the \textbf{resonant period} at which this closure occurs. We derive the impedance of this loop as the sum of the \textbf{Resonant Circumference} and the \textbf{Topological Boundary}.  In dynamical gauge theory, the physical manifestation of this closed path is the Wilson Loop.
 
+% ============================================================
+% CAP must satisfy all of the following:
+%
+% 1. BLINDING TEST. Every step must be one we would accept without
+%    knowing alpha^-1 ~ 137. Any step persuasive only because the
+%    total comes out right is numerology and not acceptable.
+% 2. DEPENDENCY DIRECTION. Premises may only be System 0 requirements
+%    (Closure, Finiteness, Unitarity, Causality, Homogeneity) and
+%    System 1 invariants (Delta=43, c=1, Euclidean substrate metric,
+%    periodic causal cycle). Nothing from System 2 onward and no
+%    companion-paper dynamics (Wilson loops, gravity strain,
+%    Zitterbewegung) may be premises; they may appear only as labeled
+%    forward-consistency remarks.
+% 3. FORWARD CONSISTENCY. The result may not contradict later
+%    structure (Wilson perimeter law, capacity-strain gravity, mass
+%    as closed chiral circulation), but consistency is a CHECK, never
+%    a premise.
+% 4. PI MUST BE CONSTRUCTED. Pi may enter only as the measured
+%    invariant of an explicitly constructed geometric object. The
+%    microscopic lattice has no continuous rotational symmetry; the
+%    isotropic round ball is the macroscopic idealization forced by
+%    the Homogeneity requirement (macroscopic observables must be
+%    invariant under lattice orientation). The step where isotropy
+%    replaces the discrete lattice ball with the round ball must be
+%    explicit, named, and scoped to macroscopic entropic cost.
+% 5. EVERY FACTOR INTERROGATED. The text must answer, in-line:
+%    why the factor is exactly 1; why diameter Delta and not radius
+%    Delta (why not 2*pi*Delta); why the perimeter and not the area
+%    (why not ~pi*Delta^2/4) or the path length (why not Delta); why
+%    the sign is structural (+) under the Entropic Balance Sheet.
+% 6. OPERATIONAL UNITS. The result must be a dimensionless count of
+%    elementary link actions per fundamental cycle, consistent with
+%    S_Phi as a transition count.
+% 7. ONE-SENTENCE TEST. The geometric picture must be stateable in
+%    one sentence: a persistent defect is a closed circulation whose
+%    parts must remain in causal contact within one cycle; its
+%    boundary must be re-traced every cycle.
+% ============================================================
 \subsection{The Resonant Circumference (Capacity)}
 \label{subsec:alpha_cap}
-\textit{Form: The geometric action of the causal bounding horizon.}
+\textit{Form: The boundary action of the closed causal envelope.}
 
-Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. Without this propagation cost, a topological defect would instantly delocalize and propagate eternally at the maximum bandwidth limit ($c = 1$).
+Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. Without this cost the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
-\textit{Derivation:} At Quiescent Equilibrium, the substrate's footprint is evaluated not on the dynamically projected Lorentzian manifold, but strictly on its native positive-definite (Euclidean) metric required by Unitarity \cref{subsec:positive_definite}.
+\textit{Derivation:} At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
-Because the causal propagation of a single coherent signal is restricted to a linear trajectory at the maximum lattice speed limit ($c \equiv 1$), the relevant evaluation space is a $(1+1)$D Euclidean plane ($x, \tau$). In this plane, the maximal influence region of a defect propagating over a fundamental cycle forms a bounding footprint. The temporal period $\Delta$ sets the diametric bound of this region (the maximum spatial separation across the causal horizon).
+The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ updates or it does not persist. For any closed trajectory, reaching a distance $d$ from the anchor costs at least $d$ steps outbound and $d$ steps to return, so $2d \le \Delta$: the maximal one-way reach is $d_{\max} = \Delta/2$, saturated by the out-and-back path.
 
-By the Homogeneity requirement \cref{subsubsec:homogeneous}, the substrate admits no preferred direction, mandating an isotropic bounding horizon. In a Euclidean metric, the unique isotropic bounding region is the disk ($\sqrt{x^2 + \tau^2} \le \Delta/2$), whose boundary is the circle of diameter $\Delta$. 
+By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period.
 
-The geometric constant $\pi$ enters the derivation here as the exact geometric invariant of the Euclidean substrate, the ratio of the isotropic circumference to its diameter. Because the entropic cost (action) of sustaining a topological defect scales strictly with the boundary required to distinguish it from the vacuum, not the enclosed bulk area, the cost of sustaining this maximal bounding horizon is exactly the geometric action of its closed path (the perimeter):
+The defect is defined by its boundary (\cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, and impedance, as a substrate invariant, cannot depend on any particular trajectory through it. The entropic cost is therefore the boundary measure of the envelope, re-traced once per fundamental cycle. Because Homogeneity strictly forbids any preferred direction or lattice alignment, this invariant causal boundary must possess maximal rotational symmetry. The ratio of the isotropic boundary (the circle) to its diameter ($\Delta$) introduces $\pi$ is the geometric multiplier:
 
 \begin{equation}
     Z_{CAP} = \pi\Delta \approx \AlphaInvCAP
@@ -133,9 +171,13 @@ Because the loop is closed and periodic, it possesses no endpoint boundaries (no
 
 The Toll is the entropic cost of executing a state transition. Without this update cost, the network's logical transitions would execute without a sequential causal history.
 
-On a self-dual lattice, the minimal nontrivial interaction is a 3-point vertex (a logic gate). Two-point interactions are trivial (propagation only); four-point interactions require asymmetric centers violating homogeneity (\cref{sec:finiteness}). 
+In geometric terms, an operational state transition fundamentally requires three components: an input, an output, and a mediating channel. On the substrate, an interaction is an operation on a node's channel space, not a statement about its geometric neighbors. By Schur's lemma, invariant bilinear couplings exist only within a single representation: a state can be propagated or measured (two legs), but never combined with a state of another type. The minimal invariant coupling of \emph{distinct} channel types is the unique trilinear singlet of $\mathrm{Spin}(8)$ triality (equivalently, Clifford multiplication):
+$$\mathbf{8}_v \otimes \mathbf{8}_s \otimes \mathbf{8}_c \;\longrightarrow\; \mathbf{1}.$$
 
-\textbf{Derivation:} A 3-point vertex has three independent legs. By the homogeneity requirement, each leg independently selects from the node's $N = 32$ available channels. The total unconstrained configuration space for the vertex's channel combinations is therefore $N \cdot N \cdot N = N^3$. 
+Its three legs naturally assume the roles of a logic gate: input chirality, output chirality, and the mediating link channel. Because triality exhausts the 8-dimensional representations of $\mathrm{Spin}(8)$, a fourth leg would have to duplicate a type already present at the vertex; within one update cycle the node lacks the temporal resolution to distinguish duplicated sectors, producing the Causal Aliasing described in \cref{sec:causality}. Higher-point transitions are therefore composite, resolvable only as sequences of 3-point vertices.
+
+\textit{Derivation:} A 3-point vertex has three independent legs. The denominator of the Toll is the \emph{a priori} configuration space of the vertex: by the Closure Constraint, no external table pre-assigns channels to vertex roles, so each leg is unconstrained over the node's $N = 32$ channels, and by Homogeneity the three selections are
+independent. The total unconstrained configuration space is therefore $N \cdot N \cdot N = N^3$.
 
 The total phase space $\Omega_{total}$ for a local 3-point event is the product of three orthogonal combinatorial factors: the $N^3$ channel combinations, the $\sigma = 5$ active interaction degrees of freedom, and the $R_M$ manifold coordinate addresses:
 \begin{equation}
@@ -163,7 +205,8 @@ The entropic cost (Toll) of a state transition is exactly the phase-space ratio 
 \label{subsec:alpha_mar}
 \textit{Form: The reciprocal of the orthogonal configuration phase-space volume.}
 
-The Margin defines the absolute resolution floor of the discrete substrate. Below this margin the system is unable to distinguish structured state information from ambient background fluctuations.
+At the substrate level, the safety buffer manifests as an information-theoretic distinguishability 
+threshold: the minimum signal amplitude required to be resolved above the geometric noise floor, analogous to the gain margin that prevents control-loop instability. Below this floor, structured information dissolves into ambient substrate fluctuations.
 
 \textbf{Derivation:} The minimum resolvable signal is exactly 1 quantum of information diluted across the total configuration volume ($V_{config}$). Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, these sectors are statistically independent, meaning their configuration volumes combine via their Cartesian product.
 
@@ -234,18 +277,18 @@ Parker (2018) & \AlphaInvParkerExperimentalValue & $\AlphaInvParkerSigma \sigma$
 CODATA (2022) & \AlphaInvExperimentalValue & $\AlphaInvSigma \sigma$ \\
 \bottomrule
 \end{tabular}
-\caption{Comparison of the $E_8$-Persistence Theory theoretical derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
+\caption{Comparison of the $E_8$-Persistence Theory $\alpha^{-1}$ derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
 
 \paragraph{The QED Extraction Tension and the Quantization Gap:}
-$E_8$-Persistence predicts the \emph{Quantization Gap} between kinematic measurements and high-order perturbative QED extractions when loop complexity approaches the substrate's finite channel capacity. The $\AlphaInvFanSigma \sigma$ deviation observed in Fan (2023) is consistent with this predicted threshold.
+$E_8$-Persistence predicts the \emph{Quantization Gap} between kinematic measurements and high-order perturbative QED extractions when loop complexity approaches the substrate's finite channel capacity. The $\AlphaInvFanSigma \sigma$ deviation observed in Fan (2023) is suggestively aligned with this predicted threshold.
 
 Morel (2020) measures $\alpha$ kinematically. This would be a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), however, extracts $\alpha$ by fitting experimental data to a 10th-order (5-loop) QED perturbative expansion. 
 
 Standard QED calculations are the analytic dual to this discrete architecture. They utilize dimensional regularization, which maps to the low-capacity limit of the substrate by treating spacetime as a continuous manifold with infinite resolution. At lower loop orders, this continuous approximation is extraordinarily successful. However, at 5-loop QED, the calculation achieves a fractional precision of $\sim (\alpha/\pi)^5 \sim 10^{-10}$. At this extreme threshold, the continuous-spacetime dual attempts to resolve state configurations that exceed the Shannon channel capacity of the underlying discrete hardware.
 
-We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent. Our framework provides a rigorous structural mechanism for this behavior: it acts as the information-theoretic limit where a continuous mathematical approximation attempts to resolve state configurations that exceed the Shannon channel capacity of the discrete underlying hardware.
+We term this $\sim 3 \times 10^{-10}$ threshold the \textbf{Quantization Gap}. This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent. Our framework provides a structural mechanism for this behavior: it acts as the information-theoretic limit where a continuous mathematical approximation attempts to resolve state configurations that exceed the Shannon channel capacity of the discrete underlying hardware.
 
 This breakdown scale can be heuristically estimated by comparing Feynman diagram multiplicity to the substrate's channel capacity. The number of QED diagrams grows factorially with loop order; at 5-loop precision, the electron anomalous magnetic moment calculation requires evaluating 12,672 distinct diagrams. Simultaneously, the available combinatorial state space of the fundamental causal loop scales as $\nu^n = 16^n$. At $n=4$ to $n=5$, the factorial diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65,536$), marking the threshold where the continuous expansion saturates the substrate's discrete bit-depth.
 
