@@ -13,7 +13,7 @@ We will begin by determining the possible dimensions of the lattice, then identi
 The requirement of an even, self-dual lattice is remarkably restrictive. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
 
 \[ n \in \{8, 16, 24, \dots\} \]
-This strictly eliminates any lattice solution in dimensions $n<8$. This yields a profound physical consequence: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an emergent projection of a higher-dimensional structure.
+This eliminates any lattice solution in dimensions $n<8$. Consequently: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an emergent projection of a higher-dimensional structure.
 
 Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which is prohibited by the strictly self-defining Closure Constraint (\cref{subsec:closure}).
 
@@ -25,13 +25,13 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 \begin{enumerate}
     \item \textbf{Unitarity} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
     
-    \item By the \textbf{Closure Constraint} (\cref{subsec:closure}), the vacuum admits no external configuration memory. Formally, the Information/Closure constraint acts as an exact Kolmogorov complexity filter. The Specification Complexity for the substrate must satisfy $K(\text{Geometry} \mid \text{IE constraints}) = 0$ additional bits. 
-    
-    \item At $n=8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. Selecting this geometry from the set of valid $n=8$ solutions requires $\log_2(1) = \mathbf{0 \text{ bits}}$ of external selection information.
-    
-    \item At $n=16$: Two non-isomorphic solutions exist ($E_8 \oplus E_8$ and $D_{16}^+$). Selecting between them requires $\log_2(2) = \mathbf{1 \text{ bit}}$ of information. Because the vacuum admits $0$ bits of external configuration memory (Closure Constraint), this $1$-bit selection cannot be realized: no physical mechanism exists within the substrate to source this information. 
-    
-    \item At $n=24$: Twenty-four distinct Niemeier lattices exist, requiring $\log_2(24) \approx \mathbf{4.58 \text{ bits}}$ of selection information, similarly violating the Closure Constraint.
+    \item By the \textbf{Closure Constraint} (\cref{subsec:closure}), the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
+
+    \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$ satisfying the Closure Constraint.
+
+    \item At $n = 16$: The architectural constraints isolate exactly two non-isomorphic solutions ($E_8 \oplus E_8$ and $D_{16}^+$). Isolating a unique geometry from this degenerate set requires $\log_2(2) = \textbf{1 bit}$ of additional specification (applied strictly to the ground-state definition, not to dynamical excitations). Because the Closure Constraint enforces \textbf{zero bits} of external specification, this substrate is not self-specifying.
+
+    \item At $n = 24$: Twenty-four distinct Niemeier lattices exist, requiring $\log_2(24) \approx 4.58$ bits of specifying information to resolve the degeneracy, similarly to violating the Closure Constraint. 
     
     \item The number of distinct even self-dual lattices grows extremely rapidly with dimension. For example, in dimension 32, there are more than 80 million such lattices.
 \end{enumerate}
@@ -72,7 +72,6 @@ This unique decomposition partitions the 8 dimensions into two orthogonal sector
 \end{enumerate}
 
 This structural partition explains why the substrate must eventually appear 4-dimensional while possessing complex internal forces, without requiring the hidden spatial dimensions of Kaluza-Klein theory.
-
 
 
 \subsubsection{The Bit-Depth of the Node (\texorpdfstring{$\nu = 16$}{nu16})}
@@ -150,11 +149,12 @@ Once these algebraic structures are established to satisfy the encoding requirem
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
 
-The \textbf{Finiteness} and \textbf{Unitarity} pillars require the vacuum to be homogeneous (no preferred positions) and self-dual (informationally symmetric). For a node to possess both a \textbf{coordinate address} and a \textbf{distinguishable Map} while satisfying these constraints, the two specifications must be \textbf{orthogonal}: independent, yet simultaneously well-defined. Geometrically, this requires the substrate to support a \emph{topological defect}, a localized boundary structure capable of separating a region from the vacuum, without specifying what occupies that region. The minimal embedding dimension for this orthogonal decomposition sets the rank of the interaction symmetry ($\sigma$), the geometric degrees of freedom available for force mediation.
+To satisfy the Map pillar, a persistent entity must strictly distinguish its internal state from the ambient environment. However, the \textbf{Finiteness} and \textbf{Unitarity} pillars require the vacuum to be homogeneous (no preferred positions) and self-dual (informationally symmetric). For a localized state to possess both a coordinate address and a distinguishable Map while satisfying these background constraints, the two specifications must be orthogonal: independent, yet simultaneously well-defined. Geometrically, this requires the substrate to support a topological defect, a localized boundary structure capable of separating a region from the vacuum without violating the background homogeneity. The minimal embedding dimension for this orthogonal decomposition sets the rank of the interaction symmetry ($\sigma$), the geometric degrees of freedom available for force mediation.
 
 \subsubsection{The Topological Boundary (\texorpdfstring{$\chi=2$}{chi=2})}
 \label{sec:topological_boundary}
-To satisfy the \textbf{Binary Partition Constraint}, we propose modeling the topological boundary of a persistent defect as a sphere ($S^2, \chi = 2$). Because the sphere is the unique simply-connected closed surface ($g=0$), it provides the exact topological structure required to rigorously separate the ``Inside'' (The System) and ``Outside'' (The Environment) without ambiguity.
+
+To satisfy the \textbf{Binary Partition Constraint}, a persistent entity must be an \textbf{extended closed boundary structure}: a circulation of information confined to a finite region, with a boundary that rigorously separates ``Inside'' from ``Outside''. The minimal such boundary is the unique simply-connected closed surface, the sphere ($S^2$, $\chi = 2$, $g = 0$). A defect is therefore not a point-like flaw.
 
 We derive this by analyzing the Euler Characteristic for closed, orientable surfaces:
 \begin{equation}
@@ -170,7 +170,7 @@ where $g$ is the genus (number of holes).
         \item \textit{Thermodynamic Failure:} By the Gauss-Bonnet theorem ($\int_M K \, dA = 2\pi\chi$), any surface with $g \geq 1$ has $\chi \leq 0$, implying neutral or negative total curvature. Such a surface cannot support net positive entropic pressure (information density) against the bulk substrate: it would structurally collapse.
     \end{itemize}
 
-    \item \textbf{The Uniqueness of $g=0$ (The Sphere):} The sphere is the unique closed surface with $g=0$, yielding $\chi=2$, the maximum possible value. It is the only simply connected topology, ensuring that all loops contract to a point. This forces all information flux to be explicitly either contained or excluded, enabling the perfect binary partition of state required for a persistent, distinguishable topological defect.
+    \item \textbf{The Uniqueness of $g=0$ (The Sphere):} The sphere is the unique closed surface with $g=0$, yielding $\chi=2$, the maximum possible value. It is the only simply connected topology, ensuring that all loops contract to a point. This forces all information flux to be either contained or excluded, enabling the perfect binary partition of state required for a persistent, distinguishable topological defect.
 \end{itemize}
 
 \paragraph{Forward Implication (System 2 Consequence):}
@@ -214,7 +214,7 @@ For a system to preserve quantum Unitarity its causal history must be uniquely r
 
 Mathematically, a $(1+1)D$ causal sequence on a self-dual lattice defines an elliptic curve. As proven formally in \cref{app:algebraic_geometry_causal_loop}, for the evolution operator of this curve to be uniquely invertible (history is perfectly preserved), the curve's endomorphism ring must be a Principal Ideal Domain. This requires the algebraic structure to possess \textit{Complex Multiplication (CM) with a class number of $h = 1$}.
 
-To preserve the self-duality of the substrate, the geometric period of the loop ($\Delta$) is identified with the algebraic CM discriminant ($D$). Consequently, the Unitarity requirement rigorously restricts the clocking period $\Delta$ to the fundamental discriminants of the nine imaginary quadratic fields of class number one (the Stark-Heegner numbers): $d \in \{1,$ $2,$ $3,$ $7,$ $11,$ $19,$ $43,$ $67,$ $163\}$.
+To preserve the self-duality of the substrate, the geometric period of the loop ($\Delta$) is identified with the algebraic CM discriminant ($D$). Consequently, the Unitarity requirement restricts the clocking period $\Delta$ to the Stark-Heegner numbers (the absolute values of the fundamental discriminants of the nine imaginary quadratic fields of class number one): $\Delta \in \{1,$ $2,$ $3,$ $7,$ $11,$ $19,$ $43,$ $67,$ $163\}$.
 
 \subsubsection{Causality (The ``Bandwidth'') Constraint}
 \label{sec:fundamental_resonance_filter2}
@@ -226,12 +226,12 @@ By the Closure Constraint, the vacuum has no external reference clock; time must
 
 To resolve this ambiguity, the system cannot reference an external clock (Closure), cannot allocate channel capacity to an internal memory counter (Finiteness), and cannot rely on spatial neighbors as a surrogate clock because translational Homogeneity renders all local neighbors geometrically identical during static intervals. To maintain temporal synchronization, the maximum run of empty slots must be strictly bounded to 1.
 
-This is achievable if and only if $M \le N$: When $M > N$, the Pigeonhole Principle guarantees that no arrangement of $M$ empty slots on a circular sequence of length $\Delta$ can avoid adjacent pairs; consecutive empty slots are structurally forced. Therefore, this run-length limited constraint\cite{immink_runlength-limited_1990} strictly requires $N \geq M$, yielding:
+This is achievable if and only if $M \le N$: When $M > N$, the Pigeonhole Principle guarantees that no arrangement of $M$ empty slots on a circular sequence of length $\Delta$ can avoid adjacent pairs; consecutive empty slots are structurally forced. Therefore, this run-length limited constraint\cite{immink_runlength-limited_1990} (which forbids arbitrary sequences of identical symbols) strictly requires $N \geq M$, yielding:
 \begin{equation}
 N \geq (\Delta - N) \implies \Delta \leq 2N = 64
 \end{equation}
 
-\textbf{Result:} With $N = 32$, the upper limit for a self-clocking fundamental cycle is $\Delta \leq 64$. This rigorously eliminates the remaining Stark-Heegner candidates $67$ and $163$, leaving $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
+\textbf{Result:} With $N = 32$, the upper limit for a self-clocking fundamental cycle is $\Delta \leq 64$. This eliminates the remaining Stark-Heegner candidates $67$ and $163$, leaving $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
 
 \subsection{Manifold Resolution}
 \label{sec:manifold_resolution}
@@ -239,7 +239,7 @@ N \geq (\Delta - N) \implies \Delta \leq 2N = 64
 Given that the substrate is a $D=4$ dimensional manifold with fundamental temporal cycle $\Delta=43$, the theoretical maximum number of distinct spacetime slots the local geometry can support per fundamental update cycle is the product:
 
 \begin{equation}
-    R_M = D\Delta = 4 \times 43 = 172
+    R_M = D\Delta = 4 \cdot 43 = 172
 \end{equation}
 
 Persistent topological defects occupy subsets of this address space; their operational costs in System 2 scale with the fraction of $R_M$ utilized.
@@ -265,7 +265,7 @@ The information required to specify a topological defect's internal state compri
 The total information to specify a defect's complete configuration: internal state plus spatial address.
 \label{sec:lembed}
 
-Because the chiral signal states are dynamic entities within the $D=4$ manifold, specifying their complete state address requires more than just spatial coordinates. In discrete control theory and state-space representations, uniquely specifying a dynamic state's full trajectory requires establishing both its position vector ($D$ dimensions) and its transition rate or orientation vector ($D$ dimensions). This necessitates a total embedding cost of $2D = 8$ independent degrees of freedom to uniquely specify the dynamic state address on the manifold. (This purely information-theoretic requirement emerges in higher-level physics as Hamiltonian Phase Space and conjugate momentum, though we rely only on the geometric state-space bound here).
+Because the chiral signal states are dynamic entities within the $D=4$ manifold, specifying their complete state address requires more than just spatial coordinates. In discrete control theory and state-space representations, uniquely specifying a dynamic state's full trajectory requires establishing both its position vector ($D$ dimensions) and its transition rate or orientation vector ($D$ dimensions). This necessitates a total embedding cost of $2D = 8$ independent degrees of freedom to uniquely specify the dynamic state address on the manifold.
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\InvLEmbed}
@@ -280,7 +280,7 @@ The vacuum's intrinsic structural complexity. This sets the substrate capacity, 
     \item \textbf{$R_M (D \cdot \Delta) = 172$:} Manifold Resolution.
 \end{itemize}
 \begin{equation}
-    L_{substrate} = (R_M) + \nu = (4 \times 43) + 16 = \mathbf{\InvLSubstrate}
+    L_{substrate} = (R_M) + \nu = (4 \cdot 43) + 16 = \mathbf{\InvLSubstrate}
 \end{equation}
 
 

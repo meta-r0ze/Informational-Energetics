@@ -14,11 +14,11 @@ Within IE the vacuum is the minimal persistent substrate from which all observab
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR} via Finiteness}
 \label{sec:finiteness}
 
-By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor stability, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity pillar enforces a finite state-space; the Margin pillar enforces finite reserves against fluctuation. Together they require the substrate to be discrete, homogeneous, and a lattice.
+By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity pillar enforces a finite state-space; the Margin pillar enforces finite reserves against fluctuation. Together we now show that finiteness require the substrate to be discrete, homogeneous, and a lattice.
 
 \subsubsection{Discrete (Indivisible Unit)}
 \label{subsubsec:discrete}
-A continuous volume admits infinite descriptive complexity. Under the Closure Constraint, no external algorithm exists to compress this to finite Kolmogorov complexity, so the substrate cannot be self-defining. Therefore, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density.
+A continuous volume admits infinite descriptive complexity. Under the Closure Constraint, no external algorithm exists to compress this to finite Kolmogorov complexity, so a continuous substrate cannot be self-defining. Therefore, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density.
 
 \subsubsection{Homogeneous (Direction-Independent)}
 \label{subsubsec:homogeneous}
@@ -39,13 +39,12 @@ For the vacuum to persist, it must maintain a stable Map over time. This require
 \end{equation}
 A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} pillar. Therefore, the \textbf{substrate} must be Euclidean.
 
-\textbf{Epistemic Note (Substrate vs. Projection):} 
-This Euclidean positive-definiteness applies strictly to the substrate lattice. The observed Lorentzian signature $(-,+,+,+)$ emerges dynamically from the causal projection derived later in \cref{sec:metric_signature}. The substrate memory is a static definite metric, while the active processor operates with an indefinite metric.
-
+\textbf{The Substrate-Projection Dual:}
+The Euclidean positive-definiteness applies strictly to the substrate lattice. The observed Lorentzian signature $(-,+,+,+)$ emerges dynamically from the causal projection derived later in \cref{sec:metric_signature}; the substrate memory serves as a static, definite metric, while the active processor operates via an indefinite metric. This fundamental distinction provides the exact geometric mechanism by which time acquires its directional arrow, satisfying a core causal requirement of the persistence architecture.
 
 \subsubsection{Lattice Must Be Mappable to a Torus}
 \label{sec:torus}
-To satisfy \textbf{Finiteness}, the system must be spatially bounded. To satisfy \textbf{Protocol} (Unitarity), it must be closed (no edges). By the combinatorial Gauss-Bonnet theorem, a regular lattice of fixed vertex coordination tiled on a closed surface of Euler characteristic $\chi$ requires topological defects if $\chi \neq 0$. The sphere ($\chi = 2$) therefore requires defects that break translational invariance. The \textbf{Torus} ($T^n$, $\chi=0$) provides the unique flat, closed topology with periodic boundary conditions that admits a homogeneous, defect-free lattice structure, simultaneously satisfying Finiteness (bounded), Unitarity (closed), and Homogeneity (flat).
+To satisfy \textbf{Finiteness}, the system must be spatially bounded. To satisfy \textbf{Protocol} (Unitarity), it must be closed (no edges). By the combinatorial Gauss-Bonnet theorem, a regular lattice of fixed vertex coordination tiled on a closed surface of Euler characteristic $\chi$ requires topological defects if $\chi \neq 0$. The sphere ($\chi = 2$) therefore requires defects that break translational invariance. The Euclidean \textbf{Torus} ($T^n$, $\chi=0$) provides the unique flat, closed topology with periodic boundary conditions that admits a homogeneous, defect-free lattice structure, simultaneously satisfying Finiteness (bounded), Unitarity (closed), and Homogeneity (flat).
 
 Consequently, the statistical evolution of the vacuum is defined by the Partition Function on a torus\footnote{Here, $\beta$ is the formal periodicity parameter of the imaginary time cycle. We use the partition function formalism for state enumeration on a torus, not to claim the vacuum has a literal temperature.}:
 \begin{equation}
@@ -73,14 +72,14 @@ For the Map to remain invariant ($Z_{\Lambda} = Z_{\Lambda^*}$), the lattice mus
 \label{sec:causality}
 For the vacuum to persist, it must exist stably and \textit{evolve} in a well-defined manner. This creates a fundamental information-theoretic challenge: how to project the vast state space of a lattice node onto a single, linear temporal axis without ambiguity. 
 
-\textbf{The Serialization Problem:} From the \textbf{Capacity} pillar, we establish that any persistent system must possess a finite state-space cardinality, denoted $N$ (the number of distinct, orthogonal degrees of freedom, or basis states, that comprise the node's total informational payload). To evolve, the system must serialize these $N$ potential states onto a discrete timeline defined by the \textbf{Temporal Modulus} ($\Delta$), representing the number of available temporal slots in one fundamental causal cycle.
+\textbf{The Serialization Problem:} From the \textbf{Capacity} pillar, we establish that any persistent system must possess a finite state-space dimension, denoted $N$ (the number of linearly independent, orthogonal basis vectors spanning the node's total informational payload, i.e., the Hilbert-space dimension). To evolve, the system must serialize these $N$ potential states onto a discrete timeline defined by the \textbf{Temporal Modulus} ($\Delta$), representing the number of available temporal slots in one fundamental causal cycle.
 
 \textbf{Causal Aliasing:} To express its full informational capacity, the system must serialize all $N$ potential states into $\Delta$ discrete temporal slots per fundamental cycle. By the Pigeonhole Principle, if $N > \Delta$, the number of states exceeds the available temporal slots. Consequently, at least one temporal coordinate must simultaneously host multiple distinct states. This results in \textbf{Causal Aliasing}: distinct information states become concurrently superimposed in time, destroying the system's ability to maintain a well-defined serial history.
     
-\textbf{The Persistence Inequality:} To enforce a strict arrow of time and satisfy the Causality requirement, the projection must satisfy the Persistence Inequality: $\Delta \ge N$. The temporal container must meet or exceed the information content it holds. The inequality $\Delta \ge N$ allows $\Delta > N$, but any excess capacity represents unutilized structure. Under the Closure Constraint, the substrate admits no inert auxiliary overhead; the minimal self-consistent solution therefore saturates the bound.
+\textbf{The Persistence Inequality:} To enforce a strict arrow of time and satisfy the Causality requirement, the projection must satisfy the Persistence Inequality: $\Delta \ge N$. The temporal container must meet or exceed the information content it holds. While the inequality allows $\Delta > N$, the Closure Constraint forbids inert auxiliary overhead. Therefore, any excess temporal capacity ($M = \Delta - N$) cannot be arbitrary; it must be explicitly mandated by additional structural requirements to maintain coherence.
 
 \subsection{Summary: The Architectural Requirement of the Vacuum}
-Through the rigorous application of Informational Energetics, we have fully specified the architectural requirements for the substrate of reality:
+Through the application of Informational Energetics, we have fully specified the architectural requirements for the substrate of reality:
 
 \begin{enumerate}
     \item ($\mathrm{CAP}, \mathrm{MAR}$) \textbf{Finite Lattice}, required by Finiteness.

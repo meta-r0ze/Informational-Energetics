@@ -24,7 +24,7 @@ Open systems (e.g., biological organisms) offset dissipation through external en
 
 To persist, any system must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
 
-To rigorously derive this architecture, we model a persistent entity as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy).
+To derive this architecture, we model a persistent entity as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy).
 
 \subsubsection{The Necessary Components of Control}
 
@@ -73,10 +73,7 @@ The mapping of IE to specific physical domains is inherently adaptive. While the
 \subsubsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}
 
-To quantify persistence, we distinguish between dissipation and coordination: structural burdens increase the system's entropic footprint (positive contributions to $Z_{IE}$), while organizational 
-mechanisms reduce net dissipation relative to the uncoordinated baseline (negative contributions). This 
-parallels the negative feedback signal in control theory, where the error $\epsilon = R - F$ is reduced by the 
-feedback term.
+To quantify persistence, we distinguish between dissipation and coordination: structural burdens increase the system's entropic footprint (positive contributions to $Z_{IE}$), while organizational mechanisms reduce net dissipation relative to the uncoordinated baseline (negative contributions). This parallels the negative feedback signal in control theory, where the error $\epsilon = R - F$ is reduced by the feedback term.
 
 \begin{itemize}
     \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and the irreversible cost of state updates ($Z_{TOL}$). These terms increase impedance.
@@ -84,7 +81,7 @@ feedback term.
     \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
 
-The \textbf{Net Entropic Impedance} ($Z_{IE}$) is the algebraic sum of these contributions:
+In Quiescent Equilibrium, the six pillars operate on orthogonal, statistically independent domains. By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
@@ -97,7 +94,7 @@ The \textbf{Net Entropic Impedance} ($Z_{IE}$) is the algebraic sum of these con
 \subsection{Necessity Argument: The Failure Modes}
 \label{sec:proof_of_necessity}
 
-We demonstrate the necessity of the set of pillars $\mathbb{P} = \{\mathrm{CAP}, \mathrm{MAP}, \mathrm{PRO}, \mathrm{GOV}, \mathrm{TOL}, \mathrm{MAR}\}$ by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
+The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
     \item \textbf{No Capacity:} \textit{Starvation.} Detects threats but lacks energy to respond. ($\tau \to 0$ via Equilibrium).
     \item \textbf{No Map:} \textit{Dissolution.} Lacks self-definition; random capacity activation maximizes internal entropy. ($\tau \to 0$ via Boundary Loss).
@@ -116,6 +113,6 @@ The six pillars map onto the canonical components of a control loop, augmented b
 We conjecture that the six pillars are sufficient for the systems analyzed here. Complex functions often cited as distinct requirements such as Memory (persistence of $MAP$ over time, $MAR$) or Prediction ($MAP$ operation via $PRO$) are treated as emergent properties of the fundamental set. Whether this set is mathematically minimal across all possible persistent systems remains an open question; the framework's predictive power provides empirical support for its sufficiency in the domain of fundamental physics.
 
 \subsection{Domain of Application and Boundary Limits}
-Complex Adaptive Systems (CAS) research has historically yielded rich qualitative taxonomies. IE introduces a falsifiable paradigm shift: by applying the rigorous constraints of robust control theory to CAS, and strictly isolating systems that successfully \textbf{persist} against entropy, open-ended qualitative observation is replaced by exact structural requirements. 
+Complex Adaptive Systems (CAS) research has historically yielded rich qualitative taxonomies. IE introduces a falsifiable paradigm shift: by applying the constraints of robust control theory to CAS, and strictly isolating systems that successfully \textbf{persist} against entropy, open-ended qualitative observation is replaced by exact structural requirements. 
 
 While macroscopic domains (biological, ecological, economic) must manage these six existential pillars probabilistically within chaotic, open environments, this work deliberately operationalizes the framework at the absolute boundary limit of fundamental physics. The vacuum serves as the ultimate zero-external-flux baseline, a sterile analytical control environment required to prove the architecture’s exact mathematical validity before evaluating the time-varying, statistical distributions of capacity and margin found in open macroscopic systems.
