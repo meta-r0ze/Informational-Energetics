@@ -416,7 +416,7 @@ def main():
         name="Higgs Self-Coupling (λ)",
         tag="HiggsLambda",
         formula_sym="((σ - χ) - 1/Δ) / H_{intrinsic}",
-        latex_sym=r"\frac{(\sigma - \chi) - \frac{1}{\Delta}}{H_{sys}}",
+        latex_sym=r"\frac{(\sigma - \chi) - \frac{1}{\Delta}}{L_{intrinsic}}",
         formula_num=f"({SIGMA} - {CHI} - 1/{DELTA}) / {L_INTRINSIC}",
         result=LAMBDA_GEO,
         latex_mode=LATEX_MODE,
