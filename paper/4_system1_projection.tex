@@ -139,9 +139,7 @@ The Euclidean metric cannot satisfy the dynamic encoding constraint. Because $\o
 
 The \textbf{Lorentzian Metric} is the unique valid solution. While the $(2,2)$ split signature yields $\omega^2 = +1$ (restoring a real algebra), the $(1,3)$ signature yields $\omega^2 = -1$. Because the Clifford volume element squares to negative unity, it functions identically as the global geometric imaginary unit ($i \equiv \omega$). This naturally generates the complex structure required to compress the signal ($\nu = 16$) and the chiral structure required to sort it.
 
-Crucially, the metric projection assigns the Lorentzian signature $(-,+,+,+)$ exclusively to Sector A (Spacetime). Sector B (Internal Symmetry) retains the original Euclidean signature $(+,+,+,+)$ of the $E_8$ algebra. This asymmetry is the direct consequence of the Causality requirement: only one $D_4$ factor can support a timelike generator, and that assignment uniquely distinguishes the spacetime sector from the internal sector.
-
-\textbf{Conclusion:} The signature $(-,+,+,+)$ is the only algebraic structure capable of processing the system's information content and is not an arbitrary choice. Physically, the negative sign of Time ($dt^2 < 0$) is the geometric cost required to generate the imaginary unit $i$.
+Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature $(-,+,+,+)$ is effective: it emerges in Sector A because the Clifford volume element in signature $(1,3)$ provides the geometric imaginary unit ($\omega^2 = -1$) required for complex phase compression and chiral sorting. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
 
 \paragraph{Physical Consequence:}
 Once these algebraic structures are established to satisfy the encoding requirement, they manifest in physics as fundamental properties of matter. The \textbf{Matter/Antimatter} distinction emerges from the complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit. \textbf{Chirality} emerges from the orthogonal projectors. These are unavoidable consequences of encoding a 16-channels onto a 4-dimensional Lorentzian manifold.
@@ -265,7 +263,7 @@ The information required to specify a topological defect's internal state compri
 The total information to specify a defect's complete configuration: internal state plus spatial address.
 \label{sec:lembed}
 
-Because the chiral signal states are dynamic entities within the $D=4$ manifold, specifying their complete state address requires more than just spatial coordinates. In discrete control theory and state-space representations, uniquely specifying a dynamic state's full trajectory requires establishing both its position vector ($D$ dimensions) and its transition rate or orientation vector ($D$ dimensions). This necessitates a total embedding cost of $2D = 8$ independent degrees of freedom to uniquely specify the dynamic state address on the manifold.
+To satisfy Causality, the substrate cannot only record a static spatial coordinate ($D=4$). A pure configuration-space point possesses no intrinsic trajectory; its subsequent state would be undefined without external boundary conditions, strictly violating the Closure Constraint. To persist as a self-determining entity, a dynamic state must uniquely specify both its coordinate location ($D=4$) and its causal successor configuration ($D=4$). This geometric doubling ($2D = 8$) is  the strict minimum required to define a directed causal trajectory generated entirely from internal state data. 
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\InvLEmbed}
@@ -299,7 +297,7 @@ We have now identified a unique solution that satisfies the architectural requir
 
     \item \textbf{Governor: The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing binary partition of state and preventing field divergence. Required by Finiteness.
 
-    \item \textbf{Toll: The causal cost of persistence ($\tau = -1$, $M=11$).} Structurally, the Lorentzian metric ($\tau = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
+    \item \textbf{Toll: The causal cost of persistence ($\tau = -1$, $M=11$).} Structurally, the Lorentzian metric ($g_{00} = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
 
     \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} The total embedding dimension sets the geometric noise floor below which signals dissolve into the substrate. In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal (derived in Section~\ref{sec:system2_geometric_impedance} as the resolution-limited coupling), is the proof of solvency. The vacuum persists because its resolution limit is exactly minimally sufficient.
 \end{itemize}
