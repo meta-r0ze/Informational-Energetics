@@ -245,18 +245,21 @@ Persistent topological defects occupy subsets of this address space; their opera
 This completes the substrate's information geometry: $\nu=16$ encodes what a single spinor holds, $N=32$ the total channels at a node, and $R_M=172$ the spacetime addresses available per cycle.
 
 \CatchFileBetweenTags{\LIntrinsicVal}{constants.tex}{LIntrinsicVal}
+\CatchFileBetweenTags{\LIntrinsicEq}{constants.tex}{LIntrinsicEq}
 \CatchFileBetweenTags{\LEmbedVal}{constants.tex}{LEmbedVal}
+\CatchFileBetweenTags{\LEmbedEq}{constants.tex}{LEmbedEq}
 \CatchFileBetweenTags{\LSubstrateVal}{constants.tex}{LSubstrateVal}
+\CatchFileBetweenTags{\LSubstrateEq}{constants.tex}{LSubstrateEq}
 
 \subsection{The Entropic Loads: Resolution Limits of the Vacuum}
 \label{sec:lattice_loads}
 
 The vacuum's persistence depends on three hierarchical scales of informational complexity. Each scale defines a resolution limit, a threshold below which signals dissolve into the substrate.
 
-\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = 23$}{Lintrinsic}): Internal Specification}
+\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LIntrinsicVal$}{Lintrinsic}): Internal Specification}
 The information required to specify a topological defect's internal state comprises three orthogonal components. The chiral configuration ($\nu=16$) encodes phase and handedness. The interaction embedding ($\sigma=5$) encodes the coordinate degrees of freedom: spatial address ($D_{space}=3$) and boundary coordinates ($D_{boundary}=2$, the continuous parameters required to specify a point on the boundary surface). The topological invariant ($\chi=2$) encodes the global identity of the boundary, the discrete classification that distinguishes the sphere ($\chi=2$) from all other closed surfaces, independent of local coordinates. Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position).
 \begin{equation}
-    L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{23}
+    L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{\LIntrinsicVal}
 \end{equation}
 
 \subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LEmbedVal$}{Lembed}): Manifold Address}
