@@ -18,9 +18,29 @@ class MeasuredVal:
         if self.value == 0: return 0.0
         return abs(self.uncertainty / self.value)
 
+    def format_latex(self):
+        """Generates standard LaTeX output using siunitx (num/qty)."""
+        cite_str = f"~\\cite{{{self.citation}}}" if self.citation else ""
+        
+        # Check if value requires scientific notation
+        is_standard_range = 0.001 < abs(self.value) < 100000
+        
+        if is_standard_range:
+            t_str = f"{self.value:.{self.decimals}f}"
+            e_str = f"{self.uncertainty:.{self.decimals}f}"
+            val_fmt = f"{t_str} \\pm {e_str}"
+        else:
+            val_fmt = to_latex_sci_with_err(self.value, self.uncertainty, self.decimals)
+
+        # Use \qty when units are present, otherwise use \num
+        if self.units and self.units.strip():
+            return f"\\qty{{{val_fmt}}}{{{self.units}}}{cite_str}"
+        else:
+            return f"\\num{{{val_fmt}}}{cite_str}"
+
 PAPER1_REFS = {
     # paper 1
-    "alpha_inv": MeasuredVal(
+    "alpha_inv_codata": MeasuredVal(
         137.035999177,
         0.000000021,
         9,

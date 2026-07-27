@@ -3,7 +3,7 @@
 import math
 import argparse
 from decimal import getcontext
-from sympy import symbols, Rational, latex, simplify, UnevaluatedExpr
+from sympy import symbols, Rational, N, latex, simplify, pretty, UnevaluatedExpr, pi, sqrt
 
 from experimental_values import PAPER1_REFS, PAPER3_REFS
 REFS = {**PAPER1_REFS, **PAPER3_REFS}
@@ -36,20 +36,183 @@ def run_global_audit(results_dict, refs, latex_mode=False):
     run_global_audit_tier(results_dict, refs, tier2_checklist, latex_mode, "spectrum")
     run_global_audit_tier(results_dict, refs, tier1_checklist + tier2_checklist, latex_mode, "combined")
 
-## TODO convert the various equations into objects with symbols and then printing them out is cleaner
-def test():
+def wrap_latex_tag(val, units):
+    if units == None or units == "":
+        return val
+    return f"\\qty{{{val}}}{{{units}}}"
+
+def format_latex_tag(val, precision=12):
+    """
+    Formats a numeric/SymPy value dynamically:
+    - Integers: 4
+    - Small floats (< 0.001): 1.23456789e-05
+    - Real floats: 137.03599908
+    """
+    if hasattr(val, 'is_integer') and val.is_integer:
+        return f"{int(val)}"
+
+    float_val = float(val)
+
+    # Check if value is integer or within floating-point epsilon of an integer
+    if float_val.is_integer() or abs(float_val - round(float_val)) < 1e-12:
+        return f"{int(round(float_val))}"
+
+    # Tiny values needing scientific notation
+    if 0 < abs(float_val) < 1e-3 or abs(float_val) >= 1e8:
+        return f"{float_val:.{precision}e}"
+
+    # Standard decimal representation: format to precision then strip trailing zeroes
+    return f"{float_val:.{precision}f}".rstrip('0').rstrip('.')
+
+def outputgroup(group_list, listname, subs, LATEX_MODE=False):
+    if not LATEX_MODE:
+        print(f"{listname}:")
+        print("-" * 70)
+    for item in group_list:
+        sym, formula = item[0], item[1]
+        experimentalValues = item[2] if len(item) > 2 else []
+        if sym not in subs:
+            uneval_subs = {
+                k: UnevaluatedExpr(v) if not isinstance(v, UnevaluatedExpr) else v
+                for k, v in subs.items()
+            }
+            subs[sym] = formula.subs(uneval_subs)
+
+        tag_name = "".join(sym.name.split("_"))
+        tag_name = tag_name[:1].upper() + tag_name[1:]
+        if (tag_name == "Alpha^-1"):
+            tag_name = "AlphaInv"
+        latex_formula = latex(formula)
+        unicode_formula = pretty(formula, use_unicode=True)
+
+        uneval_subs = {k: UnevaluatedExpr(v) for k, v in subs.items()}
+        formula_sub = formula.subs(uneval_subs)
+        latex_substituted = latex(formula_sub)
+
+        num_val = N(formula.subs(subs).doit())
+        precision = REFS[experimentalValues[0]].decimals if len(experimentalValues) > 0 else 12
+        units = REFS[experimentalValues[0]].units if len(experimentalValues) > 0 else None
+        formatted_val = format_latex_tag(num_val, precision)
+
+        if LATEX_MODE:
+            print(f"%<*{tag_name}Eq>{latex_formula}%</{tag_name}Eq>")
+            print(f"%<*{tag_name}Val>{wrap_latex_tag(formatted_val, units)}%</{tag_name}Val>")
+        else:
+            print(f"{sym}")
+            print(f"  formula = ({latex_formula})")
+            print(f"  formula = ({latex_substituted})")
+            print(f"  value = {formatted_val} {units if units != None else ""}")
+
+        for idx, exp_key in enumerate(experimentalValues):
+            experiment = REFS[exp_key]
+            diff = num_val - experiment.value
+            sigma = diff / experiment.uncertainty if experiment.uncertainty != 0 else 0.0
+
+            tag_suffix = exp_key.split("_")[-1].capitalize()
+            if not LATEX_MODE:
+                print(f"  [Exp {exp_key}] Citation     : {experiment.citation}")
+                print(f"  [Exp {exp_key}] Value        : {experiment.value:.{experiment.decimals}f} ± {experiment.uncertainty:.{experiment.decimals}f} {experiment.units}")
+                print(f"  [Exp {exp_key}] Difference   : {diff:+.6e}")
+                print(f"  [Exp {exp_key}] Discrepancy  : {sigma:+.2f} σ\n")
+            else:
+                out_str = experiment.format_latex()
+
+                print(f"%<*{tag_name}{tag_suffix}ExperimentalVal>{out_str}%</{tag_name}{tag_suffix}ExperimentalVal>")
+                print(f"%<*{tag_name}{tag_suffix}Diff>{to_latex_sci(diff, 3)}%</{tag_name}{tag_suffix}Diff>")
+                print(f"%<*{tag_name}{tag_suffix}Sigma>{sigma:+.2f}%</{tag_name}{tag_suffix}Sigma>")
+
+    if not LATEX_MODE:
+        print("-" * 70)
+    print(f"")
+
+## TODO convert all equations into objects with symbols and then printing them out
+def paper1(LATEX_MODE = False):
+    PI_SYM = symbols('pi', positive=True)
+
+    # ==========================================
+    # SYSTEM 1: CHARACTERISTIC_INTEGERS
+    # ==========================================
     DELTA_SYM, NU_SYM, SIGMA_SYM, CHI_SYM, D_SYM = symbols('Delta nu sigma chi D', integer=True, positive=True)
-    N_sym = 2*NU_SYM
-    R_M_sym = D_SYM*DELTA_SYM
+    CHARACTERISTIC_INTEGERS = [
+        (DELTA_SYM, DELTA_SYM),
+        (NU_SYM, NU_SYM),
+        (SIGMA_SYM, SIGMA_SYM),
+        (CHI_SYM, CHI_SYM),
+        (D_SYM, D_SYM),
+    ]
+    e8_subs = {
+        D_SYM: 4,
+        DELTA_SYM: 43,
+        SIGMA_SYM: 5,
+        CHI_SYM: 2,
+        NU_SYM: 16
+    }
 
-    # Build with explicit 1
-    Z_TOL = (1 * D_SYM * (R_M_sym - SIGMA_SYM)) / (N_sym**3 * SIGMA_SYM * R_M_sym)
+    L_INTRINSIC_SYM, L_EMBED_SYM, L_SUBSTRATE_SYM, N_SYM, RM_SYM = symbols('L_intrinsic L_embed L_substrate N RM', integer=True, positive=True)
+    DERIVED_LOADS = [
+        (L_INTRINSIC_SYM, NU_SYM + SIGMA_SYM + CHI_SYM),
+        (L_EMBED_SYM,     NU_SYM + SIGMA_SYM + CHI_SYM + (2 * D_SYM)),
+        (L_SUBSTRATE_SYM, (DELTA_SYM * D_SYM) + NU_SYM),
+        (N_SYM,           2 * NU_SYM),
+        (RM_SYM,         D_SYM * DELTA_SYM),
+    ]
 
-    print("LaTeX (symbolic):", latex(Z_TOL))
-    Z_TOL_num = Z_TOL.subs({DELTA_SYM: 43, NU_SYM: 16, SIGMA_SYM: 5, CHI_SYM: 2, D_SYM: 4})
-    print("LaTeX (numeric): ", latex(Z_TOL_num))
-    print("Evaluated:       ", float(Z_TOL_num))
+    print_section("SYSTEM 1: THE INVARIANT SUBSTRATE", LATEX_MODE)
+    outputgroup(CHARACTERISTIC_INTEGERS, "Characteristic Integers", e8_subs, LATEX_MODE)
+    outputgroup(DERIVED_LOADS, "Derived loads", e8_subs, LATEX_MODE)
 
+    # ==========================================
+    # SYSTEM 2: IMPEDANCE
+    # ==========================================
+    ALPHA_INV_CAP_SYM = symbols('AlphaInvCAP')
+    ALPHA_INV_MAP_SYM = symbols('AlphaInvMAP')
+    ALPHA_INV_PRO_SYM = symbols('AlphaInvPRO')
+    ALPHA_INV_GOV_SYM = symbols('AlphaInvGOV')
+    ALPHA_INV_TOL_SYM = symbols('AlphaInvTOL')
+    ALPHA_INV_MAR_SYM = symbols('AlphaInvMAR')
+
+    IMPEDANCE_COMPONENTS = [
+        (ALPHA_INV_CAP_SYM, pi * DELTA_SYM),
+        (ALPHA_INV_MAP_SYM, CHI_SYM),
+        (ALPHA_INV_PRO_SYM, -Rational(1, 1) / (RM_SYM - SIGMA_SYM)),
+        (ALPHA_INV_GOV_SYM, -Rational(1, 1) * CHI_SYM / DELTA_SYM),
+        (ALPHA_INV_TOL_SYM, (Rational(1, 1) * CHI_SYM * (RM_SYM - SIGMA_SYM)) / (N_SYM**3 * SIGMA_SYM * RM_SYM)),
+        (ALPHA_INV_MAR_SYM, Rational(1, 1) / (L_EMBED_SYM * (SIGMA_SYM + 1) * DELTA_SYM**2)),
+    ]
+
+    ALPHA_INV_SYM = symbols('alpha^-1')
+    ALPHA_SYM = symbols('alpha')
+    IMPEDANCE = [
+        (ALPHA_INV_SYM, ALPHA_INV_CAP_SYM + ALPHA_INV_MAP_SYM + ALPHA_INV_PRO_SYM + ALPHA_INV_GOV_SYM + ALPHA_INV_TOL_SYM + ALPHA_INV_MAR_SYM, ["alpha_inv_codata",
+        "alpha_inv_morel",
+        "alpha_inv_parker",
+        "alpha_inv_fan"]),
+        (ALPHA_SYM, Rational(1, 1) / ALPHA_INV_SYM),
+    ]
+
+    print_section("SYSTEM 2: GEOMETRIC IMPEDANCE", LATEX_MODE)
+    outputgroup(IMPEDANCE_COMPONENTS, "Alpha^-1 components", e8_subs, LATEX_MODE)
+    outputgroup(IMPEDANCE, "alpha^-1", e8_subs, LATEX_MODE)
+
+    # --- Von Klitzing Constant (Quantum Resistance) ---
+    SOL_SYM = symbols('SpeedOfLight')
+    RK_SYM = symbols('VonKlitzing')
+    VONKLITZING = [
+        (SOL_SYM, UnevaluatedExpr((10**-7) * 299792458)),
+        (RK_SYM, (4 * pi * SOL_SYM)/ (2 * ALPHA_SYM), ["rk"])
+    ]
+    outputgroup(VONKLITZING, "Von Klitzing Constant", e8_subs, LATEX_MODE)
+
+    # --- Planck Charge Ratio & Vacuum Breakdown ---
+    CHARGE_RATIO_SYM = symbols('PlanckChargeRatio')
+    CHARGE_RATIO_PCT_SYM = symbols('PlanckChargeRatioPercentage')
+    CHARGE_ATTENUATION_SYM = symbols('PlanckChargeAttenuation')    
+    PLANCKCHARGE = [
+        (CHARGE_RATIO_SYM, 1 / sqrt(ALPHA_INV_SYM)),
+        (CHARGE_RATIO_PCT_SYM, CHARGE_RATIO_SYM * 100),
+        (CHARGE_ATTENUATION_SYM, sqrt(ALPHA_INV_SYM))
+    ]
+    outputgroup(PLANCKCHARGE, "Planck Charge Ratio", e8_subs, LATEX_MODE)
 
 def main():
     parser = argparse.ArgumentParser(description="Calculate E8 Persistence Constants")
@@ -60,41 +223,23 @@ def main():
     LATEX_MODE = args.latex
     PAPER_NUM = args.paper
     
-    # ==========================================
-    # 2. SYSTEM I: INVARIANTS
-    # ==========================================
-    print_section("SYSTEM I: THE INVARIANT SUBSTRATE", LATEX_MODE)
+    paper1(LATEX_MODE)
+
+    if LATEX_MODE:
+        me = REFS['me'].value
+        print(f"%<*MeMeV>{me}%</MeMeVPrint>")
+        print("")
 
     D     = 4
     DELTA = 43
     SIGMA = 5
     NU    = 16
     CHI   = 2
-
-    if not LATEX_MODE:
-        print(f"Invariants: S = {{ D={D}, Delta={DELTA}, Sigma={SIGMA}, Nu={NU}, Chi={CHI} }}")
-
-    # Derived Loads
     L_INTRINSIC = NU + SIGMA + CHI
     L_EMBED = L_INTRINSIC + (2 * D)
     L_SUBSTRATE = (DELTA * D) + NU
     N = 2 * NU
     R_M = D * DELTA
-
-    if LATEX_MODE:
-        # Output basic invariants as tags
-        print(f"%<*InvLIntrinsic>{L_INTRINSIC}%</InvLIntrinsic>")
-        print(f"%<*InvLEmbed>{L_EMBED}%</InvLEmbed>")
-        print(f"%<*InvLSubstrate>{L_SUBSTRATE}%</InvLSubstrate>")
-        print(f"%<*InvN>{N}%</InvN>")
-        print(f"%<*InvRM>{R_M}%</InvRM>")
-    elif not LATEX_MODE:
-        print(f"Capacities: L_INTRINSIC={L_INTRINSIC}, L_EMBED={L_EMBED}, N={N}, RM={R_M}")
-
-    # ==========================================
-    # 3. SYSTEM II: THE VACUUM IMPEDANCE
-    # ==========================================
-    print_section("SYSTEM II: THE GEOMETRIC IMPEDANCE (Table II Audit)", LATEX_MODE)
 
     AlphaInv_CAP = PI * DELTA
     AlphaInv_MAP = CHI
@@ -102,116 +247,8 @@ def main():
     AlphaInv_GOV = -(CHI / DELTA)
     AlphaInv_TOL = (1.0 * CHI * (R_M - SIGMA)) / (N**3 * SIGMA * R_M)
     AlphaInv_MAR = 1.0 / (L_EMBED * (SIGMA + 1) * DELTA**2)
-    # Summation
     ALPHA_INV_GEO = AlphaInv_CAP + AlphaInv_MAP + AlphaInv_PRO + AlphaInv_GOV + AlphaInv_TOL + AlphaInv_MAR
     ALPHA_GEO = 1.0 / ALPHA_INV_GEO
-
-    # Table breakdown for human mode
-    if not LATEX_MODE:
-        print(f"{'COMPONENT':<25} | {'FORMULA':<25} | {'VALUE':<15}")
-        print("-" * 70)
-        print(f"{'Capacity':<25} | {'π * Δ':<25} | {AlphaInv_CAP:+.8f}")
-        print(f"{'Map':<25} | {'χ':<25} | {AlphaInv_MAP:+.8f}")
-        print(f"{'Protocol':<25} | {'-1/(DΔ - σ)':<25} | {AlphaInv_PRO:+.8f}")
-        print(f"{'Governor':<25} | {'-χ/Δ':<25} | {AlphaInv_GOV:+.8f}")
-        print(f"{'Toll':<25} | {'Eq 16a':<25} | {AlphaInv_TOL:+.8e}")
-        print(f"{'Margin':<25} | {'Eq 16b':<25} | {AlphaInv_MAR:+.8e}")
-        print("-" * 70)
-        print(f"{'TOTAL IMPEDANCE':<25} | {'SUM':<25} | {ALPHA_INV_GEO:.9f}")
-        print("-" * 70)
-        print("")
-    else:
-        # Export components for Table II generation
-        print(f"%<*AlphaInvCAP>{AlphaInv_CAP:.5f}%</AlphaInvCAP>")
-        print(f"%<*AlphaInvMAP>{AlphaInv_MAP:.5f}%</AlphaInvMAP>")
-        print(f"%<*AlphaInvPRO>{AlphaInv_PRO:.5f}%</AlphaInvPRO>")
-        print(f"%<*AlphaInvGOV>{AlphaInv_GOV:.5f}%</AlphaInvGOV>")
-        print(f"%<*AlphaInvTOL>{to_latex_sci(AlphaInv_TOL)}%</AlphaInvTOL>")
-        print(f"%<*AlphaInvMAR>{to_latex_sci(AlphaInv_MAR)}%</AlphaInvMAR>")
-        print("")
-
-    print_derivation(
-        name="Fine Structure Constant Inverse",
-        tag="AlphaInv",
-        formula_sym="Sum(Components)",
-        latex_sym=r"\pi\Delta + \chi - \frac{1}{D\Delta - \sigma} - \frac{\chi}{\Delta} + T + PM",
-        formula_num="See Table",
-        result=ALPHA_INV_GEO,
-        latex_mode=LATEX_MODE,
-        ref_key="alpha_inv"
-    )
-    print_derivation(
-        name="Fine Structure Constant Inverse (morel)",
-        tag="AlphaInvMorel",
-        formula_sym="Sum(Components)",
-        latex_sym=r"\pi\Delta + \chi - \frac{1}{D\Delta - \sigma} - \frac{\chi}{\Delta} + T + PM",
-        formula_num="See Table",
-        result=ALPHA_INV_GEO,
-        latex_mode=LATEX_MODE,
-        ref_key="alpha_inv_morel"
-    )
-    print_derivation(
-        name="Fine Structure Constant Inverse (parker)",
-        tag="AlphaInvParker",
-        formula_sym="Sum(Components)",
-        latex_sym=r"\pi\Delta + \chi - \frac{1}{D\Delta - \sigma} - \frac{\chi}{\Delta} + T + PM",
-        formula_num="See Table",
-        result=ALPHA_INV_GEO,
-        latex_mode=LATEX_MODE,
-        ref_key="alpha_inv_parker"
-    )
-
-    print_derivation(
-        name="Fine Structure Constant Inverse (fan)",
-        tag="AlphaInvFan",
-        formula_sym="Sum(Components)",
-        latex_sym=r"\pi\Delta + \chi - \frac{1}{D\Delta - \sigma} - \frac{\chi}{\Delta} + T + PM",
-        formula_num="See Table",
-        result=ALPHA_INV_GEO,
-        latex_mode=LATEX_MODE,
-        ref_key="alpha_inv_fan"
-    )
-
-    if LATEX_MODE:
-        me = REFS['me'].value
-        print(f"%<*MeMeV>{me}%</MeMeVPrint>")
-        print(f"%<*MeMeVPrint>{me}%</MeMeVPrint>")
-        print("")
-
-    # --- Von Klitzing Constant (Quantum Resistance) ---
-    Z0_SI = 4 * PI * (10**-7) * 299792458
-    RK_GEO = Z0_SI / (2 * ALPHA_GEO)
-    
-    print_derivation(
-        name="Von Klitzing Constant (R_K)",
-        tag="VonKlitzing",
-        formula_sym="Z_0 / 2α",
-        latex_sym=r"\frac{Z_0}{2\alpha}",
-        formula_num=f"{Z0_SI:.4f} / (2 * {ALPHA_GEO:.4e})",
-        result=RK_GEO,
-        latex_mode=LATEX_MODE,
-        ref_key="rk",
-        context="Quantum Hall resistance"
-    )
-
-    # --- Planck Charge Ratio & Vacuum Breakdown ---
-    CHARGE_RATIO = 1.0 / math.sqrt(ALPHA_INV_GEO)
-    CHARGE_ATTENUATION = math.sqrt(ALPHA_INV_GEO)
-    CHARGE_RATIO_PCT = CHARGE_RATIO * 100.0
-
-    print_derivation(
-        name="Planck Charge Ratio (e/q_P)",
-        tag="PlanckChargeRatio",
-        formula_sym="1 / sqrt(Z_geo)",
-        latex_sym=r"\frac{1}{\sqrt{Z_{geo}}}",
-        formula_num=f"1 / sqrt({ALPHA_INV_GEO:.4f})",
-        result=CHARGE_RATIO,
-        latex_mode=LATEX_MODE
-    )
-    if LATEX_MODE:
-        # Output tags specifically for the text formulation
-        print(f"%<*ChargeAtten>{CHARGE_ATTENUATION:.1f}%</ChargeAtten>")
-        print(f"%<*ChargeRatioPct>{CHARGE_RATIO_PCT:.1f}\\%%</ChargeRatioPct>")
 
     if PAPER_NUM == 1:
         return
