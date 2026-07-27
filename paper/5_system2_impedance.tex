@@ -10,20 +10,20 @@
 \CatchFileBetweenTags{\AlphaInvTOLVal}{constants.tex}{AlphaInvTOLVal}
 \CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
 
-\CatchFileBetweenTags{\AlphaInvCodataExperimentalValue}{constants.tex}{AlphaInvCodataExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvCodataExperimentalVal}{constants.tex}{AlphaInvCodataExperimentalVal}
 \CatchFileBetweenTags{\AlphaInvCodataSigma}{constants.tex}{AlphaInvCodataSigma}
 
-\CatchFileBetweenTags{\AlphaInvMorelExperimentalValue}{constants.tex}{AlphaInvMorelExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvMorelExperimentalVal}{constants.tex}{AlphaInvMorelExperimentalVal}
 \CatchFileBetweenTags{\AlphaInvMorelSigma}{constants.tex}{AlphaInvMorelSigma}
 
-\CatchFileBetweenTags{\AlphaInvParkerExperimentalValue}{constants.tex}{AlphaInvParkerExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvParkerExperimentalVal}{constants.tex}{AlphaInvParkerExperimentalVal}
 \CatchFileBetweenTags{\AlphaInvParkerSigma}{constants.tex}{AlphaInvParkerSigma}
 
-\CatchFileBetweenTags{\AlphaInvFanExperimentalValue}{constants.tex}{AlphaInvFanExperimentalValue}
+\CatchFileBetweenTags{\AlphaInvFanExperimentalVal}{constants.tex}{AlphaInvFanExperimentalVal}
 \CatchFileBetweenTags{\AlphaInvFanSigma}{constants.tex}{AlphaInvFanSigma}
 
 \CatchFileBetweenTags{\VonKlitzingVal}{constants.tex}{VonKlitzingVal}
-\CatchFileBetweenTags{\VonKlitzingExperimentalValue}{constants.tex}{VonKlitzingExperimentalValue}
+\CatchFileBetweenTags{\VonKlitzingExperimentalVal}{constants.tex}{VonKlitzingExperimentalVal}
 \CatchFileBetweenTags{\VonKlitzingAccText}{constants.tex}{VonKlitzingAccText}
 
 At the substrate's fundamental resolution floor with zero external flux, the Entropic Action reduces to a static discrete sum over a single fundamental cycle ($\tau=1$). For a persistent topological defect, this counts the minimum elementary operations required to sustain its configuration against the substrate's background stochastic fluctuations:
@@ -207,7 +207,7 @@ This total joint configuration phase space is the product of three independent, 
 \end{equation}
 where:
 \begin{enumerate}
-    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect. Because its defining properties are strictly orthogonal information channels—internal identity ($\nu=16$, $\chi=2$), geometric anchor ($\sigma=5$), and kinematic phase space ($2D=8$, specifying position and transition rate), their data capacities combine via direct sum: $L_{embed} = \nu + \sigma + \chi + 2D = 31$.
+    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect. Because its defining properties are strictly orthogonal information channels: internal identity ($\nu=16$, $\chi=2$), geometric anchor ($\sigma=5$), and kinematic phase space ($2D=8$, specifying position and transition rate), their data capacities combine via direct sum: $L_{embed} = \nu + \sigma + \chi + 2D = 31$.
     \item \textbf{The Interaction Subgraph ($\sigma + 1 = 6$):} On a discrete lattice, a localized interaction is evaluated as a connected subgraph, not a point. The defect embedding requires $\sigma = 5$ active geometric degrees of freedom; the minimal subgraph spanning these is a star graph with $\sigma$ edges and therefore $\sigma + 1 = 6$ vertices.
     \item \textbf{The Causal Area ($\Delta^2$):} Because causality restricts information propagation to a $(1+1)\text{D}$ plane at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a spatial horizon of length $\Delta$. The resulting macroscopic spacetime area is strictly $\Delta \cdot \Delta = \Delta^2$.
 \end{enumerate}
@@ -275,10 +275,10 @@ Recent experimental values (\Cref{tab:alpha_comparison}) do not form a simple co
 \toprule
 \textbf{Source} & \textbf{Value ($\alpha^{-1}$)} & \textbf{Dev.} \\
 \midrule
-Morel  (2020) & \AlphaInvMorelExperimentalValue & $\AlphaInvMorelSigma \sigma$ \\
-Fan (2023) & \AlphaInvFanExperimentalValue & $\AlphaInvFanSigma \sigma$\\
-Parker (2018) & \AlphaInvParkerExperimentalValue & $\AlphaInvParkerSigma \sigma$ \\
-CODATA (2022) & \AlphaInvCodataExperimentalValue & $\AlphaInvCodataSigma \sigma$ \\
+Morel  (2020) & \AlphaInvMorelExperimentalVal & $\AlphaInvMorelSigma \sigma$ \\
+Fan (2023) & \AlphaInvFanExperimentalVal & $\AlphaInvFanSigma \sigma$\\
+Parker (2018) & \AlphaInvParkerExperimentalVal & $\AlphaInvParkerSigma \sigma$ \\
+CODATA (2022) & \AlphaInvCodataExperimentalVal & $\AlphaInvCodataSigma \sigma$ \\
 \bottomrule
 \end{tabular}
 \caption{Comparison of the $E_8$-Persistence Theory $\alpha^{-1}$ derivation against experimental values. Deviation is computed as $|\alpha^{-1}_{calc} - \alpha^{-1}_{exp}| / \sigma_{exp}$.}
@@ -329,7 +329,7 @@ Combining these yields the strict geometric relationship $R_K / Z_0 = \alpha_{ge
 \end{equation}
 
 \begin{itemize}
-    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingExperimentalValue
+    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingExperimentalVal
     \item \textbf{Precision:} \VonKlitzingAccText
 \end{itemize}
 
