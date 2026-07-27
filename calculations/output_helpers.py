@@ -110,7 +110,7 @@ def print_derivation(name, tag, formula_sym, latex_sym, formula_num, result,
                  t_str = f"{target:.{ref_obj.decimals}f}"
                  e_str = f"{err_val:.{ref_obj.decimals}f}"
                  out_str = f"\\qty{{{t_str} \\pm {e_str}}}{{{unit}}}{cite_str}"
-                 print(f"%<*{tag}ExperimentalValue>{out_str}%</{tag}ExperimentalValue>")
+                 print(f"%<*{tag}ExperimentalVal>{out_str}%</{tag}ExperimentalVal>")
             # Case B: Scientific Notation
             else:
                  # Pass ref_obj.decimals to format the mantissa correctly
@@ -119,7 +119,7 @@ def print_derivation(name, tag, formula_sym, latex_sym, formula_num, result,
                      out_str = f"${exp_str}$ \\unit{{{unit}}}{cite_str}"
                  else:
                      out_str = f"${exp_str}${cite_str}"
-                 print(f"%<*{tag}ExperimentalValue>{out_str}%</{tag}ExperimentalValue>")
+                 print(f"%<*{tag}ExperimentalVal>{out_str}%</{tag}ExperimentalVal>")
 
             # Accuracy Sentence Logic
             abs_sigma = abs(sigma)
