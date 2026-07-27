@@ -23,8 +23,8 @@
 \CatchFileBetweenTags{\AlphaInvFanSigma}{constants.tex}{AlphaInvFanSigma}
 
 \CatchFileBetweenTags{\VonKlitzingVal}{constants.tex}{VonKlitzingVal}
-\CatchFileBetweenTags{\VonKlitzingExperimentalVal}{constants.tex}{VonKlitzingExperimentalVal}
-\CatchFileBetweenTags{\VonKlitzingAccText}{constants.tex}{VonKlitzingAccText}
+\CatchFileBetweenTags{\VonKlitzingRkExperimentalVal}{constants.tex}{VonKlitzingRkExperimentalVal}
+\CatchFileBetweenTags{\VonKlitzingRkSigma}{constants.tex}{VonKlitzingRkSigma}
 
 At the substrate's fundamental resolution floor with zero external flux, the Entropic Action reduces to a static discrete sum over a single fundamental cycle ($\tau=1$). For a persistent topological defect, this counts the minimum elementary operations required to sustain its configuration against the substrate's background stochastic fluctuations:
 \begin{equation}
@@ -299,9 +299,7 @@ This breakdown scale can be heuristically estimated by comparing Feynman diagram
 \textbf{Falsification criterion:} If pure kinematic measurements continue to converge to $\alpha^{-1} \approx \AlphaInvVal$ while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, the convergence of both methods to a single, identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence theory.
 
 \subsection{Corollary: Charge from Geometric Impedance}
-Because the geometric impedance $Z_{geo}$ is identified with $\alpha^{-1}$, the standard electrodynamic definitions of $e$ and $R_K$ become consistency constraints on the substrate. The elementary charge $e$ is not an input but an output: it is the information flux that the substrate permits through a $\chi=2$ topological boundary when the impedance is $Z_{geo}$.
-
-By the standard definition $\alpha = e^2/(4\pi\epsilon_0\hbar c)$, the elementary charge is:
+Because the geometric impedance $Z_{geo}$ is identified with $\alpha^{-1}$, the standard electrodynamic definitions of $e$ and $R_K$ become consistency constraints on the substrate. The elementary charge $e$ is the information flux that the substrate permits through a $\chi=2$ topological boundary when the impedance is $Z_{geo}$. By the standard definition $\alpha = e^2/(4\pi\epsilon_0\hbar c)$, the elementary charge is:
 \begin{equation}
     e = \sqrt{\frac{4\pi\epsilon_0\hbar c}{Z_{geo}}}
 \end{equation}
@@ -329,24 +327,22 @@ Combining these yields the strict geometric relationship $R_K / Z_0 = \alpha_{ge
 \end{equation}
 
 \begin{itemize}
-    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingExperimentalVal
-    \item \textbf{Precision:} \VonKlitzingAccText
+    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingRkExperimentalVal
+    \item \textbf{Precision:} The geometric prediction lies within \VonKlitzingRkSigma $\sigma$ of the Quantum Hall resistance.
 \end{itemize}
 
 \textit{Physical consequence: The flatness of QHE plateaus.} $R = R_K/n$, regardless of impurities, reflects the lattice's discrete bit-depth: resistance is quantized by channel count, offering a structural origin for the topological protection traditionally attributed to electron wavefunction topology (Chern numbers) \cite{thouless_quantized_1982, kohmoto_topological_1985}.
 
-\CatchFileBetweenTags{\ChargeAtten}{constants.tex}{ChargeAtten}
-\CatchFileBetweenTags{\ChargeRatioPct}{constants.tex}{ChargeRatioPct}
+\CatchFileBetweenTags{\PlanckChargeAttenuationVal}{constants.tex}{PlanckChargeAttenuationVal}
+\CatchFileBetweenTags{\PlanckChargeRatioPercentageVal}{constants.tex}{PlanckChargeRatioPercentageVal}
 
 \subsection{The Planck Charge Ratio}
-The ratio $e/q_P \approx 0.085$ is a known numerical identity but has lacked structural explanation: why should the electromagnetic coupling set the attenuation between natural and observed charge? In the $E_8$-Persistence framework, this acts as a structural necessity: the geometric impedance $Z_{geo}$ enforces a safety margin between the operating charge and substrate breakdown.
-
-The elementary charge appears as the Planck charge attenuated by the square root of the lattice impedance:
+The ratio $e/q_P \approx 0.085$ is a known numerical identity but has lacked structural explanation: why should the electromagnetic coupling set the attenuation between natural and observed charge? In the $E_8$-Persistence framework, this acts as a structural necessity: the geometric impedance $Z_{geo}$ enforces a safety margin between the operating charge and substrate breakdown. The elementary charge appears as the Planck charge attenuated by the square root of the lattice impedance:
 \begin{equation}
-e = \frac{q_P}{\sqrt{Z_{geo}}} \approx \frac{q_P}{\ChargeAtten}
+e = \frac{q_P}{\sqrt{Z_{geo}}} \approx \frac{q_P}{\PlanckChargeAttenuationVal}
 \end{equation}
 
-\subsubsection{\textit{Physical consequence: Safe Load Limit.}} The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \ChargeRatioPct$ of this maximum. 
+\subsubsection{\textit{Physical consequence: Safe Load Limit.}} The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \PlanckChargeRatioPercentageVal$ of this maximum. 
 
 \subsubsection{\textit{Physical consequence: Vacuum Breakdown as Capacity Limit (Schwinger Limit).}} 
 The Schwinger critical field $E_c = m_e^2 c^3/e\hbar$ marks the threshold where external electric fields spontaneously produce $e^+e^-$ pairs \cite{schwinger_gauge_1951}. The Coulomb field of an elementary charge, evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$, scales with this critical value by exactly the fine-structure constant $\alpha$:
