@@ -244,9 +244,9 @@ Persistent topological defects occupy subsets of this address space; their opera
 
 This completes the substrate's information geometry: $\nu=16$ encodes what a single spinor holds, $N=32$ the total channels at a node, and $R_M=172$ the spacetime addresses available per cycle.
 
-\CatchFileBetweenTags{\InvLIntrinsic}{constants.tex}{InvLIntrinsic}
-\CatchFileBetweenTags{\InvLEmbed}{constants.tex}{InvLEmbed}
-\CatchFileBetweenTags{\InvLSubstrate}{constants.tex}{InvLSubstrate}
+\CatchFileBetweenTags{\LIntrinsicVal}{constants.tex}{LIntrinsicVal}
+\CatchFileBetweenTags{\LEmbedVal}{constants.tex}{LEmbedVal}
+\CatchFileBetweenTags{\LSubstrateVal}{constants.tex}{LSubstrateVal}
 
 \subsection{The Entropic Loads: Resolution Limits of the Vacuum}
 \label{sec:lattice_loads}
@@ -259,17 +259,17 @@ The information required to specify a topological defect's internal state compri
     L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{23}
 \end{equation}
 
-\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \InvLEmbed$}{Lembed}): Manifold Address}
+\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LEmbedVal$}{Lembed}): Manifold Address}
 The total information to specify a defect's complete configuration: internal state plus spatial address.
 \label{sec:lembed}
 
 To satisfy Causality, the substrate cannot only record a static spatial coordinate ($D=4$). A pure configuration-space point possesses no intrinsic trajectory; its subsequent state would be undefined without external boundary conditions, strictly violating the Closure Constraint. To persist as a self-determining entity, a dynamic state must uniquely specify both its coordinate location ($D=4$) and its causal successor configuration ($D=4$). This geometric doubling ($2D = 8$) is  the strict minimum required to define a directed causal trajectory generated entirely from internal state data. 
 
 \begin{equation}
-    L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\InvLEmbed}
+    L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LEmbedVal}
 \end{equation}
 
-\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \InvLSubstrate$}{Loverhead})}
+\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \LSubstrateVal$}{Loverhead})}
 The vacuum's intrinsic structural complexity. This sets the substrate capacity, the total information the vacuum must process per fundamental cycle. 
 
 \begin{itemize}
@@ -278,7 +278,7 @@ The vacuum's intrinsic structural complexity. This sets the substrate capacity, 
     \item \textbf{$R_M (D \cdot \Delta) = 172$:} Manifold Resolution.
 \end{itemize}
 \begin{equation}
-    L_{substrate} = (R_M) + \nu = (4 \cdot 43) + 16 = \mathbf{\InvLSubstrate}
+    L_{substrate} = (R_M) + \nu = (4 \cdot 43) + 16 = \mathbf{\LSubstrateVal}
 \end{equation}
 
 
