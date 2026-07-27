@@ -3,12 +3,12 @@
 
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-\CatchFileBetweenTags{\AlphaInvCAPVal}{constants.tex}{AlphaInvCAPVal}
-\CatchFileBetweenTags{\AlphaInvMAPVal}{constants.tex}{AlphaInvMAPVal}
-\CatchFileBetweenTags{\AlphaInvPROVal}{constants.tex}{AlphaInvPROVal}
-\CatchFileBetweenTags{\AlphaInvGOVVal}{constants.tex}{AlphaInvGOVVal}
-\CatchFileBetweenTags{\AlphaInvTOLVal}{constants.tex}{AlphaInvTOLVal}
-\CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
+\CatchFileBetweenTags{\AlphaInvCapVal}{constants.tex}{AlphaInvCapVal}
+\CatchFileBetweenTags{\AlphaInvMapVal}{constants.tex}{AlphaInvMapVal}
+\CatchFileBetweenTags{\AlphaInvProVal}{constants.tex}{AlphaInvProVal}
+\CatchFileBetweenTags{\AlphaInvGovVal}{constants.tex}{AlphaInvGovVal}
+\CatchFileBetweenTags{\AlphaInvTolVal}{constants.tex}{AlphaInvTolVal}
+\CatchFileBetweenTags{\AlphaInvMarVal}{constants.tex}{AlphaInvMarVal}
 
 \CatchFileBetweenTags{\AlphaInvExperimentalValue}{constants.tex}{AlphaInvExperimentalValue}
 \CatchFileBetweenTags{\AlphaInvSigma}{constants.tex}{AlphaInvSigma}
@@ -109,7 +109,7 @@ By Homogeneity the substrate admits no preferred direction, and saturating out-a
 The defect is defined by its boundary (\cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, and impedance, as a substrate invariant, cannot depend on any particular trajectory through it. The entropic cost is therefore the boundary measure of the envelope, re-traced once per fundamental cycle. Because Homogeneity strictly forbids any preferred direction or lattice alignment, this invariant causal boundary must possess maximal rotational symmetry. The ratio of the isotropic boundary (the circle) to its diameter ($\Delta$) introduces $\pi$ as the geometric multiplier:
 
 \begin{equation}
-    Z_{CAP} = \pi\Delta \approx \AlphaInvCAPVal
+    Z_{CAP} = \pi\Delta \approx \AlphaInvCapVal
 \end{equation}
 
 \subsection{Topological Boundary (Map)}
@@ -120,7 +120,7 @@ The Map is the boundary constraint required to prevent internal state data from 
 
 \textbf{Derivation:} As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
-    Z_{MAP} = +\chi = \AlphaInvMAPVal
+    Z_{MAP} = +\chi = \AlphaInvMapVal
 \end{equation}
 Because $\chi$, the Euler characteristic, is a pure topological invariant, it is an exact, indivisible integer. It is structurally forbidden from scaling, running, or acquiring continuous corrections.
 
@@ -139,7 +139,7 @@ The Protocol mediates the flow of phase information across the orthogonal spacet
 
 Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}):
 \begin{equation}
-    Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \AlphaInvPROVal
+    Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \AlphaInvProVal
 \end{equation}
 The linear form is mandated by statelessness: the Protocol coordinates instantaneously, with no recursive memory that would permit higher-order couplings.
 
@@ -154,7 +154,7 @@ The Governor prevents runaway entropic divergence by constraining the resonant e
 
 Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
 \begin{equation}
-    Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \AlphaInvGOVVal
+    Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \AlphaInvGovVal
 \end{equation}
 
 
@@ -190,7 +190,7 @@ The valid persistence subset is defined by the intersection of three geometric c
 
 The entropic cost (Toll) of a state transition is exactly the phase-space ratio of finding a valid persistence configuration within the total interaction space:
 \begin{equation}
-    Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \AlphaInvTOLVal
+    Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \AlphaInvTolVal
 \end{equation}
 
 \subsection{Resolution Floor (Margin)}
@@ -218,7 +218,7 @@ The Margin impedance is the reciprocal, the exact informational resolution limit
 \begin{equation}
 \begin{split}
     Z_{MAR} &= \frac{1}{V_{config}} = \frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2} \\
-    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \AlphaInvMARVal
+    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \AlphaInvMarVal
 \end{split}
 \end{equation}
 
