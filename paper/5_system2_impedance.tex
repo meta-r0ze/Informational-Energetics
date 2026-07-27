@@ -190,7 +190,10 @@ The valid persistence subset is defined by the intersection of three geometric c
 
 The entropic cost (Toll) of a state transition is exactly the phase-space ratio of finding a valid persistence configuration within the total interaction space:
 \begin{equation}
-    Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \approx \AlphaInvTolVal
+\begin{split}
+    Z_{TOL} &= \frac{\Omega_{valid}}{\Omega_{total}} = \frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M} \\
+    &\approx \num{\AlphaInvTolVal}
+\end{split}
 \end{equation}
 
 \subsection{Resolution Floor (Margin)}
@@ -218,7 +221,7 @@ The Margin impedance is the reciprocal, the exact informational resolution limit
 \begin{equation}
 \begin{split}
     Z_{MAR} &= \frac{1}{V_{config}} = \frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2} \\
-    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \AlphaInvMarVal
+    &=\frac{1}{31 \cdot (5+1) \cdot 43^2} \approx \num{\AlphaInvMarVal}
 \end{split}
 \end{equation}
 
