@@ -314,7 +314,7 @@ def main():
         name="Weak Mixing Angle (sin^2 theta_W)",
         tag="WeakAngle",
         formula_sym="Delta / (D*Delta + (ν * COORDINATE_OVERHEAD) + σ)",
-        latex_sym=r"\frac{\Delta}{D\Delta + \nu + \sigma}",
+        latex_sym=r"\frac{\Delta}{D\Delta + \nu\left(1 - \frac{1}{D\Delta}\right) + \sigma}",
         formula_num=f"{DELTA} / {denom_weak:.4f}",
         result=SIN2_THETA_W_GEO,
         latex_mode=LATEX_MODE,
@@ -415,7 +415,7 @@ def main():
     print_derivation(
         name="Higgs Self-Coupling (λ)",
         tag="HiggsLambda",
-        formula_sym="((σ - χ) - 1/Δ) / H_{intrinsic}",
+        formula_sym="((σ - χ) - 1/Δ) / L_{intrinsic}",
         latex_sym=r"\frac{(\sigma - \chi) - \frac{1}{\Delta}}{L_{intrinsic}}",
         formula_num=f"({SIGMA} - {CHI} - 1/{DELTA}) / {L_INTRINSIC}",
         result=LAMBDA_GEO,
@@ -461,8 +461,8 @@ def main():
     print_derivation(
         name="Jarlskog Invariant (J)",
         tag="Jarlskog",
-        formula_sym="phi^2 * T_geo",
-        latex_sym=r"\phi^2 \cdot T_{geo}",
+        formula_sym="phi^2 * T_geo * eta",
+        latex_sym=r"\phi^2 \cdot T_{geo} \cdot \eta",
         formula_num=f"{PHI:.4f}^2 * {AlphaInv_TOL:.4e}",
         result=J_GEO,
         latex_mode=LATEX_MODE,
@@ -611,7 +611,7 @@ def main():
     print_derivation(
         name="Weak Aperture (Projected)",
         tag="WeakApertureProj",
-        formula_sym="6 * (1 - 1/DΔ)",
+        formula_sym="(sigma + 1) * (1 - 1/(D*Delta))",
         latex_sym=r"(\sigma+1)(1 - \frac{1}{D\Delta})",
         formula_num=f"6 * (1 - 1/{D*DELTA})",
         result=APERTURE_PROJECTED,
