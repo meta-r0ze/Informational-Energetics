@@ -15,14 +15,14 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
 \end{equation}
 
-\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static pillar sum (\cref{eq:entropic_balance}). For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. In \textbf{Quiescent Equilibrium}, $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. \textbf{Note:} The full dynamic variational principle is deferred to the companion paper, \textit{Informational Energetics: Entropic Action}.
+\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static component sum (\cref{eq:entropic_balance}). For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. In \textbf{Quiescent Equilibrium}, $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. \textbf{Note:} The full dynamic variational principle is deferred to the companion paper, \textit{Informational Energetics: Entropic Action}\cite{meyer_ieaction_2026}.
 
 Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it.
 
 \subsection{The Universal Architecture: Derivation from First Principles}
 \label{sec:PillarDerivation}
 
-To persist, any system must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
+To persist, any system must implement a specific architecture comprising four components for information management and two components for the thermodynamic overhead of operating on its substrate.
 
 To derive this architecture, we model a persistent entity as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy).
 
@@ -36,37 +36,37 @@ Implicit in physical implementations is the irreducible energetic and temporal c
 
 \subsubsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
-IE reframes the control elements into six \textbf{existential pillars}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, necessitating a new primary unit of measure: the \textbf{Entropic Burden}. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines and the removal of any pillar leads to catastrophic system failure (\cref{sec:proof_of_necessity}).
+IE reframes the control elements into six \textbf{existential components}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, necessitating a new primary unit of measure: the \textbf{Entropic Burden}. The components represent the synthesis of isolated foundational theorems discovered across independent disciplines and the removal of any component leads to catastrophic system failure (\cref{sec:proof_of_necessity}).
 
 \begin{enumerate}
-    \item \textbf{The Capacity ($CAP$):} \textit{The Vessel.} 
+    \item \textbf{Capacity ($CAP$):} \textit{The Vessel.} 
     The physical infrastructure required to acquire resources, process energy, and perform work. It defines the system's kinetic potential and its ability to act on the environment. (The Plant/Actuator). 
-    \textit{Foundational Theorem (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, providing the physical basis for the strict \textbf{Finiteness} requirement of the Capacity pillar. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
+    \textit{Foundational Theorem (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, providing the physical basis for the strict \textbf{Finiteness} requirement of the Capacity component. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
 
-    \item \textbf{The Map ($MAP$):} \textit{The Model.}
+    \item \textbf{Map ($MAP$):} \textit{The Model.}
     The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Reference Signal/Setpoint). 
     \textit{Foundational Theorem (The Good-Regulator Theorem \cite{conant_every_1970}):} Conant and Ashby proved mathematically that ``every good regulator of a system must be a model of that system.'' A system cannot persistently regulate against environmental entropy without encoding a structural map of its environment.
 
-    \item \textbf{The Protocol ($PRO$):} \textit{The Interface.}
+    \item \textbf{Protocol ($PRO$):} \textit{The Interface.}
     The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path). 
     \textit{Foundational Theorem (Shannon's Source-Channel Separation Theorem \cite{shannon_communication_1949}):} Shannon established that optimal communication over a noisy channel requires decoupling the source data (the Map) from the error-correcting transmission encoding (the Protocol). Systemic coherence demands an independent protocol layer.
     
-    \item \textbf{The Governor ($GOV$):} \textit{The Constraint.}
+    \item \textbf{Governor ($GOV$):} \textit{The Constraint.}
     The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
     \textit{Foundational Theorem (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
-    \item \textbf{The Toll ($TOL$):} \textit{The Temporal Cost.}
+    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.}
     The irreducible energy cost of state transitions and information erasure. (Processing Latency). 
     \textit{Foundational Theorem (Landauer's Principle \cite{landauer_irreversibility_1961}):} Any irreversible logical operation, such as erasing a bit, must dissipate at least $k_B T \ln 2$ of energy to the environment. State transitions carry an inescapable thermodynamic toll.
    
-    \item \textbf{The Margin ($MAR$):} \textit{The Buffer.}
+    \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
     The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
     \textit{Foundational Theorem (Nyquist-Bode Stability Margins \cite{nyquist_regeneration_1932}):} A feedback system operating at theoretical criticality has zero tolerance for variance. Nyquist proved that physical control loops must maintain strict gain and phase margins away from the critical threshold, or the first stochastic environmental fluctuation will cause terminal divergence.
 \end{enumerate}
 
-Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
+Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six components must function.
 
-IE reframes control systems not as devices that execute instructions, but as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
+IE reframes control systems not as devices that execute instructions, but as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-component architecture survive observation; all others dissipate.
 
 The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture.
 
@@ -81,7 +81,7 @@ To quantify persistence, we distinguish between dissipation and coordination: st
     \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
 
-In Quiescent Equilibrium, the six pillars operate on orthogonal, statistically independent domains. By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
+In Quiescent Equilibrium, the six components operate on orthogonal, statistically independent domains. By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
@@ -94,25 +94,25 @@ In Quiescent Equilibrium, the six pillars operate on orthogonal, statistically i
 \subsection{Necessity Argument: The Failure Modes}
 \label{sec:proof_of_necessity}
 
-The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
+The necessity of the set of components $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one component ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
-    \item \textbf{No Capacity:} \textit{Starvation.} Detects threats but lacks energy to respond. ($\tau \to 0$ via Equilibrium).
-    \item \textbf{No Map:} \textit{Dissolution.} Lacks self-definition; random capacity activation maximizes internal entropy. ($\tau \to 0$ via Boundary Loss).
-    \item \textbf{No Protocol:} \textit{Decoherence.} Components decouple; actions are based on statistically independent, outdated states. ($\tau \to 0$ via Fragmentation).
-    \item \textbf{No Governor:} \textit{Divergence.} Unconstrained positive feedback loops exceeds structural limits. ($\tau \to 0$ via Explosion).
-    \item \textbf{No Toll:} \textit{Zeno Collapse.} State transitions require irreducible time and energy; the Margolus-Levitin limit establishes a strict minimum time per orthogonal state transition\cite{margolus_maximum_1998}. Without this temporal cost, updates occur instantaneously, requiring infinite bandwidth and collapsing the discrete causal sequence. ($\tau \to 0$ via Causal Collapse).
-    \item \textbf{No Margin:} \textit{Fragility.} Operating at theoretical criticality leaves zero buffer for environmental variance; the first fluctuation causes failure. ($\tau \to 0$ via Random Shock).
+    \item \textbf{No Capacity (Starvation):} Lacks an energetic envelope to respond to perturbations; system lifetime drops ($\tau \to 0$) via rapid thermalization.
+    \item \textbf{No Map (Dissolution):} Lacks self-definition; random activation maximizes internal entropy. $\tau \to 0$ as the system--environment boundary dissolves.
+    \item \textbf{No Protocol (Decoherence):} Components decouple; actions rely on statistically independent, outdated states. $\tau \to 0$ by organizational fragmentation.
+    \item \textbf{No Governor (Divergence):} Unconstrained positive feedback exceeds structural limits. $\tau \to 0$ by unbounded runaway.
+    \item \textbf{No Toll (Zeno Collapse):} State transitions require irreducible time and energy per the Margolus-Levitin limit\cite{margolus_maximum_1998}. Without this cost, updates occur instantaneously, collapsing the causal sequence. $\tau \to 0$ by causal collapse.
+    \item \textbf{No Margin (Fragility):} Operating at theoretical criticality leaves zero buffer for environmental variance. $\tau \to 0$ by random shock.
 \end{itemize}
 
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
 \subsection{Scope of the Architecture}
 \label{sec:sufficiency}
-The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics that standard control theory treats as external parameters. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence.
+The six components map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics that standard control theory treats as external parameters. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence.
 
-We conjecture that the six pillars are sufficient for the systems analyzed here. Complex functions often cited as distinct requirements such as Memory (persistence of $MAP$ over time, $MAR$) or Prediction ($MAP$ operation via $PRO$) are treated as emergent properties of the fundamental set. Whether this set is mathematically minimal across all possible persistent systems remains an open question; the framework's predictive power provides empirical support for its sufficiency in the domain of fundamental physics.
+We conjecture that the six components are sufficient for the systems analyzed here. Complex functions often cited as distinct requirements such as Memory (persistence of $MAP$ over time, $MAR$) or Prediction ($MAP$ operation via $PRO$) are treated as emergent properties of the fundamental set. Whether this set is mathematically minimal across all possible persistent systems remains an open question; the framework's predictive power provides empirical support for its sufficiency in the domain of fundamental physics.
 
 \subsection{Domain of Application and Boundary Limits}
 Complex Adaptive Systems (CAS) research has historically yielded rich qualitative taxonomies. IE introduces a falsifiable paradigm shift: by applying the constraints of robust control theory to CAS, and strictly isolating systems that successfully \textbf{persist} against entropy, open-ended qualitative observation is replaced by exact structural requirements. 
 
-While macroscopic domains (biological, ecological, economic) must manage these six existential pillars probabilistically within chaotic, open environments, this work deliberately operationalizes the framework at the absolute boundary limit of fundamental physics. The vacuum serves as the ultimate zero-external-flux baseline, a sterile analytical control environment required to prove the architecture’s exact mathematical validity before evaluating the time-varying, statistical distributions of capacity and margin found in open macroscopic systems.
+While macroscopic domains (biological, ecological, economic) must manage these six existential components probabilistically within chaotic, open environments, this work deliberately operationalizes the framework at the absolute boundary limit of fundamental physics. The vacuum serves as the ultimate zero-external-flux baseline, a sterile analytical control environment required to prove the architecture’s exact mathematical validity before evaluating the time-varying, statistical distributions of capacity and margin found in open macroscopic systems.

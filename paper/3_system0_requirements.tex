@@ -1,6 +1,6 @@
 \section{System 0: Architectural requirements for persistence: Finiteness, Unitarity, Causality}
 \label{sec:System0_vacuum_requirements}
-If the principles of IE are truly universal they must apply to the most fundamental layer of reality, the vacuum itself. In this section we will map the six pillars to this specific domain resulting in three non-negotiable requirements for the substrate of reality:
+If the principles of IE are truly universal they must apply to the most fundamental layer of reality, the vacuum itself. In this section we will map the six components to this specific domain resulting in three non-negotiable requirements for the substrate of reality:
 \begin{itemize}
     \item \textbf{Finiteness:} ($\mathrm{CAP}, \mathrm{MAR}$) To prevent energetic and informational divergence.
     \item \textbf{Unitarity:} ($\mathrm{MAP}, \mathrm{PRO}$) To ensure the lossless conservation of information.
@@ -14,7 +14,7 @@ Within IE the vacuum is the minimal persistent substrate from which all observab
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR} via Finiteness}
 \label{sec:finiteness}
 
-By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity pillar enforces a finite state-space; the Margin pillar enforces finite reserves against fluctuation. Together we now show that finiteness require the substrate to be discrete, homogeneous, and a lattice.
+By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity component enforces a finite state-space; the Margin component enforces finite reserves against fluctuation. Together we now show that finiteness require the substrate to be discrete, homogeneous, and a lattice.
 
 \subsubsection{Discrete (Indivisible Unit)}
 \label{subsubsec:discrete}
@@ -24,12 +24,12 @@ A continuous volume admits infinite descriptive complexity. Under the Closure Co
 \label{subsubsec:homogeneous}
 To minimize algorithmic complexity, the substrate must be \textbf{Homogeneous}. In Algorithmic Information Theory, the structural complexity of a random graph scales with its size ($K(S) \propto N$). For the universe to be scalable without additional processing overhead, its Kolmogorov Complexity must be $O(1)$, independent of size (Closure Constraint). This requires that the local topology be the same regardless of location and direction.
 
-\subsubsection{Lattice (Discrete + Homogeneous)} A structure that is both discrete (finite information density) and homogeneous (constant structure in every direction) is a \textbf{Lattice}. This excludes continuous manifolds (infinite description) and random graphs (non-constant complexity). The lattice provides a discrete address space; it does not require the information payload residing at those addresses to be discrete. The Map and Protocol pillars may encode continuous state vectors within each node, subject only to the finiteness and unitarity constraints derived next.
+\subsubsection{Lattice (Discrete + Homogeneous)} A structure that is both discrete (finite information density) and homogeneous (constant structure in every direction) is a \textbf{Lattice}. This excludes continuous manifolds (infinite description) and random graphs (non-constant complexity). The lattice provides a discrete address space; it does not require the information payload residing at those addresses to be discrete. The Map and Protocol components may encode continuous state vectors within each node, subject only to the finiteness and unitarity constraints derived next.
 
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{MAP}, \mathrm{PRO}$}{MAP, PRO} via Unitarity}
 \label{sec:unitarity}
 
-For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. By the Closure Constraint (\cref{subsec:closure}), the vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. This requirement imposes four structural properties on the substrate:
+For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. By the Closure Constraint (\cref{subsec:closure}), the vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol components. This requirement imposes four structural properties on the substrate:
 
 \subsubsection{Lattice Must Be Positive Definite}
 \label{subsec:positive_definite}
@@ -37,7 +37,7 @@ For the vacuum to persist, it must maintain a stable Map over time. This require
 \begin{equation}
     |\mathbf{v}|^2 \geq 0 \quad \forall \mathbf{v} \neq 0
 \end{equation}
-A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} pillar. Therefore, the \textbf{substrate} must be Euclidean.
+A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} component. Therefore, the \textbf{substrate} must be Euclidean.
 
 \textbf{The Substrate-Projection Dual:}
 The Euclidean positive-definiteness applies strictly to the substrate lattice. The observed Lorentzian signature $(-,+,+,+)$ emerges dynamically from the causal projection derived later in \cref{sec:metric_signature}; the substrate memory serves as a static, definite metric, while the active processor operates via an indefinite metric. This fundamental distinction provides the exact geometric mechanism by which time acquires its directional arrow, satisfying a core causal requirement of the persistence architecture.
@@ -72,7 +72,7 @@ For the Map to remain invariant ($Z_{\Lambda} = Z_{\Lambda^*}$), the lattice mus
 \label{sec:causality}
 For the vacuum to persist, it must exist stably and \textit{evolve} in a well-defined manner. This creates a fundamental information-theoretic challenge: how to project the vast state space of a lattice node onto a single, linear temporal axis without ambiguity. 
 
-\textbf{The Serialization Problem:} From the \textbf{Capacity} pillar, we establish that any persistent system must possess a finite state-space dimension, denoted $N$ (the number of linearly independent, orthogonal basis vectors spanning the node's total informational payload, i.e., the Hilbert-space dimension). To evolve, the system must serialize these $N$ potential states onto a discrete timeline defined by the \textbf{Temporal Modulus} ($\Delta$), representing the number of available temporal slots in one fundamental causal cycle.
+\textbf{The Serialization Problem:} From the \textbf{Capacity} component, we establish that any persistent system must possess a finite state-space dimension, denoted $N$ (the number of linearly independent, orthogonal basis vectors spanning the node's total informational payload, i.e., the Hilbert-space dimension). To evolve, the system must serialize these $N$ potential states onto a discrete timeline defined by the \textbf{Temporal Modulus} ($\Delta$), representing the number of available temporal slots in one fundamental causal cycle.
 
 \textbf{Causal Aliasing:} To express its full informational capacity, the system must serialize all $N$ potential states into $\Delta$ discrete temporal slots per fundamental cycle. By the Pigeonhole Principle, if $N > \Delta$, the number of states exceeds the available temporal slots. Consequently, at least one temporal coordinate must simultaneously host multiple distinct states. This results in \textbf{Causal Aliasing}: distinct information states become concurrently superimposed in time, destroying the system's ability to maintain a well-defined serial history.
     
