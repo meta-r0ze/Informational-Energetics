@@ -1,4 +1,4 @@
-\section{System 1: The Projection, The \texorpdfstring{$E_8 \rightarrow D_4 \oplus D_4$}{E8toD4D4} geometric projection that uniquely satisfies the System 0 requirements}
+\section{System 1: Substrate Selection, The unique geometry that satisfies System 0 requirements}
 \label{sec:system1_projection}
 
 Having established the requirements of the substrate we now identify the unique mathematical structure that satisfies these constraints.
@@ -13,7 +13,7 @@ We will begin by determining the possible dimensions of the lattice, then identi
 The requirement of an even, self-dual lattice is remarkably restrictive. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
 
 \[ n \in \{8, 16, 24, \dots\} \]
-This eliminates any lattice solution in dimensions $n<8$. Consequently: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an emergent projection of a higher-dimensional structure.
+Consequently: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an emergent projection of a higher-dimensional structure.
 
 Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which is prohibited by the strictly self-defining Closure Constraint (\cref{subsec:closure}).
 
@@ -36,12 +36,11 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
     \item The number of distinct even self-dual lattices grows extremely rapidly with dimension. For example, in dimension 32, there are more than 80 million such lattices.
 \end{enumerate}
 
-The $E_8$ lattice is selected not merely for its low dimensionality, but because it is the \textbf{only self-dual geometry that requires zero bits of selection information}. It is uniquely self-defining. This differs from the $\Delta$ derivation, where surjection and continuum limit are forced by causal continuity and atomicity (physical requirements) not arbitrary choices between equivalents.
+The $E_8$ lattice is selected for its low dimensionality and because it is the \textbf{only self-dual geometry that requires zero bits of selection information}. It is uniquely self-defining. This differs from the $\Delta$ derivation, where surjection and continuum limit are forced by causal continuity and atomicity (physical requirements) not arbitrary choices between equivalents.
 
 This unique self-consistent solution is selected prior to the emergence of time, eliminating any argument of spontaneous symmetry breaking which would require fluctuations, transition rates, and a dynamical framework that does not yet exist and which the substrate must first generate.
 
-\textit{The optimality of the $E_8$ lattice extends beyond self-duality: Viazovska's proof establishes it as the densest sphere packing in eight dimensions \cite{viazovska_sphere_2017}, the unique solution to a geometric extremization problem. This reinforces its status as the substrate requiring zero selection information. $E_8$ is self-defining and geometrically optimal.}
-
+The optimality of the $E_8$ lattice extends beyond self-duality. Viazovska's proof establishes it as the densest sphere packing in eight dimensions \cite{viazovska_sphere_2017}, representing the unique solution to a strict geometric extremization problem. This reinforces its status as the baseline substrate requiring zero selection information: $E_8$ is self-defining, algorithmically minimal, and geometrically optimal.
 
 \subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:projection}
@@ -54,7 +53,7 @@ The $E_8$ lattice cannot process information by itself. Processing requires a fl
 The projection must be compatible with the self-duality of the parent $E_8$ lattice to maintain local probability conservation. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any symmetric decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a specific glue group whose coset structure exactly reconstructs the self-dual parent. To avoid unbalancing the Unitarity requirement, the state space must be partitioned into two symmetric sectors that can support this exact quotient structure.
 
 \textbf{Candidate Rank-4 Subsectors.} 
-We evaluate rank-4 root sublattices that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
+Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two orthogonal rank-4 sublattices. We evaluate the candidate rank-4 root systems that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
 
 \begin{itemize}
     \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Under the \textbf{Closure Constraint} (Section~\ref{subsec:closure}), the substrate admits no extraneous structural data. Because $\mathbb{Z}_5$ is cyclic of prime order, its states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
@@ -106,7 +105,7 @@ By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the c
 \label{sec:total_node_capacity}
 We derive the total information capacity of a single lattice node, which constrains the state space of all subsequent derivations.
 
-The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. As derived above, the internal sector requires a bit-depth of $\nu=16$. Because the projection must be compatible with the \textbf{Self-Duality} of the parent $E_8$ substrate, the Spacetime sector must remain informationally symmetric to the Internal sector. Because the parent $E_8$ substrate is exactly self-dual ($\Lambda = \Lambda^*$), the projection cannot introduce an informational asymmetry between the spacetime manifold and the internal state space without violating local probability conservation. Therefore, the maximal channel capacity supported by the geometric structure of Sector B strictly dictates the required reciprocal capacity of Sector A. Because information capacity (bit-depth) is additive across independent orthogonal sub-spaces, the total channel capacity $N$ is simply the sum of the two sectors:
+The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. As derived above, the internal sector requires a bit-depth of $\nu=16$. Because the parent $E_8$ substrate is exactly self-dual ($\Lambda = \Lambda^*$), the projection cannot introduce an informational asymmetry between the spacetime manifold and the internal state space without violating local probability conservation. The maximal channel capacity of Sector B therefore dictates the exact reciprocal capacity of Sector A. The $E_8 \to D_4 \oplus D_4$ decomposition creates two orthogonal $\mathfrak{so}(8)$ sectors; local probability conservation requires their spinor dimensions to match exactly. The total channel capacity is the unalterable direct sum:
 
 \begin{equation}
     N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
@@ -147,7 +146,7 @@ Once these algebraic structures are established to satisfy the encoding requirem
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
 
-To satisfy the Map component, a persistent entity must strictly distinguish its internal state from the ambient environment. However, the \textbf{Finiteness} and \textbf{Unitarity} components require the vacuum to be homogeneous (no preferred positions) and self-dual (informationally symmetric). For a localized state to possess both a coordinate address and a distinguishable Map while satisfying these background constraints, the two specifications must be orthogonal: independent, yet simultaneously well-defined. Geometrically, this requires the substrate to support a topological defect, a localized boundary structure capable of separating a region from the vacuum without violating the background homogeneity. The minimal embedding dimension for this orthogonal decomposition sets the rank of the interaction symmetry ($\sigma$), the geometric degrees of freedom available for force mediation.
+To satisfy the Map component, a persistent entity must strictly distinguish its internal state from the ambient environment. However, the \textbf{Finiteness} and \textbf{Unitarity} components require the vacuum to be homogeneous (no preferred positions) and self-dual (informationally symmetric). For a localized state to possess both a coordinate address and a distinguishable Map while satisfying these background constraints, the two specifications must be orthogonal: independent, yet simultaneously well-defined. Geometrically, this requires the substrate to support a topological defect, a localized boundary structure capable of separating a region from the vacuum without violating the background homogeneity. The minimal embedding dimension for this orthogonal decomposition sets the rank of the interaction symmetry ($\sigma$), the geometric degrees of freedom available for state transition.
 
 \subsubsection{The Topological Boundary (\texorpdfstring{$\chi=2$}{chi=2})}
 \label{sec:topological_boundary}
@@ -179,7 +178,7 @@ The invariant $\chi=2$ is the \emph{necessary and sufficient} condition for \tex
 
 We derive $\sigma$ as the minimal coordinate set required to fully specify a persistent entity on the lattice. A localized state requires two independent pieces of information: its \textbf{spatial address} (where it is) and its \textbf{topological boundary} (what it is).
 
-\textbf{The Orthogonality Condition:} A fundamental requirement of the Homogeneity defined in System 0 is that the internal definition of a topological defect (its boundary topology) must be entirely independent of its location. Mathematically, this requires the total configuration space to be a Cartesian product of the spatial manifold and the internal boundary manifold ($V_{total} = V_{space} \times V_{boundary}$). By definition, the dimension of a product manifold is the sum of the dimensions of its factors. This additive combination is a geometric necessity, not an externally selected architectural choice.
+\textbf{The Orthogonality Condition:} A fundamental requirement of the Homogeneity defined in System 0 is that the internal definition of a topological defect (its boundary topology) must be entirely independent of its location. Mathematically, this requires the total configuration space to be a Cartesian product of the spatial manifold and the internal boundary manifold ($V_{total} = V_{space} \times V_{boundary}$). By definition, the dimension of a product manifold is the sum of the dimensions of its factors due to geometric necessity.
 
 The dimensions of these two orthogonal factors are uniquely constrained:
 \begin{itemize}
@@ -188,7 +187,7 @@ The dimensions of these two orthogonal factors are uniquely constrained:
     \item \textbf{Topological Boundary ($D_{boundary} = 2$):} The \textbf{Map} component requires the topological defect to be distinguished from the vacuum by a closed boundary. As derived in \cref{sec:topological_boundary}, the unique simply-connected solution is the sphere ($S^2$). Regardless of its location in the 3D spatial bulk, specifying the internal state of this boundary requires exactly 2 intrinsic coordinate parameters (e.g., $\theta, \phi$). 
 \end{itemize}
 
-Because these two parameter spaces are strictly orthogonal, the dimension of the minimal geometric embedding is the exact sum of these independent sectors.
+Because spatial position and internal boundary topology are mutually independent, the total defect configuration space factorizes as the Cartesian product $\mathcal{C}_{\text{defect}} = \mathcal{M}_3 \times S^2$. The additivity of their respective dimensions is mandated by the Orthogonality Condition (\cref{sec:torus}), yielding the minimal geometric embedding dimension $\sigma$:
 
 \begin{equation}
     \sigma = \dim(V_{space}) + \dim(V_{boundary}) = 3 + 2 = \mathbf{5}
@@ -199,12 +198,14 @@ Note: $\sigma=5$ represents the minimal spatial and boundary embedding dimension
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
 
-To derive the fundamental clocking period ($\Delta$) of the lattice's causal cycle, the system must simultaneously satisfy three independent physical constraints. These constraints uniquely isolate the substrate's resonant cycle:
+For a system to reliably track its own history (Causality) without losing information (Unitarity), its fundamental clock cycle must map perfectly onto a closed, reversible mathematical loop. If the loop allows multiple distinct histories to produce the exact same current state, information is destroyed. We must therefore find a geometric period ($\Delta$) that guarantees a unique, non-degenerate causal history.
+
+To derive the fundamental clocking period ($\Delta$) of the lattice's causal cycle we apply three independent constraints to uniquely isolate the substrate's resonant cycle:
 
 \begin{itemize}
     \item Unitarity restricts $\Delta$ to the Stark-Heegner numbers.
     \item Causality requires $\Delta \geq N = 32$.
-    \item Self-Clocking requires $\Delta \leq 2N = 64$.
+    \item Relational Time and Temporal Degeneracy requires $\Delta \leq 2N = 64$.
 \end{itemize}
 
 \subsubsection{Unitarity and the Class Number Constraint}
@@ -248,7 +249,9 @@ By the Pigeonhole Principle, distributing $M$ inert intervals around a periodic 
     N \ge (\Delta - N) \implies \Delta \le 2N = 64
 \end{equation}
 
-\textbf{Result:} With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates 67 and 163, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
+This bound is the necessary and sufficient condition for unitary reconstructability: any adjacent inert intervals ($k \ge 2$) would render the temporal mapping non-injective.
+
+\textbf{Result:} With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
 
 \subsection{Manifold Resolution}
 \label{sec:manifold_resolution}
@@ -273,36 +276,28 @@ This completes the substrate's information geometry: $\nu=16$ encodes what a sin
 \subsection{The Entropic Loads: Resolution Limits of the Vacuum}
 \label{sec:lattice_loads}
 
-The vacuum's persistence depends on three hierarchical scales of informational complexity. Each scale defines a resolution limit, a threshold below which signals dissolve into the substrate.
+The vacuum's persistence depends on three hierarchical scales of informational complexity. Each scale defines a resolution limit, a threshold below which signals dissolve into the substrate. Because these scales operate on orthogonal information channels, their minimal description lengths combine additively via direct sum.
 
-\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LintrinsicVal$}{Lintrinsic}): Internal Specification}
-The information required to specify a topological defect's internal state comprises three orthogonal components. The chiral configuration ($\nu=16$) encodes phase and handedness. The interaction embedding ($\sigma=5$) encodes the coordinate degrees of freedom: spatial address ($D_{space}=3$) and boundary coordinates ($D_{boundary}=2$, the continuous parameters required to specify a point on the boundary surface). The topological invariant ($\chi=2$) encodes the global identity of the boundary, the discrete classification that distinguishes the sphere ($\chi=2$) from all other closed surfaces, independent of local coordinates. Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position). Because these three components are strictly orthogonal information channels (\cref{sec:entropic_balance_sheet}), their minimal description lengths combine additively via direct sum:
+\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LintrinsicVal$}{Lintrinsic}): Defect Specification}
+The minimum information required to uniquely specify the internal state and local geometric footprint of a topological defect. It is the exact sum of the chiral channel configuration ($\nu=16$), the local interaction embedding ($\sigma=5$) comprising of the spatial address and boundary coordinates, and the boundary topological invariant ($\chi=2$). Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position).
+
 \begin{equation}
     L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{\LintrinsicVal}
 \end{equation}
 
-\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LembedVal$}{Lembed}): Manifold Address}
-The total information to specify a defect's complete configuration: internal state plus spatial address.
+\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LembedVal$}{Lembed}): Causal Trajectory}
 \label{sec:lembed}
-
-To satisfy Causality, the substrate cannot only record a static spatial coordinate ($D=4$). A pure configuration-space point possesses no intrinsic trajectory; its subsequent state would be undefined without external boundary conditions, strictly violating the Closure Constraint. To persist as a self-determining entity, a dynamic state must uniquely specify both its coordinate location ($D=4$) and its causal successor configuration ($D=4$). This geometric doubling ($2D = 8$) is the strict minimum required to define a directed causal trajectory generated entirely from internal state data. Because kinematic phase space is orthogonal to internal state identity, this geometric doubling adds directly:
+The total information required to specify a defect's complete configuration. To satisfy Causality, the substrate cannot merely record a static coordinate. A persistent, self-determining dynamic state must uniquely specify both its current manifold location ($D=4$) and its causal successor location ($D=4$) without appealing to external boundary conditions. This geometric doubling ($2D = 8$) constitutes the kinematic phase space required to define a directed causal trajectory. Because kinematic phase space and internal state identity are orthogonal information channels, this geometric doubling combines additively with the intrinsic specification:
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LembedVal}
 \end{equation}
 
-\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \LsubstrateVal$}{Loverhead})}
-The vacuum's intrinsic structural complexity. This sets the substrate capacity, the total information the vacuum must process per fundamental cycle. 
-
-\begin{itemize}
-    \item \textbf{$\nu = 16$:} Channel infrastructure. The spinor information at each site.
-
-    \item \textbf{$R_M (D \cdot \Delta) = 172$:} Manifold Resolution.
-\end{itemize}
+\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \LsubstrateVal$}{Loverhead}): Fundamental Capacity}
+The total intrinsic structural complexity the vacuum must process per fundamental cycle. This sums the available spacetime addresses ($R_M = 172$) and the native nodal channel infrastructure ($\nu=16$):
 \begin{equation}
-    L_{substrate} = (R_M) + \nu = (4 \cdot 43) + 16 = \mathbf{\LsubstrateVal}
+    L_{substrate} = R_M + \nu = 172 + 16 = \mathbf{\LsubstrateVal}
 \end{equation}
-
 
 \subsection{The \texorpdfstring{$E_8$}{E8}-Persistence System Specification}
 \label{sec:system1spec}

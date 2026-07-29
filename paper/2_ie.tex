@@ -15,7 +15,7 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
 \end{equation}
 
-\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static component sum (\cref{eq:entropic_balance}). For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. In \textbf{Quiescent Equilibrium}, $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. \textbf{Note:} The full dynamic variational principle is deferred to the companion paper, \textit{Informational Energetics: Entropic Action}\cite{meyer_ieaction_2026}.
+\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent generalization of the static component sum (\cref{eq:entropic_balance}). For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. In \textbf{Quiescent Equilibrium}, $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. \textbf{Note:} The dynamic variational principle is further developed in the companion paper \textit{Informational Energetics: Entropic Action}\cite{meyer_ieaction_2026}; the present work establishes the self-contained static baseline without requiring dynamical assumptions.
 
 Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it.
 
@@ -66,7 +66,7 @@ IE reframes the control elements into six \textbf{existential components}, the c
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six components must function.
 
-IE reframes control systems not as devices that execute instructions, but as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-component architecture survive observation; all others dissipate.
+IE reframes control systems as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-component architecture survive observation; all others dissipate.
 
 The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture.
 
@@ -81,7 +81,9 @@ To quantify persistence, we distinguish between dissipation and coordination: st
     \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
 
-In Quiescent Equilibrium, the six components operate on orthogonal, statistically independent domains. By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
+In Quiescent Equilibrium, the six components operate on orthogonal, statistically independent domains. 
+
+By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are statistically orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
@@ -115,4 +117,4 @@ We conjecture that the six components are sufficient for the systems analyzed he
 \subsection{Domain of Application and Boundary Limits}
 Complex Adaptive Systems (CAS) research has historically yielded rich qualitative taxonomies. IE introduces a falsifiable paradigm shift: by applying the constraints of robust control theory to CAS, and strictly isolating systems that successfully \textbf{persist} against entropy, open-ended qualitative observation is replaced by exact structural requirements. 
 
-While macroscopic domains (biological, ecological, economic) must manage these six existential components probabilistically within chaotic, open environments, this work deliberately operationalizes the framework at the absolute boundary limit of fundamental physics. The vacuum serves as the ultimate zero-external-flux baseline, a sterile analytical control environment required to prove the architecture’s exact mathematical validity before evaluating the time-varying, statistical distributions of capacity and margin found in open macroscopic systems.
+While macroscopic domains (biological, ecological, economic) must manage these six existential components probabilistically within chaotic, open environments, this work deliberately operationalizes the framework at the absolute boundary limit of fundamental physics. The vacuum serves as the ultimate zero-external-flux baseline, a sterile analytical control environment required to prove the architecture’s exact mathematical validity before evaluating the time-varying, statistical distributions of capacity and margin found in open macroscopic systems. We explicitly bound the scope of this paper to deriving the static, infrared geometric baseline. The formal translation of these discrete lattice constraints into a continuous dynamic Effective Field Theory (EFT) Lagrangian is deferred to future work.

@@ -38,6 +38,5 @@ An overarching guage of how complete the paper is: 1. Would a complex systems sc
 Details about this paper:
 - Each system depends on only what is below it. IE is a general framework that depends on information theory. System 0 only can use IE, no physics to archieve its derivation (for example saying particle experiments show X show X is required).  system 1, the substrate doesn’t “know”  about general relativity, electromagnetic charge or other higher level concepts and can’t depend on them.  It can only depend on system 0 and IE and info theory etc.
 - CLOSURE-AUDIT: Check that the derivation in system 0,1,2 follow the Closure Constraint 
-- While there are companion papers this paper should be stand alone defining the core pillars and an example. Reviewing this work doesn't depend on other works. Future works will only cross validate this and show their own thing, not proving a missing part of the pillar derivation.
-- Do not flag the alpha^-1 equation in the abstract.
+- While there are companion papers this paper should be stand alone defining the core pillars and an example. Reviewing this work doesn't depend on other works. Future works will only expand and cross validate this and show their own thing, not proving a missing part of the pillar derivation.
 - If you think there is an error in math of the alpha^-1 equation simply state so, don’t waste time trying to solve it. Numerical values are done in python and imported into the paper.
