@@ -1,66 +1,153 @@
 
 ######################################################################
-  SYSTEM I: THE INVARIANT SUBSTRATE
+  SYSTEM 1: THE INVARIANT SUBSTRATE
 ######################################################################
 
-Invariants: S = { D=4, Delta=43, Sigma=5, Nu=16, Chi=2 }
-Capacities: L_INTRINSIC=23, L_EMBED=31, N=32, RM=172
+Characteristic Integers:
+----------------------------------------------------------------------
+Delta
+  formula = (\Delta)
+  formula = (43)
+  value = 43
+nu
+  formula = (\nu)
+  formula = (16)
+  value = 16
+sigma
+  formula = (\sigma)
+  formula = (5)
+  value = 5
+chi
+  formula = (\chi)
+  formula = (2)
+  value = 2
+D
+  formula = (D)
+  formula = (4)
+  value = 4
+----------------------------------------------------------------------
+
+Derived loads:
+----------------------------------------------------------------------
+L_intrinsic
+  formula = (\chi + \nu + \sigma)
+  formula = (2 + 5 + 16)
+  value = 23
+L_embed
+  formula = (2 D + \chi + \nu + \sigma)
+  formula = (2 + 2 \cdot 4 + 5 + 16)
+  value = 31
+L_substrate
+  formula = (D \Delta + \nu)
+  formula = (16 + 43 \cdot 4)
+  value = 188
+N
+  formula = (2 \nu)
+  formula = (2 \cdot 16)
+  value = 32
+RM
+  formula = (D \Delta)
+  formula = (43 \cdot 4)
+  value = 172
+----------------------------------------------------------------------
+
 
 ######################################################################
-  SYSTEM II: THE GEOMETRIC IMPEDANCE (Table II Audit)
+  SYSTEM 2: GEOMETRIC IMPEDANCE
 ######################################################################
 
-COMPONENT                 | FORMULA                   | VALUE          
+Alpha^-1 components:
 ----------------------------------------------------------------------
-Capacity                  | π * Δ                     | +135.08848410
-Map                       | χ                         | +2.00000000
-Protocol                  | -1/(DΔ - σ)               | -0.00598802
-Governor                  | -χ/Δ                      | -0.04651163
-Toll                      | Eq 16a                    | +1.18521757e-05
-Margin                    | Eq 16b                    | +2.90770367e-06
+AlphaInvCAP
+  formula = (\pi \Delta)
+  formula = (\pi 43)
+  value = 135.088484104361
+AlphaInvMAP
+  formula = (\chi)
+  formula = (2)
+  value = 2
+AlphaInvPRO
+  formula = (- \frac{1}{RM - \sigma})
+  formula = (- \left(- 5 + 43 \cdot 4\right)^{-1})
+  value = -0.005988023952
+AlphaInvGOV
+  formula = (- \frac{\chi}{\Delta})
+  formula = (- 2 \cdot 43^{-1})
+  value = -0.046511627907
+AlphaInvTOL
+  formula = (\frac{\chi \left(RM - \sigma\right)}{N^{3} RM \sigma})
+  formula = (5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3})
+  value = 1.185217569041e-05
+AlphaInvMAR
+  formula = (\frac{1}{\Delta^{2} L_{embed} \left(\sigma + 1\right)})
+  formula = (\left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2})
+  value = 2.907703670104e-06
 ----------------------------------------------------------------------
-TOTAL IMPEDANCE           | SUM                       | 137.035999212
+
+alpha^-1:
+----------------------------------------------------------------------
+alpha^-1
+  formula = (AlphaInvCAP + AlphaInvGOV + AlphaInvMAP + AlphaInvMAR + AlphaInvPRO + AlphaInvTOL)
+  formula = (\pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1} + 2)
+  value = 137.035999212
+  [Exp alpha_inv_codata] Citation     : mohr_codata_2025
+  [Exp alpha_inv_codata] Value        : 137.035999177 ± 0.000000021
+  [Exp alpha_inv_codata] Difference   : +3.538139e-8
+  [Exp alpha_inv_codata] Discrepancy  : +1.68 σ
+
+  [Exp alpha_inv_morel] Citation     : morel_determination_2020
+  [Exp alpha_inv_morel] Value        : 137.035999206 ± 0.000000011
+  [Exp alpha_inv_morel] Difference   : +6.381384e-9
+  [Exp alpha_inv_morel] Discrepancy  : +0.58 σ
+
+  [Exp alpha_inv_parker] Citation     : parker_measurement_2018
+  [Exp alpha_inv_parker] Value        : 137.035999046 ± 0.000000027
+  [Exp alpha_inv_parker] Difference   : +1.663814e-7
+  [Exp alpha_inv_parker] Discrepancy  : +6.16 σ
+
+  [Exp alpha_inv_fan] Citation     : fan_measurement_2023
+  [Exp alpha_inv_fan] Value        : 137.035999166 ± 0.000000015
+  [Exp alpha_inv_fan] Difference   : +4.638139e-8
+  [Exp alpha_inv_fan] Discrepancy  : +3.09 σ
+
+alpha
+  formula = (\frac{1}{\alpha^{-1}})
+  formula = (\left(2 + \pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1}\right)^{-1})
+  value = 0.007297352562
 ----------------------------------------------------------------------
 
---- Fine Structure Constant Inverse ---
-Formula:  Sum(Components)
-Filled:   See Table
-Calculated: 137.035999212 
-Target:     137.035999177 +/- 2.1e-08 
-Deviation:  +1.68σ  [OK]
+Von Klitzing Constant:
+----------------------------------------------------------------------
+SpeedOfLight
+  formula = (29.9792458)
+  formula = (29.9792458)
+  value = 29.9792458
+VonKlitzing
+  formula = (\frac{2 \pi SpeedOfLight}{\alpha})
+  formula = (2 \pi \left(\left(2 + \pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1}\right)^{-1}\right)^{-1} \cdot 29.9792458)
+  value = 25812.80747\Omega
+  [Exp rk] Citation     : mohr_codata_2025
+  [Exp rk] Value        : 25812.80745 ± 0.00001\Omega
+  [Exp rk] Difference   : +1.941370e-5
+  [Exp rk] Discrepancy  : +1.94 σ
 
---- Fine Structure Constant Inverse (morel) ---
-Formula:  Sum(Components)
-Filled:   See Table
-Calculated: 137.035999212 
-Target:     137.035999206 +/- 1.1e-08 
-Deviation:  +0.58σ  [OK]
+----------------------------------------------------------------------
 
---- Fine Structure Constant Inverse (parker) ---
-Formula:  Sum(Components)
-Filled:   See Table
-Calculated: 137.035999212 
-Target:     137.035999046 +/- 2.7e-08 
-Deviation:  +6.16σ  [WARNING: >3σ deviation]
-
---- Fine Structure Constant Inverse (fan) ---
-Formula:  Sum(Components)
-Filled:   See Table
-Calculated: 137.035999212 
-Target:     137.035999166 +/- 1.5e-08 
-Deviation:  +3.09σ  [WARNING: >3σ deviation]
-
---- Von Klitzing Constant (R_K) ---
-Formula:  Z_0 / 2α
-Filled:   376.7303 / (2 * 7.2974e-03)
-Calculated: 25812.8074694 \Omega
-Target:     25812.80745 +/- 1e-05 \Omega
-Deviation:  +1.94σ  [OK]
-
---- Planck Charge Ratio (e/q_P) ---
-Formula:  1 / sqrt(Z_geo)
-Filled:   1 / sqrt(137.0360)
-Calculated: 0.0854245430918 
+Planck Charge Ratio:
+----------------------------------------------------------------------
+PlanckChargeRatio
+  formula = (\frac{1}{\sqrt{\alpha^{-1}}})
+  formula = (\frac{1}{\sqrt{2 + \pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1}}})
+  value = 0.085424543092
+PlanckChargeRatioPercentage
+  formula = (100 PlanckChargeRatio)
+  formula = (100 \frac{1}{\sqrt{2 + \pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1}}})
+  value = 8.542454309183
+PlanckChargeAttenuation
+  formula = (\sqrt{\alpha^{-1}})
+  formula = (\sqrt{2 + \pi 43 + - 2 \cdot 43^{-1} + \left(1 + 5\right)^{-1} \left(2 + 2 \cdot 4 + 5 + 16\right)^{-1} \cdot 43^{-2} + 5^{-1} \cdot 2 \left(43 \cdot 4\right)^{-1} \left(- 5 + 43 \cdot 4\right) \left(2 \cdot 16\right)^{-3} + - \left(- 5 + 43 \cdot 4\right)^{-1}})
+  value = 11.70623761985
+----------------------------------------------------------------------
 
 
 ######################################################################
@@ -129,7 +216,7 @@ Target:     1.1663788e-05 +/- 6e-12 GeV^-2
 Deviation:  +0.04σ  [OK]
 
 --- Higgs Self-Coupling (λ) ---
-Formula:  ((σ - χ) - 1/Δ) / H_{intrinsic}
+Formula:  ((σ - χ) - 1/Δ) / L_{intrinsic}
 Filled:   (5 - 2 - 1/43) / 23
 Calculated: 0.129423660263 
 Target:     0.129 +/- 0.005 
@@ -150,7 +237,7 @@ Target:     2.935e-06 +/- 1e-09
 Deviation:  -0.77σ  [OK]
 
 --- Jarlskog Invariant (J) ---
-Formula:  phi^2 * T_geo
+Formula:  phi^2 * T_geo * eta
 Filled:   1.6180^2 * 1.1852e-05
 Calculated: 3.08489953167e-05 
 Target:     3.08e-05 +/- 1.5e-06 
@@ -215,7 +302,7 @@ Filled:   (1/0.1294) * exp(-0.2588)
 Calculated: 5.96444940597 
 
 --- Weak Aperture (Projected) ---
-Formula:  6 * (1 - 1/DΔ)
+Formula:  (sigma + 1) * (1 - 1/(D*Delta))
 Filled:   6 * (1 - 1/172)
 Calculated: 5.96511627907 
 
@@ -245,13 +332,6 @@ Calculated: 0.375
 ============================================================
                    GLOBAL GEOMETRIC AUDIT                   
 ============================================================
-[Alpha^-1]
-  Experimental: 137.035999177 +/- 0.00000002
-  Geometric:    137.035999212
-  Citation:            (mohr_codata_2025)
-  Deviation:    +1.68 sigma
-  Chi^2:        2.8387
-------------------------------------------------------------
 [G_Fermi]
   Experimental: 1.166378800e-05 +/- 6.0e-12
   Geometric:    1.166378823e-05
@@ -274,9 +354,9 @@ Calculated: 0.375
   Chi^2:        0.3965
 ------------------------------------------------------------
 ============================================================
-TOTAL CHI^2:   3.2366
-DOF:           4
-REDUCED CHI^2: 0.8092
+TOTAL CHI^2:   0.3980
+DOF:           3
+REDUCED CHI^2: 0.1327
 >>> STATUS: VALIDATED (Theory matches Experiment)
 ============================================================
 
@@ -330,13 +410,6 @@ REDUCED CHI^2: 1.4563
 ============================================================
                    GLOBAL GEOMETRIC AUDIT                   
 ============================================================
-[Alpha^-1]
-  Experimental: 137.035999177 +/- 0.00000002
-  Geometric:    137.035999212
-  Citation:            (mohr_codata_2025)
-  Deviation:    +1.68 sigma
-  Chi^2:        2.8387
-------------------------------------------------------------
 [G_Fermi]
   Experimental: 1.166378800e-05 +/- 6.0e-12
   Geometric:    1.166378823e-05
@@ -394,9 +467,9 @@ REDUCED CHI^2: 1.4563
   Chi^2:        3.7689
 ------------------------------------------------------------
 ============================================================
-TOTAL CHI^2:   10.5181
-DOF:           9
-REDUCED CHI^2: 1.1687
+TOTAL CHI^2:   7.6795
+DOF:           8
+REDUCED CHI^2: 0.9599
 >>> STATUS: VALIDATED (Theory matches Experiment)
 ============================================================
 

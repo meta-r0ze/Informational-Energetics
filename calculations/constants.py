@@ -101,7 +101,7 @@ def outputgroup(group_list, listname, subs, LATEX_MODE=False):
             print(f"{sym}")
             print(f"  formula = ({latex_formula})")
             print(f"  formula = ({latex_substituted})")
-            print(f"  value = {formatted_val} {units if units != None else ""}")
+            print(f"  value = {formatted_val}{units if units != None else ""}")
 
         for idx, exp_key in enumerate(experimentalValues):
             experiment = REFS[exp_key]
@@ -111,7 +111,7 @@ def outputgroup(group_list, listname, subs, LATEX_MODE=False):
             tag_suffix = exp_key.split("_")[-1].capitalize()
             if not LATEX_MODE:
                 print(f"  [Exp {exp_key}] Citation     : {experiment.citation}")
-                print(f"  [Exp {exp_key}] Value        : {experiment.value:.{experiment.decimals}f} ± {experiment.uncertainty:.{experiment.decimals}f} {experiment.units}")
+                print(f"  [Exp {exp_key}] Value        : {experiment.value:.{experiment.decimals}f} ± {experiment.uncertainty:.{experiment.decimals}f}{experiment.units}")
                 print(f"  [Exp {exp_key}] Difference   : {diff:+.6e}")
                 print(f"  [Exp {exp_key}] Discrepancy  : {sigma:+.2f} σ\n")
             else:
@@ -249,6 +249,10 @@ def main():
     AlphaInv_MAR = 1.0 / (L_EMBED * (SIGMA + 1) * DELTA**2)
     ALPHA_INV_GEO = AlphaInv_CAP + AlphaInv_MAP + AlphaInv_PRO + AlphaInv_GOV + AlphaInv_TOL + AlphaInv_MAR
     ALPHA_GEO = 1.0 / ALPHA_INV_GEO
+
+    # --- Von Klitzing Constant (Quantum Resistance) ---
+    Z0_SI = 4 * PI * (10**-7) * 299792458
+    RK_GEO = Z0_SI / (2 * ALPHA_GEO)
 
     if PAPER_NUM == 1:
         return
