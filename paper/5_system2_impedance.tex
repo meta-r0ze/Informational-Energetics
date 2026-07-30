@@ -77,17 +77,17 @@ The geometric impedance is derived systematically from the Entropic Balance Shee
 % ============================================================
 \subsection{The Resonant Circumference (Capacity)}
 \label{subsec:alpha_cap}
-\textit{Form: The boundary action of the closed causal envelope.}
-
 Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (the physical manifestation of this closed path is the Wilson Loop in dynamical gauge theory). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
-\textit{Derivation:} At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
+At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
 The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ updates or it does not persist. For any closed trajectory, reaching a distance $d$ from the anchor costs at least $d$ steps outbound and $d$ steps to return, so $2d \le \Delta$: the maximal one-way reach is $d_{\max} = \Delta/2$, saturated by the out-and-back path.
 
 By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period.
 
-The defect is defined by its boundary (\cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, and impedance, as a substrate invariant, cannot depend on any particular trajectory through it. The entropic cost is therefore the boundary measure of the envelope, re-traced once per fundamental cycle. Because Homogeneity strictly forbids any preferred direction or lattice alignment, this invariant causal boundary cannot encode anisotropic lattice artifacts; it must possess maximal rotational symmetry. The causal envelope therefore strictly saturates the isoperimetric bound of the isotropic round ball. The ratio of this maximally symmetric boundary to its diameter ($\Delta$) introduces $\pi$ as an exact macroscopic topological multiplier:
+The defect is defined by its boundary (\cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, and impedance, as a substrate invariant, cannot depend on any particular trajectory through it. The entropic cost is therefore the boundary measure of the envelope, re-traced once per fundamental cycle.
+
+The defect is defined by its boundary (\cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. The ratio of this circumference to its diameter ($\Delta$) is exactly $\pi$:
 
 \begin{equation}
     Z_{CAP} = \pi\Delta \approx \AlphaInvCAPVal
@@ -95,11 +95,9 @@ The defect is defined by its boundary (\cref{sec:topological_boundary}); the env
 
 \subsection{Topological Boundary (Map)}
 \label{subsec:alpha_map}
-\textit{Form: The integer topological invariant of the boundary constraint.}
-
 The Map is the boundary constraint required to prevent internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
 
-\textbf{Derivation:} As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
     Z_{MAP} = +\chi = \AlphaInvMAPVal
 \end{equation}
@@ -108,11 +106,9 @@ Because $\chi$, the Euler characteristic, is a pure topological invariant, it is
 
 \subsection{Alignment Efficiency (Protocol)}
 \label{subsec:alpha_pro}
-\textit{Form: The negative reciprocal of the residual coordination capacity.}
-
 The Protocol mediates the flow of phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) channels. Without this alignment cost, these channels would completely decouple, fragmenting the vacuum into isolated, unrelated subspaces.
 
-\textbf{Derivation:} The manifold resolution $R_M = D\Delta = 172$ is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
+The manifold resolution $R_M = D\Delta = 172$ is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
 
 \begin{equation}
     C_{res} = R_M - \sigma = (4 \cdot 43) - 5 = 167
@@ -127,11 +123,9 @@ The linear form is mandated by statelessness: the Protocol coordinates instantan
 
 \subsection{Stabilizing Potential (Governor)}
 \label{subsec:alpha_gov}
-\textit{Form: The negative ratio of the topological boundary to the causal cycle.}
-
 The Governor prevents runaway entropic divergence by constraining the resonant excitation across the temporal cycle. Without this stabilizing cost, local phase excitations on the causal loop would undergo unbounded, runaway feedback, overflowing the local node capacity.
  
-\textbf{Derivation:} To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
+To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
 
 Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
 \begin{equation}
@@ -141,15 +135,12 @@ Because the loop is closed and periodic, it possesses no endpoint boundaries (no
 
 \subsection{Entropic Transition (Toll)}
 \label{subsec:alpha_tol}
-\textit{Form: The ratio of persistence-preserving states to total interaction states.}
-
 The Toll is the entropic cost of executing a state transition. Without this temporal cost, logical transitions would execute without sequential causal history. The Toll is the ratio of the minimal valid configuration space to the maximal unconstrained configuration space:
 
 \begin{equation}
     Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}}.
 \end{equation}
 
-\textbf{Derivation:}
 The numerator, the minimal state transition, is defined by three geometric filters required to prevent non-unitary mixing, unquantized flux, or coordinate self-aliasing:
 \begin{enumerate}
     \item \textbf{State Identity (1):} The interaction acts as the identity on internal channel configuration.
@@ -184,11 +175,9 @@ The Toll is therefore the ratio of minimal valid to maximal unconstrained phase 
 
 \subsection{Resolution Floor (Margin)}
 \label{subsec:alpha_mar}
-\textit{Form: The reciprocal of the orthogonal configuration phase-space volume.}
-
 At the substrate level, the safety buffer manifests as an information-theoretic distinguishability threshold: the minimum signal amplitude required to be resolved above the geometric noise floor, analogous to the gain margin that prevents control-loop instability. Below this floor, structured information dissolves into ambient substrate fluctuations.
 
-\textbf{Derivation:} The minimum resolvable signal is exactly 1 quantum of information diluted across the \emph{minimal} number of distinct configurations ($V_{config}$) required to specify a localized defect. Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, independent specification domains combine multiplicatively (Cartesian product).
+The minimum resolvable signal is exactly 1 quantum of information diluted across the \emph{minimal} number of distinct configurations ($V_{config}$) required to specify a localized defect. Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, independent specification domains combine multiplicatively (Cartesian product).
 
 The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
@@ -213,9 +202,11 @@ The Margin impedance is the reciprocal: the probability that a single quantum of
 \subsection{The Additive Baseline and the Finite Sum}
 \label{sec:additive_baseline}
 
-As established in the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), the six existential pillars operate on geometrically disjoint domains assigned by the $E_8 \to D_4 \oplus D_4$ projection. Capacity and Margin govern metric volume; Map governs topological boundaries; Governor regulates temporal phase density; and Toll dictates combinatorial channel selection. The Protocol mediates the residual coordination capacity between the orthogonal sectors. Because these domains share no geometric generators, their mutual information vanishes identically, and cross-terms are structurally forbidden. Because these domains share no geometric generators, their mutual information vanishes identically. In standard statistical mechanics, independent degrees of freedom yield a strictly factorized partition function ($\mathcal{Z}_{total} = \prod \mathcal{Z}_i$). Because the entropic action is proportional to the negative logarithm of the state sum, this exact factorization mathematically mandates a strictly linear, additive entropic action at lowest order. The linear combination is therefore the rigorous physical consequence of substrate orthogonality.
+As established in the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), the six existential pillars operate on geometrically disjoint domains assigned by the $E_8 \to D_4 \oplus D_4$ projection. Capacity and Margin govern metric volume; Map governs topological boundaries; Governor regulates temporal phase density; and Toll dictates combinatorial channel selection. The Protocol mediates the residual coordination capacity between the orthogonal sectors. Non-linear cross-terms are structurally forbidden as the projection shares no geometric generators across sectors.
 
-Two constraints rigidly bound this summation, ensuring it is a complete and minimal basis:
+In standard statistical mechanics, independent degrees of freedom yield a strictly factorized partition function ($\mathcal{Z}_{total} = \prod \mathcal{Z}_i$). Because the entropic action is proportional to the negative logarithm of the state sum, this exact factorization mathematically mandates a strictly linear, additive entropic action at lowest order. The distinct functional form of each term, whether a boundary measure, an inverse capacity, or a phase space ratio is the strict, dimensionally-appropriate information-theoretic measure for that specific, orthogonal geometric domain.
+
+The linear combination is therefore the rigorous physical consequence of substrate orthogonality. Two constraints rigidly bound this summation, ensuring it is a complete and minimal basis:
 
 \begin{enumerate}
     \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The characteristic integers $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
@@ -284,7 +275,8 @@ This breakdown scale can be heuristically estimated by comparing Feynman diagram
 \subsection{The Geometric Origin of Elementary Charge}
 Having derived the strictly dimensionless geometric impedance $Z_{geo}$, we now translate this structural limit into macroscopic physical observables. On the $E_8$ substrate, $Z_{geo}$ acts as a strict flow constraint: it restricts the amount of information flux that can propagate through a $\chi=2$ topological boundary without violating structural coherence. In standard macroscopic physics, this emergent quantum of flux is observed as the elementary charge $e$. 
 
-Rather than treating charge as a postulated particle property, its fundamental magnitude is strictly bounded by this geometric limit. Equating our geometric impedance with the inverse fine-structure coupling ($Z_{geo} \equiv \alpha^{-1}$), the conversion into macroscopic SI units (via the vacuum permittivity $\epsilon_0$, the causal speed limit $c$, and the quantum of action $\hbar$) recovers the elementary charge:
+Rather than treating charge as a postulated particle property, its fundamental magnitude is strictly bounded by this geometric limit. To compare this substrate bound with macroscopic measurement, we apply the standard dimensional isomorphism. The dimensionless geometric impedance $Z_{geo}$ maps to the inverse fine-structure coupling; in SI units this yields:
+
 \begin{equation}
     e = \sqrt{\frac{4\pi\epsilon_0\hbar c}{Z_{geo}}}
 \end{equation}
@@ -302,8 +294,7 @@ A geometric impedance should manifest as a measurable macroscopic transmission r
     \item \textbf{Geometric Coupling:} The framework derives the dimensionless scaling between a single internal channel and the bulk medium as $Z_{channel} / Z_0 = \alpha_{geo}^{-1}$, where $Z_0$ is the Characteristic Impedance of Free Space.
 \end{enumerate}
 
-Combining these yields a strict geometric prediction for the resistance of a single fundamental channel: $R_{channel} = \frac{Z_0}{2} \cdot \alpha^{-1}_{geo}$. Evaluating this in the SI unit system by applying the macroscopic vacuum impedance isomorphism ($Z_0 = \mu_0 c \approx 376.73\,\Omega$) yields:
-
+Combining these yields a strict geometric prediction for the resistance of a single fundamental channel: $R_{channel} = \frac{Z_0}{2} \cdot \alpha^{-1}_{geo}$. Evaluating this substrate prediction in SI units via the standard macroscopic impedance isomorphism ($Z_0 = \mu_0 c$) yields:
 \begin{equation}
     R_{channel} = \frac{Z_0}{2} \cdot \alpha^{-1}_{geo} \approx \mathbf{\VonKlitzingVal}
 \end{equation}

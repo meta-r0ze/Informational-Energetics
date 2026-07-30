@@ -1,7 +1,6 @@
 \section{System 1: Substrate Selection, The unique geometry that satisfies System 0 requirements}
 \label{sec:system1_projection}
-
-Having established the requirements of the substrate we now identify the unique mathematical structure that satisfies these constraints.
+The architectural requirements of System 0 translate into a search for the unique discrete geometric structure satisfying these constraints.
 
 \subsection{The Lattice Selection (\texorpdfstring{$E_8$}{E8})}
 \label{sec:lattice_selection}
@@ -27,7 +26,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
     
     \item By the \textbf{Closure Constraint} (\cref{subsec:closure}), the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
 
-    \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$ satisfying the Closure Constraint.
+    \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$, satisfying the Closure Constraint.
 
     \item At $n = 16$: The architectural constraints isolate exactly two non-isomorphic solutions ($E_8 \oplus E_8$ and $D_{16}^+$). Isolating a unique geometry from this degenerate set requires $\log_2(2) = \textbf{1 bit}$ of additional specification (applied strictly to the ground-state definition, not to dynamical excitations). Because the Closure Constraint enforces \textbf{zero bits} of external specification, this substrate is not self-specifying.
 
@@ -36,7 +35,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
     \item The number of distinct even self-dual lattices grows extremely rapidly with dimension. For example, in dimension 32, there are more than 80 million such lattices.
 \end{enumerate}
 
-The $E_8$ lattice is selected for its low dimensionality and because it is the \textbf{only self-dual geometry that requires zero bits of selection information}. It is uniquely self-defining. This differs from the $\Delta$ derivation, where surjection and continuum limit are forced by causal continuity and atomicity (physical requirements) not arbitrary choices between equivalents.
+The $E_8$ lattice is selected for its low dimensionality and because it is the \textbf{only self-dual geometry that requires zero bits of selection information}. It is uniquely self-defining.
 
 This unique self-consistent solution is selected prior to the emergence of time, eliminating any argument of spontaneous symmetry breaking which would require fluctuations, transition rates, and a dynamical framework that does not yet exist and which the substrate must first generate.
 
@@ -58,7 +57,7 @@ Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two 
 \begin{itemize}
     \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Under the \textbf{Closure Constraint} (Section~\ref{subsec:closure}), the substrate admits no extraneous structural data. Because $\mathbb{Z}_5$ is cyclic of prime order, its states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
     
-    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, satisfying the Closure Constraint. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality components (\cref{sec:chiralcapacity}).
+    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, satisfying the Closure Constraint. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars (\cref{sec:chiralcapacity}).
 \end{itemize}
 
 Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric decomposition} that preserves global Unitarity while naturally generating the chiral structure required for information processing.
@@ -80,7 +79,7 @@ To determine the information capacity (Bit-Depth) of the lattice nodes we ask: w
 
 \textit{Geometric Translation:} In a lattice, information states are encoded as \textbf{orientations}---directional configurations that can be rotated and transformed. Because these transformations are strictly geometric rotations of a coordinate space, they are governed by the Orthogonal groups $SO(n)$ and their simply-connected double covers, the Spin groups $Spin(n)$. While other Lie groups (such as $SU(n)$) admit complex representations, they describe abstract internal symmetries; the physical orientation of the substrate is strictly bound to $Spin(n)$ geometry.
 
-The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\mathfrak{so}(8)$) acts on 8-dimensional fundamental and spinor representations. As established in \cref{sec:projection}, each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local continuous rotation symmetry of $Spin(8)$. We must determine the minimal channel capacity ($\nu$) required for this native $Spin(8)$ hardware to satisfy the \textbf{Map} and \textbf{Causality} components.
+The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\mathfrak{so}(8)$) acts on 8-dimensional fundamental and spinor representations. As established in \cref{sec:projection}, each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local continuous rotation symmetry of $Spin(8)$. We must determine the minimal channel capacity ($\nu$) required for this native $Spin(8)$ hardware to satisfy the \textbf{Map} and \textbf{Causality} pillars.
 
 \begin{enumerate}
     \item \textbf{The Map Constraint (Complex Phase):} 
@@ -136,7 +135,7 @@ A 4-dimensional manifold admits two metric signatures. We test each against the 
 \subsubsection{The Unique Solution}
 The Euclidean metric cannot satisfy the dynamic encoding constraint. Because $\omega^2 = +1$ in signature $(+,+,+,+)$, the center of the Clifford algebra is strictly real ($\mathbb{R} \oplus \mathbb{R}$). It lacks the capacity to generate the global geometric imaginary unit $i$ required for complex phase compression, nor can it support complex chiral projectors. A universe with this signature would be a static, real-valued block with no capacity for phase or flow.
 
-The \textbf{Lorentzian Metric} is the unique valid solution. While the $(2,2)$ split signature yields $\omega^2 = +1$ (restoring a real algebra), the $(1,3)$ signature yields $\omega^2 = -1$. Because the Clifford volume element squares to negative unity, it functions identically as the global geometric imaginary unit ($i \equiv \omega$). This naturally generates the complex structure required to compress the signal ($\nu = 16$) and the chiral structure required to sort it.
+The \textbf{Lorentzian Metric} is the unique valid solution. While the $(2,2)$ split signature yields $\omega^2 = +1$ (restoring a real algebra), the $(1,3)$ signature yields $\omega^2 = -1$. In Geometric Algebra, the Clifford volume element of a $(1,3)$ manifold functions as the geometric imaginary unit ($i \equiv \omega$), directly mapping the spacetime pseudoscalar to the quantum phase. This naturally generates the complex structure required to compress the signal ($\nu = 16$) and the chiral structure required to sort it, without separating internal and external spaces.
 
 Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature $(-,+,+,+)$ is effective: it emerges in Sector A because the Clifford volume element in signature $(1,3)$ provides the geometric imaginary unit ($\omega^2 = -1$) required for complex phase compression and chiral sorting. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
 
@@ -223,7 +222,7 @@ To preserve the self-duality of the parent $E_8$ lattice ($\Lambda = \Lambda^*$)
 
 Mathematically, unique reconstructability demands that the endomorphism ring $\text{End}(\mathbb{C}/\Lambda) \cong \mathcal{O}_K$ be a Principal Ideal Domain, which holds if and only if the class number $h(D) = 1$.
 
-\textbf{Failure Mode ($h > 1$):} If $h(D) > 1$, the ideal class group contains non-trivial classes, giving rise to multiple non-isomorphic (though isogenous) elliptic curves sharing the same endomorphism ring. These correspond to topologically distinct causal histories that generate locally identical observable states. An observer at a future node cannot uniquely invert the state transformation, resulting in \textbf{Causal Degeneracy} and a breakdown of unitary evolution.
+\textbf{Failure Mode ($h > 1$):} If $h(D) > 1$, the ideal class group contains non-trivial classes, giving rise to multiple non-isomorphic (though isogenous) elliptic curves sharing the same endomorphism ring. These correspond to topologically distinct causal histories that generate locally identical observable states. An observer at a future node cannot uniquely invert the state transformation, resulting in \textbf{Causal Degeneracy} and a breakdown of unitary evolution. The h(D)=1 condition is therefore both necessary and sufficient under the Closure Constraint.
 
 Consequently, the unitarity requirement strictly restricts $\Delta$ to the Stark--Heegner numbers (the absolute values of the fundamental discriminants of the nine imaginary quadratic fields of class number one):
 \begin{equation}
@@ -239,7 +238,7 @@ To satisfy Causality we apply the constraint \linebreak $\Delta \ge N = 32$ (est
 
 By the Closure Constraint, the vacuum possesses no external reference clock. Time must therefore emerge relationally, defined exclusively by internal state transitions. Furthermore, by Finiteness, the node cannot allocate channel capacity to an internal memory counter to track elapsed empty intervals; by Homogeneity, spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
 
-In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. Because the local geometry lacks an external temporal metric, and because internal counting mechanisms are structurally forbidden, any sequence of $k \ge 2$ consecutive inert intervals creates a temporal degeneracy: the node cannot determine how many inert steps have elapsed during the gap. This manifests as Causal Aliasing and destroy the system's ability to maintain a well-defined serial history.
+In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. Because the local geometry lacks an external temporal metric, and because internal counting mechanisms are structurally forbidden, any sequence of $k \ge 2$ consecutive inert intervals creates a temporal degeneracy: without an external clock or internal memory counter, the node cannot distinguish one empty step from two, making the temporal evolution non-injective. This manifests as Causal Aliasing and destroys the system's ability to maintain a well-defined serial history.
 
 For the causal history to remain uniquely reconstructable (the fundamental Unitarity requirement), this degeneracy must be structurally forbidden. The system must interleave its $N$ active transitions such that consecutive inert intervals are strictly avoided ($k_{\text{max}} = 1$).
 
