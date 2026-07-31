@@ -2,21 +2,17 @@
 \label{sec:the_test_case}
 From living cells and neural networks to sprawling cities and economic ecologies, Complex Adaptive Systems (CAS) research has historically yielded rich qualitative taxonomies. Informational Energetics (IE) introduces a falsifiable paradigm shift: by applying the exact constraints of the six persistence pillars to CAS, open-ended qualitative observation is replaced by strict structural requirements.
 
-While macroscopic domains (biological, ecological, economic) must manage the six pillars probabilistically within chaotic, open environments, we require an absolute baseline to test the architecture's universal validity. We postulate that the fundamental quantum vacuum is the simplest, most constrained Complex Adaptive System (CAS) in existence. By treating the vacuum as a persistent system in a state of Quiescent Equilibrium, operating with zero external flux and strictly subject to the six IE pillars we establish an absolute boundary condition.
+While macroscopic domains (biological, ecological, economic) must manage the six pillars probabilistically within chaotic, open environments, we require an absolute baseline to test the architecture's universal validity. We postulate that the fundamental quantum vacuum is the simplest, most constrained Complex Adaptive System (CAS) in existence. By treating the vacuum as a persistent system in a state of Quiescent Equilibrium, operating with zero external flux and strictly subject to the six IE pillars, we establish an absolute boundary condition.
 
-As the minimal persistent substrate from which all observable structures emerge, no deeper system exists beneath it. It cannot obtain configuration information, boundary conditions, synchronization signals, or memory from an external source. We formalize this absolute isolation as:
-\label{subsec:closure}
+As the closed persistent substrate from which all observable structures emerge, the vacuum admits no deeper system beneath it. It cannot obtain configuration information, boundary conditions, synchronization signals, or memory from an external source. We formalize this closed-system condition as:
 \begin{quote}
-\textbf{The Closure Constraint (Zero-Flux Baseline):} The substrate of reality must be entirely self-defining. Its geometry must arise exclusively from its own architectural requirements.
+\textbf{The Closure Constraint:} The substrate of reality must be entirely self-defining. Its geometry must arise exclusively from its own architectural requirements.
 \end{quote}
+\label{subsec:closure}
 
-Any candidate substrate requiring external parameters violates this baseline and is not a fundamental ground state. By governed the vacuum by this constraint, we create the most rigorously constrained test case possible. If the six requirements of persistence alone cannot uniquely derive the vacuum's mathematical structure, the IE framework is not universal. We refer to this specific mapping of IE onto the vacuum substrate as the 
-\textbf{$E_8$-Persistence Theory} ($E_8$P), distinguishing the universal 
-framework from the validated system.
+Subjecting the vacuum to this constraint creates the most rigorously constrained test case possible: if persistence requirements alone cannot derive its mathematical structure, the framework is not universal. We refer to this specific mapping as the \textbf{$E_8$-Persistence Theory}, distinguishing the universal framework from the validated system. We explicitly restrict this paper to the static geometric baseline; the continuous dynamic Effective Field Theory (EFT) Lagrangian is left to future work.
 
-We explicitly restrict the bounds of this paper to deriving the static geometric baseline, providing the foundation for constructing the continuous dynamic Effective Field Theory (EFT) Lagrangian in future work.
-
-\section{System 0: The \texorpdfstring{$E_8$}{E8}-Persistence theory test case: Architectural requirements for zero-flux substrate}
+\section{System 0: Architectural requirements for zero-flux substrate}
 \label{sec:System0_vacuum_requirements}
 In this section we map the six IE pillars to the specific domain of the vacuum, resulting in three strictly non-negotiable requirements for the fundamental substrate:
 \begin{itemize}
@@ -28,12 +24,10 @@ In this section we map the six IE pillars to the specific domain of the vacuum, 
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR} via Finiteness}
 \label{sec:finiteness}
 
-By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity component enforces a finite state-space; the Margin component enforces finite reserves against fluctuation. Together we now show that finiteness require the substrate to be discrete, homogeneous, and a lattice.
+By the Closure Constraint the vacuum must be self-specifying. A self-specifying system cannot require infinite information to describe any local neighborhood as that would need an external decompressor that does not exist. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. Finiteness is therefore mandatory. The Capacity component enforces a finite state-space; the Margin component enforces finite reserves against fluctuation. Together we now show that finiteness requires the substrate to be discrete, homogeneous, and a lattice.
 
 \subsubsection{Finiteness Mandates a Discrete, Homogeneous Lattice}
-\label{subsubsec:discrete}
-\label{subsubsec:homogeneous}
-\label{subsubsec:lattice}
+\label{subsubsec:discrete_homogeneous_lattice}
 
 A continuous volume admits infinite descriptive complexity. Under the Closure Constraint, no external algorithm exists to compress this to finite Kolmogorov complexity. Therefore, the substrate must be \textbf{Discrete}: there must exist a fundamental, indivisible unit of information that sets a maximum density. 
 
@@ -44,7 +38,7 @@ A structure that is both discrete (finite information density) and homogeneous (
 \subsection{Persistence Requires \texorpdfstring{$\mathrm{MAP}, \mathrm{PRO}$}{MAP, PRO} via Unitarity}
 \label{sec:unitarity}
 
-For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. By the Closure Constraint (\cref{subsec:closure}), the vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. This requirement imposes four structural properties on the substrate:
+For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. By the Closure Constraint, the vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. This requirement imposes four structural properties on the substrate:
 
 \subsubsection{Lattice Must Be Positive Definite}
 \label{subsec:positive_definite}
@@ -52,10 +46,10 @@ For the vacuum to persist, it must maintain a stable Map over time. This require
 \begin{equation}
     |\mathbf{v}|^2 \geq 0 \quad \forall \mathbf{v} \neq 0
 \end{equation}
-A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable ground state. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} component. Therefore, the \textbf{substrate} must be Euclidean.
+A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable minimum configuration. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} component. Therefore, the \textbf{substrate} must be Euclidean.
 
 \textbf{The Substrate-Projection Dual:}
-The Euclidean positive-definiteness applies strictly to the substrate lattice. The observed Lorentzian signature $(-,+,+,+)$ emerges dynamically from the causal projection derived later in \cref{sec:metric_signature}; the substrate memory serves as a static, definite metric, while the active processor operates via an indefinite metric. This fundamental distinction provides the exact geometric mechanism by which time acquires its directional arrow, satisfying a core causal requirement of the persistence architecture.
+The Euclidean positive-definiteness applies strictly to the substrate lattice, which functions as a static memory repository. Causal progression necessitates an active processor operating via an indefinite metric. This fundamental distinction between static storage and dynamic processing provides the geometric degree of freedom from which the directional arrow of time can be derived (\Cref{sec:metric_signature}), satisfying a core causal requirement of the persistence architecture.
 
 \subsubsection{Lattice Must Be Mappable to a Torus}
 \label{sec:torus}

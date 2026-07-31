@@ -1,6 +1,6 @@
 \section{System 1: Substrate Selection, The unique geometry that satisfies System 0 requirements}
 \label{sec:system1_projection}
-The architectural requirements of System 0 translate into a search for the unique discrete geometric structure satisfying these constraints.
+System 0 demands finiteness, unitarity, and causality. These requirements act as eliminative filters: they do not merely suggest a lattice, they progressively remove every alternative until one structure remains. We first constrain the dimension and uniqueness of the lattice, then determine its projection into spacetime and internal symmetry, and finally fix the temporal period and topological invariants that prevent causal aliasing. The mathematical theorems function as black-box filters; what matters is that each constraint is forced by the persistence architecture, leaving no continuous parameter free.
 
 \subsection{The Lattice Selection (\texorpdfstring{$E_8$}{E8})}
 \label{sec:lattice_selection}
@@ -9,12 +9,12 @@ We will begin by determining the possible dimensions of the lattice, then identi
 
 \subsubsection{The \texorpdfstring{$n \equiv 0 \pmod 8$}{neq0mod8} Constraint}
 \label{sec:kneserstheorem}
-The requirement of an even, self-dual lattice is remarkably restrictive. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
+To prevent irreversible information loss during read/write operations, the substrate must be even and self-dual. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
 
 \[ n \in \{8, 16, 24, \dots\} \]
-Consequently: the observed $n=4$ spacetime cannot mathematically host a unitary, self-dual information substrate. The universe we observe cannot be the fundamental hardware; it must be an emergent projection of a higher-dimensional structure.
+Consequently: a unitary, self-dual information substrate cannot mathematically exist in $n=4$. Therefore, the observed 4D spacetime cannot be the foundational hardware itself, but must strictly be an emergent projection of a higher-dimensional structure.
 
-Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which is prohibited by the strictly self-defining Closure Constraint (\cref{subsec:closure}).
+Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which is prohibited by the strictly self-defining Closure Constraint.
 
 \subsubsection{The Principle of Algorithmic Determinism}
 \label{sec:principleofalgorithmicdeterminism}
@@ -24,7 +24,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 \begin{enumerate}
     \item \textbf{Unitarity} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
     
-    \item By the \textbf{Closure Constraint} (\cref{subsec:closure}), the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
+    \item By the Closure Constraint, the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
 
     \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$, satisfying the Closure Constraint.
 
@@ -49,15 +49,15 @@ The $E_8$ lattice cannot process information by itself. Processing requires a fl
 \subsubsection{The Symmetric Decomposition (External Spacetime vs. Internal Symmetry)}
 \label{sec:symmetric_decomposition}
 
-The projection must be compatible with the self-duality of the parent $E_8$ lattice to maintain local probability conservation. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any symmetric decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a specific glue group whose coset structure exactly reconstructs the self-dual parent. To avoid unbalancing the Unitarity requirement, the state space must be partitioned into two symmetric sectors that can support this exact quotient structure.
+The projection must be compatible with the self-duality of the parent $E_8$ lattice to maintain local probability conservation. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any symmetric decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a specific glue group (the symmetry dictating how the two sublattices bond) whose coset structure exactly reconstructs the self-dual parent. To avoid unbalancing the Unitarity requirement, the state space must be partitioned into two symmetric sectors that can support this exact quotient structure.
 
 \textbf{Candidate Rank-4 Subsectors.} 
 Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two orthogonal rank-4 sublattices. We evaluate the candidate rank-4 root systems that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
 
 \begin{itemize}
-    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Under the \textbf{Closure Constraint} (Section~\ref{subsec:closure}), the substrate admits no extraneous structural data. Because $\mathbb{Z}_5$ is cyclic of prime order, its states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
+    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Under the Closure Constraint, the substrate admits no extraneous structural data. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups and therefore admits no symmetric decomposition; its five states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
     
-    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, satisfying the Closure Constraint. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars (\cref{sec:chiralcapacity}).
+    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, satisfying the Closure Constraint. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars (\Cref{sec:chiralcapacity}).
 \end{itemize}
 
 Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric decomposition} that preserves global Unitarity while naturally generating the chiral structure required for information processing.
@@ -82,16 +82,16 @@ To determine the information capacity (Bit-Depth) of the lattice nodes we ask: w
 The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\mathfrak{so}(8)$) acts on 8-dimensional fundamental and spinor representations. As established in \cref{sec:projection}, each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local continuous rotation symmetry of $Spin(8)$. We must determine the minimal channel capacity ($\nu$) required for this native $Spin(8)$ hardware to satisfy the \textbf{Map} and \textbf{Causality} pillars.
 
 \begin{enumerate}
-    \item \textbf{The Map Constraint (Complex Phase):} 
+    \item \textbf{The Map Constraint (Phase Encoding):}  
     While $Spin(8)$ possesses chiral spinors, they are mathematically \textbf{Real} (Majorana-Weyl). In signal processing terms, this means a state vector is identical to its conjugate ($\psi = \bar{\psi}$). A system built strictly on an 8-channel real representation cannot distinguish a signal from its inverse (Phase Ambiguity) because it lacks complex phase information. To support a stable Map, the system requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$). The minimal encoding unit is the hardware's native spinor dimension (8), set by the $D_4$/$\mathfrak{so}(8)$ algebra; no sub-8 representation supports the full rotational structure of the substrate. A complex representation of this base dimension requires 16 real degrees of freedom. Because the native $Spin(8)$ spinors are real, encoding a complex phase distinct from amplitude demands a direct sum of two independent 8-dimensional real channels, yielding $8+8=16$ real channels.
     
-    \item \textbf{The Causality Constraint (Chirality):} 
-    To support the \textbf{Causality} component (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Chirality}, the ability to distinguish Left-handed projections from Right-handed projections, preventing information from reflecting symmetrically across the causal loop. 
+    \item \textbf{The Causality Constraint (Directional Flow):} 
+    To support the \textbf{Causality} component (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Directional Flow}, the ability to distinguish Left-handed projections from Right-handed projections, preventing information from reflecting symmetrically across the causal loop. 
 \end{enumerate}
 
 To satisfy both constraints simultaneously, the node utilizes the representations natively available to its $D_4$ ($\mathfrak{so}(8)$) geometry. Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations: the Left-handed spinor ($8_L$) and the Right-handed spinor ($8_R$). 
 
-To encode a persistent, complex, causal signal, the node must allocate exactly one chiral representation for input ($8_L$) and one for output ($8_R$). This structurally enforces Causality while jointly providing exactly the 16 real channels required to encode complex phase (Map).
+To encode a persistent, directed signal, the node must allocate one left-handed spinor ($8_L$) for input and one right-handed spinor ($8_R$) for output. This structurally enforces Causality while jointly providing exactly the 16 real channels required to encode complex phase (Map).
 
 The total internal channel capacity (Bit-Depth) of the node is therefore the direct sum of these paired representations:
 \begin{equation}
@@ -118,8 +118,8 @@ This integer $N = 32$ represents the total number of distinct state channels ava
 \subsubsection{The Requirements}
 To map the 16-channel signal onto a 4-dimensional manifold without loss or ambiguity, the metric algebra must satisfy two strict encoding constraints:
 \begin{enumerate}
-    \item \textbf{Complex Compression (Map):} The 16 real channels must be compressed into 8 complex degrees of freedom ($16\mathbb{R} \to 8\mathbb{C}$). This requires the algebra to naturally generate a geometric imaginary unit ($i$) to encode phase information.
-    \item \textbf{Chiral Sorting (Causality):} The system must distinguish ``Input'' from ``Output'' to enforce the arrow of time. This requires the algebra to support orthogonal projectors ($P_L, P_R$) that split the signal into directed halves ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
+    \item \textbf{Phase Encoding (Map):} To avoid informational ambiguity, the 16 real channels must be compressed into 8 complex degrees of freedom ($16\mathbb{R} \to 8\mathbb{C}$). This requires the algebra to naturally generate a geometric imaginary unit ($i$) to encode phase information.
+    \item \textbf{Directional Flow (Causality):} The substrate must prevent symmetric causal reflection to distinguish ``Input'' from ``Output'' and enforce the arrow of time. This requires the algebra to support orthogonal projectors ($P_L, P_R$) that split the signal into directed halves ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
 \end{enumerate}
 
 \subsubsection{The Search Space}
@@ -137,10 +137,10 @@ The Euclidean metric cannot satisfy the dynamic encoding constraint. Because $\o
 
 The \textbf{Lorentzian Metric} is the unique valid solution. While the $(2,2)$ split signature yields $\omega^2 = +1$ (restoring a real algebra), the $(1,3)$ signature yields $\omega^2 = -1$. In Geometric Algebra, the Clifford volume element of a $(1,3)$ manifold functions as the geometric imaginary unit ($i \equiv \omega$), directly mapping the spacetime pseudoscalar to the quantum phase. This naturally generates the complex structure required to compress the signal ($\nu = 16$) and the chiral structure required to sort it, without separating internal and external spaces.
 
-Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature $(-,+,+,+)$ is effective: it emerges in Sector A because the Clifford volume element in signature $(1,3)$ provides the geometric imaginary unit ($\omega^2 = -1$) required for complex phase compression and chiral sorting. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
+Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature $(-,+,+,+)$ is effective: it emerges in Sector A because the Clifford volume element in signature $(1,3)$ provides the geometric imaginary unit ($\omega^2 = -1$) required for complex phase encoding and directional flow. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
 
 \paragraph{Physical Consequence:}
-Once these algebraic structures are established to satisfy the encoding requirement, they manifest in physics as fundamental properties of matter. The \textbf{Matter/Antimatter} distinction emerges from the complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit. \textbf{Chirality} emerges from the orthogonal projectors. These are unavoidable consequences of encoding a 16-channels onto a 4-dimensional Lorentzian manifold.
+The geometric requirement for complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit creates a strictly bipartite state space. This emergent distinction corresponds to the standard physics classification of matter/antimatter.
 
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
@@ -150,7 +150,7 @@ To satisfy the Map component, a persistent entity must strictly distinguish its 
 \subsubsection{The Topological Boundary (\texorpdfstring{$\chi=2$}{chi=2})}
 \label{sec:topological_boundary}
 
-To satisfy the \textbf{Binary Partition Constraint}, a persistent entity must be an \textbf{extended closed boundary structure}: a circulation of information confined to a finite region, with a boundary that rigorously separates ``Inside'' from ``Outside''. The minimal such boundary is the unique simply-connected closed surface, the sphere ($S^2$, $\chi = 2$, $g = 0$). A defect is therefore not a point-like flaw.
+To satisfy the \textbf{Binary Partition Constraint}, a persistent entity in the substrate must be an \textbf{extended closed boundary structure}: a circulation of information confined to a finite region, with a boundary that rigorously separates ``Inside'' from ``Outside''. The minimal such boundary is the unique simply-connected closed surface, the sphere ($S^2$, $\chi = 2$, $g = 0$). A defect is therefore not a point-like flaw.
 
 We derive this by analyzing the Euler Characteristic for closed, orientable surfaces:
 \begin{equation}
@@ -169,8 +169,8 @@ where $g$ is the genus (number of holes).
     \item \textbf{The Uniqueness of $g=0$ (The Sphere):} The sphere is the unique closed surface with $g=0$, yielding $\chi=2$, the maximum possible value. It is the only simply connected topology, ensuring that all loops contract to a point. This forces all information flux to be either contained or excluded, enabling the perfect binary partition of state required for a persistent, distinguishable topological defect.
 \end{itemize}
 
-\paragraph{Forward Implication (System 2 Consequence):}
-The invariant $\chi=2$ is the \emph{necessary and sufficient} condition for \textbf{charge quantization}. Because $\chi$ must be an integer and $\chi=2$ is the unique maximum for closed surfaces, the charge associated with this topology is discrete. You can have 1 sphere or 2 spheres, but not 1.5 spheres. This geometric constraint allows the continuous lattice field to support discrete, countable units of charge.
+\paragraph{Forward Implication (System 2 Consequence):} 
+The invariant $\chi=2$ is the necessary and sufficient condition for \textbf{information flux quantization}. Because $\chi$ must be an integer and $\chi=2$ is the unique maximum for closed surfaces, the information flux associated with this topology is discrete. You can have 1 sphere or 2 spheres, but not 1.5 spheres. This geometric constraint allows the continuous lattice field to support countable units of information flux (which manifests macroscopically as elementary charge).
 
 \subsubsection{The Embedding Invariant (\texorpdfstring{$\sigma=5$}{sigma=5})}
 \label{sec:embedding_invariant}
@@ -186,7 +186,7 @@ The dimensions of these two orthogonal factors are uniquely constrained:
     \item \textbf{Topological Boundary ($D_{boundary} = 2$):} The \textbf{Map} component requires the topological defect to be distinguished from the vacuum by a closed boundary. As derived in \cref{sec:topological_boundary}, the unique simply-connected solution is the sphere ($S^2$). Regardless of its location in the 3D spatial bulk, specifying the internal state of this boundary requires exactly 2 intrinsic coordinate parameters (e.g., $\theta, \phi$). 
 \end{itemize}
 
-Because spatial position and internal boundary topology are mutually independent, the total defect configuration space factorizes as the Cartesian product $\mathcal{C}_{\text{defect}} = \mathcal{M}_3 \times S^2$. The additivity of their respective dimensions is mandated by the Orthogonality Condition (\cref{sec:torus}), yielding the minimal geometric embedding dimension $\sigma$:
+Because spatial position and internal boundary topology are mutually independent, the total defect configuration space factorizes as the Cartesian product $\mathcal{C}_{\text{defect}} = \mathcal{M}_3 \times S^2$. The additivity of their respective dimensions is mandated by the Orthogonality Condition, yielding the minimal geometric embedding dimension $\sigma$:
 
 \begin{equation}
     \sigma = \dim(V_{space}) + \dim(V_{boundary}) = 3 + 2 = \mathbf{5}
@@ -202,31 +202,34 @@ For a system to reliably track its own history (Causality) without losing inform
 To derive the fundamental clocking period ($\Delta$) of the lattice's causal cycle we apply three independent constraints to uniquely isolate the substrate's resonant cycle:
 
 \begin{itemize}
-    \item Unitarity restricts $\Delta$ to the Stark-Heegner numbers.
+    \item Unitarity restricts $\Delta$ to the Stark--Heegner numbers.
     \item Causality requires $\Delta \geq N = 32$.
     \item Relational Time and Temporal Degeneracy requires $\Delta \leq 2N = 64$.
 \end{itemize}
 
 \subsubsection{Unitarity and the Class Number Constraint}
 \label{sec:fundamental_resonance_filter1}
+For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its causal history must be uniquely reconstructable: multiple distinct causal histories cannot blend into identical outcomes, or information is irreversibly lost. Paralleling our methodology of separating System 0 (Requirements) from System 1 (Substrate Selection), we first define the structural requirements of this causal loop, then apply the mathematical theorems that uniquely solve them.
 
-For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its causal history must be uniquely reconstructable; multiple distinct causal histories cannot blend into identical outcomes, or information is irreversibly lost.
+\paragraph{The Structural Requirements.} Three constraints define the physical boundaries of the causal history:
+\begin{enumerate}
+    \item[\textbf{(R1)}] \emph{The Causal Torus.} As derived in \cref{sec:metric_signature}, the Lorentzian signature pairs the temporal step with the spatial step ($\delta t = i\,\delta x$). Causal propagation over a fundamental cycle $\Delta$ therefore forms a periodic $(1+1)$D loop. Topologically, this is a real torus $\mathbb{T}^2$; analytically, it is a complex torus $\mathbb{C}/\Lambda$ endowed with a complex structure generating the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
+    
+    \item[\textbf{(R2)}] \emph{Self-Duality and Closure.} To preserve the parent lattice's self-duality (\Cref{sec:projection}), the loop's partition function must remain invariant under the modular transformation $S: z \to -1/z$, forcing the lattice to carry complex multiplication by an order of $K$. The Closure Constraint forbids sub-orders of conductor $f>1$ (which would require external memory to specify). The endomorphism ring is therefore exactly the maximal order $\mathcal{O}_K$, strictly identifying the geometric period as $\Delta = |D_K|$.
+    
+    \item[\textbf{(R3)}] \emph{The Uniqueness Constraint.} Unique reconstructability requires the causal loop to be determined entirely by its local invariants. If multiple distinct (non-isomorphic) global loops share identical local data, an observer cannot invert the state transformation, resulting in \textbf{Causal Degeneracy} and destroying Unitarity.
+\end{enumerate}
 
-Causal propagation on the $E_8$ substrate is restricted to a local $(1+1)\text{D}$ plane. Because the vacuum possesses a fundamental discrete temporal cycle $\Delta$, the state evolution forms a periodic loop. Topologically, this history maps to a real torus $\mathbb{T}^2$; analytically, we model it as a complex torus $\mathbb{C}/\Lambda$ (an elliptic curve) with lattice basis $\{1, z\}$. The Lorentzian signature imparts a complex structure, pairing the temporal step with the spatial step ($\delta t = i\,\delta x$), embedding the generator in the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
+\paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that satisfy these requirements:
+\begin{enumerate}
+    \item[\textbf{(M1)}] \emph{Class Group Torsor (Solving R3).} Distinct reroutings of flux around the causal loop that preserve all local invariants would render the temporal history non-injective. If the class number $h(D_K) > 1$, the causal loop admits multiple non-isomorphic global topologies that share identical local state data. By the Closure Constraint, the node possesses no external perspective to distinguish which global loop it occupies; this ambiguity destroys Unitarity. Algebraically, such reroutings are the non-principal ideal classes: the isomorphism classes of complex tori with endomorphism ring $\mathcal{O}$ form a torsor under the ideal class group $\operatorname{Pic}(\mathcal{O})$, whose total count is the class number $h(\mathcal{O})$. Each non-principal class creates a distinct torus with identical local data, so the class number must strictly be one: $h(D_K) = 1$.
 
-To preserve the self-duality of the parent $E_8$ lattice ($\Lambda = \Lambda^*$), the partition function on $\mathbb{C}/\Lambda$ must remain invariant under the modular transformation $S: z \to -1/z$. This requires $z$ to lie within the ring of integers $\mathcal{O}_K$ of the field $K$. Because the vacuum admits no external specification memory (Closure Constraint), the causal loop cannot be defined by a sub-order of conductor $f > 1$; such a structure would require additional integer parameters, violating self-definition. The geometric period $\Delta$ must therefore coincide with the fundamental discriminant of the maximal order, yielding the strict identification:
+    \item[\textbf{(M2)}] \emph{Baker--Heegner--Stark Theorem (Solving R1 \& R2).} The complex structure of the causal torus is governed by an imaginary quadratic field. By the Baker--Heegner--Stark theorem, there are exactly nine such fields whose maximal order has trivial class group ($h(D_K)=1$). Their absolute fundamental discriminants (and thus our available temporal periods) are strictly limited to $|D_K| \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
+\end{enumerate}
 
+The Unitarity requirements therefore strictly restrict the temporal modulus to:
 \begin{equation}
-    \Delta = |D|.
-\end{equation}
-
-Mathematically, unique reconstructability demands that the endomorphism ring $\text{End}(\mathbb{C}/\Lambda) \cong \mathcal{O}_K$ be a Principal Ideal Domain, which holds if and only if the class number $h(D) = 1$.
-
-\textbf{Failure Mode ($h > 1$):} If $h(D) > 1$, the ideal class group contains non-trivial classes, giving rise to multiple non-isomorphic (though isogenous) elliptic curves sharing the same endomorphism ring. These correspond to topologically distinct causal histories that generate locally identical observable states. An observer at a future node cannot uniquely invert the state transformation, resulting in \textbf{Causal Degeneracy} and a breakdown of unitary evolution. The h(D)=1 condition is therefore both necessary and sufficient under the Closure Constraint.
-
-Consequently, the unitarity requirement strictly restricts $\Delta$ to the Stark--Heegner numbers (the absolute values of the fundamental discriminants of the nine imaginary quadratic fields of class number one):
-\begin{equation}
-    \Delta \in \{1, 2, 3, 7, 11, 19, 43, 67, 163\}.
+    \Delta \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}
 \end{equation}
 
 \subsubsection{Causality (The ``Bandwidth'') Constraint}
@@ -278,7 +281,7 @@ This completes the substrate's information geometry: $\nu=16$ encodes what a sin
 The vacuum's persistence depends on three hierarchical scales of informational complexity. Each scale defines a resolution limit, a threshold below which signals dissolve into the substrate. Because these scales operate on orthogonal information channels, their minimal description lengths combine additively via direct sum.
 
 \subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LintrinsicVal$}{Lintrinsic}): Defect Specification}
-The minimum information required to uniquely specify the internal state and local geometric footprint of a topological defect. It is the exact sum of the chiral channel configuration ($\nu=16$), the local interaction embedding ($\sigma=5$) comprising of the spatial address and boundary coordinates, and the boundary topological invariant ($\chi=2$). Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position).
+The minimum information required to uniquely specify the internal state and local geometric footprint of a topological defect. It is the exact sum of the chiral channel configuration ($\nu=16$), the local interaction embedding ($\sigma=5$) comprising the spatial address and boundary coordinates, and the boundary topological invariant ($\chi=2$). Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position).
 
 \begin{equation}
     L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{\LintrinsicVal}
@@ -286,7 +289,7 @@ The minimum information required to uniquely specify the internal state and loca
 
 \subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LembedVal$}{Lembed}): Causal Trajectory}
 \label{sec:lembed}
-The total information required to specify a defect's complete configuration. To satisfy Causality, the substrate cannot merely record a static coordinate. A persistent, self-determining dynamic state must uniquely specify both its current manifold location ($D=4$) and its causal successor location ($D=4$) without appealing to external boundary conditions. This geometric doubling ($2D = 8$) constitutes the kinematic phase space required to define a directed causal trajectory. Because kinematic phase space and internal state identity are orthogonal information channels, this geometric doubling combines additively with the intrinsic specification:
+The total information required to specify a defect's complete configuration. To satisfy Causality, the substrate cannot merely record a static coordinate. A persistent, self-determining dynamic state must uniquely specify both its current manifold location ($D=4$) and its causal successor location ($D=4$) without appealing to external boundary conditions. This necessary geometric doubling ($2D=8$) constitutes the minimal information required to define a directed causal trajectory (the discrete analogue of kinematic phase space).
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LembedVal}
@@ -313,10 +316,10 @@ We have now identified a unique solution that satisfies the architectural requir
 
     \item \textbf{Governor: The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing binary partition of state and preventing field divergence. Required by Finiteness.
 
-    \item \textbf{Toll: The causal cost of persistence ($\tau = -1$, $M=11$).} Structurally, the Lorentzian metric ($g_{00} = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
+    \item \textbf{Toll: The causal cost of persistence ($g_{00} = -1$, $M=11$).} Structurally, the Lorentzian metric ($g_{00} = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
 
     \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} The total embedding dimension sets the geometric noise floor below which signals dissolve into the substrate. In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal (derived in Section~\ref{sec:system2_geometric_impedance} as the resolution-limited coupling), is the proof of solvency. The vacuum persists because its resolution limit is exactly minimally sufficient.
 \end{itemize}
 
 \subsection{Conclusion: \texorpdfstring{$E_8$}{E8}-Persistence theory}
-The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of Characteristic Integers: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these established a substrate on which other systems can persist.
+The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of Characteristic Integers: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish a substrate on which other systems can persist.

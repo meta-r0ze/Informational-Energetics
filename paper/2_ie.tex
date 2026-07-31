@@ -15,7 +15,7 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
 \end{equation}
 
-\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent measure of entropic losses. For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. The dynamical aspect of $S_\phi$ reduces to a simple count of state transitions in an important special case: Quiescent Equilibrium, in which no net energy enters or leaves the system. In that case $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We explicitly bound the scope of this paper to establishing the quiescent equilibrium, leaving the dynamic evolution of persistent systems to future work.
+\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent measure of entropic losses. For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density. The dynamical aspect of $S_\Phi$ reduces to a simple count of state transitions in an important special case: Quiescent Equilibrium, in which no net energy enters or leaves the system. In that case $Z_{IE}$ is constant and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We bound the scope of this paper to establishing the quiescent equilibrium, leaving the dynamic evolution of persistent systems to future work.
 
 Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it.
 
@@ -36,7 +36,7 @@ Implicit in physical implementations is the irreducible energetic and temporal c
 
 \subsubsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
-IE reframes the control elements and thermodynamic and information-theoretic constraints into six \textbf{existential pillars}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, necessitating a new primary unit of measure: the \textbf{Entropic Burden}. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines.
+IE reframes the control elements and thermodynamic and information-theoretic constraints into six \textbf{existential pillars}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, shifting the primary analytical focus from performance optimization to persistence maintenance. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines.
 
 \begin{enumerate}
     \item \textbf{Capacity ($CAP$):} \textit{The Vessel.} 
@@ -66,13 +66,13 @@ IE reframes the control elements and thermodynamic and information-theoretic con
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
-IE reframes control systems as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-component architecture survive observation; all others dissipate.
+IE reframes control systems as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
 
 The mapping of IE to specific physical domains is inherently adaptive. While the present work demonstrates this on the substrate of the vacuum, the IE framework states that all systems that persist are specific solutions to this same universal architecture.
 
 \subsection{Necessity Argument: The Failure Modes}
 \label{sec:proof_of_necessity}
-The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one component ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
+The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
     \item \textbf{No Capacity (Starvation):} Lacks an energetic envelope to respond to perturbations; system lifetime drops ($\tau \to 0$) via rapid thermalization.
     \item \textbf{No Map (Dissolution):} Lacks self-definition; random activation maximizes internal entropy. $\tau \to 0$ as the system--environment boundary dissolves.
@@ -84,31 +84,41 @@ The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{
 
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
+\subsection{Architectural Sufficiency}
+\label{sec:sufficiency}
+The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence. Capabilities traditionally cited as independent requirements are strict compositions of the basis, carrying no independent entropic budget. \emph{Memory} is Map content provisioned against temporal variance by Margin. \emph{Prediction} is Map operation on incoming signal via Protocol. \emph{Repair} is a Governor-triggered re-provisioning within the Margin reserve. \emph{Replication} is Protocol-mediated write of Map onto fresh Capacity.
+
+At the zero-flux baseline, a persistent configuration is specified by exactly three irreducible coordinates and each coordinate demands exactly two modes of structural engagement \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation):
+\begin{center}
+\begin{tabular}{lcc}
+ & \textbf{Provision} & \textbf{Defense} \\
+\textbf{Finiteness} & Capacity & Margin \\
+\textbf{Unitarity} & Map & Protocol \\
+\textbf{Causality} & Toll & Governor \\
+\end{tabular}
+\end{center}
+
+At zero flux, no external source exists to supply a fourth coordinate; in quiescent equilibrium, dynamics reduce to \emph{holding} a resource and \emph{holding it against variance}, admitting no third engagement mode. The six pillars are therefore the complete, non-fungible product of three resources and two engagement modes: a seventh primitive would require either a fourth coordinate (excluded at zero flux) or a third engagement mode (excluded in quiescent equilibrium).
+
 \subsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}
 
 To quantify persistence, we distinguish between dissipation and coordination: structural burdens increase the system's entropic footprint (positive contributions to $Z_{IE}$), while organizational mechanisms reduce net dissipation relative to the uncoordinated baseline (negative contributions). This parallels the negative feedback signal in control theory, where the error $\epsilon = R - F$ is reduced by the feedback term.
 
 \begin{itemize}
-    \item \textbf{Structural Costs ($+$):} The energetic overhead of existence. This includes maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and the irreversible cost of state updates ($Z_{TOL}$). These terms increase impedance.
+    \item \textbf{Structural Costs ($Z_i > 0$):} The energetic overhead of existence. This includes maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and the irreversible cost of state updates ($Z_{TOL}$). These terms increase impedance.
 
-    \item \textbf{Organizational Gains ($-$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
+    \item \textbf{Organizational Gains ($Z_i < 0$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
 \end{itemize}
 
 In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. 
 
-By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. This strictly diagonalizes the lowest-order action. The \textbf{Net Entropic Impedance} ($Z_{IE}$) is therefore the algebraic sum of these contributions:
+By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. In standard statistical mechanics, independent structural degrees of freedom yield a strictly factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$). Because the entropic action is strictly proportional to the negative logarithm of the state sum ($S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$), this exact factorization mandates a strictly additive action across orthogonal channels. The Net Entropic Impedance ($Z_{IE}$) is therefore the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
 \begin{split}
     Z_{IE} &= \underbrace{(Z_{CAP} + Z_{MAP} + Z_{TOL} + Z_{MAR})}_{\text{Structural Costs}} \\
-           &- \underbrace{(Z_{PRO} + Z_{GOV})}_{\text{Organizational Gains}}
+           &+ \underbrace{(Z_{PRO} + Z_{GOV})}_{\text{Organizational Gains}}
 \end{split}
 \end{equation}
-
-\subsection{Scope of the Architecture}
-\label{sec:sufficiency}
-The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics that standard control theory treats as external parameters. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence.
-
-We conjecture that the six pillars are sufficient for the systems analyzed here. Complex functions often cited as distinct requirements such as Memory (persistence of $MAP$ over time, $MAR$) or Prediction ($MAP$ operation via $PRO$) are treated as emergent properties of the fundamental set. Whether this set is mathematically minimal across all possible persistent systems remains an open question; the framework's predictive power provides empirical support for its sufficiency in the domain of fundamental physics.

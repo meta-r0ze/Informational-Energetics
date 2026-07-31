@@ -2,7 +2,7 @@ We are working on this paper.  Below is the general review guidelines:
 
 Classify every issue you find into exactly one of these categories, and lead with the category label and note: (a) does fixing it change the math or logic, (b) does fixing it change the narrative or tone, (c) is it visible to a casual reader vs. only a specialist referee.
 
-* Cohesion Optimization / Modular Consolidation: For any issues point out if it occurs because of a lack of missing [section/paragraph/sentance] solving/answering a general thing and the paper is currently compensating by smearing explanations or repetive definition across various sections.
+* Cohesion Optimization / Modular Consolidation: For any issues point out if it occurs because of a lack of missing [section/paragraph/sentance] solving/answering a general thing and the paper is currently compensating by smearing explanations or repetitive definition across various sections.
 
 * FATAL-IDEA (Map failure): The core logic or mathematics is wrong in a way that undermines the paper's central claims. Would cause rejection regardless of presentation.
 SHARE (gov failure): Should be fixed before widely sharing as an idea.  Most will interpret the spirit of what is written, but the text needs to be more exact to prevent inaccurate readings.
@@ -36,8 +36,8 @@ On the paper itself at a meta level:
 * For anything you find suggest latex fixes that can be inserted/edited into the paper as well as if multiple places need to be fixed to fully resolve the issue.
 * COGNITIVE-CAPACITY-CHECK: Perform a Cognitive-Capacity-Check. Can readers from both disciplines follow along? Identify any 'informational load' exceeds the local bandwidth (too many new terms at once).
 * DISSIPATION-SCRUBBING: Scrub for Verbal Dissipation. Remove repetitions, 'hedging' language (e.g., 'it seems like,' 'one could argue'), and 'filler' adjectives. Every word must perform work to keep the paper within its 'Dimensional Budget'.
-* An overarching guage of how complete the paper is: 1. Would a complex systems scientist want to read this in its current form? 2. Would a physicist want to read this in its current form? 
-
+* An overarching guage of how complete the paper is: 1. Would a complex systems scientist want to read this in its current form? 2. Would a physicist want to read this in its current form?
+* While we map to 'charge', geometrically we should use consistent terms around information everywhere when possible to keep it e8 first.
 
 Details about this paper:
 * Each system depends on only what is below it. IE is a general framework that depends on information theory. System 0 only can use IE, no physics to archive its derivation (for example saying particle experiments show X show X is required).  system 1, the substrate doesn’t “know”  about general relativity, electromagnetic charge or other higher level concepts and can’t depend on them.  It can only depend on system 0 and IE and info theory etc.
