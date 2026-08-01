@@ -14,7 +14,7 @@ To prevent irreversible information loss during read/write operations, the subst
 \[ n \in \{8, 16, 24, \dots\} \]
 Consequently: a unitary, self-dual information substrate cannot mathematically exist in $n=4$. Therefore, the observed 4D spacetime cannot be the foundational hardware itself, but must strictly be an emergent projection of a higher-dimensional structure.
 
-Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which is prohibited by the strictly self-defining Closure Constraint.
+Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which violates the requirement that the substrate be strictly self-defining.
 
 \subsubsection{The Principle of Algorithmic Determinism}
 \label{sec:principleofalgorithmicdeterminism}
@@ -24,7 +24,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 \begin{enumerate}
     \item \textbf{Unitarity} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
     
-    \item By the Closure Constraint, the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
+    \item Because the substrate must be strictly self-specifying, it admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
 
     \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$, satisfying the Closure Constraint.
 
@@ -55,9 +55,9 @@ The projection must be compatible with the self-duality of the parent $E_8$ latt
 Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two orthogonal rank-4 sublattices. We evaluate the candidate rank-4 root systems that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
 
 \begin{itemize}
-    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Under the Closure Constraint, the substrate admits no extraneous structural data. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups and therefore admits no symmetric decomposition; its five states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
+    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups and therefore admits no symmetric decomposition; its five states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
     
-    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, satisfying the Closure Constraint. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars (\Cref{sec:chiralcapacity}).
+    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, requiring zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars.
 \end{itemize}
 
 Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric decomposition} that preserves global Unitarity while naturally generating the chiral structure required for information processing.
@@ -65,7 +65,7 @@ Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric dec
 This unique decomposition partitions the 8 dimensions into two orthogonal sectors with distinct roles:
 
 \begin{enumerate}
-    \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. Since the $D_4$ root system has rank 4 (four linearly independent simple roots), it naturally projects onto a 4-dimensional coordinate manifold, fixing \textbf{D=4} for spacetime.  The rank equals the number of independent Cartan generators, which specify the coordinate addresses; hence rank 4 implies $D=4$.
+    \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. Since the $D_4$ root system has rank 4 (four linearly independent simple roots), it naturally projects onto a 4-dimensional coordinate manifold, fixing \textbf{D=4} for the external coordinate manifold. The rank equals the number of independent Cartan generators, which specify the coordinate addresses; hence rank 4 implies $D=4$.
     \item \textbf{Sector B (Internal Symmetry):} The second $D_4$ lattice encodes the internal configuration of each node, its state within the substrate's symmetry structure. These four dimensions are internal degrees of freedom and not spatial directions. 
 \end{enumerate}
 
@@ -222,7 +222,7 @@ For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its
 
 \paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that satisfy these requirements:
 \begin{enumerate}
-    \item[\textbf{(M1)}] \emph{Class Group Torsor (Solving R3).} Distinct reroutings of flux around the causal loop that preserve all local invariants would render the temporal history non-injective. If the class number $h(D_K) > 1$, the causal loop admits multiple non-isomorphic global topologies that share identical local state data. By the Closure Constraint, the node possesses no external perspective to distinguish which global loop it occupies; this ambiguity destroys Unitarity. Algebraically, such reroutings are the non-principal ideal classes: the isomorphism classes of complex tori with endomorphism ring $\mathcal{O}$ form a torsor under the ideal class group $\operatorname{Pic}(\mathcal{O})$, whose total count is the class number $h(\mathcal{O})$. Each non-principal class creates a distinct torus with identical local data, so the class number must strictly be one: $h(D_K) = 1$.
+    \item[\textbf{(M1)}] \emph{Class Group Torsor (Solving R3).} Distinct reroutings of flux around the causal loop that preserve all local invariants would render the temporal history non-injective. If the class number $h(D_K) > 1$, the causal loop admits multiple non-isomorphic global topologies that share identical local state data. With no external perspective available to distinguish which global loop it occupies, this ambiguity destroys Unitarity. Algebraically, such reroutings are the non-principal ideal classes: the isomorphism classes of complex tori with endomorphism ring $\mathcal{O}$ form a torsor under the ideal class group $\operatorname{Pic}(\mathcal{O})$, whose total count is the class number $h(\mathcal{O})$. Each non-principal class creates a distinct torus with identical local data, so the class number must strictly be one: $h(D_K) = 1$.
 
     \item[\textbf{(M2)}] \emph{Baker--Heegner--Stark Theorem (Solving R1 \& R2).} The complex structure of the causal torus is governed by an imaginary quadratic field. By the Baker--Heegner--Stark theorem, there are exactly nine such fields whose maximal order has trivial class group ($h(D_K)=1$). Their absolute fundamental discriminants (and thus our available temporal periods) are strictly limited to $|D_K| \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
 \end{enumerate}
@@ -256,7 +256,7 @@ This bound is the necessary and sufficient condition for unitary reconstructabil
 \textbf{Result:} With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
 
 \subsection{Manifold Resolution}
-\label{sec:manifold_resolution}
+\label{subsec:manifold_resolution}
 
 Given that the substrate is a $D=4$ dimensional manifold with fundamental temporal cycle $\Delta=43$, the theoretical maximum number of distinct spacetime slots the local geometry can support per fundamental update cycle is the product:
 
@@ -281,6 +281,7 @@ This completes the substrate's information geometry: $\nu=16$ encodes what a sin
 The vacuum's persistence depends on three hierarchical scales of informational complexity. Each scale defines a resolution limit, a threshold below which signals dissolve into the substrate. Because these scales operate on orthogonal information channels, their minimal description lengths combine additively via direct sum.
 
 \subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LintrinsicVal$}{Lintrinsic}): Defect Specification}
+\label{subsub:lintrinsic}
 The minimum information required to uniquely specify the internal state and local geometric footprint of a topological defect. It is the exact sum of the chiral channel configuration ($\nu=16$), the local interaction embedding ($\sigma=5$) comprising the spatial address and boundary coordinates, and the boundary topological invariant ($\chi=2$). Together these three orthogonal components set the internal resolution limit: the precision with which the vacuum can distinguish \emph{what} a defect is (internal state) from \emph{where} it is (spatial position).
 
 \begin{equation}
@@ -288,14 +289,15 @@ The minimum information required to uniquely specify the internal state and loca
 \end{equation}
 
 \subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LembedVal$}{Lembed}): Causal Trajectory}
-\label{sec:lembed}
-The total information required to specify a defect's complete configuration. To satisfy Causality, the substrate cannot merely record a static coordinate. A persistent, self-determining dynamic state must uniquely specify both its current manifold location ($D=4$) and its causal successor location ($D=4$) without appealing to external boundary conditions. This necessary geometric doubling ($2D=8$) constitutes the minimal information required to define a directed causal trajectory (the discrete analogue of kinematic phase space).
+\label{subsec:lembed}
+The total information required to specify a defect's complete configuration. To satisfy Causality, the substrate cannot merely record a static coordinate. A persistent, self-determining dynamic state must uniquely specify both its current manifold location ($D=4$) and its causal successor location ($D=4$) without appealing to external boundary conditions. This necessary geometric doubling (4 bits for current coordinate, 4 bits for successor coordinate) constitutes the minimal information required to define a directed causal trajectory (the discrete analogue of kinematic phase space).
 
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LembedVal}
 \end{equation}
 
 \subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \LsubstrateVal$}{Loverhead}): Fundamental Capacity}
+\label{subsub:lsubstrate}
 The total intrinsic structural complexity the vacuum must process per fundamental cycle. This sums the available spacetime addresses ($R_M = 172$) and the native nodal channel infrastructure ($\nu=16$):
 \begin{equation}
     L_{substrate} = R_M + \nu = 172 + 16 = \mathbf{\LsubstrateVal}
@@ -322,4 +324,4 @@ We have now identified a unique solution that satisfies the architectural requir
 \end{itemize}
 
 \subsection{Conclusion: \texorpdfstring{$E_8$}{E8}-Persistence theory}
-The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of Characteristic Integers: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish a substrate on which other systems can persist.
+The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of structural invariants: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish a substrate on which other systems can persist.

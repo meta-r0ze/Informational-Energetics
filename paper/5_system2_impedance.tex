@@ -95,7 +95,7 @@ The defect is defined by its boundary (\Cref{sec:topological_boundary}); the env
 \label{subsec:alpha_map}
 The Map is the boundary constraint required to prevent internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
 
-As established in \cref{sec:the_system_logic} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+As established in \cref{sec:topological_boundary} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
     Z_{MAP} = +\chi = \AlphaInvMAPVal
 \end{equation}
@@ -106,7 +106,7 @@ Because $\chi$, the Euler characteristic, is a pure topological invariant, it is
 \label{subsec:alpha_pro}
 The Protocol mediates the flow of phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) channels. Without this alignment cost, these channels would completely decouple, fragmenting the vacuum into isolated, unrelated subspaces.
 
-The manifold resolution $R_M = D\Delta = 172$ is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
+The manifold resolution $R_M = D\Delta$ (\Cref{subsec:manifold_resolution}) is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
 
 \begin{equation}
     C_{res} = R_M - \sigma = (4 \cdot 43) - 5 = 167
@@ -154,7 +154,7 @@ These filters are independently necessary and jointly sufficient; no fourth filt
 
 The denominator counts independent dimensions of the unconstrained configuration manifold. On the substrate, a non-trivial state transition requires an interaction; a 2-point operation is mere propagation (identity). By Schur's lemma, invariant couplings of distinct channel types are strictly trilinear; the minimal interaction vertex is the Spin(8) triality singlet $\mathbf{8}_v \otimes \mathbf{8}_s \otimes \mathbf{8}_c \to \mathbf{1}$. Because triality provides exactly three independent 8-dimensional representations, a fourth leg must duplicate a channel type, producing Causal Aliasing. Aliasing collapses distinct states into a single temporal slot, rendering the causal history non-injective and violating Unitarity. Higher-point transitions are composite sequences of 3-point vertices.
 
-By the Closure Constraint, no external observer exists to assign internal channel roles to vertex legs prior to interaction. Consequently, an unconstrained 3-point vertex cannot pre-distinguish between Sector A and Sector B degrees of freedom. Rather than being restricted to the single-sector internal bit-depth $\nu=16$, each leg independently samples the total topological node capacity $N=2\nu=32$ across both orthogonal sectors.
+With no external observer to assign internal channel roles prior to interaction, an unconstrained 3-point vertex cannot pre-distinguish between Sector A and Sector B degrees of freedom. Rather than being restricted to the single-sector internal bit-depth $\nu=16$, each leg independently samples the total topological node capacity $N=2\nu=32$ across both orthogonal sectors.
 
 The unconstrained phase space of admissible state assignments for a 3-leg vertex is therefore $N^3$. Combining this with the local interaction degrees of freedom ($\sigma=5$) and the available manifold addresses ($R_M=172$), the total unconstrained phase space is the Cartesian product:
 
@@ -179,7 +179,7 @@ The minimum resolvable signal is exactly 1 quantum of information diluted across
 
 The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
-    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, established in \cref{sec:lembed}.
+    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{subsec:lembed}.
     \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other tree topology possesses a radius $r \ge 2$, which would delocalize the interaction across multiple neighborhoods. Because discrete state information resides at the lattice nodes, the minimal local configuration volume is therefore exactly the vertex count of the $\sigma$-star graph: $\sigma + 1 = 6$.
     \item \textbf{The Causal Area} ($A_{causal} = \Delta^2$): As established in \cref{sec:fundamental_resonance_filter1}, fundamental causality restricts information propagation on the discrete substrate to a local $(1+1)$D plane. Operating at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a 1D spatial horizon of length $\Delta$. The resulting spacetime resolution count is strictly $\Delta \cdot \Delta = \Delta^2$.
 \end{enumerate}
@@ -215,7 +215,7 @@ The distinct functional form of each term—whether a macroscopic boundary measu
 Two constraints rigidly bound this finite sum, ensuring it forms a complete and minimal basis:
 
 \begin{enumerate}
-    \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The characteristic integers $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
+    \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The structural invariants $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
     
     \item \textbf{Sign Classification:} The signs are fixed prior to evaluation by the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), confirmed by the failure mode analysis. Terms representing irreducible structural overhead (Capacity, Map, Toll, Margin) are strictly positive. Terms representing organizational gains (Protocol, Governor) act analogously to negative feedback in control theory, reducing net dissipation, and are therefore strictly negative.
 \end{enumerate}
@@ -241,7 +241,7 @@ Summing the geometric components:
     Z_{geo} = \num{\AlphaInvVal}\dots
 \end{equation}
 
-Because $\pi$ is the sole non-integer constant, all other terms being exact rational combinations of the characteristic integers, the precision of the prediction is limited only by the evaluation of $\pi$.
+Because $\pi$ is the sole non-integer constant, all other terms being exact rational combinations of the structural invariants, the precision of the prediction is limited only by the evaluation of $\pi$.
 
 Recent experimental values (\Cref{tab:alpha_comparison}) do not form a simple consensus and reflect ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}(0)$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}(0)$ via the electron anomalous magnetic moment ($g-2$). That these independent measurements are mutually exclusive is an open problem in standard metrology. CODATA (2022) synthesizes these conflicting inputs and its uncertainty reflects this tension.
 
@@ -257,7 +257,7 @@ Parker (2018) & \AlphaInvParkerExperimentalVal & $\AlphaInvParkerSigma \sigma$ \
 CODATA (2022) & \AlphaInvCodataExperimentalVal & $\AlphaInvCodataSigma \sigma$ \\
 \bottomrule
 \end{tabular}
-\caption{Comparison of the $E_8$-Persistence Theory $Z_{geo}$ derivation against experimental values. Deviation is computed as $|Z_{geo} - \alpha^{-1}(0)_{exp}| / \sigma_{exp}$.}
+\caption{Comparison of the $E_8$-Persistence Theory dimensionless $Z_{geo}$ derivation against experimental values. Deviation is computed as $|Z_{geo} - \alpha^{-1}(0)_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
 
@@ -272,6 +272,8 @@ Morel (2020) measures $\alpha$ kinematically, a direct macroscopic probe of the 
 
 \textbf{Falsification criterion:} If pure kinematic measurements continue to converge to $\alpha^{-1}(0) \approx \num{\AlphaInvVal}$ while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, convergence of both methods to a single identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence theory.
 
+\paragraph{Dimensional Correspondence.}
+The substrate yields strictly dimensionless geometric bounds. The following sections derive three corollaries of the geometric impedance $Z_{geo}$: charge emerges as quantized information flux through a topological boundary; macroscopic resistance is quantized by discrete channel count; and the substrate enforces a hard capacity ceiling which exceeding resolves excess flux into particle-antiparticle pairs. To validate these bounds against experiment, we translate them into macroscopic observables using the standard dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$) that observers employ to measure flux. These are correspondence identities; they do not derive dimensional constants from the lattice.
 
 \subsection{The Geometric Origin of Elementary Charge}
 Having derived the strictly dimensionless geometric impedance $Z_{geo}$, we now translate this structural limit into macroscopic physical observables. On the $E_8$ substrate, $Z_{geo}$ acts as a strict flow constraint: it restricts the amount of information flux that can propagate through a $\chi=2$ topological boundary without violating structural coherence. In standard macroscopic physics, this emergent quantum of flux is observed as the elementary charge $e$. 
@@ -324,8 +326,8 @@ In standard physics, the absolute capacity of the vacuum is represented by the P
 \subsubsection{\textit{Physical consequence: Safe Load Limit.}} 
 The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \num{\PlanckChargeRatioPercentageVal}$\% of this maximum to maintain structural coherence.
 
-\subsubsection{\textit{Physical consequence: Vacuum Breakdown as Capacity Limit (Schwinger Limit).}} 
-The Schwinger critical field $E_c = m_e^2 c^3/e\hbar$ marks the threshold where external electric fields spontaneously produce $e^+e^-$ pairs \cite{schwinger_gauge_1951}. The Coulomb field of an elementary charge, evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$, scales with this critical value by exactly the fine-structure constant $\alpha$:
+\subsubsection{\textit{Physical consequence: Vacuum Breakdown as Capacity Limit (Schwinger Limit).}}
+In the macroscopic QED dual, the electron mass $m_e$ sets the characteristic scale for the Schwinger critical field $E_c = m_e^2 c^3/e\hbar$, marking the threshold where external electric fields spontaneously produce $e^+e^-$ pairs \cite{schwinger_gauge_1951}. The Coulomb field of an elementary charge, evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$, scales with this critical value by exactly the fine-structure constant $\alpha$:
 \begin{equation}
 \frac{e}{4\pi\epsilon_0 \lambdabar^2} = \alpha E_c = \frac{E_c}{Z_{geo}}
 \end{equation}
