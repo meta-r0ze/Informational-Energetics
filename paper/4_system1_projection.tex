@@ -24,7 +24,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 \begin{enumerate}
     \item \textbf{Unitarity} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
     
-    \item Because the substrate must be strictly self-specifying, it admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
+    \item By the Closure Constraint, the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
 
     \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$, satisfying the Closure Constraint.
 
@@ -104,7 +104,7 @@ By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the c
 \label{sec:total_node_capacity}
 We derive the total information capacity of a single lattice node, which constrains the state space of all subsequent derivations.
 
-The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, symmetric subsystems. As derived above, the internal sector requires a bit-depth of $\nu=16$. Because the parent $E_8$ substrate is exactly self-dual ($\Lambda = \Lambda^*$), the projection cannot introduce an informational asymmetry between the spacetime manifold and the internal state space without violating local probability conservation. The maximal channel capacity of Sector B therefore dictates the exact reciprocal capacity of Sector A. The $E_8 \to D_4 \oplus D_4$ decomposition creates two orthogonal $\mathfrak{so}(8)$ sectors; local probability conservation requires their spinor dimensions to match exactly. The total channel capacity is the unalterable direct sum:
+The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, isomorphic sublattices. As derived in \cref{sec:chiralcapacity}, each $D_4$ factor intrinsically requires a bit-depth of $\nu=16$ to support complex phase and directional flow via paired chiral spinors ($8_L \oplus 8_R$). Because the decomposition is symmetric, both sectors inherit this same 16-channel structure. The total node capacity is therefore the direct sum:
 
 \begin{equation}
     N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
@@ -175,24 +175,21 @@ The invariant $\chi=2$ is the necessary and sufficient condition for \textbf{inf
 \subsubsection{The Embedding Invariant (\texorpdfstring{$\sigma=5$}{sigma=5})}
 \label{sec:embedding_invariant}
 
-We derive $\sigma$ as the minimal coordinate set required to fully specify a persistent entity on the lattice. A localized state requires two independent pieces of information: its \textbf{spatial address} (where it is) and its \textbf{topological boundary} (what it is).
-
-\textbf{The Orthogonality Condition:} A fundamental requirement of the Homogeneity defined in System 0 is that the internal definition of a topological defect (its boundary topology) must be entirely independent of its location. Mathematically, this requires the total configuration space to be a Cartesian product of the spatial manifold and the internal boundary manifold ($V_{total} = V_{space} \times V_{boundary}$). By definition, the dimension of a product manifold is the sum of the dimensions of its factors due to geometric necessity.
+A persistent defect requires two independent specifications: its spatial address (where it is) and its topological boundary (what it is). Homogeneity forbids these from depending on each other, so the configuration space is the Cartesian product $\mathcal{C}_{\text{defect}} = \mathcal{M}_{\text{space}} \times S^2$ and by definition, the dimension of a product manifold is the sum of its factors, $\dim(\mathcal{M}_{\text{space}} \times S^2) = \dim(\mathcal{M}_{\text{space}}) + \dim(S^2)$.
 
 The dimensions of these two orthogonal factors are uniquely constrained:
 \begin{itemize}
-    \item \textbf{Spatial Freedom ($D_{space} = 3$):} The \textbf{Causality} component requires that one dimension of the $D = 4$ manifold be allocated to the update stream (Time). This leaves exactly $D - 1 = 3$ dimensions for spatial configuration. This value is also structurally mandated by the boundary topology: the persistent defect possesses an $S^2$ boundary ($\chi = 2$), which cannot be geometrically embedded in a spatial manifold of fewer than 3 dimensions.
-    
-    \item \textbf{Topological Boundary ($D_{boundary} = 2$):} The \textbf{Map} component requires the topological defect to be distinguished from the vacuum by a closed boundary. As derived in \cref{sec:topological_boundary}, the unique simply-connected solution is the sphere ($S^2$). Regardless of its location in the 3D spatial bulk, specifying the internal state of this boundary requires exactly 2 intrinsic coordinate parameters (e.g., $\theta, \phi$). 
+    \item \textbf{Spatial freedom ($\dim(\mathcal{M}_{\text{space}}) = 3$).} Causality allocates one dimension of the $D=4$ manifold to time (\cref{sec:metric_signature}), leaving three for spatial position. An $S^2$ boundary that separates a finite interior from an exterior intrinsically requires three ambient spatial dimensions; in fewer, it cannot enclose a bulk volume.
+    \item \textbf{Boundary coordinates ($\dim(S^2) = 2$).} The simply-connected defect boundary is a sphere (\cref{sec:topological_boundary}), requiring two intrinsic parameters (e.g., $\theta, \phi$).
 \end{itemize}
 
-Because spatial position and internal boundary topology are mutually independent, the total defect configuration space factorizes as the Cartesian product $\mathcal{C}_{\text{defect}} = \mathcal{M}_3 \times S^2$. The additivity of their respective dimensions is mandated by the Orthogonality Condition, yielding the minimal geometric embedding dimension $\sigma$:
-
+The minimal geometric embedding dimension is therefore:
 \begin{equation}
-    \sigma = \dim(V_{space}) + \dim(V_{boundary}) = 3 + 2 = \mathbf{5}
+    \sigma = \dim(\mathcal{M}_{\text{space}}) + \dim(S^2) = 3 + 2 = \mathbf{5}
 \end{equation}
 
-Note: $\sigma=5$ represents the minimal spatial and boundary embedding dimension for a persistent topological defect (spatial address plus boundary coordinates), not the gauge-group rank of an effective quantum field theory.
+Note: $\sigma=5$ represents the minimal spatial and boundary embedding dimension for a persistent topological defect, not the gauge-group rank of an effective quantum field theory.
+
 
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
