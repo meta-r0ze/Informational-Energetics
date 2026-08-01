@@ -202,17 +202,19 @@ The Margin impedance is the reciprocal: the probability that a single quantum of
 
 The quiescent-equilibrium state sum factorizes exactly over the six pillars:
 \begin{equation}
-\mathcal{Z}_{\text{total}} = \mathcal{Z}_{\text{CAP}}\,\mathcal{Z}_{\text{MAP}}\,\mathcal{Z}_{\text{PRO}}\,\mathcal{Z}_{\text{GOV}}\,\mathcal{Z}_{\text{TOL}}\,\mathcal{Z}_{\text{MAR}},
+\mathcal{Z}_{\text{total}} = \prod_{i=1}^6 \mathcal{Z}_i,
 \end{equation}
-because the $E_8 \to D_4 \oplus D_4$ projection assigns each pillar to a geometrically disjoint domain. 
+because, as established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six pillars operate on orthogonal, independent domains. At strict zero flux these domains share no generators, so their mutual information vanishes and cross-terms are forbidden.
 
-As established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), at strict zero flux these domains share no generators, so their mutual information vanishes and cross-terms are forbidden. The geometric impedance is therefore the additive entropy. Because Capacity and Map enter as exact Boltzmann weights while the remaining pillars enter as small multiplicative modifiers $(1 \pm P_i)$, their entropic contributions evaluate via $-\ln(1 \pm P_i) \approx \mp P_i$:
-
+In the microcanonical ensemble of a zero-flux substrate, every structural requirement (whether irreducible overhead or organizational gain) acts as an entropic constraint, converting relative configuration volumes directly into additive action. Each factor therefore takes the exact exponential form $\mathcal{Z}_i = e^{-Z_i}$, where $Z_i$ is the dimensionless geometric action exacted by that pillar. The geometric impedance is the exact additive entropy:
 \begin{equation}
-    Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 (-\ln \mathcal{Z}_i) \equiv \sum_{i=1}^6 Z_i
+    Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 Z_i.
 \end{equation}
+
+Despite differing geometric origins---boundary measure, topological invariant, or phase-space ratio---each term is a dimensionless ratio relative to the fundamental lattice unit cell, rendering all terms commensurable in the dimensionless geometric action $Z_{\text{geo}}$.
 
 Two constraints rigidly bound this finite sum, ensuring it forms a complete and minimal basis:
+...
 
 \begin{enumerate}
     \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The structural invariants $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}

@@ -24,7 +24,7 @@ Open systems (e.g., biological organisms) offset dissipation through external en
 
 To persist, any system must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate.
 
-To derive this architecture, we model a persistent entity as a \textbf{dynamic control system} that must regulate its internal state against external fluctuations (entropy).
+To derive this architecture, we identify the minimal logical requirements for any distinguishable structure to resist entropic decay.
 
 \subsubsection{The Necessary Pillars of Control}
 
@@ -36,7 +36,7 @@ Implicit in physical implementations is the irreducible energetic and temporal c
 
 \subsubsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
-IE reframes the control elements and thermodynamic and information-theoretic constraints into six \textbf{existential pillars}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, shifting the primary analytical focus from performance optimization to persistence maintenance. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines.
+IE extracts the common logical skeleton underlying these independent theorems into six \textbf{existential pillars}, the complete, minimal set required for persistence, recontextualizing control components as survival requirements within a predictive, quantitative model. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, shifting the primary analytical focus from performance optimization to persistence maintenance. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines.
 
 \begin{enumerate}
     \item \textbf{Capacity ($CAP$):} \textit{The Vessel.} 
@@ -44,7 +44,7 @@ IE reframes the control elements and thermodynamic and information-theoretic con
     \textit{Foundational Theorem (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, providing the physical basis for the strict \textbf{Finiteness} requirement of the Capacity component. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
 
     \item \textbf{Map ($MAP$):} \textit{The Model.}
-    The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Reference Signal/Setpoint). 
+    The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Compressed Representation or The Reference Signal/Setpoint). 
     \textit{Foundational Theorem (The Good-Regulator Theorem \cite{conant_every_1970}):} Conant and Ashby proved mathematically that ``every good regulator of a system must be a model of that system.'' A system cannot persistently regulate against environmental entropy without encoding a structural map of its environment.
 
     \item \textbf{Protocol ($PRO$):} \textit{The Interface.}
@@ -61,7 +61,8 @@ IE reframes the control elements and thermodynamic and information-theoretic con
    
     \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
     The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
-    \textit{Foundational Theorem (Nyquist-Bode Stability Margins \cite{nyquist_regeneration_1932}):} A feedback system operating at theoretical criticality has zero tolerance for variance. Nyquist proved that physical control loops must maintain strict gain and phase margins away from the critical threshold, or the first stochastic environmental fluctuation will cause terminal divergence.
+    \textit{Foundational Theorem (Nyquist-Bode Stability Margins
+    \cite{nyquist_regeneration_1932}):} A system operating at theoretical criticality has zero tolerance for variance. Nyquist established that strict gain and phase margins away from the critical threshold are necessary for persistence; without them, the first stochastic fluctuation causes terminal divergence.
 \end{enumerate}
 
 Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
@@ -86,7 +87,7 @@ Since the removal of any component results in termination, the set $\mathbb{P}$ 
 
 \subsection{Architectural Sufficiency}
 \label{sec:sufficiency}
-The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence. Capabilities traditionally cited as independent requirements are strict compositions of the basis, carrying no independent entropic budget. \emph{Memory} is Map content provisioned against temporal variance by Margin. \emph{Prediction} is Map operation on incoming signal via Protocol. \emph{Repair} is a Governor-triggered re-provisioning within the Margin reserve. \emph{Replication} is Protocol-mediated write of Map onto fresh Capacity.
+The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics. The control-theoretic names reflect historical discovery order, not foundational priority; each pillar is an information-theoretic bound on state-space dimension, phase preservation, or transition capacity. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence. Capabilities traditionally cited as independent requirements are strict compositions of the basis, carrying no independent entropic budget. \emph{Memory} is Map content provisioned against temporal variance by Margin. \emph{Prediction} is Map operation on incoming signal via Protocol. \emph{Repair} is a Governor-triggered re-provisioning within the Margin reserve. \emph{Replication} is Protocol-mediated write of Map onto fresh Capacity.
 
 At the zero-flux baseline, a persistent configuration is specified by exactly three irreducible coordinates and each coordinate demands exactly two modes of structural engagement \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation):
 \begin{center}
