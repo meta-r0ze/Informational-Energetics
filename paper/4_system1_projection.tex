@@ -55,9 +55,9 @@ The projection must be compatible with the self-duality of the parent $E_8$ latt
 Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two orthogonal rank-4 sublattices. We evaluate the candidate rank-4 root systems that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
 
 \begin{itemize}
-    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups and therefore admits no symmetric decomposition; its five states cannot be partitioned into a symmetric, self-contained addressing scheme; resolving the quotient structure would require an externally specified translation table, violating the requirement that the vacuum be entirely self-defining.
+    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups, so its five states cannot be partitioned into a self-contained addressing scheme without an externally specified translation table, violating the Closure Constraint.
     
-    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification, requiring zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars.
+    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars.
 \end{itemize}
 
 Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric decomposition} that preserves global Unitarity while naturally generating the chiral structure required for information processing.
@@ -65,7 +65,7 @@ Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric dec
 This unique decomposition partitions the 8 dimensions into two orthogonal sectors with distinct roles:
 
 \begin{enumerate}
-    \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. Since the $D_4$ root system has rank 4 (four linearly independent simple roots), it naturally projects onto a 4-dimensional coordinate manifold, fixing \textbf{D=4} for the external coordinate manifold. The rank equals the number of independent Cartan generators, which specify the coordinate addresses; hence rank 4 implies $D=4$.
+    \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. The $D_4$ root system has rank 4 (four linearly independent simple roots, i.e., independent Cartan generators specifying coordinate addresses), so it naturally projects onto a 4-dimensional coordinate manifold, fixing $D=4$.
     \item \textbf{Sector B (Internal Symmetry):} The second $D_4$ lattice encodes the internal configuration of each node, its state within the substrate's symmetry structure. These four dimensions are internal degrees of freedom and not spatial directions. 
 \end{enumerate}
 
@@ -89,9 +89,9 @@ The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\
     To support the \textbf{Causality} component (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Directional Flow}, the ability to distinguish Left-handed projections from Right-handed projections, preventing information from reflecting symmetrically across the causal loop. 
 \end{enumerate}
 
-To satisfy both constraints simultaneously, the node utilizes the representations natively available to its $D_4$ ($\mathfrak{so}(8)$) geometry. Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations: the Left-handed spinor ($8_L$) and the Right-handed spinor ($8_R$). 
+Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations ($8_L$ and $8_R$). The node allocates one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
 
-To encode a persistent, directed signal, the node must allocate one left-handed spinor ($8_L$) for input and one right-handed spinor ($8_R$) for output. This structurally enforces Causality while jointly providing exactly the 16 real channels required to encode complex phase (Map).
+To satisfy both constraints simultaneously, the node utilizes the representations natively available to its $D_4$ ($\mathfrak{so}(8)$) geometry. Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations: the Left-handed spinor ($8_L$) and the Right-handed spinor ($8_R$). To encode a persistent, directed signal, the node must allocates one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
 
 The total internal channel capacity (Bit-Depth) of the node is therefore the direct sum of these paired representations:
 \begin{equation}
@@ -102,8 +102,6 @@ By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the c
 
 \subsection{The Total Node Capacity (\texorpdfstring{$N$}{N})}
 \label{sec:total_node_capacity}
-We derive the total information capacity of a single lattice node, which constrains the state space of all subsequent derivations.
-
 The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, isomorphic sublattices. As derived in \cref{sec:chiralcapacity}, each $D_4$ factor intrinsically requires a bit-depth of $\nu=16$ to support complex phase and directional flow via paired chiral spinors ($8_L \oplus 8_R$). Because the decomposition is symmetric, both sectors inherit this same 16-channel structure. The total node capacity is therefore the direct sum:
 
 \begin{equation}
@@ -145,7 +143,7 @@ The geometric requirement for complex conjugation ($\psi \leftrightarrow \bar{\p
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
 
-To satisfy the Map component, a persistent entity must strictly distinguish its internal state from the ambient environment. However, the \textbf{Finiteness} and \textbf{Unitarity} components require the vacuum to be homogeneous (no preferred positions) and self-dual (informationally symmetric). For a localized state to possess both a coordinate address and a distinguishable Map while satisfying these background constraints, the two specifications must be orthogonal: independent, yet simultaneously well-defined. Geometrically, this requires the substrate to support a topological defect, a localized boundary structure capable of separating a region from the vacuum without violating the background homogeneity. The minimal embedding dimension for this orthogonal decomposition sets the rank of the interaction symmetry ($\sigma$), the geometric degrees of freedom available for state transition.
+To satisfy the Map pillar, a persistent entity must distinguish its internal state from the ambient environment. But \textbf{Finiteness} and \textbf{Unitarity} demand homogeneity and self-duality, so its coordinate address and boundary topology must be orthogonal specifications. Geometrically, this requires a topological defect, a localized boundary separating a region from the vacuum without violating background homogeneity. The minimal embedding dimension for this orthogonal decomposition is $\sigma$, the geometric degrees of freedom available for state transition.
 
 \subsubsection{The Topological Boundary (\texorpdfstring{$\chi=2$}{chi=2})}
 \label{sec:topological_boundary}
@@ -238,7 +236,7 @@ To satisfy Causality we apply the constraint \linebreak $\Delta \ge N = 32$ (est
 
 By the Closure Constraint, the vacuum possesses no external reference clock. Time must therefore emerge relationally, defined exclusively by internal state transitions. Furthermore, by Finiteness, the node cannot allocate channel capacity to an internal memory counter to track elapsed empty intervals; by Homogeneity, spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
 
-In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. Because the local geometry lacks an external temporal metric, and because internal counting mechanisms are structurally forbidden, any sequence of $k \ge 2$ consecutive inert intervals creates a temporal degeneracy: without an external clock or internal memory counter, the node cannot distinguish one empty step from two, making the temporal evolution non-injective. This manifests as Causal Aliasing and destroys the system's ability to maintain a well-defined serial history.
+In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. Without an external temporal metric or internal memory counter, any sequence of $k \ge 2$ consecutive inert intervals creates a temporal degeneracy: the node cannot distinguish one empty step from two, rendering the temporal evolution non-injective. This manifests as Causal Aliasing and destroys the system's ability to maintain a well-defined serial history.
 
 For the causal history to remain uniquely reconstructable (the fundamental Unitarity requirement), this degeneracy must be structurally forbidden. The system must interleave its $N$ active transitions such that consecutive inert intervals are strictly avoided ($k_{\text{max}} = 1$).
 
