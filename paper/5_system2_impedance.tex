@@ -77,7 +77,7 @@ The geometric impedance is derived systematically from the Entropic Balance Shee
 % ============================================================
 \subsection{The Resonant Circumference (Capacity)}
 \label{subsec:alpha_cap}
-Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (the physical manifestation of this closed path is the Wilson Loop in dynamical gauge theory). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
+Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (this corresponds in the standard effective field theory dual to the Wilson Loop). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
 At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
@@ -200,17 +200,17 @@ The Margin impedance is the reciprocal: the probability that a single quantum of
 \subsection{The Additive Baseline and the Finite Sum}
 \label{sec:additive_baseline}
 
-As established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six existential pillars operate on geometrically disjoint domains assigned by the $E_8 \to D_4 \oplus D_4$ projection. Capacity and Margin govern metric volume; Map governs topological boundaries; Governor regulates temporal phase density; and Toll dictates combinatorial channel selection. The Protocol mediates the residual coordination capacity between the orthogonal sectors. Because these domains share no geometric generators, their mutual information vanishes identically at the strict zero-flux baseline. While dynamical excitations inevitably generate non-linear cross-terms, Quiescent Equilibrium represents the static structural floor where no active flux exists to mediate these couplings.
+The quiescent-equilibrium state sum factorizes exactly over the six pillars:
+\begin{equation}
+\mathcal{Z}_{\text{total}} = \mathcal{Z}_{\text{CAP}}\,\mathcal{Z}_{\text{MAP}}\,\mathcal{Z}_{\text{PRO}}\,\mathcal{Z}_{\text{GOV}}\,\mathcal{Z}_{\text{TOL}}\,\mathcal{Z}_{\text{MAR}},
+\end{equation}
+because the $E_8 \to D_4 \oplus D_4$ projection assigns each pillar to a geometrically disjoint domain. 
 
-Crucially, the state sum separates into the macroscopic structural baseline (the exact geometric invariants of Capacity and Map) and multiplicative modifiers $(1 \pm P_i)$ for Protocol, Governor, Toll, and Margin, representing fractional phase-space modifications to that baseline. In Quiescent Equilibrium these fractional weights are small ($P_i \ll 1$), so their entropic contributions evaluate via the first-order limit $-\ln(1 \pm P_i) \approx \mp P_i$, while the macroscopic baseline terms enter exactly:
+As established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), at strict zero flux these domains share no generators, so their mutual information vanishes and cross-terms are forbidden. The geometric impedance is therefore the additive entropy. Because Capacity and Map enter as exact Boltzmann weights while the remaining pillars enter as small multiplicative modifiers $(1 \pm P_i)$, their entropic contributions evaluate via $-\ln(1 \pm P_i) \approx \mp P_i$:
 
 \begin{equation}
-\begin{split}
-    Z_{geo} &\propto -\ln \mathcal{Z}_{total} = \sum_{i=1}^6 (-\ln \mathcal{Z}_i) \equiv \sum_{i=1}^6 Z_i
-\end{split}
+    Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 (-\ln \mathcal{Z}_i) \equiv \sum_{i=1}^6 Z_i
 \end{equation}
-
-The distinct functional form of each term—whether a macroscopic boundary measure ($\pi\Delta$), an exact topological invariant ($\chi$), or a perturbative phase-space probability ratio ($P \ll 1$)—is therefore the rigorously appropriate, dimensionless information-theoretic measure for that specific, orthogonal geometric domain, seamlessly unified at the linear limit.
 
 Two constraints rigidly bound this finite sum, ensuring it forms a complete and minimal basis:
 
@@ -224,12 +224,12 @@ The geometric impedance is therefore exactly evaluated by expanding this sum int
 
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
-Z_{geo} = \underbrace{\pi\Delta}_{CAP}
-+ \,\underbrace{\chi}_{MAP}
-- \,\underbrace{\frac{1}{R_M - \sigma}}_{PRO}
-- \,\underbrace{\frac{\chi}{\Delta}}_{GOV} & \\
-+ \,\underbrace{\frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M}}_{TOL}
-+ \,\underbrace{\frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2}}_{MAR}
+Z_{\text{geo}} = \underbrace{\pi\Delta}_{\text{CAP}}
++ \,\underbrace{\chi}_{\text{MAP}}
+- \,\underbrace{\frac{1}{R_M - \sigma}}_{\text{PRO}}
+- \,\underbrace{\frac{\chi}{\Delta}}_{\text{GOV}} & \\
++ \,\underbrace{\frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M}}_{\text{TOL}}
++ \,\underbrace{\frac{1}{L_{\text{embed}} \cdot (\sigma + 1) \cdot \Delta^2}}_{\text{MAR}}
 \end{split}
 \end{equation}
 
@@ -238,7 +238,7 @@ Z_{geo} = \underbrace{\pi\Delta}_{CAP}
 \label{subsec:alpha_numerical_validation}
 Summing the geometric components:
 \begin{equation}
-    Z_{geo} = \num{\AlphaInvVal}\dots
+    Z_{\text{geo}} = \num{\AlphaInvVal}\dots
 \end{equation}
 
 Because $\pi$ is the sole non-integer constant, all other terms being exact rational combinations of the structural invariants, the precision of the prediction is limited only by the evaluation of $\pi$.
