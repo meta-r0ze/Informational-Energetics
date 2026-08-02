@@ -28,11 +28,11 @@ To derive this architecture, we identify the minimal logical requirements for an
 
 \subsubsection{The Necessary Pillars of Control}
 
-From control theory, any stable feedback loop requires specific functional components \cite{dorf_modern_2017}: the Plant (the system to be controlled), the Sensor (measuring the output), the Controller (computing the correction), and the Actuator (implementing the correction), with the desired behavior specified by a Reference Signal (Setpoint).
+Stable feedback requires specific functional components components \cite{dorf_modern_2017}: the Plant (the system to be controlled), the Sensor (measuring the output), the Controller (computing the correction), and the Actuator (implementing the correction), with the desired behavior specified by a Reference Signal (Setpoint).
 
 For \textit{robust} operation under uncertainty, control systems must additionally implement gain and phase margins to prevent instability from perturbations \cite{astrom_feedback_2008}. These margins are typically treated as tunable parameters rather than structural requirements.
 
-Implicit in physical implementations is the irreducible energetic and temporal cost of state transitions (Landauer's Principle \cite{landauer_irreversibility_1961}; Margolus-Levitin limit \cite{margolus_maximum_1998}). This ``Toll'' is typically treated as a constraint rather than a required component.
+Implicit in any implementations is the irreducible energetic and temporal cost of state transitions (Landauer's Principle \cite{landauer_irreversibility_1961}; Margolus-Levitin limit \cite{margolus_maximum_1998}). This ``Toll'' is typically treated as a constraint rather than a required component.
 
 \subsubsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
@@ -41,31 +41,31 @@ IE extracts the common logical skeleton underlying these independent theorems in
 \begin{enumerate}
     \item \textbf{Capacity ($CAP$):} \textit{The Vessel.} 
     The physical infrastructure required to acquire resources, process energy, and perform work. It defines the system's kinetic potential and its ability to act on the environment. (The Plant/Actuator). 
-    \textit{Foundational Theorem (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, providing the physical basis for the strict \textbf{Finiteness} requirement of the Capacity component. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
+    \textit{Convergent Evidence (The Bekenstein Bound \cite{bekenstein_universal_1981}):} Bekenstein established that a finite region of space can contain at most a finite amount of information, demonstrating that finite capacity is a necessary feature of any spatially bounded information substrate. A persistent system cannot rely on infinite state-space. Furthermore, the Margolus-Levitin limit \cite{margolus_maximum_1998} establishes that the rate at which this capacity can process state transitions is strictly bounded by its available energy.
 
     \item \textbf{Map ($MAP$):} \textit{The Model.}
     The internal logic, topological structure, or compressed representation of environmental regularities that distinguishes the system from the environment. It functions as a predictive engine that reduces uncertainty (Surprisal), allowing the system to steer towards high-utility states. (The Compressed Representation or The Reference Signal/Setpoint). 
-    \textit{Foundational Theorem (The Good-Regulator Theorem \cite{conant_every_1970}):} Conant and Ashby proved mathematically that ``every good regulator of a system must be a model of that system.'' A system cannot persistently regulate against environmental entropy without encoding a structural map of its environment.
+    \textit{Convergent Evidence (The Good-Regulator Theorem \cite{conant_every_1970}):} Conant and Ashby proved mathematically that ``every good regulator of a system must be a model of that system.'' A system cannot persistently regulate against environmental entropy without encoding a structural map of its environment.
 
     \item \textbf{Protocol ($PRO$):} \textit{The Interface.}
     The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path). 
-    \textit{Foundational Theorem (Shannon's Source-Channel Separation Theorem \cite{shannon_communication_1949}):} Shannon established that optimal communication over a noisy channel requires decoupling the source data (the Map) from the error-correcting transmission encoding (the Protocol). Systemic coherence demands an independent protocol layer.
+    \textit{Convergent Evidence (Shannon's Source-Channel Separation Theorem \cite{shannon_communication_1949}):} Shannon established that source coding and channel coding are structurally distinct functions. Systemic coherence demands an independent Protocol layer that standardizes interfaces across internal boundaries under finite channel capacity and latency.
     
     \item \textbf{Governor ($GOV$):} \textit{The Constraint.}
     The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
-    \textit{Foundational Theorem (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
+    \textit{Convergent Evidence (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
     \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.}
     The irreducible energy cost of state transitions and information erasure. (Processing Latency). 
-    \textit{Foundational Theorem (Landauer's Principle \cite{landauer_irreversibility_1961}):} Any irreversible logical operation, such as erasing a bit, must dissipate at least $k_B T \ln 2$ of energy to the environment. State transitions carry an inescapable thermodynamic toll.
+    \textit{Convergent Evidence (Landauer's Principle \cite{landauer_irreversibility_1961}):} Any irreversible logical operation, such as erasing a bit, must dissipate at least $k_B T \ln 2$ of energy to the environment. State transitions carry an inescapable thermodynamic toll.
    
     \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
     The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
-    \textit{Foundational Theorem (Nyquist-Bode Stability Margins
+    \textit{Convergent Evidence (Nyquist-Bode Stability Margins
     \cite{nyquist_regeneration_1932}):} A system operating at theoretical criticality has zero tolerance for variance. Nyquist established that strict gain and phase margins away from the critical threshold are necessary for persistence; without them, the first stochastic fluctuation causes terminal divergence.
 \end{enumerate}
 
-Every system operates upon a \textbf{Substrate}: the physical medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
+Every system operates upon a \textbf{Substrate}: the medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
 
 IE reframes control systems as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
 
@@ -89,7 +89,7 @@ Since the removal of any component results in termination, the set $\mathbb{P}$ 
 \label{sec:sufficiency}
 The six pillars map onto the canonical components of a control loop, augmented by constraints from information theory and thermodynamics. The control-theoretic names reflect historical discovery order, not foundational priority; each pillar is an information-theoretic bound on state-space dimension, phase preservation, or transition capacity. Advanced topologies (feedforward networks, state observers) extend this basic structure but do not introduce new primitive requirements for persistence. Capabilities traditionally cited as independent requirements are strict compositions of the basis, carrying no independent entropic budget. \emph{Memory} is Map content provisioned against temporal variance by Margin. \emph{Prediction} is Map operation on incoming signal via Protocol. \emph{Repair} is a Governor-triggered re-provisioning within the Margin reserve. \emph{Replication} is Protocol-mediated write of Map onto fresh Capacity.
 
-At the zero-flux baseline, a persistent configuration is specified by exactly three irreducible coordinates and each coordinate demands exactly two modes of structural engagement \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation):
+At the zero-flux baseline, a persistent configuration is specified by three irreducible constraints and each coordinate demands exactly two modes of structural engagement: \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation):
 \begin{center}
 \begin{tabular}{lcc}
  & \textbf{Provision} & \textbf{Defense} \\
@@ -99,7 +99,7 @@ At the zero-flux baseline, a persistent configuration is specified by exactly th
 \end{tabular}
 \end{center}
 
-At zero flux, no external source exists to supply a fourth coordinate; in quiescent equilibrium, dynamics reduce to \emph{holding} a resource and \emph{holding it against variance}, admitting no third engagement mode. The six pillars are therefore the complete, non-fungible product of three resources and two engagement modes: a seventh primitive would require either a fourth coordinate (excluded at zero flux) or a third engagement mode (excluded in quiescent equilibrium).
+At zero flux, no external source exists to introduce a fourth irreducible requirement. In quiescent equilibrium, no third mode of operation exists: dynamics reduce to establishing a capability and defending it against variance. The six pillars therefore exhaust the architecture; any additional primitive would require either a new existential constraint or a new mode of structural engagement, neither of which the baseline admits.
 
 \subsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}

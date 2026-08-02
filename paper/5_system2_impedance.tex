@@ -85,7 +85,7 @@ The fundamental cycle is periodic: the defect's configuration must recur identic
 
 By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period.
 
-The defect is defined by its boundary (\Cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. In the Euclidean metric of the substrate, the ratio of circumference to diameter is the geometric constant $\frac{C}{\Delta} = \pi$. So the capacity impedance is exactly the boundary length:
+Because the $D_4$ lattice is a discrete subset of $\mathbb{R}^4$ equipped with the Euclidean metric, the entropic cost is a metric measure on the embedding space, not a lattice-point count. The defect is defined by its boundary (\Cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. In the Euclidean metric of the substrate, the ratio of circumference to diameter is the geometric constant $\frac{C}{\Delta} = \pi$. So the capacity impedance is exactly the boundary length:
 
 \begin{equation}
     Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}
@@ -180,7 +180,7 @@ The minimum resolvable signal is exactly 1 quantum of information diluted across
 The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
     \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{subsec:lembed}.
-    \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other tree topology possesses a radius $r \ge 2$, which would delocalize the interaction across multiple neighborhoods. Because discrete state information resides at the lattice nodes, the minimal local configuration volume is therefore exactly the vertex count of the $\sigma$-star graph: $\sigma + 1 = 6$.
+    \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other tree topology possesses a radius $r \ge 2$, which would delocalize the interaction across multiple neighborhoods. The Star Graph ($S_\sigma$) is the unique connected $\sigma$-edge graph with radius $r=1$; any other topology delocalizes across multiple neighborhoods, violating the Orthogonality Condition. The minimal local volume is therefore $\sigma+1=6$.
     \item \textbf{The Causal Area} ($A_{causal} = \Delta^2$): As established in \cref{sec:fundamental_resonance_filter1}, fundamental causality restricts information propagation on the discrete substrate to a local $(1+1)$D plane. Operating at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a 1D spatial horizon of length $\Delta$. The resulting spacetime resolution count is strictly $\Delta \cdot \Delta = \Delta^2$.
 \end{enumerate}
 
@@ -204,17 +204,16 @@ The quiescent-equilibrium state sum factorizes exactly over the six pillars:
 \begin{equation}
 \mathcal{Z}_{\text{total}} = \prod_{i=1}^6 \mathcal{Z}_i,
 \end{equation}
-because, as established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six pillars operate on orthogonal, independent domains. At strict zero flux these domains share no generators, so their mutual information vanishes and cross-terms are forbidden.
+because, as established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six pillars operate on orthogonal, independent domains. At strict zero flux, no propagating excitations exist to mediate interactions between these domains; mutual information vanishes identically, forbidding cross-terms.
 
 In the microcanonical ensemble of a zero-flux substrate, every structural requirement (whether irreducible overhead or organizational gain) acts as an entropic constraint, converting relative configuration volumes directly into additive action. Each factor therefore takes the exact exponential form $\mathcal{Z}_i = e^{-Z_i}$, where $Z_i$ is the dimensionless geometric action exacted by that pillar. The geometric impedance is the exact additive entropy:
 \begin{equation}
     Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 Z_i.
 \end{equation}
 
-Despite differing geometric origins---boundary measure, topological invariant, or phase-space ratio---each term is a dimensionless ratio relative to the fundamental lattice unit cell, rendering all terms commensurable in the dimensionless geometric action $Z_{\text{geo}}$.
+Despite differing geometric origins (boundary measure, topological invariant, or phase-space ratio), each term is a dimensionless ratio relative to the fundamental lattice unit cell, rendering all terms commensurable in the dimensionless geometric action $Z_{\text{geo}}$.
 
 Two constraints rigidly bound this finite sum, ensuring it forms a complete and minimal basis:
-...
 
 \begin{enumerate}
     \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The structural invariants $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
