@@ -1,4 +1,4 @@
-\section{System 1: Substrate Selection, The unique geometry that satisfies System 0 requirements}
+\section{System 1: Substrate Isolation, The unique geometry that satisfies System 0 requirements}
 \label{sec:system1_projection}
 System 0 demands finiteness, unitarity, and causality. These requirements act as eliminative filters: they do not merely suggest a lattice, they progressively remove every alternative until one structure remains. We first constrain the dimension and uniqueness of the lattice, then determine its projection into spacetime and internal symmetry, and finally fix the temporal period and topological invariants that prevent causal aliasing. The mathematical theorems function as black-box filters; what matters is that each constraint is forced by the persistence architecture, leaving no continuous parameter free.
 
@@ -43,72 +43,67 @@ The optimality of the $E_8$ lattice extends beyond self-duality. Viazovska's pro
 
 \subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:projection}
+The $E_8$ lattice cannot process information without distinguishing input from output. The projection must break $E_8$ symmetry to separate the coordinate-addressing function from the state-configuration function.
 
-The $E_8$ lattice cannot process information by itself. Processing requires a flow (Input vs. Output). The projection must break the $E_8$ symmetry to distinguish the ``Observer'' (Spacetime) from the ``System'' (Internal States).
-
-\subsubsection{The Symmetric Decomposition (External Spacetime vs. Internal Symmetry)}
+\subsubsection{The Symmetric Decomposition}
 \label{sec:symmetric_decomposition}
 
-The projection must be compatible with the self-duality of the parent $E_8$ lattice to maintain local probability conservation. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any symmetric decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a specific glue group (the symmetry dictating how the two sublattices bond) whose coset structure exactly reconstructs the self-dual parent. To avoid unbalancing the Unitarity requirement, the state space must be partitioned into two symmetric sectors that can support this exact quotient structure.
+To maintain local probability conservation the projection must preserve self-duality. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a glue group whose coset structure reconstructs the self-dual parent. To preserve Unitarity, the state space must partition into two isomorphic sectors supporting this quotient structure.
 
 \textbf{Candidate Rank-4 Subsectors.} 
-Because the parent $E_8$ lattice has rank 8, a symmetric bisection requires two orthogonal rank-4 sublattices. We evaluate the candidate rank-4 root systems that can symmetrically embed in $E_8$. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. We restrict our search to sublattices admitting a symmetric embedding $E_8 \to L_4 \oplus L_4$. $B_4$ and $C_4$ violate the Evenness requirement because their root lattices contain roots of two distinct lengths. $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$ as the mathematically viable candidates for the symmetric decomposition of the substrate.
+Because $E_8$ has rank 8, a bisection requires two orthogonal rank-4 sublattices. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. $B_4$ and $C_4$ violate Evenness (roots of two distinct lengths). $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$.
 
 \begin{itemize}
-    \item \textbf{The $A_4$ No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ orthogonal decomposition has an index of 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups, so its five states cannot be partitioned into a self-contained addressing scheme without an externally specified translation table, violating the Closure Constraint.
+    \item \textbf{The \texorpdfstring{$A_4$}{A4} No-Go (Closure Mismatch):} The $A_4 \oplus A_4$ decomposition has index 5 in $E_8$, yielding a cyclic glue group $\mathbb{Z}_5$. Because $\mathbb{Z}_5$ is cyclic of prime order, it has no non-trivial proper subgroups, so its five states cannot be partitioned into a self-contained addressing scheme without an externally specified translation table, violating the Closure Constraint.
     
-    \item \textbf{The $D_4$ Solution (The Unitary Partition):} The $D_4 \oplus D_4$ orthogonal decomposition has an index of 4 in $E_8$, yielding a glue group $(\mathbb{Z}_2 \times \mathbb{Z}_2)$ composed of involutions. This structure supports a symmetric, self-contained addressing scheme with zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice that supports \textbf{Triality}, providing the exact geometric symmetry required to construct the Map and Causality pillars.
+    \item \textbf{The \texorpdfstring{$D_4$}{D4} Solution (The Unitary Partition):} The $D_4 \oplus D_4$ decomposition has index 4 in $E_8$, yielding a glue group of involutions. This supports a self-contained addressing scheme with zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice supporting \textbf{Triality}, providing the geometric symmetry required for Map and Causality.
 \end{itemize}
 
-Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique symmetric decomposition} that preserves global Unitarity while naturally generating the chiral structure required for information processing.
-
-This unique decomposition partitions the 8 dimensions into two orthogonal sectors with distinct roles:
+Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} decomposition preserving global Unitarity while generating the chiral structure required for information processing. It partitions the 8 dimensions into two orthogonal sectors:
 
 \begin{enumerate}
-    \item \textbf{Sector A (External Spacetime):} The first $D_4$ lattice defines the coordinate addresses of the lattice nodes. The $D_4$ root system has rank 4 (four linearly independent simple roots, i.e., independent Cartan generators specifying coordinate addresses), so it naturally projects onto a 4-dimensional coordinate manifold, fixing $D=4$.
-    \item \textbf{Sector B (Internal Symmetry):} The second $D_4$ lattice encodes the internal configuration of each node, its state within the substrate's symmetry structure. These four dimensions are internal degrees of freedom and not spatial directions. 
+    \item \textbf{Sector A (Coordinate Sector):} The first $D_4$ defines coordinate addresses. Rank 4 (four independent Cartan generators) projects naturally onto a 4-dimensional coordinate manifold, fixing $D=4$.
+    \item \textbf{Sector B (State Sector):} The second $D_4$ encodes internal node configuration. These four dimensions are internal degrees of freedom, not coordinate directions.
 \end{enumerate}
 
-This structural partition explains why the substrate must eventually appear 4-dimensional while possessing complex internal forces, without requiring the hidden spatial dimensions of Kaluza-Klein theory.
+This structural partition explains why the substrate appears 4-dimensional with complex internal structure, without additional coordinate dimensions.
 
-
-\subsubsection{The Bit-Depth of the Node (\texorpdfstring{$\nu = 16$}{nu16})}
+\subsubsection{The Bit-Depth of the Node (\texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:chiralcapacity}
 
-To determine the information capacity (Bit-Depth) of the lattice nodes we ask: what is the minimal geometric structure required to define a persistent, distinguishable signal on the lattice?
+To determine the information capacity of a lattice node, we ask: what is the minimal geometric structure required to define a persistent, distinguishable signal?
 
-\textit{Geometric Translation:} In a lattice, information states are encoded as \textbf{orientations}, directional configurations that can be rotated and transformed. Because these transformations are strictly geometric rotations of a coordinate space, they are governed by the Orthogonal groups $SO(n)$ and their simply-connected double covers, the Spin groups $Spin(n)$. While other Lie groups (such as $SU(n)$) admit complex representations, they describe abstract internal symmetries; the physical orientation of the substrate is strictly bound to $Spin(n)$ geometry.
+In a lattice, information states are encoded as \textbf{orientations}, governed by the Spin groups $Spin(n)$ (the double covers of $SO(n)$), because the substrate is strictly bound to real geometric rotations.
 
-The $D_4$ lattice spans 4 spatial dimensions, but its associated Lie algebra ($\mathfrak{so}(8)$) acts on 8-dimensional fundamental and spinor representations. As established in \cref{sec:projection}, each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local continuous rotation symmetry of $Spin(8)$. We must determine the minimal channel capacity ($\nu$) required for this native $Spin(8)$ hardware to satisfy the \textbf{Map} and \textbf{Causality} pillars.
+The $D_4$ lattice spans 4 abstract dimensions, but its associated Lie algebra $\mathfrak{so}(8)$ acts on 8-dimensional spinor representations. Each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local $Spin(8)$ rotation symmetry. We determine the minimal channel capacity ($\nu$) required for this native hardware to satisfy Map and Causality.
 
 \begin{enumerate}
     \item \textbf{The Map Constraint (Phase Encoding):}  
-    While $Spin(8)$ possesses chiral spinors, they are mathematically \textbf{Real} (Majorana-Weyl). In signal processing terms, this means a state vector is identical to its conjugate ($\psi = \bar{\psi}$). A system built strictly on an 8-channel real representation cannot distinguish a signal from its inverse (Phase Ambiguity) because it lacks complex phase information. To support a stable Map, the system requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$). The minimal encoding unit is the hardware's native spinor dimension (8), set by the $D_4$/$\mathfrak{so}(8)$ algebra; no sub-8 representation supports the full rotational structure of the substrate. A complex representation of this base dimension requires 16 real degrees of freedom. Because the native $Spin(8)$ spinors are real, encoding a complex phase distinct from amplitude demands a direct sum of two independent 8-dimensional real channels, yielding $8+8=16$ real channels.
-    
+    While $Spin(8)$ possesses chiral spinors, they are mathematically \textbf{Real} (Majorana-Weyl). In signal processing terms, this means a state vector is identical to its conjugate ($\psi = \bar{\psi}$). A system built on an 8-channel real representation cannot distinguish a signal from its inverse (Phase Ambiguity), so a stable Map requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$). The native spinor dimension is fixed at 8 by the $D_4$/$\mathfrak{so}(8)$ algebra; a complex representation of this dimension therefore requires 16 real degrees of freedom, i.e., two independent 8-dimensional real channels.
+
     \item \textbf{The Causality Constraint (Directional Flow):} 
-    To support the \textbf{Causality} component (Arrow of Time), the system must distinguish ``Input'' from ``Output.'' Geometrically, this requires \textbf{Directional Flow}, the ability to distinguish Left-handed projections from Right-handed projections, preventing information from reflecting symmetrically across the causal loop. 
+    To support Causality, the system must distinguish input from output. Geometrically, this requires distinguishing left-handed from right-handed projections, preventing symmetric reflection across the causal loop.
 \end{enumerate}
 
-Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations ($8_L$ and $8_R$). The node allocates one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
+Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations ($8_L$ and $8_R$). The node partitions one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
 
-To satisfy both constraints simultaneously, the node utilizes the representations natively available to its $D_4$ ($\mathfrak{so}(8)$) geometry. Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations: the Left-handed spinor ($8_L$) and the Right-handed spinor ($8_R$). To encode a persistent, directed signal, the node must allocates one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
-
-The total internal channel capacity (Bit-Depth) of the node is therefore the direct sum of these paired representations:
+The total internal channel capacity is therefore:
 \begin{equation}
     \nu = \dim(8_L) + \dim(8_R) = 8 + 8 = \mathbf{16}
 \end{equation}
 
-By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the channel capacity requirements without  requiring embedding in a higher-dimensional gauge group.
+By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the channel capacity requirements without embedding in a higher-dimensional gauge group.
 
 \subsection{The Total Node Capacity (\texorpdfstring{$N$}{N})}
 \label{sec:total_node_capacity}
-The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, isomorphic sublattices. As derived in \cref{sec:chiralcapacity}, each $D_4$ factor intrinsically requires a bit-depth of $\nu=16$ to support complex phase and directional flow via paired chiral spinors ($8_L \oplus 8_R$). Because the decomposition is symmetric, both sectors inherit this same 16-channel structure. The total node capacity is therefore the direct sum:
+The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, isomorphic sublattices. As derived in \cref{sec:chiralcapacity}, each $D_4$ factor requires $\nu=16$ to support complex phase and directional flow via paired chiral spinors ($8_L \oplus 8_R$). Because the decomposition is symmetric, both sectors inherit this 16-channel structure. The total node capacity is therefore:
 
 \begin{equation}
     N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
 \end{equation}
 
 This integer $N = 32$ represents the total number of distinct state channels available for encoding information on the lattice substrate.
+
 
 \subsection{Dimensional Reduction: Geometric Origin of The Metric Signature and Causality}
 \label{sec:metric_signature}
@@ -164,7 +159,8 @@ where $g$ is the genus (number of holes).
         \item \textit{Thermodynamic Failure:} By the Gauss-Bonnet theorem ($\int_M K \, dA = 2\pi\chi$), any surface with $g \geq 1$ has $\chi \leq 0$, implying neutral or negative total curvature. Such a surface cannot support net positive entropic pressure (information density) against the bulk substrate: it would structurally collapse.
     \end{itemize}
 
-    \item \textbf{The Uniqueness of $g=0$ (The Sphere):} The sphere is the unique closed surface with $g=0$, yielding $\chi=2$, the maximum possible value. It is the only simply connected topology, ensuring that all loops contract to a point. This forces all information flux to be either contained or excluded, enabling the perfect binary partition of state required for a persistent, distinguishable topological defect.
+    \item \textbf{The Uniqueness of $g=0$ (The Sphere):}
+    The sphere is the unique simply-connected closed surface $(g=0)$ which uniquely yields $\chi=2$, the maximum possible value for any closed surface. It is the only simply connected topology, ensuring that all loops contract to a point. This forces all information flux to be either contained or excluded, enabling the perfect binary partition of state required for a persistent, distinguishable topological defect.
 \end{itemize}
 
 \paragraph{Forward Implication (System 2 Consequence):} 
@@ -298,25 +294,24 @@ The total intrinsic structural complexity the vacuum must process per fundamenta
     L_{substrate} = R_M + \nu = 172 + 16 = \mathbf{\LsubstrateVal}
 \end{equation}
 
-\subsection{The \texorpdfstring{$E_8$}{E8}-Persistence System Specification}
+\subsection{The \texorpdfstring{$E_8$}{E8} Lattice Substrate System}
 \label{sec:system1spec}
 We have now identified a unique solution that satisfies the architectural requirements of System 0.
 
 \begin{itemize}
     \item[] \textbf{Substrate: The $E_8$ Manifold.} The $D_4 \oplus D_4$ decomposition of $E_8$ fixes $D=4$ as the unique dimensionality supporting Finiteness and Causality.
 
-    \item \textbf{Capacity: The Operational Envelope ($N=32$).} The $N=32$ chiral channels within each $\Delta=43$ cycle define the total state-transition budget. The clock period sets the envelope; the channel count determines what fills it.
-
+    \item \textbf{Capacity: The State-Transition Budget ($N=32$).} The $N=32$ chiral channels within each $\Delta=43$ cycle define the total number of distinct state transitions available per fundamental cycle. The clock period sets the temporal bound; the channel count determines the information throughput.
+    
     \item \textbf{Map: The Persistent Embedding ($\sigma=5$).} The sum of spatial ($D_{\text{space}}=3$) and topological ($D_{\text{boundary}}=2$) degrees of freedom required to uniquely embed a persistent entity in the manifold.
     
-    \item \textbf{Protocol: The Chiral Bit-Depth ($\nu=16$).} The minimal spinor dimension admitting complex structure and chirality, enabling lossless information propagation. Required by Unitarity for read/write symmetry.
+    \item \textbf{Protocol: The Chiral Bit-Depth ($\nu=16$).} The minimal spinor dimension admitting complex structure and chirality, enabling lossless information propagation between coordinate and state sectors.
 
     \item \textbf{Governor: The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing binary partition of state and preventing field divergence. Required by Finiteness.
 
-    \item \textbf{Toll: The causal cost of persistence ($g_{00} = -1$, $M=11$).} Structurally, the Lorentzian metric ($g_{00} = -1$) encodes time by sacrificing one spatial dimension's definiteness. Operationally, the $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
+    \item \textbf{Toll: The Causal Cost ($M=11$).} The Lorentzian signature (corresponding to $g_{00}=-1$ in the effective metric) encodes time by making one coordinate dimension indefinite relative to the others. The $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
 
-    \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} The total embedding dimension sets the geometric noise floor below which signals dissolve into the substrate. In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal (derived in Section~\ref{sec:system2_geometric_impedance} as the resolution-limited coupling), is the proof of solvency. The vacuum persists because its resolution limit is exactly minimally sufficient.
+    \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal is exactly the threshold at which structured information remains distinguishable from substrate fluctuations. The vacuum persists because its resolution limit is minimally sufficient.
 \end{itemize}
 
-\subsection{Conclusion: \texorpdfstring{$E_8$}{E8}-Persistence theory}
-The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of structural invariants: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish a substrate on which other systems can persist.
+The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of structural invariants: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish the unique self-specifying substrate from which all observable structure must emerge.

@@ -1,4 +1,4 @@
-\section{System 2: The Geometric Impedance (\texorpdfstring{$\alpha^{-1}$}{alpha\string^-1}), the  cost of sustaining topological charge against the lattice flux}
+\section{System 2: The Geometric Impedance}
 \label{sec:system2_geometric_impedance}
 
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
@@ -83,9 +83,9 @@ At Quiescent Equilibrium, the substrate's footprint is evaluated on its native p
 
 The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ updates or it does not persist. For any closed trajectory, reaching a distance $d$ from the anchor costs at least $d$ steps outbound and $d$ steps to return, so $2d \le \Delta$: the maximal one-way reach is $d_{\max} = \Delta/2$, saturated by the out-and-back path.
 
-By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period.
+By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period in the embedding Euclidean metric. The lattice provides a discrete address space; the geometric measure on its embedding space is continuous.
 
-Because the $D_4$ lattice is a discrete subset of $\mathbb{R}^4$ equipped with the Euclidean metric, the entropic cost is a metric measure on the embedding space, not a lattice-point count. The defect is defined by its boundary (\Cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. In the Euclidean metric of the substrate, the ratio of circumference to diameter is the geometric constant $\frac{C}{\Delta} = \pi$. So the capacity impedance is exactly the boundary length:
+The defect is defined by its boundary (\Cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. In the Euclidean metric of the substrate, the ratio of circumference to diameter is the geometric constant $\frac{C}{\Delta} = \pi$. So the capacity impedance is exactly the boundary length:
 
 \begin{equation}
     Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}

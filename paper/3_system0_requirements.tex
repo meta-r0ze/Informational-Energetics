@@ -16,15 +16,14 @@ Subjecting the vacuum to this constraint creates the most rigorously constrained
 \label{sec:System0_vacuum_requirements}
 In this section we map the six IE pillars to the specific domain of the vacuum, resulting in three strictly non-negotiable requirements for the fundamental substrate:
 \begin{itemize}
-    \item \textbf{Finiteness:} ($\mathrm{CAP}, \mathrm{MAR}$) To prevent energetic and informational divergence.
+    \item \textbf{Finiteness:} ($\mathrm{CAP}, \mathrm{MAR}$) To prevent informational divergence.
     \item \textbf{Unitarity:} ($\mathrm{MAP}, \mathrm{PRO}$) To ensure the lossless conservation of information.
     \item \textbf{Causality:} ($\mathrm{GOV}, \mathrm{TOL}$) To enforce a well-defined temporal evolution.
 \end{itemize}
 
-\subsection{Persistence Requires \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR} via Finiteness}
+\subsection{Persistence Requires Finiteness for \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR}}
 \label{sec:finiteness}
-
-The Closure Constraint requires the vacuum to be entirely self-specifying: it cannot require infinite information to describe any local neighborhood, as that would need an external decompressor. Even with infinite storage, evaluating an infinitely complex model would take infinite time: each bit of the minimally compressed representation must be consulted to guarantee Governor containment, and any finite processing rate implies divergent latency. The system would be paralyzed before the next fluctuation arrives. The Capacity component enforces a finite state-space; the Margin component enforces finite reserves against fluctuation. Together they require the substrate to be discrete, homogeneous, and a lattice.
+The Closure Constraint requires self-specification: it cannot require an external decompressor. Information-theoretically, infinite descriptive complexity implies infinite evaluation time, any finite processing rate yields divergent latency, paralyzing the system before the next fluctuation. Capacity bounds the finite state-space; Margin bounds the reserves against variance. Geometrically, both require the substrate to be discrete, homogeneous, and a lattice.
 
 \subsubsection{Finiteness Mandates a Discrete, Homogeneous Lattice}
 \label{subsubsec:discrete_homogeneous_lattice}
@@ -35,10 +34,10 @@ Furthermore, to minimize algorithmic processing overhead, the substrate must be 
 
 A structure that is both discrete (finite information density) and homogeneous (constant structure in every direction) is by definition a \textbf{Lattice}. This conclusion specifically rules out continuous manifolds (infinite description) and arbitrary graphs (non-constant complexity).
 
-\subsection{Persistence Requires \texorpdfstring{$\mathrm{MAP}, \mathrm{PRO}$}{MAP, PRO} via Unitarity}
+\subsection{Persistence Requires Unitarity for \texorpdfstring{$\mathrm{MAP}, \mathrm{PRO}$}{MAP, PRO}}
 \label{sec:unitarity}
 
-For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. The vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. This requirement imposes four structural properties on the substrate:
+For the vacuum to persist, it must maintain a stable Map over time. This requires that information is perfectly conserved. The vacuum must be a perfectly closed and lossless information network, making Unitarity a structural necessity, corresponding to the Map and Protocol pillars. Geometrically, it imposes four structural properties on the substrate:
 
 \subsubsection{Lattice Must Be Positive Definite}
 \label{subsec:positive_definite}
@@ -78,11 +77,11 @@ For the Map to remain invariant ($Z_{\Lambda} = Z_{\Lambda^*}$), the lattice mus
 
 \textbf{Requirements:} The lattice of the vacuum must be \textbf{Positive Definite, Unimodular, Even, and Self-Dual}.
 
-\subsection{Persistence Requires \texorpdfstring{$\mathrm{GOV}, \mathrm{TOL}$}{GOV, TOL} via Causality}
+\subsection{Persistence Requires Causality for \texorpdfstring{$\mathrm{GOV}, \mathrm{TOL}$}{GOV, TOL}}
 \label{sec:causality}
-For the vacuum to persist, it must exist stably and \textit{evolve} in a well-defined manner. This creates a fundamental information-theoretic challenge: how to project the vast state space of a lattice node onto a single, linear temporal axis without ambiguity. 
+Persistence requires stable evolution. Information-theoretically, this is the Serialization Problem: projecting a finite state-space onto a discrete timeline. Geometrically, this requires a well-defined temporal axis without ambiguity.
 
-\textbf{The Serialization Problem:} From the \textbf{Capacity} component, any persistent system possesses a finite state-space dimension $N$ (the number of orthogonal basis vectors spanning the node's payload, i.e., the Hilbert-space dimension). To evolve, the system must serialize these $N$ states onto a discrete timeline of $\Delta$ slots per fundamental cycle, the \textbf{Temporal Modulus}.
+\textbf{The Serialization Problem:} From the \textbf{Capacity} component, any persistent system possesses a finite state-space dimension $N$ (the number of linearly independent, orthogonal basis vectors spanning the node's total informational payload, i.e., the Hilbert-space dimension). To evolve, the system must serialize these $N$ states onto a discrete timeline of $\Delta$ slots per fundamental cycle, the \textbf{Temporal Modulus}.
 
 \textbf{Causal Aliasing:} By the Pigeonhole Principle, if $N > \Delta$, at least one temporal slot must host multiple distinct states. This \textbf{Causal Aliasing} destroys the system's ability to maintain a well-defined serial history.
     
