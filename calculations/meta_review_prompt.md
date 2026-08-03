@@ -3,6 +3,7 @@ We are working on this paper.  Below is the general review guidelines:
 Classify every issue you find into exactly one of these categories, and lead with the category label and note: (a) does fixing it change the math or logic, (b) does fixing it change the narrative or tone, (c) is it visible to a casual reader vs. only a specialist referee.
 
 * Cohesion Optimization / Modular Consolidation: For any issues point out if it occurs because of a lack of missing [section/paragraph/sentance] solving/answering a general thing and the paper is currently compensating by smearing explanations or repetitive definition across various sections.
+* For any issue point out if the fix is actually a simplification here and an improvement elsewhere rather than always adding.
 
 * FATAL-IDEA (Map failure): The core logic or mathematics is wrong in a way that undermines the paper's central claims. Would cause rejection regardless of presentation.
 SHARE (gov failure): Should be fixed before widely sharing as an idea.  Most will interpret the spirit of what is written, but the text needs to be more exact to prevent inaccurate readings.

@@ -79,13 +79,19 @@ The geometric impedance is derived systematically from the Entropic Balance Shee
 \label{subsec:alpha_cap}
 Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (this corresponds in the standard effective field theory dual to the Wilson Loop). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
+% Establish the metric
 At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
+% Derive the maximal reach from periodicity
 The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ updates or it does not persist. For any closed trajectory, reaching a distance $d$ from the anchor costs at least $d$ steps outbound and $d$ steps to return, so $2d \le \Delta$: the maximal one-way reach is $d_{\max} = \Delta/2$, saturated by the out-and-back path.
 
-By Homogeneity the substrate admits no preferred direction, and saturating out-and-back paths exist along every orientation. The invariant envelope (the union of all closed $\Delta$-cycles anchored at the node) is therefore the disk of radius $\Delta/2$: its diameter, the separation of two saturating excursions in opposite directions ($\Delta/2 + \Delta/2$), is exactly $\Delta$, matching the temporal period in the embedding Euclidean metric. The lattice provides a discrete address space; the geometric measure on its embedding space is continuous.
+% Construct the invariant envelope
+% Bridge discrete tocontinuous
+By Homogeneity, the substrate admits no preferred direction. The invariant envelope (the union of all valid closed $\Delta$-cycles anchored at the node) is therefore an isotropic disk of radius $\Delta/2$ in the embedding Euclidean metric, making its diameter ($\Delta/2 + \Delta/2 = \Delta$) exactly match the temporal period. While the lattice provides a discrete address space, the geometric measure of this isotropic envelope on the embedding space is continuous. Any discrete anisotropy cancels in the Homogeneity-enforced average over all orientations, leaving the continuous Euclidean measure.
 
-The defect is defined by its boundary (\Cref{sec:topological_boundary}); the envelope's interior is indistinguishable from the vacuum, making the entropic cost strictly a boundary measure of the envelope re-traced once per fundamental cycle. Because the Homogeneity constraint forbids any preferred direction, this cost must be invariant under lattice orientation. The boundary measure is therefore the isotropic limit: the circumference of the round ball. In the Euclidean metric of the substrate, the ratio of circumference to diameter is the geometric constant $\frac{C}{\Delta} = \pi$. So the capacity impedance is exactly the boundary length:
+% Identify the boundary is the cost
+% Invoke isotropy to pi
+Because the defect is defined strictly by its topological boundary (\Cref{sec:topological_boundary}), and its interior being indistinguishable from the vacuum, the entropic cost is precisely the measure of this continuous perimeter. Given the established isotropic limit, this measure is exactly the circumference of a Euclidean circle, yielding the strict geometric ratio $\frac{C}{\Delta} = \pi$.
 
 \begin{equation}
     Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}
@@ -95,7 +101,7 @@ The defect is defined by its boundary (\Cref{sec:topological_boundary}); the env
 \label{subsec:alpha_map}
 The Map is the boundary constraint required to prevent internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
 
-As established in \cref{sec:topological_boundary} by the Gauss-Bonnet theorem, any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+As established in \cref{sec:topological_boundary} by the combinatorial Gauss-Bonnet theorem (where total discrete curvature equates to $2\pi\chi$), any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
     Z_{MAP} = +\chi = \AlphaInvMAPVal
 \end{equation}
@@ -180,7 +186,7 @@ The minimum resolvable signal is exactly 1 quantum of information diluted across
 The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
     \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{subsec:lembed}.
-    \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other tree topology possesses a radius $r \ge 2$, which would delocalize the interaction across multiple neighborhoods. The Star Graph ($S_\sigma$) is the unique connected $\sigma$-edge graph with radius $r=1$; any other topology delocalizes across multiple neighborhoods, violating the Orthogonality Condition. The minimal local volume is therefore $\sigma+1=6$.
+    \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other connected tree has radius $r \ge 2$, delocalizing the interaction across multiple neighborhoods and violating the Orthogonality Condition. The minimal local volume is therefore $\sigma+1=6$.
     \item \textbf{The Causal Area} ($A_{causal} = \Delta^2$): As established in \cref{sec:fundamental_resonance_filter1}, fundamental causality restricts information propagation on the discrete substrate to a local $(1+1)$D plane. Operating at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a 1D spatial horizon of length $\Delta$. The resulting spacetime resolution count is strictly $\Delta \cdot \Delta = \Delta^2$.
 \end{enumerate}
 
@@ -200,23 +206,27 @@ The Margin impedance is the reciprocal: the probability that a single quantum of
 \subsection{The Additive Baseline and the Finite Sum}
 \label{sec:additive_baseline}
 
+% JOB 1+2: Factorization and its justification
 The quiescent-equilibrium state sum factorizes exactly over the six pillars:
 \begin{equation}
 \mathcal{Z}_{\text{total}} = \prod_{i=1}^6 \mathcal{Z}_i,
 \end{equation}
 because, as established in the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six pillars operate on orthogonal, independent domains. At strict zero flux, no propagating excitations exist to mediate interactions between these domains; mutual information vanishes identically, forbidding cross-terms.
 
-In the microcanonical ensemble of a zero-flux substrate, every structural requirement (whether irreducible overhead or organizational gain) acts as an entropic constraint, converting relative configuration volumes directly into additive action. Each factor therefore takes the exact exponential form $\mathcal{Z}_i = e^{-Z_i}$, where $Z_i$ is the dimensionless geometric action exacted by that pillar. The geometric impedance is the exact additive entropy:
+% JOB 3+4: Unified currency and additive form
+As established in the Entropic Balance Sheet, the entropic action is the negative logarithm of the factorized state sum. Each pillar therefore contributes an exact exponential weight $\mathcal{Z}_i = e^{-Z_i}$, where $Z_i$ is the dimensionless geometric action exacted by that pillar. The geometric impedance is the exact additive entropy:
 \begin{equation}
     Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 Z_i.
 \end{equation}
 
+
+% JOB 5: Heterogeneity defense
 Despite differing geometric origins (boundary measure, topological invariant, or phase-space ratio), each term is a dimensionless ratio relative to the fundamental lattice unit cell, rendering all terms commensurable in the dimensionless geometric action $Z_{\text{geo}}$.
 
+% JOB 6+7+8: Completeness, signs, and transition
 Two constraints rigidly bound this finite sum, ensuring it forms a complete and minimal basis:
-
 \begin{enumerate}
-    \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. Furthermore, these six components exhaust the architectural degrees of freedom required for persistence. The structural invariants $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
+    \item \textbf{Individual Forcing and Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. These six components exhaust the architectural degrees of freedom required for persistence. The structural invariants $\mathbb{S} = \{\Delta=43, \nu=16, \sigma=5, \chi=2\}$ exhaust the independent invariants of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$; no term involves $\nu$ independently because the chiral bit-depth is fully allocated to the channel structure).}
     
     \item \textbf{Sign Classification:} The signs are fixed prior to evaluation by the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), confirmed by the failure mode analysis. Terms representing irreducible structural overhead (Capacity, Map, Toll, Margin) are strictly positive. Terms representing organizational gains (Protocol, Governor) act analogously to negative feedback in control theory, reducing net dissipation, and are therefore strictly negative.
 \end{enumerate}
@@ -228,7 +238,7 @@ The geometric impedance is therefore exactly evaluated by expanding this sum int
 Z_{\text{geo}} = \underbrace{\pi\Delta}_{\text{CAP}}
 + \,\underbrace{\chi}_{\text{MAP}}
 - \,\underbrace{\frac{1}{R_M - \sigma}}_{\text{PRO}}
-- \,\underbrace{\frac{\chi}{\Delta}}_{\text{GOV}} & \\
+- \,\underbrace{\frac{\chi}{\Delta}}_{\text{GOV}} \\
 + \,\underbrace{\frac{1 \cdot \chi \cdot (R_M - \sigma)}{N^3 \cdot \sigma \cdot R_M}}_{\text{TOL}}
 + \,\underbrace{\frac{1}{L_{\text{embed}} \cdot (\sigma + 1) \cdot \Delta^2}}_{\text{MAR}}
 \end{split}

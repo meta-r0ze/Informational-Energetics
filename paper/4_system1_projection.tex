@@ -115,7 +115,7 @@ To map the 16-channel signal onto a 4-dimensional manifold without loss or ambig
     \item \textbf{Directional Flow (Causality):} The substrate must prevent symmetric causal reflection to distinguish ``Input'' from ``Output'' and enforce the arrow of time. This requires the algebra to support orthogonal projectors ($P_L, P_R$) that split the signal into directed halves ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
 \end{enumerate}
 
-\subsubsection{The Search Space}
+\subsubsection{The Admissible Signatures}
 A 4-dimensional manifold admits two metric signatures. We test each against the requirements:
 
 \begin{itemize}
@@ -188,7 +188,7 @@ Note: $\sigma=5$ represents the minimal spatial and boundary embedding dimension
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
 
-For a system to reliably track its own history (Causality) without losing information (Unitarity), its fundamental clock cycle must map perfectly onto a closed, reversible mathematical loop. If the loop allows multiple distinct histories to produce the exact same current state, information is destroyed. We must therefore find a geometric period ($\Delta$) that guarantees a unique, non-degenerate causal history.
+For a system to reliably track its own history (Causality) without losing information (Unitarity), its fundamental clock cycle must map perfectly onto a closed, reversible mathematical loop. If the loop allows multiple distinct histories to produce the exact same current state, information is destroyed. The geometric period ($\Delta$) is therefore strictly constrained to structures that guarantees a unique, non-degenerate causal history.
 
 To derive the fundamental clocking period ($\Delta$) of the lattice's causal cycle we apply three independent constraints to uniquely isolate the substrate's resonant cycle:
 
@@ -213,7 +213,7 @@ For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its
 
 \paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that satisfy these requirements:
 \begin{enumerate}
-    \item[\textbf{(M1)}] \emph{Class Group Torsor (Solving R3).} If the causal loop can be rewired in multiple ways without changing its local appearance, the system cannot tell which history it followed, and the Map collapses. Algebraically, if the class number $h(D_K) > 1$, the causal loop admits multiple non-isomorphic global topologies that share identical local state data. With no external perspective available to distinguish which global loop it occupies, this ambiguity destroys Unitarity. Algebraically, such reroutings are the non-principal ideal classes: the isomorphism classes of complex tori with endomorphism ring $\mathcal{O}$ form a torsor under the ideal class group $\operatorname{Pic}(\mathcal{O})$, whose total count is the class number $h(\mathcal{O})$. Each non-principal class creates a distinct torus with identical local data, so the class number must strictly be one: $h(D_K) = 1$.
+    \item[\textbf{(M1)}] \emph{Class Number (Solving R3).} If the causal loop can be rewired in multiple ways without changing its local appearance, the system cannot tell which history it followed, and the Map collapses. The number of distinct global rewirings that share identical local data is governed by the \textbf{class number} $h(D_K)$. If $h(D_K) > 1$, multiple non-isomorphic causal loops exist with the same local signature, destroying Unitarity by Causal Degeneracy. In the geometry of complex tori, each distinct rewiring corresponds to a non-principal ideal class; the total number of such classes is exactly $h(D_K)$. The uniqueness constraint therefore requires $h(D_K) = 1$.
 
     \item[\textbf{(M2)}] \emph{Baker--Heegner--Stark Theorem (Solving R1 \& R2).} The complex structure of the causal torus is governed by an imaginary quadratic field. By the Baker--Heegner--Stark theorem, there are exactly nine such fields whose maximal order has trivial class group ($h(D_K)=1$). Their absolute fundamental discriminants (and thus our available temporal periods) are strictly limited to $|D_K| \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
 \end{enumerate}

@@ -55,9 +55,7 @@ IE extracts the common logical skeleton underlying these independent theorems in
     The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
     \textit{Convergent Evidence (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
-    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.}
-    The irreducible energy cost of state transitions and information erasure. (Processing Latency). 
-    \textit{Convergent Evidence (Landauer's Principle \cite{landauer_irreversibility_1961}):} Any irreversible logical operation, such as erasing a bit, must dissipate at least $k_B T \ln 2$ of energy to the environment. State transitions carry an inescapable thermodynamic toll.
+    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.} Any irreversible logical operation, such as erasing a bit of structural information, necessitates a strictly compensatory increase in environmental Shannon entropy (macroscopically manifesting as the $k_BT \ln 2$ bound). State transitions carry an inescapable thermodynamic toll.
    
     \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
     The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
@@ -114,7 +112,7 @@ To quantify persistence, we distinguish between dissipation and coordination: st
 
 In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. 
 
-By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. In standard statistical mechanics, independent structural degrees of freedom yield a strictly factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$). Because the entropic action is strictly proportional to the negative logarithm of the state sum ($S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$), this exact factorization mandates a strictly additive action across orthogonal channels. The Net Entropic Impedance ($Z_{IE}$) is therefore the algebraic sum of these contributions:
+By the principles of algorithmic information theory, independent channels combine additively: non-linear cross-terms represent mutual information, which vanishes when channels are orthogonal. In standard statistical mechanics, independent structural degrees of freedom yield a strictly factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$). Because the entropic action is strictly proportional to the negative logarithm of the state sum ($S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$), this exact factorization mandates a strictly additive action across orthogonal channels. Multiplicativity would require cross-domain couplings; non-trivial measure would require a preferred direction. Both are forbidden at zero flux, so the linear form is unique. The Net Entropic Impedance ($Z_{IE}$) is therefore the algebraic sum of these contributions:
 
 \begin{equation}
 \label{eq:entropic_balance}
