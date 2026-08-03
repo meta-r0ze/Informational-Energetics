@@ -229,21 +229,28 @@ To satisfy Causality we apply the constraint \linebreak $\Delta \ge N = 32$ (est
 \subsubsection{Relational Time and Temporal Degeneracy}
 \label{sec:relational_time_constraint}
 
-By the Closure Constraint, the vacuum possesses no external reference clock. Time must therefore emerge relationally, defined exclusively by internal state transitions. Furthermore, by Finiteness, the node cannot allocate channel capacity to an internal memory counter to track elapsed empty intervals; by Homogeneity, spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
+% Establish the premises that force relational time: no external clock (Closure), no internal memory counter (Finiteness),  no surrogate clocks (Homogeneity).
+By the Closure Constraint, the vacuum possesses no external reference clock. Time must therefore emerge relationally, defined exclusively by internal state transitions. By Finiteness, the node cannot allocate channel capacity to an internal memory counter to track elapsed empty intervals; by Homogeneity, spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
 
-In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. Without an external temporal metric or internal memory counter, any sequence of $k \ge 2$ consecutive inert intervals creates a temporal degeneracy: the node cannot distinguish one empty step from two, rendering the temporal evolution non-injective. This manifests as Causal Aliasing and destroys the system's ability to maintain a well-defined serial history.
+% Define the operational composition of a fundamental cycle: N active transitions that mark time, and M = Δ - N inert intervals that contain no temporal markers.
+In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. An inert interval contains no state transition; by the definition of relational time, it contains no temporal marker.
 
-For the causal history to remain uniquely reconstructable (the fundamental Unitarity requirement), this degeneracy must be structurally forbidden. The system must interleave its $N$ active transitions such that consecutive inert intervals are strictly avoided ($k_{\text{max}} = 1$).
+% Identify the threat to Unitarity: consecutive inert intervals create temporal degeneracy because the system cannot distinguish their length, rendering the causal history non-injective.
+A run of $k \ge 2$ consecutive inert intervals therefore contains exactly one temporal signature (the active transition at each end), but spans $k$ indistinguishable substeps. The temporal mapping is
+non-injective: the system cannot reconstruct whether one, two, or $k$ empty steps occurred, violating the Unitarity requirement that causal history be uniquely invertible.
 
-By the Pigeonhole Principle, distributing $M$ inert intervals around a periodic loop without forcing adjacent pairs is possible if and only if the number of active transitions meets or exceeds the number of inert intervals ($N \ge M$). This yields the strict relational bound:
+% State the structural requirement: to preserve injective causal history, consecutive inert intervals must be structurally forbidden.
+For the causal history to remain uniquely reconstructable, consecutive inert intervals must be structurally forbidden ($k_{\max} = 1$).
 
+% Derive the mathematical bound from the structural requirement using the pigeonhole principle on a periodic loop.
+On a periodic loop, distributing $M$ inert intervals with no adjacent pairs requires at least as many active transitions as inert intervals to serve as separators. By the pigeonhole principle:
 \begin{equation}
-    N \ge (\Delta - N) \implies \Delta \le 2N = 64
+    N \ge M \implies N \ge (\Delta - N) \implies \Delta \le 2N = 64
 \end{equation}
+This bound is necessary and sufficient for unitary reconstructability under relational time.
 
-This bound is the necessary and sufficient condition for unitary reconstructability: any adjacent inert intervals ($k \ge 2$) would render the temporal mapping non-injective.
-
-\textbf{Result:} With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
+% Results
+With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
 
 \subsection{Manifold Resolution}
 \label{subsec:manifold_resolution}

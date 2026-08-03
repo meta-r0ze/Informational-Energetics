@@ -23,23 +23,10 @@ Among all configurations capable of encoding a given structural complexity, only
 % Contextualize open/closed systems and scope to Quiescent Equilibrium.
 Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it. In the closed-system limit of \textbf{Quiescent Equilibrium}, no net energy enters or leaves the system, $Z_{IE}$ is constant, and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We bound the scope of this paper to establishing this quiescent baseline, leaving the dynamic evolution of persistent systems to future work.
 
-
-\subsection{The Universal Architecture: Derivation from First Principles}
-\label{sec:PillarDerivation}
-
-To persist, any system must implement a specific architecture comprising four pillars for information management and two pillars for the thermodynamic overhead of operating on its substrate. To derive this architecture, we identify the minimal logical requirements for any distinguishable structure to resist entropic decay.
-
-\subsubsection{Control-Theoretic Precedents}
-Control theory, developed empirically from servomechanisms, identified four functional components\cite{dorf_modern_2017}: the Plant (the system to be controlled), the Sensor (measuring the output), the Controller (computing the correction), and the Actuator (implementing the correction), with the desired behavior specified by a Reference Signal (Setpoint).
-
-For \textit{robust} operation under uncertainty, control systems must additionally implement gain and phase margins to prevent instability from perturbations \cite{astrom_feedback_2008}. These margins are typically treated as tunable parameters rather than structural requirements.
-
-Implicit in any implementations is the irreducible energetic and temporal cost of state transitions (Landauer's Principle \cite{landauer_irreversibility_1961}; Margolus-Levitin limit \cite{margolus_maximum_1998}). This ``Toll'' is typically treated as a constraint rather than a required component.
-
-\subsubsection{The Universal Architecture of Persistence}
+\subsection{The Universal Architecture of Persistence}
 \label{sec:universal_architecture_of_persistence}
-IE extracts the common logical skeleton underlying these independent theorems and rederives them as substrate-universal architectural requirements from information theory and thermodynamics. These six
-\textbf{existential pillars} form the complete, minimal set required for persistence. Performance comes secondary to persistence; thermodynamic and information-theoretic imperatives are elevated, shifting the primary analytical focus from performance optimization to persistence maintenance. The pillars represent the synthesis of isolated foundational theorems discovered across independent disciplines.
+To persist, any system must implement a specific architecture. IE derives this architecture from information-theoretic and thermodynamic necessity: six \textbf{existential pillars} that constitute the
+complete, minimal set required for persistence. Performance is secondary; the derivation proceeds from persistence requirements, not engineering optimization.
 
 \begin{enumerate}
     \item \textbf{Capacity ($CAP$):} \textit{The Vessel.} 
@@ -53,25 +40,37 @@ IE extracts the common logical skeleton underlying these independent theorems an
 
     \item \textbf{Protocol ($PRO$):} \textit{The Interface.}
     The communicative glue regulating information flow between the Capacity and the Map. It ensures internal coherence, standardizes interfaces, and minimizes signal decay across the system's internal boundaries. (The Feedback Network/Sensor Path). 
-    \textit{Convergent Evidence (Shannon's Source-Channel Separation Theorem \cite{shannon_communication_1949}):} Shannon established that source coding and channel coding are structurally distinct functions. Systemic coherence demands an independent Protocol layer that standardizes interfaces across internal boundaries under finite channel capacity and latency.
+    \textit{Convergent Evidence (Shannon's Source-Channel Separation and Channel Capacity \cite{shannon_communication_1949}):} Shannon established that source coding and channel coding are structurally distinct functions, and that reliable transmission requires matching the information source to the channel capacity. Systemic coherence demands an independent Protocol layer that standardizes interfaces across internal boundaries under finite capacity and latency.
     
     \item \textbf{Governor ($GOV$):} \textit{The Constraint.}
     The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
     \textit{Convergent Evidence (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
-    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.} Any irreversible logical operation, such as erasing a bit of structural information, necessitates a strictly compensatory increase in environmental Shannon entropy (macroscopically manifesting as the $k_BT \ln 2$ bound). State transitions carry an inescapable thermodynamic toll.
+    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.} State transitions carry an irreducible energetic cost (Landauer's principle) and an irreducible temporal cost (Margolus-Levitin limit). Any irreversible logical operation, such as erasing a bit of structural information, necessitates a strictly compensatory increase in environmental Shannon entropy (the $k_BT \ln 2$ bound).
+    \textit{Convergent Evidence (Landauer's Principle and Margolus-Levitin Limit \cite{landauer_irreversibility_1961,margolus_maximum_1998}):} These bounds make Toll a structural requirement, not an external constraint.
    
     \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
     The structural and energetic reserves held to absorb stochastic shocks. It defines the system's `Safe Operating Area,' providing the buffer required to survive environmental variance without terminal failure. (The gain and phase margin). 
     \textit{Convergent Evidence (Nyquist-Bode Stability Margins
-    \cite{nyquist_regeneration_1932}):} A system operating at theoretical criticality has zero tolerance for variance. Nyquist established that strict gain and phase margins away from the critical threshold are necessary for persistence; without them, the first stochastic fluctuation causes terminal divergence.
+    \cite{nyquist_regeneration_1932}):} A system operating at theoretical criticality has zero tolerance for variance. Nyquist established that strict gain and phase margins away from the critical threshold are necessary for persistence; without them, the first stochastic fluctuation causes terminal divergence. These margins are the linear-control manifestation of a general requirement: persistent systems must maintain structural tolerance away from phase boundaries.
 \end{enumerate}
 
-Every system operates upon a \textbf{Substrate}: the medium imposing the immutable limits (bandwidth, latency, noise floor) within which the six pillars must function.
+Every system operates upon a \textbf{Substrate}: the medium imposing immutable limits (bandwidth, latency, noise floor) within which the six pillars function.
 
-IE reframes control systems as structures that persist. An open-loop system merely ``does'': it follows a predetermined path regardless of environment. A closed-loop system ``remains'': it possesses the structural capacity to maintain coherence against entropic pressure. This persistence is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
+An open-loop system ``does'': it follows a predetermined path. A closed-loop system ``remains'': it  maintains coherence against entropic pressure. This is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
 
-IE describes the architecture of persistent systems but does not explain the transition from disorder to structure. The mapping of IE to specific physical domains is inherently adaptive. While the present work validates this framework on the vacuum substrate, all systems that persist are specific solutions to the same universal architecture.
+IE describes the architecture of persistence but does not explain the transition from disorder to structure.
+
+% Describe how CT and IE are different
+% Acknowledge the 4 components as convergent evidence;
+% Explain why manufacturing history limited CT to 4+2 tunables rather than 6 existential pillars and link them to the IE pillars.
+% Frame CT as one physical instantiation that IE subsumes.
+\subsubsection{Control Theory}
+\label{sec:control_theory}
+Control theory optimizes the performance of existing systems; IE derives the minimal architecture required for existence itself. Developed from servomechanisms, control theory identified four primary functional components \cite{dorf_modern_2017} (Plant, Sensor, Controller, and Actuator) along with a Reference Signal, while treating stability margins \cite{astrom_feedback_2008} and transition costs \cite{landauer_irreversibility_1961} as operational constraints or adjustable tuning parameters.
+
+This split reflects a foundational assumption: classical control theory assumes the system already exists. Its mandate is performance tracking and disturbance rejection, taking the physical substrate and power supply as given. IE shifts the baseline from ``How does a pre-existing system track a setpoint?'' to ``What architecture is required for a system to exist at all?'' The six pillars are not a renaming of control components; rather, physical servomechanisms provide compelling convergent evidence—they successfully persist because they map onto these exact bounds (Plant/Actuator $\to$ Capacity, Reference Signal $\to$ Map, Sensor/Feedback $\to$ Protocol, Controller $\to$ Governor). By recognizing Toll and Margin as structural pillars rather than background overhead or tuning knobs, IE generalizes this architecture to any persistent system, subsuming control theory as a domain-specific physical instantiation.
+
 
 \subsection{Necessity Argument: The Failure Modes}
 \label{sec:proof_of_necessity}
@@ -133,5 +132,7 @@ is strictly additive. Multiplicativity would require cross-domain couplings and 
 
 % The primary job of this is to be an intuitive example that most people can get. We trade completeness for readability; experts may cringe at the compression, but the gist is correct and that is okay.
 \subsection{Example: Biological Cell (Not a Validation)}
+From living cells and neural networks to sprawling cities and economic ecologies, complex adaptive systems research has historically yielded rich qualitative taxonomies. IE introduces a falsifiable paradigm shift: by applying the exact constraints of the six persistence  pillars, open-ended qualitative observation is replaced by strict structural requirements. Any persistent system (biological, ecological, institutional, or physical) must satisfy the same architectural bounds.
+
 In a biological cell (an open, noisy system where architectural bounds are tangled with environmental coupling) the six pillars are recognizable but intertwined: Capacity as physical structure and 
 metabolic hardware; Map as the genome; Protocol as the genetic code and signaling machinery; Governor as apoptosis and cell-cycle checkpoints; Toll as the thermodynamic cost of proofreading and state resetting; Margin as ATP reserves and stress-response buffers. This mapping is qualitative; a cell's openness prevents the exact accounting required to test architectural bounds, which is why the vacuum baseline is necessary.
