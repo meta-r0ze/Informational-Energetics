@@ -1,41 +1,23 @@
 \section{System 2: The Geometric Impedance}
 \label{sec:system2_geometric_impedance}
 
-\CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
-
 \CatchFileBetweenTags{\AlphaInvCAPVal}{constants.tex}{AlphaInvCAPVal}
 \CatchFileBetweenTags{\AlphaInvMAPVal}{constants.tex}{AlphaInvMAPVal}
 \CatchFileBetweenTags{\AlphaInvPROVal}{constants.tex}{AlphaInvPROVal}
 \CatchFileBetweenTags{\AlphaInvGOVVal}{constants.tex}{AlphaInvGOVVal}
 \CatchFileBetweenTags{\AlphaInvTOLVal}{constants.tex}{AlphaInvTOLVal}
 \CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
+\CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-\CatchFileBetweenTags{\AlphaInvCodataExperimentalVal}{constants.tex}{AlphaInvCodataExperimentalVal}
-\CatchFileBetweenTags{\AlphaInvCodataSigma}{constants.tex}{AlphaInvCodataSigma}
+Having isolated the unique substrate, we must test whether it can sustain localized persistent structures. A topological defect concentrates information flux against the homogeneous lattice; without an entropic cost accounting, the substrate would dissolve any localized distinction.  We
+therefore quantify the minimum geometric action required to maintain one unit of topological charge ($Q_{top}=\chi/2=1$) through a single fundamental cycle ($\tau=1$).
 
-\CatchFileBetweenTags{\AlphaInvMorelExperimentalVal}{constants.tex}{AlphaInvMorelExperimentalVal}
-\CatchFileBetweenTags{\AlphaInvMorelSigma}{constants.tex}{AlphaInvMorelSigma}
-
-\CatchFileBetweenTags{\AlphaInvParkerExperimentalVal}{constants.tex}{AlphaInvParkerExperimentalVal}
-\CatchFileBetweenTags{\AlphaInvParkerSigma}{constants.tex}{AlphaInvParkerSigma}
-
-\CatchFileBetweenTags{\AlphaInvFanExperimentalVal}{constants.tex}{AlphaInvFanExperimentalVal}
-\CatchFileBetweenTags{\AlphaInvFanSigma}{constants.tex}{AlphaInvFanSigma}
-
-\CatchFileBetweenTags{\VonKlitzingVal}{constants.tex}{VonKlitzingVal}
-\CatchFileBetweenTags{\VonKlitzingRkExperimentalVal}{constants.tex}{VonKlitzingRkExperimentalVal}
-\CatchFileBetweenTags{\VonKlitzingRkSigma}{constants.tex}{VonKlitzingRkSigma}
-
-At the substrate's fundamental resolution floor with zero external flux, the Entropic Action reduces to a static, discrete sum over a single fundamental causal cycle ($\tau=1$). For a persistent topological defect, this counts the minimum elementary operations (lattice updates, link traversals, symmetry transformations) required to sustain its configuration against background stochastic fluctuations. Because the topological boundary $\chi=2$ enforces a strict binary partition of information flux, charge emerges as a topological invariant rather than a postulated particle property.
-
-We define the \textbf{geometric impedance} ($Z_{geo}$) as this dimensionless entropic action per unit of topological charge ($Q_{top} = \chi/2 = 1$):
+Because the boundary $\chi=2$ enforces a strict binary partition of information flux, charge is a topological invariant.  The \textbf{geometric impedance} is the resulting dimensionless entropic action per unit charge:
 \begin{equation}
     Z_{geo} = \frac{S_{\Phi,\text{defect}}}{Q_{top}}
 \end{equation}
 
-Because the vacuum is the ultimate closed system, this purely information-theoretic resistance is the only available measure of coupling strength. In standard Effective Field Theory, this dimensionless coupling is observed empirically as the fine-structure constant ($\alpha \approx 1/137$). Within $E_8$-Persistence theory, standard QFT is the analytic continuum dual: $Z_{geo}$ acts as the static, infrared geometric baseline $\alpha^{-1}(0) \equiv Z_{geo}$, while standard renormalization group running governs dynamic scale variation around this fixed discrete bound.
-
-The geometric impedance is derived systematically from the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}).
+At quiescent equilibrium the six pillars operate on orthogonal domains, so $Z_{geo}$ is the exact additive sum of their individual geometric costs (\cref{sec:entropic_balance_sheet}).
 
 % ============================================================
 % CAP must satisfy all of the following:
@@ -97,9 +79,10 @@ Because the defect is defined strictly by its topological boundary (\Cref{sec:to
     Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}
 \end{equation}
 
+
 \subsection{Topological Boundary (Map)}
 \label{subsec:alpha_map}
-The Map is the boundary constraint required to prevent internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
+The Map is the boundary constraint preventing internal state data from dissolving into the background substrate. Without this topological cost, the substrate could not distinguish the system's inside from its outside, causing information to leak into the unquantized background.
 
 As established in \cref{sec:topological_boundary} by the combinatorial Gauss-Bonnet theorem (where total discrete curvature equates to $2\pi\chi$), any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
@@ -110,7 +93,7 @@ Because $\chi$, the Euler characteristic, is a pure topological invariant, it is
 
 \subsection{Alignment Efficiency (Protocol)}
 \label{subsec:alpha_pro}
-The Protocol mediates the flow of phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) channels. Without this alignment cost, these channels would completely decouple, fragmenting the vacuum into isolated, unrelated subspaces.
+The Protocol is the alignment cost mediating phase information across the orthogonal spacetime (Sector A) and internal symmetry (Sector B) channels. Without it, these channels decouple, fragmenting the vacuum into isolated subspaces.
 
 The manifold resolution $R_M = D\Delta$ (\Cref{subsec:manifold_resolution}) is the total available coordination capacity, the maximum distinct spacetime addresses per fundamental cycle. A localized defect consumes exactly $\sigma = 5$ degrees of freedom to define its geometric embedding, leaving residual capacity:
 
@@ -118,7 +101,7 @@ The manifold resolution $R_M = D\Delta$ (\Cref{subsec:manifold_resolution}) is t
     C_{res} = R_M - \sigma = (4 \cdot 43) - 5 = 167
 \end{equation}
 
-Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}):
+Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport, and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}):
 \begin{equation}
     Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \num{\AlphaInvPROVal}
 \end{equation}
@@ -127,7 +110,7 @@ The linear form is mandated by statelessness: the Protocol coordinates instantan
 
 \subsection{Stabilizing Potential (Governor)}
 \label{subsec:alpha_gov}
-The Governor prevents runaway entropic divergence by constraining the resonant excitation across the temporal cycle. Without this stabilizing cost, local phase excitations on the causal loop would undergo unbounded, runaway feedback, overflowing the local node capacity.
+The Governor is the stabilizing constraint preventing runaway entropic divergence across the temporal cycle. Without it, local phase excitations undergo unbounded feedback, overflowing node capacity.
  
 To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
 
@@ -139,7 +122,7 @@ Because the loop is closed and periodic, it possesses no endpoint boundaries (no
 
 \subsection{Entropic Transition (Toll)}
 \label{subsec:alpha_tol}
-The Toll is the entropic cost of executing a state transition. Without this temporal cost, logical transitions would execute without sequential causal history. The Toll is the ratio of the minimal valid configuration space to the maximal unconstrained configuration space:
+The Toll is the entropic cost of executing a state transition; without it, causal history collapses. Geometrically, it is the probability of selecting a valid transition from the unconstrained phase space:
 
 \begin{equation}
     Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}}.
@@ -152,7 +135,7 @@ The numerator, the minimal state transition, is defined by three geometric filte
     \item \textbf{Coordinate Non-Degeneracy ($R_M - \sigma$):} The transition target cannot alias with the interaction's own geometric embedding, leaving the orthogonal residual $(R_M - \sigma)$ valid coordinates.
 \end{enumerate}
 
-These filters are independently necessary and jointly sufficient; no fourth filter is available because the $E_8\to D_4\oplus D_4$ projection exhausts the node's orthogonal geometric generators. Because identity, topological flux, and spatial addresses govern strictly orthogonal configuration spaces, their independent valid state counts combine multiplicatively. The minimal valid phase space is therefore exactly:
+These three filters are independently necessary and jointly sufficient; no fourth filter is available because the $E_8\to D_4\oplus D_4$ projection exhausts the node's orthogonal geometric generators. Because identity (Sector B), topological flux (Sector A), and spatial addresses ($\chi$) govern strictly orthogonal configuration spaces, their independent valid state counts combine multiplicatively. The minimal valid phase space is therefore exactly:
 
 \begin{equation}
     \Omega_{valid} = 1 \cdot \chi \cdot (R_M - \sigma).
@@ -177,9 +160,10 @@ The Toll is therefore the ratio of minimal valid to maximal unconstrained phase 
 \end{split}
 \end{equation}
 
+
 \subsection{Resolution Floor (Margin)}
 \label{subsec:alpha_mar}
-At the substrate level, the safety buffer manifests as an information-theoretic distinguishability threshold: the minimum signal amplitude required to be resolved above the geometric noise floor, analogous to the gain margin that prevents control-loop instability. Below this floor, structured information dissolves into ambient substrate fluctuations.
+At the substrate level, the Margin manifests as an resolution threshold: the minimum signal amplitude required to be resolved above the geometric noise floor. Below this floor, structured information dissolves into ambient substrate fluctuations.
 
 The minimum resolvable signal is exactly 1 quantum of information diluted across the \emph{minimal} number of distinct configurations ($V_{config}$) required to specify a localized defect. Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, independent specification domains combine multiplicatively (Cartesian product).
 
@@ -203,6 +187,7 @@ The Margin impedance is the reciprocal: the probability that a single quantum of
 \end{split}
 \end{equation}
 
+
 \subsection{The Additive Baseline and the Finite Sum}
 \label{sec:additive_baseline}
 
@@ -218,7 +203,6 @@ As established in the Entropic Balance Sheet, the entropic action is the negativ
 \begin{equation}
     Z_{\text{geo}} = -\ln \mathcal{Z}_{\text{total}} = \sum_{i=1}^6 Z_i.
 \end{equation}
-
 
 % JOB 5: Heterogeneity defense
 Despite differing geometric origins (boundary measure, topological invariant, or phase-space ratio), each term is a dimensionless ratio relative to the fundamental lattice unit cell, rendering all terms commensurable in the dimensionless geometric action $Z_{\text{geo}}$.
@@ -245,101 +229,11 @@ Z_{\text{geo}} = \underbrace{\pi\Delta}_{\text{CAP}}
 \end{equation}
 
 
-\subsection{Numerical Validation}
+\subsection{Numerical Evaluation}
 \label{subsec:alpha_numerical_validation}
 Summing the geometric components:
 \begin{equation}
     Z_{\text{geo}} = \num{\AlphaInvVal}\dots
 \end{equation}
 
-Because $\pi$ is the sole non-integer constant, all other terms being exact rational combinations of the structural invariants, the precision of the prediction is limited only by the evaluation of $\pi$.
-
-Recent experimental values (\Cref{tab:alpha_comparison}) do not form a simple consensus and reflect ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}(0)$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}(0)$ via the electron anomalous magnetic moment ($g-2$). That these independent measurements are mutually exclusive is an open problem in standard metrology. CODATA (2022) synthesizes these conflicting inputs and its uncertainty reflects this tension.
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{lcc}
-\toprule
-\textbf{Source} & \textbf{Value ($\alpha^{-1}(0)$)} & \textbf{Dev.} \\
-\midrule
-Morel  (2020) & \AlphaInvMorelExperimentalVal & $\AlphaInvMorelSigma \sigma$ \\
-Fan (2023) & \AlphaInvFanExperimentalVal & $\AlphaInvFanSigma \sigma$\\
-Parker (2018) & \AlphaInvParkerExperimentalVal & $\AlphaInvParkerSigma \sigma$ \\
-CODATA (2022) & \AlphaInvCodataExperimentalVal & $\AlphaInvCodataSigma \sigma$ \\
-\bottomrule
-\end{tabular}
-\caption{Comparison of the $E_8$-Persistence Theory dimensionless $Z_{geo}$ derivation against experimental values. Deviation is computed as $|Z_{geo} - \alpha^{-1}(0)_{exp}| / \sigma_{exp}$.}
-\label{tab:alpha_comparison}
-\end{table}
-
-\paragraph{The QED Extraction Tension and the Quantization Gap:}
-Standard QED is the analytic continuum dual to this discrete architecture. Dimensional regularization successfully approximates the substrate at low loop orders by treating spacetime as a continuous manifold with infinite resolution. However, because the substrate possesses finite channel capacity ($\nu=16$ per sector, $N=32$ total), the continuum approximation must eventually saturate the discrete hardware.
-
-The breakdown occurs when the combinatorial complexity of loop diagrams reaches parity with the substrate's state-space budget. The number of QED diagrams grows factorially with loop order; at the 5-loop order of precision, the electron anomalous magnetic moment calculation requires evaluating $12{,}672$ distinct diagrams. The available combinatorial state space of the substrate scales as $\nu^n = 16^n$, where $n$ is the sequence length of interaction vertices. At $n=4$ to $n=5$ (corresponding to 4- and 5-loop vertex complexity), diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65{,}536$), marking the threshold where the continuous expansion encounters the substrate's information-theoretic resolution limit. We term this $\sim 3\times 10^{-10}$ scale the \textbf{Quantization Gap}.
-
-This resonates with Freeman Dyson's 1952 observation\cite{dyson_divergence_1952} that the QED perturbative series is asymptotic rather than convergent. Our framework provides a structural mechanism for this behavior: the continuum dual does not fail because of a mathematical pathology, but because it exhausts the finite Shannon capacity of the underlying geometric hardware.
-
-Morel (2020) measures $\alpha$ kinematically, a direct macroscopic probe of the geometric impedance that does not rely on quantum loop corrections. Fan (2023), by contrast, extracts $\alpha$ from a 10th-order (5-loop) QED perturbative expansion, placing it precisely in the regime where the continuum dual approaches capacity saturation. The $\AlphaInvFanSigma\sigma$ deviation observed in Fan (2023) is consistent with the expected onset of the Quantization Gap, though it does not alone constitute confirmation.
-
-\textbf{Falsification criterion:} If pure kinematic measurements continue to converge to $\alpha^{-1}(0) \approx \num{\AlphaInvVal}$ while 6+ loop QED extractions systematically diverge from this value, the Quantization Gap is confirmed. Conversely, convergence of both methods to a single identical value differing from our geometric prediction by $>5\sigma$ would decisively falsify the $E_8$-Persistence theory.
-
-\paragraph{Dimensional Correspondence.}
-The substrate yields strictly dimensionless geometric bounds. The following sections derive three corollaries of the geometric impedance $Z_{geo}$: charge emerges as quantized information flux through a topological boundary; macroscopic resistance is quantized by discrete channel count; and the substrate enforces a hard capacity ceiling which exceeding resolves excess flux into particle-antiparticle pairs. To validate these bounds against experiment, we translate them into macroscopic observables using the standard dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$) that observers employ to measure flux. These are correspondence identities; they do not derive dimensional constants from the lattice.
-
-\subsection{The Geometric Origin of Elementary Charge}
-Having derived the strictly dimensionless geometric impedance $Z_{geo}$, we now translate this structural limit into macroscopic physical observables. On the $E_8$ substrate, $Z_{geo}$ acts as a strict flow constraint: it restricts the amount of information flux that can propagate through a $\chi=2$ topological boundary without violating structural coherence. In standard macroscopic physics, this emergent quantum of flux is observed as the elementary charge $e$. 
-
-Rather than treating charge as a postulated particle property, its fundamental magnitude is strictly bounded by this geometric limit. The $E_8$ substrate derives only a dimensionless capacity limit; the dimensional constants $\hbar$, $c$, and $\epsilon_0$ are not intrinsic to the lattice. They constitute the standard dimensional scaffolding that macroscopic observers use to measure flux. To validate the dimensionless geometric bound against experiment, we apply the empirical dimensional isomorphism, mapping $Z_{geo}$ to the inverse fine-structure coupling. In SI units this yields:
-
-\begin{equation}
-    e = \sqrt{\frac{4\pi\epsilon_0\hbar c}{Z_{geo}}}
-\end{equation}
-
-The square-root form emerges because entropic action scales quadratically with information flux, while the geometric $4\pi$ factor arises naturally from the isotropic boundary measure of the spherical topological defect ($S^2$, $\chi=2$) enclosing the flux. This established capacity limit directly dictates the single-channel macroscopic resistance and the vacuum breakdown thresholds derived in the following sections.
-
-\subsection{Macroscopic Channel Resistance}
-A geometric impedance should manifest as a measurable macroscopic transmission resistance. We can derive the theoretical resistance of a single discrete transmission channel on the $E_8$ substrate using three structural facts:
-
-\begin{enumerate}
-    \item \textbf{Single Channel Limit:} The vacuum substrate supports discrete transmission channels.
-    
-    \item \textbf{Spinor Double Cover:} Because the carrier states are spinors (Section \ref{sec:chiralcapacity}), completing a closed circuit to return to the initial phase requires traversing the manifold twice ($720^\circ$). The measured resistance of a single loop is therefore the vacuum impedance shared across two windings: $R_{channel} = Z_{channel}/2$.
-    
-    \item \textbf{Geometric Coupling:} The framework derives the dimensionless scaling between a single internal channel and the bulk medium as $Z_{channel} / Z_0 = \alpha_{geo}^{-1}$, where $Z_0$ is the Characteristic Impedance of Free Space.
-\end{enumerate}
-
-Combining these yields a strict geometric prediction for the resistance of a single fundamental channel: $R_{channel} = \frac{Z_0}{2} \cdot \alpha^{-1}_{geo}$. Evaluating this substrate prediction in SI units via the standard macroscopic impedance isomorphism ($Z_0 = \mu_0 c$) yields:
-\begin{equation}
-    R_{channel} = \frac{Z_0}{2} \cdot \alpha^{-1}_{geo} \approx \mathbf{\VonKlitzingVal}
-\end{equation}
-
-\textbf{Verification via the Von Klitzing Constant ($R_K$):}
-Standard electromagnetism defines the Von Klitzing constant algebraically as $R_K = Z_0 / 2\alpha$. The Quantum Hall Effect measures this exact single-channel resistance with parts-per-billion precision, independently of high-energy $\alpha^{-1}$ extractions:
-\begin{itemize}
-    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingRkExperimentalVal
-    \item \textbf{Precision:} The $E_8$-Persistence geometric prediction matches the observed Quantum Hall resistance to within \VonKlitzingRkSigma $\sigma$.
-\end{itemize}
-
-\textit{Physical consequence: The flatness of QHE plateaus.} $R = R_{channel}/n$, regardless of impurities, reflects the lattice's discrete bit-depth: resistance is quantized by channel count, offering a structural origin for the topological protection traditionally attributed to electron wavefunction topology (Chern numbers) \cite{thouless_quantized_1982, kohmoto_topological_1985}.
-
-\CatchFileBetweenTags{\PlanckChargeAttenuationVal}{constants.tex}{PlanckChargeAttenuationVal}
-\CatchFileBetweenTags{\PlanckChargeRatioPercentageVal}{constants.tex}{PlanckChargeRatioPercentageVal}
-
-\subsection{The Geometric Load Limit}
-The geometric impedance $Z_{geo}$ fundamentally enforces a safety margin between an operating signal and substrate breakdown. If the substrate can theoretically support a maximum unitary flux density ($q_{max}$), the lattice impedance attenuates the stable, propagating flux ($q_{operating}$) by the square root of the impedance:
-\begin{equation}
-    q_{operating} = \frac{q_{max}}{\sqrt{Z_{geo}}} \approx \frac{q_{max}}{\num{\PlanckChargeAttenuationVal}}
-\end{equation}
-
-\textbf{Verification via the Planck Charge Ratio:}
-In standard physics, the absolute capacity of the vacuum is represented by the Planck charge ($q_P$), and the fundamental operating flux is the elementary charge ($e$). The empirical ratio $e/q_P \approx 0.085$ has historically lacked a structural explanation. In the $E_8$-Persistence framework, this attenuation is a structural necessity preventing immediate vacuum breakdown.
-
-\subsubsection{\textit{Physical consequence: Safe Load Limit.}} 
-The electron represents the \textbf{safe operating limit} of the vacuum. While the substrate can theoretically support a unitary charge ($q_P$), the geometric impedance restricts propagating charge to $\approx \num{\PlanckChargeRatioPercentageVal}$\% of this maximum to maintain structural coherence.
-
-\subsubsection{\textit{Physical consequence: Vacuum Breakdown as Capacity Limit (Schwinger Limit).}}
-In the macroscopic QED dual, the electron mass $m_e$ sets the characteristic scale for the Schwinger critical field $E_c = m_e^2 c^3/e\hbar$, marking the threshold where external electric fields spontaneously produce $e^+e^-$ pairs \cite{schwinger_gauge_1951}. The Coulomb field of an elementary charge, evaluated at the reduced Compton wavelength $\lambdabar = \hbar/m_e c$, scales with this critical value by exactly the fine-structure constant $\alpha$:
-\begin{equation}
-\frac{e}{4\pi\epsilon_0 \lambdabar^2} = \alpha E_c = \frac{E_c}{Z_{geo}}
-\end{equation}
-The dimensionless geometric impedance factor $Z_{geo} \approx 137$ therefore represents the \textbf{safety factor} between the characteristic field of an isolated fundamental charge and the vacuum breakdown threshold. Any localized excitation attempting to concentrate flux beyond this margin hits the non-linear Schwinger ceiling, resolving into particle-antiparticle pairs and enforcing the substrate's ultimate capacity limit.
+Every term is an exact rational combination of the structural invariants except $\pi$, which enters as the universal isotropic ratio$C/\Delta$ (Section~\ref{subsec:alpha_cap}). The derivation contains zero continuous empirical parameters; precision is therefore limited only by the evaluation of $\pi$.
