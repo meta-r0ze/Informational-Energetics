@@ -40,14 +40,10 @@ This unique self-consistent solution is selected prior to the emergence of time,
 
 The optimality of the $E_8$ lattice extends beyond self-duality. Viazovska's proof establishes it as the densest sphere packing in eight dimensions \cite{viazovska_sphere_2017}, representing the unique solution to a strict geometric extremization problem. This reinforces its status as the baseline substrate requiring zero selection information: $E_8$ is self-defining, algorithmically minimal, and geometrically optimal.
 
-\subsection{The Projection (\texorpdfstring{$D=4$}{D=4} and \texorpdfstring{$\nu=16$}{nu=16})}
-\label{sec:projection}
-The $E_8$ lattice cannot process information without distinguishing input from output. The projection must break $E_8$ symmetry to separate the coordinate-addressing function from the state-configuration function.
-
-\subsubsection{The Symmetric Decomposition}
+\subsection{The Symmetric Decomposition}
 \label{sec:symmetric_decomposition}
 
-To maintain local probability conservation the projection must preserve self-duality. Because $E_8$ is self-dual ($\Lambda = \Lambda^*$), any decomposition into orthogonal sublattices ($E_8 \to L_4 \oplus L_4$) must admit a glue group whose coset structure reconstructs the self-dual parent. To preserve Unitarity, the state space must partition into two isomorphic sectors supporting this quotient structure.
+To process information, the substrate must distinguish coordinate addresses from internal state configurations. This requires breaking the parent $E_8$ symmetry into orthogonal sectors: one for spacetime addressing, one for node state. Any such decomposition must preserve the self-duality required by Unitarity ($\Lambda = \Lambda^*$), so the glue group must reconstruct the parent lattice from its orthogonal sublattices.
 
 \textbf{Candidate Rank-4 Subsectors.} 
 Because $E_8$ has rank 8, a bisection requires two orthogonal rank-4 sublattices. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. $B_4$ and $C_4$ violate Evenness (roots of two distinct lengths). $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$.
@@ -67,72 +63,65 @@ Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} decompositio
 
 This structural partition explains why the substrate appears 4-dimensional with complex internal structure, without additional coordinate dimensions.
 
-\subsubsection{The Bit-Depth of the Node (\texorpdfstring{$\nu=16$}{nu=16})}
+
+\subsection{Node Hardware: The Bit-Depth (\texorpdfstring{$\nu=16$}{nu=16})}
 \label{sec:chiralcapacity}
 
-To determine the information capacity of a lattice node, we ask: what is the minimal geometric structure required to define a persistent, distinguishable signal?
-
-In a lattice, information states are encoded as \textbf{orientations}, governed by the Spin groups $Spin(n)$ (the double covers of $SO(n)$), because the substrate is strictly bound to real geometric rotations.
-
-The $D_4$ lattice spans 4 abstract dimensions, but its associated Lie algebra $\mathfrak{so}(8)$ acts on 8-dimensional spinor representations. Each $D_4$ factor in the $E_8 \to D_4 \oplus D_4$ decomposition therefore provides a local $Spin(8)$ rotation symmetry. We determine the minimal channel capacity ($\nu$) required for this native hardware to satisfy Map and Causality.
+% State the encoding requirements
+The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal sectors. To support persistent information processing, the node must satisfy two encoding requirements:
 
 \begin{enumerate}
-    \item \textbf{The Map Constraint (Phase Encoding):}  
-    While $Spin(8)$ possesses chiral spinors, they are mathematically \textbf{Real} (Majorana-Weyl). In signal processing terms, this means a state vector is identical to its conjugate ($\psi = \bar{\psi}$). A system built on an 8-channel real representation cannot distinguish a signal from its inverse (Phase Ambiguity), so a stable Map requires \textbf{Complex Representations} ($\psi \neq \bar{\psi}$). The native spinor dimension is fixed at 8 by the $D_4$/$\mathfrak{so}(8)$ algebra; a complex representation of this dimension therefore requires 16 real degrees of freedom, i.e., two independent 8-dimensional real channels.
-
-    \item \textbf{The Causality Constraint (Directional Flow):} 
-    To support Causality, the system must distinguish input from output. Geometrically, this requires distinguishing left-handed from right-handed projections, preventing symmetric reflection across the causal loop.
+    \item \textbf{Phase Discrimination (Map):} The system must distinguish a state from its conjugate ($\psi \neq \bar{\psi}$), requiring a complex structure.
+    \item \textbf{Directional Flow (Causality):} The system must distinguish input from output, requiring two distinct channels.
 \end{enumerate}
 
-Because $D_4$ possesses \textbf{Triality}, its geometry uniquely supports independent 8-dimensional chiral representations ($8_L$ and $8_R$). The node partitions one for input and one for output, structurally enforcing Causality while jointly providing the 16 real channels required for complex phase (Map).
+% Identify the native hardware and its structural limitation.
+The $D_4$ lattice carries $\mathfrak{so}(8)$ symmetry, which acts on 8-dimensional spinor representations. A single 8-dimensional real spinor channel cannot satisfy either requirement: it is
+self-conjugate ($\psi = \bar{\psi}$), creating phase ambiguity that collapses the Map, and it provides only one channel, preventing the directional distinction required by Causality.
 
-The total internal channel capacity is therefore:
+% Identify the hardware capability and map it to both requirements.
+However, $D_4$ possesses a unique \textbf{Triality} symmetry that provides two independent 8-dimensional chiral representations ($8_L$ and $8_R$). Taken together, these provide 16 real degrees of
+freedom, forming an 8-dimensional complex representation that restores phase discrimination. Taken separately, their distinct chirality allows the node to assign one channel to input and the other to output, structurally enforcing directional flow.
+
+% Results
+The internal channel capacity \textbf{per sector} is therefore:
 \begin{equation}
-    \nu = \dim(8_L) + \dim(8_R) = 8 + 8 = \mathbf{16}
+    \nu = \dim(8_L) + \dim(8_R) = 8 + 8 = \mathbf{16}.
 \end{equation}
 
-By deriving $\nu = 16$ strictly from the rank-4 $D_4$ hardware, we satisfy the channel capacity requirements without embedding in a higher-dimensional gauge group.
+By deriving $\nu=16$ strictly from the rank-4 $D_4$ hardware, we satisfy the channel capacity requirements without embedding in a higher-dimensional gauge group.
+
+
+\subsection{The Metric Signature and Causality}
+\label{sec:metric_signature}
+As established in \cref{sec:symmetric_decomposition}, the projection $E_8 \to D_4 \oplus D_4$ fixes Sector A as the 4-dimensional coordinate manifold and Sector B as the internal state space. We now
+ask: what metric signature does Sector A need to faithfully carry the 16-channel signal derived in \cref{sec:chiralcapacity}? To preserve complex phase discrimination and directional flow, the metric algebra must generate a geometric imaginary unit $i$ (compressing $16\mathbb{R} \to 8\mathbb{C}$) and support chiral projectors (splitting $8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
+
+% List candidates, eliminate, constrain to a unique result.
+A 4-dimensional manifold admits three metric signatures. We test each:
+
+The Euclidean signature $(+,+,+,+)$ and the split signature $(2,2)$ both yield $\omega^2 = +1$ for the Clifford volume element. Their centers are strictly real ($\mathbb{R} \oplus \mathbb{R}$), so neither
+can generate the geometric imaginary unit required for complex phase compression, nor can they support complex chiral projectors. A substrate with either signature would be a static, real-valued block
+with no capacity for phase or flow.
+
+The Lorentzian signature $(-,+,+,+)$ is thus the unique valid solution. In signature $(1,3)$, the Clifford volume element squares to $\omega^2 = -1$, functioning as the geometric imaginary unit ($i \equiv \omega$). This naturally generates both the complex structure required to compress the signal and the chiral projectors required to sort it into directed halves, without separating internal and external spaces.
+
+% Sector distinction.
+Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature is \emph{effective}: it emerges in Sector A because the Clifford volume element provides the geometric imaginary unit required
+for phase encoding and directional flow. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
+
+% Physical consequence.
+The geometric requirement for complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit creates a strictly bipartite state space. This emergent distinction corresponds to the standard physics classification of matter and antimatter.
 
 \subsection{The Total Node Capacity (\texorpdfstring{$N$}{N})}
 \label{sec:total_node_capacity}
-The projection $E_8 \to D_4 \oplus D_4$ creates two orthogonal, isomorphic sublattices. As derived in \cref{sec:chiralcapacity}, each $D_4$ factor requires $\nu=16$ to support complex phase and directional flow via paired chiral spinors ($8_L \oplus 8_R$). Because the decomposition is symmetric, both sectors inherit this 16-channel structure. The total node capacity is therefore:
+Because the $E_8 \to D_4 \oplus D_4$ decomposition is symmetric, both sectors inherit the 16-channel structure. The total node capacity is:
 
 \begin{equation}
     N = \nu_{\text{Sector A}} + \nu_{\text{Sector B}} = 16 + 16 = \mathbf{32}
 \end{equation}
 
 This integer $N = 32$ represents the total number of distinct state channels available for encoding information on the lattice substrate.
-
-
-\subsection{Dimensional Reduction: Geometric Origin of The Metric Signature and Causality}
-\label{sec:metric_signature}
-
-\subsubsection{The Requirements}
-To map the 16-channel signal onto a 4-dimensional manifold without loss or ambiguity, the metric algebra must satisfy two strict encoding constraints:
-\begin{enumerate}
-    \item \textbf{Phase Encoding (Map):} To avoid informational ambiguity, the 16 real channels must be compressed into 8 complex degrees of freedom ($16\mathbb{R} \to 8\mathbb{C}$). This requires the algebra to naturally generate a geometric imaginary unit ($i$) to encode phase information.
-    \item \textbf{Directional Flow (Causality):} The substrate must prevent symmetric causal reflection to distinguish ``Input'' from ``Output'' and enforce the arrow of time. This requires the algebra to support orthogonal projectors ($P_L, P_R$) that split the signal into directed halves ($8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
-\end{enumerate}
-
-\subsubsection{The Admissible Signatures}
-A 4-dimensional manifold admits two metric signatures. We test each against the requirements:
-
-\begin{itemize}
-    \item \textbf{Option A: Euclidean Metric $(+,+,+,+)$.} 
-    In a space where all dimensions are spatial, the volume element (pseudoscalar $\omega$) squares to positive unity ($\omega^2 = +1$). 
-    \item \textbf{Option B: Lorentzian Metric $(-,+,+,+)$.} 
-    In a space with one temporal dimension, the Clifford algebra volume element (the pseudoscalar $\omega$) squares to negative unity ($\omega^2 = -1$).
-\end{itemize}
-
-\subsubsection{The Unique Solution}
-The Euclidean metric cannot satisfy the dynamic encoding constraint. Because $\omega^2 = +1$ in signature $(+,+,+,+)$, the center of the Clifford algebra is strictly real ($\mathbb{R} \oplus \mathbb{R}$). It lacks the capacity to generate the global geometric imaginary unit $i$ required for complex phase compression, nor can it support complex chiral projectors. A universe with this signature would be a static, real-valued block with no capacity for phase or flow.
-
-The \textbf{Lorentzian Metric} is the unique valid solution. While the $(2,2)$ split signature yields $\omega^2 = +1$ (restoring a real algebra), the $(1,3)$ signature yields $\omega^2 = -1$. In Geometric Algebra, the Clifford volume element of a $(1,3)$ manifold functions as the geometric imaginary unit ($i \equiv \omega$), directly mapping the spacetime pseudoscalar to the quantum phase. This naturally generates the complex structure required to compress the signal ($\nu = 16$) and the chiral structure required to sort it, without separating internal and external spaces.
-
-Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature $(-,+,+,+)$ is effective: it emerges in Sector A because the Clifford volume element in signature $(1,3)$ provides the geometric imaginary unit ($\omega^2 = -1$) required for complex phase encoding and directional flow. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
-
-\paragraph{Physical Consequence:}
-The geometric requirement for complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit creates a strictly bipartite state space. This emergent distinction corresponds to the standard physics classification of matter/antimatter.
 
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
@@ -205,14 +194,14 @@ For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its
 \begin{enumerate}
     \item[\textbf{(R1)}] \emph{The Causal Torus.} As derived in \cref{sec:metric_signature}, the Lorentzian signature pairs the temporal step with the spatial step ($\delta t = i\,\delta x$). Causal propagation over a fundamental cycle $\Delta$ therefore forms a periodic $(1+1)$D loop. Topologically, this is a real torus $\mathbb{T}^2$; analytically, it is a complex torus $\mathbb{C}/\Lambda$ endowed with a complex structure that generates the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
     
-    \item[\textbf{(R2)}] \emph{Self-Duality and Closure.} To preserve the parent lattice's self-duality (\Cref{sec:projection}), the loop's partition function must remain invariant under the modular transformation $S: z \to -1/z$, forcing the lattice to carry complex multiplication by an order of $K$. The Closure Constraint forbids sub-orders of conductor $f>1$ (which would require external memory to specify). The endomorphism ring is therefore exactly the maximal order $\mathcal{O}_K$, strictly identifying the geometric period as $\Delta = |D_K|$.
+    \item[\textbf{(R2)}] \emph{Self-Duality and Closure.} To preserve the parent lattice's self-duality (\Cref{sec:symmetric_decomposition}), the loop's partition function must remain invariant under the modular transformation $S: z \to -1/z$, forcing the lattice to carry complex multiplication by an order of $K$. The Closure Constraint forbids sub-orders of conductor $f>1$ (which would require external memory to specify). The endomorphism ring is therefore exactly the maximal order $\mathcal{O}_K$, strictly identifying the geometric period as $\Delta = |D_K|$.
     
     \item[\textbf{(R3)}] \emph{The Uniqueness Constraint.} Unique reconstructability requires the causal loop to be determined entirely by its local invariants. If multiple distinct (non-isomorphic) global loops share identical local data, an observer cannot invert the state transformation, resulting in \textbf{Causal Degeneracy} and destroying Unitarity.
 \end{enumerate}
 
 \paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that satisfy these requirements:
 \begin{enumerate}
-    \item[\textbf{(M1)}] \emph{Class Number (Solving R3).} If the causal loop can be rewired in multiple ways without changing its local appearance, the system cannot tell which history it followed, and the Map collapses. The number of distinct global rewirings that share identical local data is governed by the \textbf{class number} $h(D_K)$. If $h(D_K) > 1$, multiple non-isomorphic causal loops exist with the same local signature, destroying Unitarity by Causal Degeneracy. In the geometry of complex tori, each distinct rewiring corresponds to a non-principal ideal class; the total number of such classes is exactly $h(D_K)$. The uniqueness constraint therefore requires $h(D_K) = 1$.
+    \item[\textbf{(M1)}] \emph{Class Number (Solving R3).} If the causal loop can be rewired in multiple ways without changing its local appearance, the system cannot tell which history it followed, and the Map collapses. The number of distinct global rewirings that share identical local data is governed by the \textbf{class number} $h(D_K)$. If $h(D_K) > 1$, multiple non-isomorphic causal loops exist with the same local signature, destroying Unitarity by Causal Degeneracy. In the geometry of complex tori, each distinct rewiring corresponds to a non-principal ideal class; the total number of such classes is exactly $h(D_K)$. The uniqueness constraint therefore requires $h(D_K) = 1$. For the rigorous equivalence between unique reconstructability and trivial class number, see \cref{app:unitarity-class-number}.
 
     \item[\textbf{(M2)}] \emph{Baker--Heegner--Stark Theorem (Solving R1 \& R2).} The complex structure of the causal torus is governed by an imaginary quadratic field. By the Baker--Heegner--Stark theorem, there are exactly nine such fields whose maximal order has trivial class group ($h(D_K)=1$). Their absolute fundamental discriminants (and thus our available temporal periods) are strictly limited to $|D_K| \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
 \end{enumerate}
@@ -321,4 +310,4 @@ We have now identified a unique solution that satisfies the architectural requir
     \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal is exactly the threshold at which structured information remains distinguishable from substrate fluctuations. The vacuum persists because its resolution limit is minimally sufficient.
 \end{itemize}
 
-The constraints of \textbf{Finiteness}, \textbf{Unitarity}, and \textbf{Causality} converge on a \textbf{unique} geometric structure: the $E_8$ lattice projected onto a causal $D=4$ manifold accompanied by the set of structural invariants: $\mathbb{S} = \{\Delta{=}43, \nu{=}16, \sigma{=}5, \chi{=}2\}$. Together these establish the unique self-specifying substrate from which all observable structure must emerge.
+The constraints of Finiteness, Unitarity, and Causality converge on a unique geometric structure: the $E_8$ lattice projected onto a causal $D = 4$ manifold. Because this structure is bounded by the persistence architecture, its geometric properties are strictly quantized, yielding the fundamental temporal cycle ($\Delta=43$), channel depth ($\nu=16$), spatial embedding ($\sigma=5$), and boundary topology ($\chi=2$) derived above. Together these establish the unique self-specifying substrate from which all observable structure must emerge.

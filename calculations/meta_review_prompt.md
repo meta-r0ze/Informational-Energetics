@@ -20,7 +20,7 @@ POLISH (substrate alignment): Stylistic, LaTeX, or presentational. Fix if conven
 * SHARE (gov failure) The abstract should answer 'what', the introduction should answer 'why', the conclusion should say 'what changed', What do they now know that they didn't before and what comes next
 * DIMENSIONALITY AUDIT: Any experimental results should have SI units labeled where appropriate
 IMPROVE (Mar optimization): Any sections overly verbose/edited or repeating previously defined stuff and should be distilled down?
-
+* FLOW: The paper should aim to be organized at every level from the order of the sections to the order of the sentences in a Logical Flow / Narrative Linearity / Monotonic Logic when possible
 
 * IE is a general framework for all systems that persist and should be stand alone, the validation/example is the vacuum. This is a complex systems IE paper first.
 *  Complex systems readers should see a universal framework for persistence not just an elaborate setup for a physics derivation.  (AKA the IE section at the start should be cleanly separate from the physics work)
@@ -40,7 +40,8 @@ On the paper itself at a meta level:
 * DISSIPATION-SCRUBBING: Scrub for Verbal Dissipation. Remove repetitions, 'hedging' language (e.g., 'it seems like,' 'one could argue'), and 'filler' adjectives. Every word must perform work to keep the paper within its 'Dimensional Budget'.
 * An overarching guage of how complete the paper is: 1. Would a complex systems scientist want to read this in its current form? 2. Would a physicist want to read this in its current form?
 * While we map to 'charge', geometrically we should use consistent terms around information everywhere when possible to keep it e8 first.
-
+* The pillar requirements resulted in geometric structures that have the attributes of the structural invariants.  The paper shoudn't discuss these in a way that implies that we picked values / structures to match numbers.
+* 
 Details about this paper:
 * Each system depends on only what is below it. IE is a general framework that depends on information theory. System 0 only can use IE, no physics to archive its derivation (for example saying particle experiments show X show X is required).  system 1, the substrate doesn’t “know”  about general relativity, electromagnetic charge or other higher level concepts and can’t depend on them (but can name them if they appear).  It can only depend on system 0 and IE and info theory etc.
 * SUBSTRATE-INDEPENDENCE RULE: IE is substrate-universal. The IE sections must justify every pillar, theorem, and architectural requirement using only information-theoretic bounds (state-space dimension, phase preservation, transition capacity) and control-theoretic necessity. No argument may depend on properties specific to matter (mass, charge, force, temperature, spacetime curvature) or on concepts that have not yet been derived within the IE hierarchy. Cited theorems (e.g., Shannon), frame them as convergent evidence from physical instantiations, not as premises that require physical matter to be true. Physical analogies are permitted only as illustration, never as logical support.
