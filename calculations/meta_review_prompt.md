@@ -19,7 +19,7 @@ POLISH (substrate alignment): Stylistic, LaTeX, or presentational. Fix if conven
 * NAME-CHECK: Informational Energetics or IE refers to the general framework around systems that can persist.  $E_8$-Persistence theory is the name of the physics theory that applies IE to derive the E8 lattice substrate, constants etc
 * SHARE (gov failure) The abstract should answer 'what', the introduction should answer 'why', the conclusion should say 'what changed', What do they now know that they didn't before and what comes next
 * DIMENSIONALITY AUDIT: Any experimental results should have SI units labeled where appropriate
-IMPROVE (Mar optimization): Any sections overly verbose/edited or repeating previously defined stuff and should be distilled down?
+* IMPROVE (Mar optimization): Any sections overly verbose/edited or repeating previously defined stuff and should be distilled down?
 * FLOW: The paper should aim to be organized at every level from the order of the sections to the order of the sentences in a Logical Flow / Narrative Linearity / Monotonic Logic when possible
 
 * IE is a general framework for all systems that persist and should be stand alone, the validation/example is the vacuum. This is a complex systems IE paper first.

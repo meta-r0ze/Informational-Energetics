@@ -122,7 +122,7 @@ Because the loop is closed and periodic, it possesses no endpoint boundaries (no
 
 \subsection{Entropic Transition (Toll)}
 \label{subsec:alpha_tol}
-The Toll is the entropic cost of executing a state transition; without it, causal history collapses. Geometrically, it is the probability of selecting a valid transition from the unconstrained phase space:
+The Toll is the entropic cost of executing a state transition; without it, causal history collapses. Geometrically, it is the fractional cost of selecting a valid transition from the unconstrained phase space: the ratio of admissible configurations to total configurations directly measures the geometric impedance of the transition:
 
 \begin{equation}
     Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}}.
@@ -141,7 +141,7 @@ These three filters are independently necessary and jointly sufficient; no fourt
     \Omega_{valid} = 1 \cdot \chi \cdot (R_M - \sigma).
 \end{equation}
 
-The denominator counts independent dimensions of the unconstrained configuration manifold. On the substrate, a non-trivial state transition requires an interaction; a 2-point operation is mere propagation (identity). By Schur's lemma, invariant couplings of distinct channel types are strictly trilinear; the minimal interaction vertex is the Spin(8) triality singlet $\mathbf{8}_v \otimes \mathbf{8}_s \otimes \mathbf{8}_c \to \mathbf{1}$. Because triality provides exactly three independent 8-dimensional representations, a fourth leg must duplicate a channel type, producing Causal Aliasing. Aliasing collapses distinct states into a single temporal slot, rendering the causal history non-injective and violating Unitarity. Higher-point transitions are composite sequences of 3-point vertices.
+The denominator counts independent dimensions of the unconstrained configuration manifold. On the substrate, a non-trivial state transition requires an interaction; a 2-point operation is mere propagation (identity). To conserve information across distinct channel types, the lattice must couple them in symmetric groups of three: any fewer channels cannot mediate a non-trivial interaction, while any additional channel must duplicate an existing type and collapse distinct states into a single temporal slot. This geometric requirement (Schur's lemma) forces the minimal interaction vertex to be a triality singlet: $\mathbf{8}_v \otimes \mathbf{8}_s \otimes \mathbf{8}_c \to \mathbf{1}$. Because the $D_4$ spinor structure provides exactly three independent 8-dimensional representations, a fourth leg would produce Causal Aliasing, rendering the causal history non-injective and violating Unitarity. Higher-point transitions are therefore composite sequences of 3-point vertices.
 
 With no external observer to assign internal channel roles prior to interaction, an unconstrained 3-point vertex cannot pre-distinguish between Sector A and Sector B degrees of freedom. Rather than being restricted to the single-sector internal bit-depth $\nu=16$, each leg independently samples the total topological node capacity $N=2\nu=32$ across both orthogonal sectors.
 
@@ -179,7 +179,8 @@ Because state vector, local topology, and causal horizon constitute orthogonal c
     V_{config} = L_{embed} \cdot (\sigma + 1) \cdot \Delta^2
 \end{equation}
 
-The Margin impedance is the reciprocal: the probability that a single quantum of structured information remains distinguishable from the geometric noise floor after being diluted across all independent specification domains:
+The Margin impedance is the reciprocal dilution factor: the fraction of the total configuration volume occupied by a single quantum of structured information:
+
 \begin{equation}
 \begin{split}
     Z_{MAR} &= \frac{1}{V_{config}} = \frac{1}{L_{embed} \cdot (\sigma + 1) \cdot \Delta^2} \\

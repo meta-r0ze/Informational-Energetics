@@ -13,7 +13,7 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
 \noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent measure of entropic losses. For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density.
 
 % State the Selection Principle and clarify its eliminative, non-teleological nature
-Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible $S_\Phi$ remain observable at timescales longer than those that don't. Configurations do not \emph{seek} minimization. The selection principle is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what remains constitutes the observable universe. We formalize this as:
+Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible $S_\Phi$ remain observable at timescales longer than those that don't. Configurations do not \emph{seek} minimization. The selection principle is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what persists is the minimal-action remainder. We formalize this as:
 
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
     \noindent The \textbf{Selection Principle}: Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible \textbf{Entropic Action} ($S_\Phi$) remain observable.
@@ -98,18 +98,17 @@ Open systems implement the same six-pillar architecture, but environmental coupl
 
 \subsection{The Entropic Balance Sheet}
 \label{sec:entropic_balance_sheet}
-To quantify persistence, we distinguish between dissipation and coordination: structural burdens increase the system's entropic footprint (positive contributions to $Z_{IE}$), while organizational mechanisms reduce net dissipation relative to the uncoordinated baseline (negative contributions). This parallels the negative feedback signal in control theory, where the error $\epsilon = R - F$ is reduced by the feedback term.
+To quantify persistence, we distinguish between the \emph{direct} entropic cost of maintaining each pillar and the \emph{net} impedance that results when the pillars interact. All six pillars impose strictly positive structural costs: each requires finite channel capacity, state transitions, and boundary maintenance to exist. However, two pillars (Protocol and Governor) function as \emph{coordination investments}. They incur a direct cost, but their absence would cause a far larger uncoordinated dissipation (fragmentation for lack of Protocol, runaway divergence for lack of Governor). Their net contribution to the observable impedance is therefore the \emph{savings} relative to the uncoordinated baseline.
 
 \begin{itemize}
-    \item \textbf{Structural Costs ($Z_i > 0$):} The energetic overhead of existence. This includes maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and the irreversible cost of state updates ($Z_{TOL}$). These terms increase impedance.
+    \item \textbf{Direct Structural Costs ($Z_i > 0$):} The irreducible overhead of maintaining boundaries ($Z_{CAP}$, $Z_{MAR}$), storing internal models ($Z_{MAP}$), and executing state updates ($Z_{TOL}$). These terms increase impedance regardless of system organization.
 
-    \item \textbf{Organizational Gains ($Z_i < 0$):} The reduction in dissipation achieved through coordination. The Protocol ($Z_{PRO}$) minimizes friction by standardizing interfaces; in control theory, this is analogous to the negative feedback signal subtracted from the setpoint ($\epsilon = R - F$). The Governor ($Z_{GOV}$) prevents wasteful divergence. These represent structural optimizations: the measurable difference in dissipation between a disorganized system and an organized one.
+    \item \textbf{Coordination Investments (net $Z_i < 0$):} Protocol and Governor incur direct costs, but their operational effect is to reduce the system's \emph{net} dissipation below the uncoordinated baseline. In the balance sheet, this appears as a negative contribution to $Z_{IE}$ because the organized system dissipates less than the disorganized one. In control theory, this is analogous to negative feedback: the controller consumes energy, but the loop's net dissipation is lower than the open-loop runaway.
 \end{itemize}
 
-In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. 
+In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. In statistical mechanics, independent degrees of freedom yield a factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$); because $S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$, the entropic action is strictly additive. Multiplicativity would require cross-domain couplings and a preferred direction, both forbidden at zero flux; therefore the linear form is unique.
 
-Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. In statistical mechanics, independent degrees of freedom yield a factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$); because $S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$, the entropic action
-is strictly additive. Multiplicativity would require cross-domain couplings and a preferred direction, both forbidden at zero flux; therefore the linear form is unique. The Net Entropic Impedance ($Z_{IE}$) is therefore the algebraic sum of these contributions:
+The Net Entropic Impedance ($Z_{IE}$) is the algebraic sum of these contributions, where Protocol and Governor enter with negative signs reflecting their coordination savings:
 
 \begin{equation}
 \label{eq:entropic_balance}
