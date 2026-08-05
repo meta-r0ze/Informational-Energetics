@@ -9,7 +9,7 @@
 \CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-Having isolated the unique substrate, we must test whether it can sustain localized persistent structures. A topological defect concentrates information flux against the homogeneous lattice; without an entropic cost accounting, the substrate would dissolve any localized distinction.  We
+Having isolated the unique substrate, we now must test whether it can sustain localized persistent structures. A topological defect concentrates information flux against the homogeneous lattice; without an entropic cost accounting, the substrate would dissolve any localized distinction.  We
 therefore quantify the minimum geometric action required to maintain one unit of topological charge ($Q_{top}=\chi/2=1$) through a single fundamental cycle ($\tau=1$).
 
 Because the boundary $\chi=2$ enforces a strict binary partition of information flux, charge is a topological invariant.  The \textbf{geometric impedance} is the resulting dimensionless entropic action per unit charge:
@@ -69,7 +69,7 @@ The fundamental cycle is periodic: the defect's configuration must recur identic
 
 % Construct the invariant envelope
 % Bridge discrete tocontinuous
-By Homogeneity, the substrate admits no preferred direction. The invariant envelope (the union of all valid closed $\Delta$-cycles anchored at the node) is therefore an isotropic disk of radius $\Delta/2$ in the embedding Euclidean metric, making its diameter ($\Delta/2 + \Delta/2 = \Delta$) exactly match the temporal period. While the lattice provides a discrete address space, the geometric measure of this isotropic envelope on the embedding space is continuous. Any discrete anisotropy cancels in the Homogeneity-enforced average over all orientations, leaving the continuous Euclidean measure.
+By Homogeneity, the substrate admits no preferred direction in its embedding Euclidean metric. The invariant envelope (the union of all valid closed $\Delta$-cycles anchored at the node) is therefore an isotropic disk of radius $\Delta/2$, making its diameter ($\Delta/2 + \Delta/2 = \Delta$) exactly match the temporal period. While the lattice provides a discrete address space, the geometric measure of this isotropic envelope on the embedding space is continuous. Any discrete anisotropy cancels in the Homogeneity-enforced average over all orientations, leaving the continuous Euclidean measure.
 
 % Identify the boundary is the cost
 % Invoke isotropy to pi
@@ -169,7 +169,7 @@ The minimum resolvable signal is exactly 1 quantum of information diluted across
 
 The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
-    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{subsec:lembed}.
+    \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{par:lembed}.
     \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other connected tree has radius $r \ge 2$, delocalizing the interaction across multiple neighborhoods and violating the Orthogonality Condition. The minimal local volume is therefore $\sigma+1=6$.
     \item \textbf{The Causal Area} ($A_{causal} = \Delta^2$): As established in \cref{sec:fundamental_resonance_filter1}, fundamental causality restricts information propagation on the discrete substrate to a local $(1+1)$D plane. Operating at the maximum speed limit $c \equiv 1$, a fundamental cycle of temporal duration $\Delta$ sweeps a 1D spatial horizon of length $\Delta$. The resulting spacetime resolution count is strictly $\Delta \cdot \Delta = \Delta^2$.
 \end{enumerate}
@@ -231,7 +231,7 @@ Z_{\text{geo}} = \underbrace{\pi\Delta}_{\text{CAP}}
 
 \subsection{Numerical Evaluation}
 \label{subsec:alpha_numerical_validation}
-Summing the geometric components:
+Summing the geometric components of \cref{eq:alpha_inverse} gives the structural index:
 \begin{equation}
     Z_{\text{geo}} = \num{\AlphaInvVal}\dots
 \end{equation}

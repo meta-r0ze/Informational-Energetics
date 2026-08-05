@@ -1,6 +1,6 @@
 \section{System 1: Substrate Isolation, The unique geometry that satisfies System 0 requirements}
 \label{sec:system1_projection}
-System 0 demands Finiteness, Unitarity, and Causality. These requirements act as eliminative filters: they do not merely suggest a lattice, they progressively remove every alternative until one structure remains. We first constrain the dimension and uniqueness of the lattice, then determine its projection into spacetime and internal symmetry, and finally fix the temporal period and topological invariants that prevent causal aliasing. The mathematical theorems function as black-box filters; what matters is that each constraint is forced by the persistence architecture, leaving no continuous parameter free.
+System 1 applies the filters of System 0 to identify the unique geometry that satisfies all architectural requirements simultaneously. These requirements act as eliminative filters: they progressively remove every alternative until one structure remains. We first constrain the dimension and uniqueness of the lattice, then determine its projection into spacetime and internal symmetry, and finally fix the temporal period and topological invariants that prevent causal aliasing. The mathematical theorems function as black-box filters; what matters is that each constraint is forced by the persistence architecture, leaving no continuous parameter free.
 
 \subsection{The Lattice Selection (\texorpdfstring{$E_8$}{E8})}
 \label{sec:lattice_selection}
@@ -94,24 +94,19 @@ By deriving $\nu=16$ strictly from the rank-4 $D_4$ hardware, we satisfy the cha
 
 \subsection{The Metric Signature and Causality}
 \label{sec:metric_signature}
-As established in \cref{sec:symmetric_decomposition}, the projection $E_8 \to D_4 \oplus D_4$ fixes Sector A as the 4-dimensional coordinate manifold and Sector B as the internal state space. We now
-ask: what metric signature does Sector A need to faithfully carry the 16-channel signal derived in \cref{sec:chiralcapacity}? To preserve complex phase discrimination and directional flow, the metric algebra must generate a geometric imaginary unit $i$ (compressing $16\mathbb{R} \to 8\mathbb{C}$) and support chiral projectors (splitting $8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
+As established in \cref{sec:symmetric_decomposition}, the projection $E_8 \to D_4 \oplus D_4$ fixes Sector A as the 4-dimensional coordinate manifold and Sector B as the internal state space. We now ask: what metric signature does Sector A need to faithfully carry the 16-channel signal derived in \cref{sec:chiralcapacity}? To preserve complex phase discrimination and directional flow, the metric algebra must generate a geometric imaginary unit $i$ (compressing $16\mathbb{R} \to 8\mathbb{C}$) and support chiral projectors (splitting $8\mathbb{C} \to 4\mathbb{C}_L + 4\mathbb{C}_R$).
 
 % List candidates, eliminate, constrain to a unique result.
-A 4-dimensional manifold admits three metric signatures. We test each:
-
-The Euclidean signature $(+,+,+,+)$ and the split signature $(2,2)$ both yield $\omega^2 = +1$ for the Clifford volume element. Their centers are strictly real ($\mathbb{R} \oplus \mathbb{R}$), so neither
-can generate the geometric imaginary unit required for complex phase compression, nor can they support complex chiral projectors. A substrate with either signature would be a static, real-valued block
-with no capacity for phase or flow.
+The algebraic structure of the $D_4$ spinor representation mandates a metric signature whose volume element can serve as the geometric imaginary unit. Among the three admissible signatures for a 4-dimensional manifold, only the Lorentzian signature $(-,+,+,+)$ yields a Clifford volume element squaring to $\omega^2 = -1$. Euclidean $(+,+,+,+)$ and split $(2,2)$ signatures both give $\omega^2 = +1$, producing a strictly real center ($\mathbb{R} \oplus \mathbb{R}$) that cannot support the required complex structure or chiral projectors. A substrate with either would be a static, real-valued block with no capacity for phase or flow.
 
 The Lorentzian signature $(-,+,+,+)$ is thus the unique valid solution. In signature $(1,3)$, the Clifford volume element squares to $\omega^2 = -1$, functioning as the geometric imaginary unit ($i \equiv \omega$). This naturally generates both the complex structure required to compress the signal and the chiral projectors required to sort it into directed halves, without separating internal and external spaces.
 
 % Sector distinction.
-Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature is \emph{effective}: it emerges in Sector A because the Clifford volume element provides the geometric imaginary unit required
-for phase encoding and directional flow. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
+Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature is \emph{effective}: it emerges in Sector A because the algebraic requirements of the $D_4$ spinor representation can only be satisfied by a metric whose volume element provides the geometric imaginary unit. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
 
 % Physical consequence.
 The geometric requirement for complex conjugation ($\psi \leftrightarrow \bar{\psi}$) enabled by the imaginary unit creates a strictly bipartite state space. This emergent distinction corresponds to the standard physics classification of matter and antimatter.
+
 
 \subsection{The Total Node Capacity (\texorpdfstring{$N$}{N})}
 \label{sec:total_node_capacity}
@@ -261,53 +256,44 @@ This completes the substrate's information geometry: $\nu=16$ encodes what a sin
 \CatchFileBetweenTags{\LsubstrateVal}{constants.tex}{LsubstrateVal}
 \CatchFileBetweenTags{\LsubstrateEq}{constants.tex}{LsubstrateEq}
 
-\subsection{The Entropic Loads: Resolution Limits of the Vacuum}
-\label{sec:lattice_loads}
-The vacuum's persistence depends on three hierarchical resolution limits, thresholds below which signals dissolve into the substrate. Operating on orthogonal channels, their description lengths combine additively.
+\subsection{Substrate Resolution Limits}
+\label{sec:resolution_limits}
 
-\subsubsection{The Intrinsic Load (\texorpdfstring{$L_{intrinsic} = \LintrinsicVal$}{Lintrinsic}): Defect Specification}
-\label{subsub:lintrinsic}
-The minimum information to specify a defect's internal state and local geometric footprint: the chiral channel configuration ($\nu=16$), the local interaction embedding ($\sigma=5$), and the boundary topological invariant ($\chi=2$). These orthogonal components set the internal resolution limit, the precision with which the vacuum distinguishes \emph{what} a defect is from \emph{where} it is.
+The vacuum substrate processes information at three hierarchical scales. These resolution limits are intrinsic properties of the lattice; they define the thresholds below which structured signals dissolve into geometric noise. Operating on orthogonal channels, their description lengths combine additively.
 
+\paragraph{Intrinsic load ($L_{\text{intrinsic}} = \LintrinsicVal$)}  
+\label{par:lintrinsic}
+The minimum information to specify a defect's internal state and local geometric footprint: the chiral channel configuration ($\nu = 16$), the local interaction embedding ($\sigma = 5$), and the boundary topological invariant ($\chi = 2$).  These orthogonal components set the internal resolution limit:
 \begin{equation}
     L_{intrinsic} = \nu + \sigma + \chi = 16 + 5 + 2 = \mathbf{\LintrinsicVal}
 \end{equation}
 
-\subsubsection{The Embedding Load (\texorpdfstring{$L_{embed} = \LembedVal$}{Lembed}): Causal Trajectory}
-\label{subsec:lembed}
-The total information to specify a defect's complete configuration. Causality requires more than a static coordinate: the state must specify both its current manifold location and its causal successor
-($D=4$ each), without external boundary conditions. This geometric doubling defines the minimal directed causal trajectory (the discrete analogue of kinematic phase space).
-
+\paragraph{Embedding load ($L_{\text{embed}} = \LembedVal$)}
+\label{par:lembed}
+The total information to specify a defect's complete configuration. Causality requires more than a static coordinate: the state must specify both its current manifold location and its causal successor ($D=4$ each) without external boundary conditions. This geometric doubling defines the minimal directed causal trajectory:
 \begin{equation}
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LembedVal}
 \end{equation}
 
-\subsubsection{The Substrate Load (\texorpdfstring{$L_{substrate} = \LsubstrateVal$}{Loverhead}): Fundamental Capacity}
-\label{subsub:lsubstrate}
-The total intrinsic structural complexity processed per fundamental cycle, summing the available spacetime addresses ($R_M=172$) and the native nodal channel infrastructure ($\nu=16$):
-
+\paragraph{Substrate load ($L_{\text{substrate}} = 188$)}  
+\label{par:lsubstrate}
+The total intrinsic structural complexity processed per fundamental cycle, summing the available spacetime addresses ($R_M = 172$) and the native nodal channel infrastructure ($\nu = 16$):
 \begin{equation}
     L_{substrate} = R_M + \nu = 172 + 16 = \mathbf{\LsubstrateVal}
 \end{equation}
 
 \subsection{The \texorpdfstring{$E_8$}{E8} Lattice Substrate System}
 \label{sec:system1spec}
-We have now identified a unique solution that satisfies the architectural requirements of System 0.
+
+The $E_8$ lattice substrate instantiates the six-pillar architecture as follows:
 
 \begin{itemize}
-    \item[] \textbf{Substrate: The $E_8$ Manifold.} The $D_4 \oplus D_4$ decomposition of $E_8$ fixes $D=4$ as the unique dimensionality supporting Finiteness and Causality.
-
-    \item \textbf{Capacity: The State-Transition Budget ($N=32$).} The $N=32$ chiral channels within each $\Delta=43$ cycle define the total number of distinct state transitions available per fundamental cycle. The clock period sets the temporal bound; the channel count determines the information throughput.
-    
-    \item \textbf{Map: The Persistent Embedding ($\sigma=5$).} The sum of spatial ($D_{\text{space}}=3$) and topological ($D_{\text{boundary}}=2$) degrees of freedom required to uniquely embed a persistent entity in the manifold.
-    
-    \item \textbf{Protocol: The Chiral Bit-Depth ($\nu=16$).} The minimal spinor dimension admitting complex structure and chirality, enabling lossless information propagation between coordinate and state sectors.
-
-    \item \textbf{Governor: The Topological Boundary ($\chi=2$).} The sphere ($S^2$), unique simply-connected closed surface, enforcing binary partition of state and preventing field divergence. Required by Finiteness.
-
-    \item \textbf{Toll: The Causal Cost ($M=11$).} The Lorentzian signature (corresponding to $g_{00}=-1$ in the effective metric) encodes time by making one coordinate dimension indefinite relative to the others. The $M = \Delta - N = 11$ overhead intervals in the fundamental cycle provide the temporal slack required for lossless state transitions.
-
-    \item \textbf{Margin: The Resolution Floor ($L_{embed}=31$).} In Quiescent Equilibrium, this floor is \textbf{saturated}: the minimal resolvable signal is exactly the threshold at which structured information remains distinguishable from substrate fluctuations. The vacuum persists because its resolution limit is minimally sufficient.
+    \item \textbf{Capacity:} The state-transition budget $N=32$ chiral channels per fundamental cycle.
+    \item \textbf{Map:} The persistent embedding dimension $\sigma=5$.
+    \item \textbf{Protocol:} The chiral bit-depth $\nu=16$.
+    \item \textbf{Governor:} The topological boundary $\chi=2$ (the simply-connected sphere $S^2$).
+    \item \textbf{Toll:} The causal overhead $M=\Delta-N=11$ intervals per cycle.
+    \item \textbf{Margin:} The resolution floor $L_{\text{embed}}=31$.
 \end{itemize}
 
-The constraints of Finiteness, Unitarity, and Causality converge on a unique geometric structure: the $E_8$ lattice projected onto a causal $D = 4$ manifold. Because this structure is bounded by the persistence architecture, its geometric properties are strictly quantized, yielding the fundamental temporal cycle ($\Delta=43$), channel depth ($\nu=16$), spatial embedding ($\sigma=5$), and boundary topology ($\chi=2$) derived above. Together these establish the unique self-specifying substrate from which all observable structure must emerge.
+No continuous degrees of freedom remain. The $E_8$ lattice projected onto a causal $D=4$ manifold is therefore a minimal persistent system: each architectural requirement is satisfied by a discrete invariant derived from the closure constraint. Together this establish the unique self-specifying substrate from which all observable structure must emerge.

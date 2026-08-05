@@ -1,7 +1,7 @@
 \section{System 0: Architectural requirements for zero-flux substrate}
 \label{sec:System0_vacuum_requirements}
 
-Having established Finiteness, Unitarity, and Causality as necessary conditions for persistence in \Cref{sec:universal_architecture_of_persistence}, we now derive their geometric implications for the vacuum substrate under the Closure Constraint.
+System 0 asks: \emph{What geometric properties must a substrate possess to satisfy the three existential requirements of IE (Finiteness, Unitarity, and Causality) when no external memory, boundary conditions, or synchronization signals are available?}
 
 \subsection{Persistence Requires Finiteness for \texorpdfstring{$\mathrm{CAP}, \mathrm{MAR}$}{CAP, MAR}}
 \label{sec:finiteness}
@@ -27,7 +27,8 @@ For the vacuum to persist, it must maintain a stable Map over time. This require
 \begin{equation}
     |\mathbf{v}|^2 \geq 0 \quad \forall \mathbf{v} \neq 0
 \end{equation}
-A metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable minimum configuration. Furthermore, a Lorentzian metric admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} component. Therefore, the \textbf{substrate} must be Euclidean.
+
+A indefinite metric with negative eigenvalues (Lorentzian) allows $|\mathbf{v}|^2 < 0$, implying an imaginary ``distance'' from the reference state and preventing the definition of a stable minimum configuration. Furthermore, an indefinite metric (Lorentzian metric) admits non-trivial null vectors ($|\mathbf{v}|^2 = 0$ where $\mathbf{v} \neq 0$), allowing for the creation of infinite information density without exceeding the capacity budget ($|k\mathbf{v}|^2 = 0$ for any scalar amplitude $k$), which violates the \textbf{Finiteness} component. Therefore, the \textbf{substrate} must be Euclidean.
 
 \textbf{The Substrate-Projection Dual:}
 The Euclidean positive-definiteness applies strictly to the substrate lattice, which functions as a static memory repository. Causal progression necessitates an active processor operating via an indefinite metric. This fundamental distinction between static storage and dynamic processing provides the geometric degree of freedom from which the directional arrow of time can be derived (\Cref{sec:metric_signature}), satisfying a core causal requirement of the persistence architecture.

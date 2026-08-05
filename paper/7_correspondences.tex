@@ -18,7 +18,7 @@
 \label{sec:empirical_correspondences}
 
 \subsection{The Fine-Structure Constant and Quantization Gap}
-The geometric impedance $Z_{geo}$ is the substrate's intrinsic coupling strength.  In the analytic continuum dual, this static bound is observed as the inverse fine-structure constant, $\alpha^{-1}(0) \equiv Z_{geo}$, with standard renormalization-group running governing dynamic variation around this fixed infrared baseline.
+The structural index $Z_{\text{geo}}$ quantifies the substrate's intrinsic dimensionless coupling strength. We now test whether this index corresponds to a known physical observable. In the analytic continuum dual, a static bound of this magnitude is identified with the inverse fine-structure constant, $\alpha^{-1}(0)$, with standard renormalization-group running governing dynamic variation around this fixed infrared baseline.
 
 Recent experimental values (\Cref{tab:alpha_comparison}) of $\alpha^{-1}(0)$ do not form a simple consensus and reflect ongoing metrological tension. Morel (2020) and Parker (2018) measure $\alpha^{-1}(0)$ kinematically using photon recoil (Rubidium and Cesium, respectively). Fan (2023) determines $\alpha^{-1}(0)$ via the electron anomalous magnetic moment ($g-2$). That these independent measurements are mutually exclusive is an open problem in standard metrology. CODATA (2022) synthesizes these conflicting inputs and its uncertainty reflects this tension.
 
@@ -34,12 +34,12 @@ Parker (2018) & \AlphaInvParkerExperimentalVal & $\AlphaInvParkerSigma \sigma$ \
 CODATA (2022) & \AlphaInvCodataExperimentalVal & $\AlphaInvCodataSigma \sigma$ \\
 \bottomrule
 \end{tabular}
-\caption{Comparison of the $E_8$-Persistence theory dimensionless $Z_{geo}$ derivation against experimental values. Deviation is computed as $|Z_{geo} - \alpha^{-1}(0)_{exp}| / \sigma_{exp}$.}
+\caption{Comparison of the $E_8$-Persistence structural index $Z_{geo}$ against experimental determinations of $\alpha^{-1}(0)$. Deviation is computed as $|Z_{geo} - \alpha^{-1}(0)_{exp}| / \sigma_{exp}$.}
 \label{tab:alpha_comparison}
 \end{table}
 
 \paragraph{The QED Extraction Tension and the Quantization Gap:}
-Standard QED is the analytic continuum dual to this discrete architecture. Dimensional regularization successfully approximates the substrate at low loop orders by treating spacetime as a continuous manifold with infinite resolution. However, because the substrate possesses finite channel capacity ($\nu=16$ per sector, $N=32$ total), the continuum approximation must eventually saturate the discrete hardware.
+Standard QED serves as the analytic continuum dual to this discrete architecture. Dimensional regularization approximates the substrate at low loop orders by treating spacetime as continuous, but because the substrate possesses finite channel capacity ($\nu=16$ per sector, $N=32$ total), the continuum approximation must eventually saturate the discrete hardware.
 
 The breakdown occurs when the combinatorial complexity of loop diagrams reaches parity with the substrate's state-space budget. The number of QED diagrams grows factorially with loop order; at the 5-loop order of precision, the electron anomalous magnetic moment calculation requires evaluating $12{,}672$ distinct diagrams. The available combinatorial state space of the substrate scales as $\nu^n = 16^n$, where $n$ is the sequence length of interaction vertices. At $n=4$ to $n=5$ (corresponding to 4- and 5-loop vertex complexity), diagram complexity ($\sim 10^4$) reaches parity with the hardware phase-space limit ($16^4 = 65{,}536$), marking the threshold where the continuous expansion encounters the substrate's information-theoretic resolution limit. We term this $\sim 3\times 10^{-10}$ scale the \textbf{Quantization Gap}.
 
