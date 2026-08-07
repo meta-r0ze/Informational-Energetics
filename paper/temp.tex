@@ -9,32 +9,6 @@
 \CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-Having isolated the unique substrate, we now must test whether it can sustain localized persistent structures during dynamic propagation. A topological defect concentrates information flux against the homogeneous lattice; without an entropic cost accounting, the substrate would dissolve any localized distinction. We therefore quantify the minimum geometric action required to maintain one unit of topological charge ($Q_{top}=\chi/2=1$) through a single fundamental cycle ($\tau=1$).
-
-Because the boundary $\chi=2$ enforces a strict binary partition of information flux, charge is a topological invariant. The \textbf{geometric impedance} is the resulting dimensionless entropic action per unit charge:
-\begin{equation}
-    Z_{geo} = \frac{S_{\Phi,\text{defect}}}{Q_{top}}
-\end{equation}
-
-\subsection{From Structural Impedance to Causal Coupling}
-\label{subsec:impedance_duality}
-
-On a discrete causal lattice, a localized state traverses from node to node. At each causal link, it either propagates cleanly, or it is forced to interact (scatter or dissipate) to resolve an entropic threat. The likelihood of this forced interaction is the substrate's fundamental \textbf{causal coupling}, denoted $\kappa$.
-
-To evaluate $\kappa$, we must quantify the thermodynamic cost of maintaining the six structural pillars. Because the pillars operate on orthogonal domains (\cref{sec:entropic_balance_sheet}), mutual information vanishes and their entropic costs are strictly additive. This additive architecture is the defining structural law of the framework: independent constraints in series sum their resistances.
-
-Consequently, the total geometric impedance is the exact linear combination of the six pillar costs:
-\begin{equation}
-    Z_{\mathrm{geo}} = \sum_{i=1}^6 Z_i.
-\end{equation}
-
-In any network of series constraints, the natural measure of throughput is not the resistance itself but the \textbf{admittance} $Y = 1/Z$. The $E_8$ substrate is not a thermal bath, but a maximally constrained, zero-flux causal network. On such a network, the fractional flow of information across a node (the causal coupling) is governed by the network's geometric admittance:
-
-\begin{equation}
-    \kappa \equiv \frac{1}{Z_{\mathrm{geo}}}.
-\end{equation}
-
-To calculate this total impedance, we classify the six architectural components into \emph{Direct Structural Costs} ($Z_i > 0$), which represent the raw entropic overhead of preventing failure, and \emph{Coordination Investments} ($Z_i < 0$), which actively suppress failure rates, reducing the net system impedance.
 
 
 % ============================================================
@@ -77,9 +51,7 @@ To calculate this total impedance, we classify the six architectural components 
 % ============================================================
 \subsection{The Resonant Circumference (Capacity)}
 \label{subsec:alpha_cap}
-Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (this corresponds in the standard effective field theory dual to the Wilson Loop). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
-
-Capacity contributes the fundamental geometric impedance required to prevent a localized state from dissipating into the unconstrained Euclidean background (Information Starvation). This entropic footprint, which corresponds in the standard effective field theory dual to the Wilson Loop, dominates the vacuum impedance ($\approx 99.9\%$). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
+Capacity contributes the fundamental geometric impedance required to prevent a localized state from dissipating into the unconstrained Euclidean background (Information Starvation). This entropic footprint dominates the vacuum impedance ($\approx 99.9\%$). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
 % Establish the metric
 At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
@@ -99,15 +71,15 @@ Because the defect is defined strictly by its topological boundary (\Cref{sec:to
     Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}
 \end{equation}
 
-
 \subsection{Topological Boundary (Map)}
 \label{subsec:alpha_map}
-Map contributes the topological impedance required to prevent internal state data from leaking into the unquantized background (Boundary Dissolution). As established in \cref{sec:topological_boundary} by the combinatorial Gauss-Bonnet theorem (where total discrete curvature equates to $2\pi\chi$), any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+Map contributes the topological impedance required to prevent internal state data from leaking into the unquantized background (Boundary Dissolution). As established in \cref{sec:topological_boundary} by the combinatorial Gauss-Bonnet theorem (where total discrete curvature equates to $2\pi\chi$), any closed, regular surface must satisfy a topological boundary condition. 
+
+To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
 \begin{equation}
     Z_{MAP} = +\chi = \AlphaInvMAPVal
 \end{equation}
 Because $\chi$, the Euler characteristic, is a pure topological invariant, it is an exact, indivisible integer. It is structurally forbidden from scaling, running, or acquiring continuous corrections.
-
 
 \subsection{Alignment Efficiency (Protocol)}
 \label{subsec:alpha_pro}
@@ -125,22 +97,20 @@ Entropic impedance is the inverse of flow capacity. The greater the residual cap
 \end{equation}
 The linear form is mandated by statelessness: the Protocol coordinates instantaneously, with no recursive memory that would permit higher-order couplings.
 
-
 \subsection{Stabilizing Potential (Governor)}
 \label{subsec:alpha_gov}
 Governor reduces total impedance by providing the stabilizing boundary constraint that prevents runaway entropic divergence across the temporal cycle. Without it, local phase excitations undergo unbounded feedback, overflowing node capacity.
  
 To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
 
-Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
+Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the system's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
 \begin{equation}
     Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \num{\AlphaInvGOVVal}
 \end{equation}
 
-
 \subsection{Entropic Transition (Toll)}
 \label{subsec:alpha_tol}
-Toll contributes the transition impedance required to select a valid, non-degenerate interaction from the unconstrained phase space, preventing Zeno Collapse. Geometrically, it is the fractional cost of executing a valid state transition out of the possible; without it, causal history collapses into instantaneous updates:
+Toll contributes the transition impedance required to select a valid, non-degenerate interaction from the unconstrained phase space, preventing Zeno Collapse. Geometrically, it is the fractional cost of executing a state transition; without it, causal history collapses into instantaneous updates.
 
 \begin{equation}
     Z_{TOL} = \frac{\Omega_{valid}}{\Omega_{total}}.
@@ -178,10 +148,11 @@ The Toll is therefore the ratio of minimal valid to maximal unconstrained phase 
 \end{split}
 \end{equation}
 
-
 \subsection{Resolution Floor (Margin)}
 \label{subsec:alpha_mar}
-Margin contributes the resolution impedance—the minimum structural footprint required to prevent the signal from dissolving into the geometric noise floor (Fragility). The minimum resolvable signal is exactly 1 quantum of information diluted across the \emph{minimal} number of distinct configurations ($V_{config}$) required to specify a localized defect. The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
+Margin contributes the resolution impedance---the minimum structural footprint required to prevent the signal from dissolving into the geometric noise floor (Fragility). The minimum resolvable signal is exactly 1 quantum of information diluted across the \emph{minimal} number of distinct configurations ($V_{config}$) required to specify a localized defect.
+
+Because the $E_8 \to D_4 \oplus D_4$ projection partitions the lattice into strictly orthogonal sectors, independent specification domains combine multiplicatively (Cartesian product). The minimal configuration volume requires three domains to exhaust the node's orthogonal geometric generators and prevent underspecification:
 \begin{enumerate}
     \item \textbf{The State Vector ($L_{embed} = 31$):} The total description length of a dynamic defect, structurally derived in \cref{par:lembed}.
     \item \textbf{The Local Interaction Volume ($V_{local} = \sigma + 1 = 6$):} A localized lattice interaction is a connected subgraph spanning $\sigma = 5$ independent directions from a central node. To strictly localize the interaction to a single neighborhood, the maximum distance from the center to any node must be 1 (graph radius $r=1$). The Star Graph ($S_\sigma$) is the strictly unique connected tree topology of $\sigma$ edges that possesses a radius of 1; any other connected tree has radius $r \ge 2$, delocalizing the interaction across multiple neighborhoods and violating the Orthogonality Condition. The minimal local volume is therefore $\sigma+1=6$.
@@ -202,33 +173,25 @@ The Margin impedance is the reciprocal dilution factor: the fraction of the tota
 \end{split}
 \end{equation}
 
-
 \subsection{The Additive Baseline and the Finite Sum}
 \label{sec:additive_baseline}
 
-In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains (\Cref{sec:entropic_balance_sheet}). At strict zero flux, no propagating excitations exist to mediate interactions between these domains; mutual information vanishes identically, forbidding cross-terms. This motivates the functional form of the total structural index:
+In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains (\Cref{sec:entropic_balance_sheet}). At strict zero flux, no propagating excitations exist to mediate interactions between these domains; mutual information vanishes identically, forbidding cross-terms. This motivates the total geometric index $Z_{\text{geo}}$ as the linear combination of independent dimensionless contributions:
 
-\paragraph{Dimensionless Additivity and Unit Weighting}
-In a closed, self-specifying substrate at Quiescent Equilibrium, the total Net Entropic Impedance $Z_{\mathrm{geo}}$ is the exact, unweighted linear combination of the six pillar impedances:
 \begin{equation}
-    Z_{\text{geo}} = \sum_{i=1}^6 s_i Z_i , \quad s_i \in \{+1, -1\} ,
+    Z_{\text{geo}} = \sum_{i=1}^6 Z_i.
 \end{equation}
-where direct structural costs enter with a positive sign and coordination investments enter with a negative sign.
 
-Dimensionless Additivity and Unit Weighting rests on three substrate-universal identities dictated by the vacuum's Closure Constraint:
+Each term $Z_i$ is a dimensionless quantity forced by the geometric and information-theoretic requirements of its pillar: boundary measure (CAP), topological invariant (MAP), coordination efficiency (PRO, GOV), transition rarity (TOL), and resolution dilution (MAR). All six are constructed from the same substrate invariants and operate on orthogonal domains. 
 
+Two properties characterize this sum:
 \begin{enumerate}
-    \item{Universal Currency.} 
-    Standard physics requires dimensional conversion constants ($\hbar, c, G$) because it measures heterogeneous phenomena in macroscopic unit conventions. On a self-specifying discrete substrate, no such units exist; the unique primitive quantity is the elementary state transition. The geometric perimeter ($\pi\Delta$), topological boundary ($\chi$), and phase-space fractions (PRO, GOV, TOL, MAR) are all pure dimensionless expectation values of these state transitions. Because they share an identical operational currency, their linear combination is mathematically well-defined without dimensional conversion factors.
+    \item \textbf{Completeness:} The functional form of each term is strictly forced by the geometric and information-theoretic requirements of its component. The six components exhaust the architectural degrees of freedom required for persistence. The derived geometric limits ($\Delta = 43$, $\nu = 16$, $\sigma = 5$, $\chi = 2$) exhaust the independent structural degrees of freedom of the projection. \textit{(Note that $\nu=16$ enters only through the total node capacity $N=2\nu=32$.)}
     
-    \item{Unit Weighting.}
-    In standard statistical mechanics, independent subsystems carry weights (e.g., temperature, chemical potential) supplied by an external reservoir. By the Closure Constraint, the vacuum admits no external environment to configure arbitrary scaling ratios. A non-unity coefficient would introduce an unconstrained free parameter, structurally requiring a deeper layer to define it and thus violating self-specification. The structural coupling between orthogonal pillars is therefore fixed to exactly unity.
-    
-    \item{Complete Sign Assignment.}
-    The six pillars mathematically exhaust the minimal architecture required for persistence. Their signs are uniquely fixed by the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}): direct structural overheads (CAP, MAP, TOL, MAR) increase total impedance ($+$), while organizational feedback mechanisms (PRO, GOV) reduce net dissipation ($-$).
+    \item \textbf{Signs:} The signs are fixed by the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}). Structural overhead terms (CAP, MAP, TOL, MAR) are positive; coordination terms (PRO, GOV) reduce net dissipation and are negative.
 \end{enumerate}
 
-The geometric impedance is therefore given by expanding this sum into the exact individual costs derived in \crefrange{subsec:alpha_cap}{subsec:alpha_mar}:
+The geometric impedance is therefore given by expanding this sum into the individual geometric costs derived in \crefrange{subsec:alpha_cap}{subsec:alpha_mar}:
 
 \begin{equation}\label{eq:alpha_inverse}
 \begin{split}
@@ -242,16 +205,5 @@ Z_{\text{geo}} = \underbrace{\pi\Delta}_{\text{CAP}}
 \end{equation}
 
 
-\subsection{Numerical Evaluation}
-\label{subsec:alpha_numerical_validation}
-Summing the geometric components of \cref{eq:alpha_inverse} gives the structural index:
-\begin{equation}
-    Z_{\text{geo}} = \num{\AlphaInvVal}\dots
-\end{equation}
+% -----------------------------------------------------------
 
-Every term is an exact rational combination of the derived geometric bounds except $\pi$, which enters as the universal isotropic ratio $C/\Delta$ (\Cref{subsec:alpha_cap}). The derivation contains zero continuous empirical parameters; precision is therefore limited only by the evaluation of $\pi$.
-
-By the Network Admittance Postulate, the causal coupling of the $E_8$ substrate is:
-\begin{equation}
-    \kappa = \frac{1}{Z_{geo}} \approx \frac{1}{\num{\AlphaInvVal}}
-\end{equation}

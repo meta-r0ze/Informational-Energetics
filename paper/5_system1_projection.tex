@@ -8,7 +8,8 @@ We first constrain the possible dimensions of the lattice, progressively elimina
 
 \subsubsection{The \texorpdfstring{$n \equiv 0 \pmod 8$}{neq0mod8} Constraint}
 \label{sec:kneserstheorem}
-To prevent irreversible information loss during read/write operations, the substrate must be even and self-dual. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. This immediately eliminates the majority of dimensionalities leaving only: 
+To prevent irreversible information loss during read/write operations, the substrate must be even and self-dual. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. (Note: while the 4D lattice $F_4$ is self-dual, it is not even; while $D_4$ is even, it is not self-dual. Only $n \ge 8$ yields lattices satisfying all Unitarity constraints simultaneously.) This immediately eliminates the majority of dimensionalities leaving only: 
+% Note is for those that would make this simple mistake when reviewing
 
 \[ n \in \{8, 16, 24, \dots\} \]
 Consequently: a unitary, self-dual information substrate cannot mathematically exist in $n=4$. Therefore, the observed 4D spacetime cannot be the foundational hardware itself, but must strictly be an emergent projection of a higher-dimensional structure.
@@ -27,7 +28,7 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 
     \item At $n = 8$: The $E_8$ lattice is the \textbf{unique} even self-dual lattice \cite{conway_sphere_1988}. The algorithmic specification complexity of a uniquely determined geometry is $\log_2(1) = \textbf{0 bits}$, satisfying the Closure Constraint.
 
-    \item At $n = 16$: The architectural constraints isolate exactly two non-isomorphic solutions ($E_8 \oplus E_8$ and $D_{16}^+$). Isolating a unique geometry from this degenerate set requires $\log_2(2) = \textbf{1 bit}$ of additional specification (applied strictly to the ground-state definition, not to dynamical excitations). Because the Closure Constraint enforces \textbf{zero bits} of external specification, this substrate is not self-specifying.
+    \item At $n = 16$: The architectural constraints isolate exactly two non-isomorphic solutions ($E_8 \oplus E_8$ and $D_{16}^+$). Isolating a unique geometry from this set requires $\log_2(2) = \textbf{1 bit}$ of additional specification (applied strictly to the ground-state definition, not to dynamical excitations). Because the Closure Constraint enforces \textbf{zero bits} of external specification, this substrate is not self-specifying.
 
     \item At $n = 24$: Twenty-four distinct Niemeier lattices exist, requiring $\log_2(24) \approx 4.58$ bits of specifying information to resolve the degeneracy, similarly to violating the Closure Constraint. 
     
@@ -53,6 +54,8 @@ Because $E_8$ has rank 8, a bisection requires two orthogonal rank-4 sublattices
     
     \item \textbf{The \texorpdfstring{$D_4$}{D4} Solution (The Unitary Partition):} The $D_4 \oplus D_4$ decomposition has index 4 in $E_8$, yielding a glue group of involutions. This supports a self-contained addressing scheme with zero external specification. Furthermore, $D_4$ is the unique rank-4 even lattice supporting \textbf{Triality}, providing the geometric symmetry required for Map and Causality.
 \end{itemize}
+
+The bare $D_4 \oplus D_4$ sublattice has volume 4 and is not self-dual; the four cosets of the glue group complete it to the full $E_8$ lattice, which is strictly unimodular ($\mathrm{vol}=1$) and self-dual. The substrate is the full $E_8$ lattice, not the bare orthogonal sum.
 
 Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} decomposition preserving global Unitarity while generating the chiral structure required for information processing. It partitions the 8 dimensions into two orthogonal sectors:
 
@@ -99,7 +102,7 @@ As established in \cref{sec:symmetric_decomposition}, the projection $E_8 \to D_
 % List candidates, eliminate, constrain to a unique result.
 The algebraic structure of the $D_4$ spinor representation mandates a metric signature whose volume element can serve as the geometric imaginary unit. Among the three admissible signatures for a 4-dimensional manifold, only the Lorentzian signature $(-,+,+,+)$ yields a Clifford volume element squaring to $\omega^2 = -1$. Euclidean $(+,+,+,+)$ and split $(2,2)$ signatures both give $\omega^2 = +1$, producing a strictly real center ($\mathbb{R} \oplus \mathbb{R}$) that cannot support the required complex structure or chiral projectors. A substrate with either would be a static, real-valued block with no capacity for phase or flow.
 
-The Lorentzian signature $(-,+,+,+)$ is thus the unique valid solution. In signature $(1,3)$, the Clifford volume element squares to $\omega^2 = -1$, functioning as the geometric imaginary unit ($i \equiv \omega$). This naturally generates both the complex structure required to compress the signal and the chiral projectors required to sort it into directed halves, without separating internal and external spaces.
+The Lorentzian signature $(-,+,+,+)$ is thus the unique valid solution. In signature $(1,3)$, the Clifford volume element squares to $\omega^2 = -1$, functioning as the geometric imaginary unit ($i \equiv \omega$). This naturally generates both the complex structure required to compress the signal and the chiral projectors required to sort it into directed halves, without separating internal and external spaces. At this quiescent static baseline, the Lorentzian signature is not a dynamical continuous wave equation (which emerges only in the macroscopic limit), but strictly an algebraic requirement of the Clifford volume element necessary to support complex chiral representation on the discrete node.
 
 % Sector distinction.
 Crucially, the $E_8$ substrate remains Euclidean. The Lorentzian signature is \emph{effective}: it emerges in Sector A because the algebraic requirements of the $D_4$ spinor representation can only be satisfied by a metric whose volume element provides the geometric imaginary unit. Sector B retains the Euclidean metric; it lacks a timelike generator and cannot propagate signals. Only one $D_4$ factor supports causal evolution, distinguishing spacetime from internal symmetry.
@@ -139,7 +142,7 @@ where $g$ is the genus (number of holes).
     \begin{itemize}
         \item \textit{Information-Theoretic Failure:} A genus $g \geq 1$ surface is not simply connected. It supports non-contractible loops, closed paths that thread through the holes without intersecting the surface. This creates informational ambiguity: information flux can traverse the topology without being strictly partitioned into ``Inside'' or ``Outside,'' rendering the total conserved quantity associated with the boundary ill-defined.
         
-        \item \textit{Thermodynamic Failure:} By the Gauss-Bonnet theorem ($\int_M K \, dA = 2\pi\chi$), any surface with $g \geq 1$ has $\chi \leq 0$, implying neutral or negative total curvature. Such a surface cannot support net positive entropic pressure (information density) against the bulk substrate: it would structurally collapse.
+        \item \textit{Capacity Failure:} By the Gauss-Bonnet theorem ($\int_M K \, dA = 2\pi\chi$), any surface with $g \geq 1$ yields $\chi \leq 0$. Because the Map impedance scales with $\chi$, a neutral or negative Euler characteristic provides zero topological boundary cost, meaning the structure possesses no independent capacity to resist dissolving into the ambient geometric noise of the lattice.
     \end{itemize}
 
     \item \textbf{The Uniqueness of $g=0$ (The Sphere):}
@@ -185,24 +188,29 @@ To derive the fundamental clocking period ($\Delta$) of the lattice's causal cyc
 \label{sec:fundamental_resonance_filter1}
 For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its causal history must be uniquely reconstructable: multiple distinct causal histories cannot blend into identical outcomes, or information is irreversibly lost. Paralleling our methodology of separating System 0 (Requirements) from System 1 (Substrate Selection), we first define the structural requirements of this causal loop, then apply the mathematical theorems that uniquely solve them.
 
-\paragraph{The Structural Requirements.} Three constraints define the physical boundaries of the causal history:
+\paragraph{The Structural Requirements.} Three geometric constraints define the physical boundaries of the causal history:
 \begin{enumerate}
-    \item[\textbf{(R1)}] \emph{The Causal Torus.} As derived in \cref{sec:metric_signature}, the Lorentzian signature pairs the temporal step with the spatial step ($\delta t = i\,\delta x$). Causal propagation over a fundamental cycle $\Delta$ therefore forms a periodic $(1+1)$D loop. Topologically, this is a real torus $\mathbb{T}^2$; analytically, it is a complex torus $\mathbb{C}/\Lambda$ endowed with a complex structure that generates the imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
+    \item[\textbf{(R1)}] \emph{The Causal Torus $\Rightarrow$ Complex Structure.} As derived in \cref{sec:metric_signature}, the Lorentzian signature pairs the temporal step with the spatial step ($\delta t = i\,\delta x$). Causal propagation over a fundamental cycle $\Delta$ therefore forms a periodic $(1+1)$D loop. Analytically, this defines a complex torus ($\mathbb{C}/\Lambda$) endowed with a complex structure.
     
-    \item[\textbf{(R2)}] \emph{Self-Duality and Closure.} To preserve the parent lattice's self-duality (\Cref{sec:symmetric_decomposition}), the loop's partition function must remain invariant under the modular transformation $S: z \to -1/z$, forcing the lattice to carry complex multiplication by an order of $K$. The Closure Constraint forbids sub-orders of conductor $f>1$ (which would require external memory to specify). The endomorphism ring is therefore exactly the maximal order $\mathcal{O}_K$, strictly identifying the geometric period as $\Delta = |D_K|$.
+    \item[\textbf{(R2)}] \emph{Self-Duality $\Rightarrow$ Maximal Symmetry.} To preserve the parent lattice's self-duality (\Cref{sec:symmetric_decomposition}), this causal loop must be invariant under modular inversion ($\mathcal{S}: z \mapsto -1/z$). Furthermore, the Closure Constraint forbids the use of external memory to specify arbitrary sub-structures (conductor $f>1$). The loop must therefore be generated by its maximal possible endomorphism ring.
     
-    \item[\textbf{(R3)}] \emph{The Uniqueness Constraint.} Unique reconstructability requires the causal loop to be determined entirely by its local invariants. If multiple distinct (non-isomorphic) global loops share identical local data, an observer cannot invert the state transformation, resulting in \textbf{Causal Degeneracy} and destroying Unitarity.
+    \item[\textbf{(R3)}] \emph{Unique Reconstructability $\Rightarrow$ No Degeneracy.} Unitarity demands that local transition data uniquely determines the global causal history. If multiple non-isomorphic global loops share identical local invariants, the substrate cannot invert the state transformation, resulting in \textbf{Causal Degeneracy}.
 \end{enumerate}
 
-\paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that satisfy these requirements:
+\paragraph{The Mathematical Solution.} We now apply algebraic number theory to identify the unique mathematical structures that solve these physical requirements:
 \begin{enumerate}
-    \item[\textbf{(M1)}] \emph{Class Number (Solving R3).} If the causal loop can be rewired in multiple ways without changing its local appearance, the system cannot tell which history it followed, and the Map collapses. The number of distinct global rewirings that share identical local data is governed by the \textbf{class number} $h(D_K)$. If $h(D_K) > 1$, multiple non-isomorphic causal loops exist with the same local signature, destroying Unitarity by Causal Degeneracy. In the geometry of complex tori, each distinct rewiring corresponds to a non-principal ideal class; the total number of such classes is exactly $h(D_K)$. The uniqueness constraint therefore requires $h(D_K) = 1$. The Closure Constraint forbids external memory to resolve degeneracy, so relaxed assumptions (bounded reconstructability, symmetry-resolved degeneracies) are excluded from the minimal substrate. For the proof of this equivalence, see \cref{app:unitarity-class-number}.
+    \item[\textbf{(M1)}] \emph{Imaginary Quadratic Fields (Solving R1).} The complex structure of the causal torus ($\mathbb{C}/\Lambda$) generated by a discrete cycle of length $\Delta$ is analytically governed by an imaginary quadratic field $K = \mathbb{Q}(\sqrt{-\Delta})$.
 
-    \item[\textbf{(M2)}] \emph{Baker--Heegner--Stark Theorem (Solving R1 \& R2).} The complex structure of the causal torus is governed by an imaginary quadratic field. By the Baker--Heegner--Stark theorem, there are exactly nine such fields whose maximal order has trivial class group ($h(D_K)=1$). Their absolute fundamental discriminants (and thus our available temporal periods) are strictly limited to $|D_K| \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
+    \item[\textbf{(M2)}] \emph{Complex Multiplication (Solving R2).} To satisfy the modular invariance and maximal ring constraints of R2, the complex torus must mathematically carry \textbf{complex multiplication} by the maximal order $\mathcal{O}_K$ of the field $K$. This rigorously identifies the geometric period as the absolute discriminant: $\Delta = |D_K|$.
+
+    \item[\textbf{(M3)}] \emph{The Class Number (Solving R3).} In algebraic number theory, the number of non-isomorphic complex tori sharing the exact same endomorphism ring is given by the class number $h(D_K)$. To prevent the causal degeneracy forbidden by R3, the class group must be trivial, strictly requiring $h(D_K) = 1$. (For the geometric proof, see \cref{app:unitarity-class-number}.) \textit{The connection to number theory is architectural, not dynamical: $h(D_K)$ counts the distinct global causal histories compatible with local data, and unitarity requires this count to be exactly one.}
+
+    \item[\textbf{(M4)}] \emph{Baker--Heegner--Stark Enumeration.} To identify the exact temporal periods that satisfy all constraints, we apply the Baker--Heegner--Stark theorem. It proves there are exactly nine imaginary quadratic fields whose maximal order has $h=1$. Their fundamental discriminants uniquely restrict the universally available temporal periods to the Heegner numbers: $\Delta \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
 \end{enumerate}
 
 The Unitarity requirements therefore strictly restrict the temporal modulus to:
 \begin{equation}
+    \label{eq:heegner_modulus_set}
     \Delta \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}
 \end{equation}
 
@@ -210,31 +218,25 @@ The Unitarity requirements therefore strictly restrict the temporal modulus to:
 \label{sec:fundamental_resonance_filter2}
 To satisfy Causality we apply the constraint \linebreak $\Delta \ge N = 32$ (established in \cref{sec:causality}) leaving: $\Delta \in \{43, 67, 163\}$
 
+
+
 \subsubsection{Relational Time and Temporal Degeneracy}
 \label{sec:relational_time_constraint}
 
-% Establish the premises that force relational time: no external clock (Closure), no internal memory counter (Finiteness),  no surrogate clocks (Homogeneity).
-By the Closure Constraint, the vacuum possesses no external reference clock. Time must therefore emerge relationally, defined exclusively by internal state transitions. By Finiteness, the node cannot allocate channel capacity to an internal memory counter to track elapsed empty intervals; by Homogeneity, spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
+\paragraph{Premises:} Three established constraints govern the temporal structure: (1) \textit{Closure}: no external clock exists; (2) \textit{Finiteness}: all $N=32$ channels are allocated to state representation, leaving zero residual capacity for an internal run-length counter; (3) \textit{Homogeneity}: spatial neighbors are geometrically identical during static intervals and cannot serve as surrogate clocks.
 
-% Define the operational composition of a fundamental cycle: N active transitions that mark time, and M = Δ - N inert intervals that contain no temporal markers.
-In a fundamental causal cycle of length $\Delta$, a node executes $N = 32$ active state transitions, leaving $M = \Delta - N$ inert intervals. An inert interval contains no state transition; by the definition of relational time, it contains no temporal marker.
+\paragraph{The aliasing problem:} A fundamental cycle contains $N$ active transitions and $M = \Delta - N$ inert intervals. An inert interval carries no state transition and therefore no intrinsic temporal marker. A run of $k \geq 2$ consecutive inert slots presents identical local data at its bounding active transitions regardless of $k$; the mapping from local observations to elapsed time is non-injective. This is \textbf{Causal Aliasing}, violating the Causality requirement.
 
-% Identify the threat to Unitarity: consecutive inert intervals create temporal degeneracy because the system cannot distinguish their length, rendering the causal history non-injective.
-A run of $k \ge 2$ consecutive inert intervals therefore contains exactly one temporal signature (the active transition at each end), but spans $k$ indistinguishable substeps. The temporal mapping is
-non-injective: the system cannot reconstruct whether one, two, or $k$ empty steps occurred, violating the Unitarity requirement that causal history be uniquely invertible.
+\paragraph{The structural requirement:} Unique reconstructability therefore requires that no two inert intervals be adjacent ($k_{\max} = 1$).
 
-% State the structural requirement: to preserve injective causal history, consecutive inert intervals must be structurally forbidden.
-For the causal history to remain uniquely reconstructable, consecutive inert intervals must be structurally forbidden ($k_{\max} = 1$).
-
-% Derive the mathematical bound from the structural requirement using the pigeonhole principle on a periodic loop.
-On a periodic loop, distributing $M$ inert intervals with no adjacent pairs requires at least as many active transitions as inert intervals to serve as separators. By the pigeonhole principle:
+\paragraph{The bound:} On a periodic loop, separating $M$ inert intervals so that no two are adjacent requires at least $M$ active transitions as separators. Hence $N \geq M = \Delta - N$, yielding:
 \begin{equation}
-    N \ge M \implies N \ge (\Delta - N) \implies \Delta \le 2N = 64
+    \Delta \leq 2N = 64 .
 \end{equation}
-This bound is necessary and sufficient for unitary reconstructability under relational time.
+This bound is necessary and sufficient under the three premises above.
 
-% Results
-With node capacity fixed at $N = 32$, this relational continuity limit restricts the fundamental cycle to $\Delta \le 64$. This eliminates the remaining Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution for the temporal period.
+With $N=32$, this eliminates the Stark--Heegner candidates $67$ and $163$, isolating $\Delta = 43$ as the strictly unique geometric solution.
+
 
 \subsection{Manifold Resolution}
 \label{subsec:manifold_resolution}
@@ -244,6 +246,8 @@ Given that the substrate is a $D=4$ dimensional manifold with fundamental tempor
 \begin{equation}
     R_M = D\Delta = 4 \cdot 43 = 172
 \end{equation}
+
+This product counts the total coordinate-period budget: each of the $D=4$ coordinate directions (including time, which must be explicitly addressed within the causal patch) is resolvable over $\Delta=43$ temporal phases, yielding $D\Delta=172$ independent coordinate-period slots. It is an information-theoretic capacity count, not a geometric volume.
 
 Persistent topological defects occupy subsets of this address space; their operational costs in System 2 scale with the fraction of $R_M$ utilized.
 
@@ -275,7 +279,7 @@ The total information to specify a defect's complete configuration. Causality re
     L_{embed} = L_{intrinsic} + 2D = 23 + 8 = \mathbf{\LembedVal}
 \end{equation}
 
-\paragraph{Substrate load ($L_{\text{substrate}} = 188$)}  
+\paragraph{Substrate load ($L_{\text{substrate}} = \LsubstrateVal$)}  
 \label{par:lsubstrate}
 The total intrinsic structural complexity processed per fundamental cycle, summing the available spacetime addresses ($R_M = 172$) and the native nodal channel infrastructure ($\nu = 16$):
 \begin{equation}

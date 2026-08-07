@@ -17,8 +17,19 @@
 \section{Empirical Correspondences and Observed Constants}
 \label{sec:empirical_correspondences}
 
-% State that Z_geo is dimensionless. To validate against experiment we translate
-The structural index $Z_{\text{geo}}$ is strictly dimensionless. To validate it against experiment, we translate the geometric bounds into macroscopic observables using the standard dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$) that observers employ to measure flux. These are correspondence identities; they do not derive dimensional constants from the lattice. The primary identification is with the inverse fine-structure constant, $\alpha^{-1}(0) \equiv Z_{\text{geo}}$. Three further corollaries follow: the elementary charge as the quantized flux unit, the von Klitzing resistance as the channel quantization, and the geometric load limit as the vacuum breakdown threshold.
+The structural index $Z_{\text{geo}}$ is strictly dimensionless. To validate it against experiment, we translate the geometric bounds into macroscopic observables using the standard dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$) that observers employ to measure flux. These are correspondence identities; they do not derive dimensional constants from the lattice.
+
+The primary identification is with the inverse fine-structure constant. In macroscopic Quantum Electrodynamics (QED), the fine-structure constant $\alpha$ represents the dimensionless probability of interaction at any given vertex, precisely the role played by the substrate's causal coupling $\kappa$. We therefore establish the empirical correspondence:
+\begin{equation}
+\begin{split}    
+    \alpha^{-1}(0) &\equiv Z_{\text{geo}} \approx \AlphaInvVal \\
+    \alpha(0) &\equiv \kappa \approx \frac{1}{\AlphaInvVal}
+\end{split}
+\end{equation}
+
+Because System 1 strictly isolates the substrate at \textbf{Quiescent Equilibrium} (zero external flux, no dynamic macroscopic fields), this calculation structurally corresponds directly to the deep infrared limit ($Q^2 \to 0$) of standard physics. The substrate's geometric admittance natively provides the zero-momentum fine-structure constant, demonstrating that the QED interaction probability perfectly mirrors the structural bounds of the underlying information substrate prior to dynamical screening (Renormalization Group running) at higher energies.
+
+From this primary identification ($\alpha^{-1}(0) \equiv Z_{\text{geo}}$), three further corollaries follow: the elementary charge as the quantized flux unit, the von Klitzing resistance as the channel quantization, and the geometric load limit as the vacuum breakdown threshold.
 
 \subsection{The Fine-Structure Constant and Quantization Gap}
 \label{sec:fine_structure}
@@ -87,14 +98,8 @@ Combining these yields the structural prediction:
 \end{equation}
 The factor of $1/2$ originates strictly from the spinor double cover; $Z_{\text{geo}}$ supplies the dimensionless geometric coupling. The observer imposes $Z_0 = \sqrt{\mu_0/\epsilon_0}$ as dimensional scaffolding to map this dimensionless geometric resistance into SI units (ohms).
 
-\paragraph{Verification via the von Klitzing constant ($R_K$):}
-Standard electrodynamics defines $R_K \equiv h/e^2 = Z_0 / 2\alpha$. Because $Z_{\text{geo}}$ corresponds to $\alpha^{-1}(0)$, the structural prediction $R_{\text{channel}}$ matches $R_K$ exactly. The quantum Hall effect measures this single-channel resistance with parts-per-billion precision, independently of high-energy $\alpha^{-1}$ extractions:
-
-\begin{itemize}
-    \item \textbf{Experimental Value (CODATA 2022):} \VonKlitzingRkExperimentalVal
-    \item \textbf{Precision:} The $E_8$-Persistence geometric prediction matches the observed quantum Hall resistance to within \VonKlitzingRkSigma $\sigma$.
-\end{itemize}
-Matching $R_{\text{channel}}$ to $R_K$ demonstrates that the quantum Hall plateau resistance is the direct macroscopic signature of single-channel $E_8$ spinorial transport.
+\paragraph{Correspondence with the von Klitzing constant ($R_K$):}
+Since the 2019 SI redefinition, $R_K = h/e^2$ is an exact defined constant (CODATA 2022: $R_K = 25812.80745\ldots\,\Omega$). The quantum Hall effect realizes this resistance as a macroscopic plateau, providing a precision consistency check independent of high-energy $\alpha^{-1}$ extractions. Because $Z_{\text{geo}}$ corresponds to $\alpha^{-1}(0)$, the structural prediction $R_{\text{channel}} = (Z_0/2) \, Z_{\text{geo}}$ algebraically coincides with $R_K$, confirming the internal consistency of the dimensional scaffolding.
 
 
 \textit{Physical consequence: the flatness of QHE plateaus.} 
@@ -126,4 +131,4 @@ In the macroscopic QED dual, the standard model utilizes the electron mass $m_e$
 \end{equation}
 The dimensionless geometric impedance factor $Z_{\text{geo}} \approx \num{\AlphaInvVal}$ therefore represents the safety factor between the characteristic field of an isolated fundamental charge and the vacuum breakdown threshold. Any localized excitation attempting to concentrate flux beyond this margin hits the non-linear Schwinger ceiling, resolving into particle-antiparticle pairs and enforcing the substrate's ultimate capacity limit.
 
-All four empirical correspondences (the fine-structure constant, the elementary charge, the quantized channel resistance, and the vacuum breakdown threshold) are constrained by the same geometric impedance $Z_{\text{geo}}$ of the $E_8$ substrate. The dimensionless relations contain no continuous parameters; the dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$, $m_e$) is supplied by the observer's measurement framework, not derived from the lattice.
+The fine-structure constant is the primary structural correspondence, with $Z_{\text{geo}}$ as the dimensionless geometric index. The elementary charge, channel resistance, and vacuum breakdown threshold are algebraic consequences of this single correspondence under the standard dimensional scaffolding ($\hbar$, $c$, $\epsilon_0$, $m_e$). All four observables are therefore consistently constrained by the same substrate impedance.
