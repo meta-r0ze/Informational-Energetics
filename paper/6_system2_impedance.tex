@@ -77,28 +77,22 @@ To calculate this total impedance, we classify the six architectural components 
 % ============================================================
 \subsection{The Resonant Circumference (Capacity)}
 \label{subsec:alpha_cap}
-Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (this corresponds in the standard effective field theory dual to the Wilson Loop). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
+Capacity measures the entropic footprint required for a topological defect to maintain structural coherence across its fundamental cycle. It measures the geometric cost of maintaining the spatial boundary that distinguishes a localized defect from the vacuum bulk. Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
 
-Capacity contributes the fundamental geometric impedance required to prevent a localized state from dissipating into the unconstrained Euclidean background (Information Starvation). This entropic footprint, which corresponds in the standard effective field theory dual to the Wilson Loop, dominates the vacuum impedance ($\approx 99.9\%$). Without this cost, the state would propagate openly at the bandwidth limit ($c=1$) and delocalize completely.
-
-% Establish the metric
+% Establish the metric and evaluation domain
 At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
 % Derive the maximal reach from periodicity
-The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ updates or it does not persist. For any closed trajectory, reaching a distance $d$ from the anchor costs at least $d$ steps outbound and $d$ steps to return, so $2d \le \Delta$: the maximal one-way reach is $d_{\max} = \Delta/2$, saturated by the out-and-back path.
+The fundamental cycle is periodic: the defect's configuration must recur identically after $\Delta$ discrete updates or it does not persist. At the network speed limit ($c=1$), a signal can traverse at most one lattice spacing per tick. To remain causally synchronized, a signal must be able to travel from the defect's central anchor to its boundary and back within this cycle. A round trip to a radial distance $r$ requires $2r$ ticks, bounding the maximal coherent radius to $r \le \Delta/2$.
 
-% Construct the invariant envelope
-% Bridge discrete to continuous
-By Homogeneity, the substrate admits no preferred direction in its embedding Euclidean metric. The invariant envelope (the union of all valid closed $\Delta$-cycles anchored at the node) is therefore an isotropic disk of radius $\Delta/2$, making its diameter ($\Delta/2 + \Delta/2 = \Delta$) exactly match the temporal period. While the lattice provides a discrete address space, the geometric measure of this isotropic envelope on the embedding space is continuous. Any discrete anisotropy cancels in the Homogeneity-enforced average over all orientations, leaving the continuous Euclidean measure.
+\textbf{The continuous geometric measure.} The lattice provides a discrete address space, but the substrate's footprint is evaluated on its native positive-definite Euclidean metric (\Cref{subsec:positive_definite}). By Homogeneity, macroscopic observables must be invariant under lattice orientation. The invariant envelope (the union of all valid closed $\Delta$-cycles, averaged over all orientations) is therefore an isotropic disk of diameter $D = 2r = \Delta$. Any discrete anisotropy cancels in the orientation average, leaving the continuous Euclidean measure.
 
-% Identify the boundary is the cost
-% Invoke isotropy to pi
-Because the defect is defined strictly by its topological boundary (\Cref{sec:topological_boundary}), and its interior being indistinguishable from the vacuum, the entropic cost is precisely the measure of this continuous perimeter. Given the established isotropic limit, this measure is exactly the circumference of a Euclidean circle, yielding the strict geometric ratio $\frac{C}{\Delta} = \pi$.
-
+Because the defect is defined strictly by its topological boundary (\Cref{sec:topological_boundary}), and its interior is indistinguishable from the vacuum, the entropic cost is the measure of this continuous perimeter, not the discrete tick count. The geometric impedance is therefore the circumference of the isotropic envelope:
 \begin{equation}
-    Z_{CAP} = C = \pi\Delta \approx \num{\AlphaInvCAPVal}
+    Z_{\mathrm{CAP}} = C = \pi D = \pi\Delta \approx \num{\AlphaInvCAPVal}
 \end{equation}
 
+The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates from this fundamental geometry (this corresponds in the standard effective field theory dual to the Wilson Loop).
 
 \subsection{Topological Boundary (Map)}
 \label{subsec:alpha_map}

@@ -1,11 +1,10 @@
 \section{Informational Energetics}
 \label{sec:IE}
-Any system that persists, from a fundamental physical vacuum to a complex biological organism, must solve the same existential problem: maintaining structural coherence against the thermodynamic current that erases distinction. IE is a theoretical framework designed to derive the minimal universal architecture required to solve this problem. By unifying non-equilibrium thermodynamics and algorithmic information theory, IE shifts the analytical focus from empirical observation to first-principles structural deduction. Where complex systems research has historically relied on qualitative taxonomies, IE establishes a predictive mechanics of persistence governed by strict information-theoretic bounds.
-
+Any system that persists, from a fundamental physical vacuum to a complex biological organism, must solve the same existential problem: maintaining structural coherence against the thermodynamic current that erases distinction. IE is a theoretical framework designed to derive the minimal universal architecture required to solve this problem. By grounding thermodynamic phenomenology in  algorithmic information theory, IE shifts the analytical focus from empirical observation to first-principles structural deduction. Where complex systems research has historically relied on qualitative taxonomies, IE establishes a predictive mechanics of persistence governed by strict information-theoretic bounds.
 
 \subsection{The Selection Principle}
 % Define the cost metric before the principle invokes it.
-The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. Formally, it is the time-integrated Net Entropic Impedance:
+The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. 
 
 \begin{equation}\label{eq:entropic_action}
     S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
@@ -55,7 +54,7 @@ IE extracts the logical skeleton underlying independent theorems across discipli
     The non-linear constraint mechanism that prevents unbounded divergence or `runaway' loops. It enforces operational boundaries (e.g., apoptosis, budget limits) to protect the substrate from exhaustion. (Controller/Limiter). 
     \textit{Convergent Evidence (Ashby's Law of Requisite Variety \cite{raadt_ashbys_1987}):} ``Only variety can destroy variety.'' For a system to remain stable, its active constraint mechanism (Governor) must possess a number of states equal to or greater than the number of perturbations threatening the system.
     
-    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.} State transitions carry an irreducible energetic cost (Landauer's principle) and an irreducible temporal cost (Margolus-Levitin limit). Any irreversible logical operation, such as erasing a bit of structural information, necessitates a strictly compensatory increase in environmental Shannon entropy (the $k_BT \ln 2$ bound).
+    \item \textbf{Toll ($TOL$):} \textit{The Temporal Cost.} State transitions carry an irreducible information cost (Landauer's principle) and an irreducible temporal cost (Margolus-Levitin limit). Any irreversible logical operation, such as erasing a bit of structural information, necessitates a strictly compensatory increase in environmental Shannon entropy (the $k_BT \ln 2$ bound).
     \textit{Convergent Evidence (Landauer's Principle and Margolus-Levitin Limit \cite{landauer_irreversibility_1961,margolus_maximum_1998}):} These bounds make Toll a structural requirement.
    
     \item \textbf{Margin ($MAR$):} \textit{The Buffer.}
@@ -70,6 +69,11 @@ An open-loop system ``does'': it follows a predetermined path. A closed-loop sys
 
 IE describes the architecture of persistence but does not explain the transition from disorder to structure.
 
+% Describe how thermodynamics and IE are different
+\paragraph{Relation to Thermodynamics.} 
+\label{sec:thermodynamics}
+Algorithmic information theory provides the formal foundation of IE. Shannon entropy and Gibbs entropy are formally identical; the second law is the data processing inequality; and Landauer's principle states that information erasure carries an irreducible thermodynamic cost. The mapping 
+between the two frameworks is exact: \emph{information loss} corresponds to entropic dissipation, \emph{channel capacity} to thermodynamic availability, and \emph{information flux} to energy flux. We employ thermodynamic terminology where it provides operational intuition, but the framework requires no external thermal bath and remains well-defined for closed systems at zero flux.
 
 % Describe how CT and IE are different
 % Acknowledge the 4 components as convergent evidence;
@@ -122,8 +126,8 @@ The Net Entropic Impedance ($Z_{IE}$) is the algebraic sum of these contribution
 \label{sec:proof_of_necessity}
 The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
-    \item \textbf{No Capacity (Starvation):} Lacks an energetic envelope to respond to perturbations; system lifetime drops $\tau \to 0$ via rapid thermalization.
-    \item \textbf{No Map (Dissolution):} Lacks self-definition; random activation maximizes internal entropy. $\tau \to 0$ as the system--environment boundary dissolves.
+    \item \textbf{No Capacity (Starvation):} Lacks an energetic envelope to respond to perturbations; system lifetime drops $\tau \to 0$ via rapid decoherence.
+    \item \textbf{No Map (Dissolution):} Lacks self-definition; random activation maximizes internal uncertainty. $\tau \to 0$ as the system--environment boundary dissolves.
     \item \textbf{No Protocol (Decoherence):} Components decouple; actions rely on statistically independent, outdated states. $\tau \to 0$ by organizational fragmentation.
     \item \textbf{No Governor (Divergence):} Unconstrained positive feedback exceeds structural limits. $\tau \to 0$ by unbounded runaway.
     \item \textbf{No Toll (Zeno Collapse):} State transitions require irreducible time and energy per the Margolus-Levitin limit\cite{margolus_maximum_1998}. Without this cost, updates occur instantaneously, collapsing the causal sequence. $\tau \to 0$ by causal collapse.
