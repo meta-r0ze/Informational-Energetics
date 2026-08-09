@@ -22,11 +22,9 @@ POLISH (substrate alignment): Stylistic, LaTeX, or presentational. Fix if conven
 * IMPROVE (Mar optimization): Any sections overly verbose/edited or repeating previously defined stuff and should be distilled down?
 * FLOW: The paper should aim to be organized at every level from the order of the sections to the order of the sentences in a Logical Flow / Narrative Linearity / Monotonic Logic when possible
 
-* IE is a general framework for all systems that persist and should be stand alone, the validation/example is the vacuum. This is a complex systems IE paper first.
-*  Complex systems readers should see a universal framework for persistence not just an elaborate setup for a physics derivation.  (AKA the IE section at the start should be cleanly separate from the physics work)
-* Any complex system paper like this will contain two domains, complex systems and the application of it.  That is just part of the fun of writing working on complex systems.
-* SUBSTRATE-FIRST EMERGENCE (Tone Rule): We are solving an E8 problem and then showing that it matches physics, not going looking for a  standard physics equation/constant/etc.  One possible route example: (1) State the IE architectural requirement — what does this demand of the substrate? (2) Derive the unique mathematical structure that satisfies that requirement. (3) Recognize that the result is identical to the known physics operator. It should not be physics has X, we now try to say Y in E8 is the same thing. 
-NARRATIVE-ADMITTANCE: Ensure every mathematical derivation is preceded by a Narrative-Admittance pass. Why does the system/substrate NEED this section? What threat is it solving?
+* This is a complex systems paper. The abstract/conclusion should discuss the complex systems problem of persistence and how IE presents a solution for that. IE is a general framework for all systems that persist and should be stand alone, the validation/example is the vacuum. 
+* Complex systems readers should see a universal framework for persistence not just an elaborate setup for a physics derivation.  (AKA the IE section at the start should be cleanly separate from the physics work)
+* NARRATIVE-ADMITTANCE: Ensure every mathematical derivation is preceded by a Narrative-Admittance pass. Why does the system/substrate NEED this section? What threat is it solving?
 * TONE: This could be thought of framing as a "Dual": (like AdS/CFT). Not "The Standard Model is just a capacity network" 
 * TONE: Never declare that standard physics is "arbitrary," "wrong," or an "axiom." Instead, we are showing that standard physics perfectly emerges from this deeper geometric foundation.
 * TONE: check for Aggressive/Dismissive Language, replacing any implied critique of standard physics with pure emergent/dual framing.
@@ -41,7 +39,7 @@ On the paper itself at a meta level:
 * An overarching guage of how complete the paper is: 1. Would a complex systems scientist want to read this in its current form? 2. Would a physicist want to read this in its current form?
 * While we map to 'charge', geometrically we should use consistent terms around information everywhere when possible to keep it e8 first.
 * The pillar requirements resulted in geometric structures that have the attributes of the structural invariants.  The paper shoudn't discuss these in a way that implies that we picked values / structures to match numbers.
-* 
+
 Details about this paper:
 * Each system depends on only what is below it. IE is a general framework that depends on information theory. System 0 only can use IE, no physics to archive its derivation (for example saying particle experiments show X show X is required).  system 1, the substrate doesn’t “know”  about general relativity, electromagnetic charge or other higher level concepts and can’t depend on them (but can name them if they appear).  It can only depend on system 0 and IE and info theory etc.
 * SUBSTRATE-INDEPENDENCE RULE: IE is substrate-universal. The IE sections must justify every pillar, theorem, and architectural requirement using only information-theoretic bounds (state-space dimension, phase preservation, transition capacity) and control-theoretic necessity. No argument may depend on properties specific to matter (mass, charge, force, temperature, spacetime curvature) or on concepts that have not yet been derived within the IE hierarchy. Cited theorems (e.g., Shannon), frame them as convergent evidence from physical instantiations, not as premises that require physical matter to be true. Physical analogies are permitted only as illustration, never as logical support.

@@ -14,9 +14,12 @@ The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost fo
 % State the Selection Principle and clarify its eliminative, non-teleological nature
 Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible $S_\Phi$ remain observable at timescales longer than those that don't. Configurations do not \emph{seek} minimization. The selection principle is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what persists is the minimal-action remainder. We formalize this as:
 
+\begin{samepage}
+\label{selection_principle}
 \begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
     \noindent The \textbf{Selection Principle}: Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible \textbf{Entropic Action} ($S_\Phi$) remain observable.
 \end{mdframed}
+\end{samepage}
 
 % Contextualize open/closed systems and scope to Quiescent Equilibrium.
 Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it. In the closed-system limit of \textbf{Quiescent Equilibrium}, no net energy enters or leaves the system, $Z_{IE}$ is constant, and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We bound the scope of this paper to establishing this quiescent baseline, leaving the dynamic evolution of persistent systems to future work.
@@ -70,7 +73,7 @@ An open-loop system ``does'': it follows a predetermined path. A closed-loop sys
 IE describes the architecture of persistence but does not explain the transition from disorder to structure.
 
 % Describe how thermodynamics and IE are different
-\paragraph{Relation to Thermodynamics.} 
+\paragraph{Relation to Thermodynamics}
 \label{sec:thermodynamics}
 Algorithmic information theory provides the formal foundation of IE. Shannon entropy and Gibbs entropy are formally identical; the second law is the data processing inequality; and Landauer's principle states that information erasure carries an irreducible thermodynamic cost. The mapping 
 between the two frameworks is exact: \emph{information loss} corresponds to entropic dissipation, \emph{channel capacity} to thermodynamic availability, and \emph{information flux} to energy flux. We employ thermodynamic terminology where it provides operational intuition, but the framework requires no external thermal bath and remains well-defined for closed systems at zero flux.
@@ -110,7 +113,9 @@ To quantify persistence, we distinguish between the \emph{direct} entropic cost 
     \item \textbf{Coordination Investments (net $Z_i < 0$):} Protocol and Governor incur direct costs, but their operational effect is to reduce the system's \emph{net} dissipation below the uncoordinated baseline. In the balance sheet, this appears as a negative contribution to $Z_{IE}$ because the organized system dissipates less than the disorganized one. In control theory, this is analogous to negative feedback: the controller consumes energy, but the loop's net dissipation is lower than the open-loop runaway.
 \end{itemize}
 
-In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. In statistical mechanics, independent degrees of freedom yield a factorized partition function ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$); because $S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$, the entropic action is strictly additive. Multiplicativity would require cross-domain couplings and a preferred direction, both forbidden at zero flux; therefore the linear form is unique.
+In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. For independent probability spaces, the partition function factorizes multiplicatively ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$) 
+\cite{jaynes_information_1957}; because $S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$, the entropic action is strictly additive. Multiplicativity would require cross-domain couplings 
+and a preferred direction, both forbidden at zero flux; therefore the linear form is unique.
 
 The Net Entropic Impedance ($Z_{IE}$) is the algebraic sum of these contributions, where Protocol and Governor enter with negative signs reflecting their coordination savings:
 
