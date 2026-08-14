@@ -47,5 +47,6 @@ Details about this paper:
 * CLOSURE-AUDIT: Check that the derivation in system 0,1,2 follow the Closure Constraint 
 * While there are companion papers this paper should be stand alone defining the core pillars and an example. Reviewing this work doesn't depend on other works. Future works will only expand and cross validate this and show their own thing, not proving a missing part of the pillar derivation.
 * If you think there is an error in math of the alpha^-1 equation simply state that, don’t waste time trying to solve it. Numerical values are done in python and imported into the paper.
+* IE names Conservation, Unitarity is the physics specific version.  Make sure the appropriate term is used in the right places
 
 Lastly anything else you noticed?

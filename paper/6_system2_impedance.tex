@@ -9,14 +9,14 @@
 \CatchFileBetweenTags{\AlphaInvMARVal}{constants.tex}{AlphaInvMARVal}
 \CatchFileBetweenTags{\AlphaInvVal}{constants.tex}{AlphaInvVal}
 
-The $E_8$ substrate is a maximally constrained, zero-flux causal network. At quiescent equilibrium there is no kinetic motion in the traditional sense. Yet persistence across discrete time requires that the substrate's structural state be transferred from one temporal node to the next. This is not dynamical propagation but \textbf{causal serialization}: the defect must re-assert its boundary at each clock tick or dissolve into the homogeneous background. In this discrete setting, the natural measure of structural survival is the network \textbf{admittance} $Y = 1/Z$.
+The $E_8$ substrate is a maximally constrained, zero-flux causal network. At Quiescent Equilibrium there is no kinetic motion in the traditional sense. Yet persistence across discrete time requires that the substrate's structural state be transferred from one temporal node to the next. This is not dynamical propagation but \textbf{causal serialization}: the defect must re-assert its boundary at each clock tick or dissolve into the homogeneous background. In this discrete setting, the natural measure of structural survival is the network \textbf{admittance} $Y = 1/Z$.
 
 On this geometric substrate, the admittance represents the fundamental \textbf{causal coupling} ($\kappa$): the probability that information successfully transfers to the next temporal node without decohering:
 \begin{equation}
     \kappa \equiv Y = \frac{1}{Z_{\mathrm{geo}}}.
 \end{equation}
 
-On a homogeneous network, any localized state naturally tends to disperse into geometric noise. To remain persistently observable, a configuration must maintain a stable topological partition across its fundamental causal cycle.  By the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}), the six orthogonal pillars contribute either Direct Structural Costs or Organizational Gains, which sum to the total geometric impedance.
+On a homogeneous network, any localized state naturally tends to disperse into geometric noise. To remain persistently observable, a configuration must maintain a stable topological partition across its fundamental causal cycle.  By the Entropic Balance Sheet (\Cref{subsec:entropic_balance_sheet}), the six orthogonal pillars contribute either Direct Structural Costs or Organizational Gains, which sum to the total geometric impedance.
 
 % ============================================================
 % CAP must satisfy all of the following:
@@ -25,7 +25,7 @@ On a homogeneous network, any localized state naturally tends to disperse into g
 %    knowing alpha^-1 ~ 137. Any step persuasive only because the
 %    total comes out right is numerology and not acceptable.
 % 2. DEPENDENCY DIRECTION. Premises may only be System 0 requirements
-%    (Closure, Finiteness, Unitarity, Causality, Homogeneity) and
+%    (Closure, Finiteness, Conservation, Causality, Homogeneity) and
 %    System 1 invariants (Delta=43, c=1, Euclidean substrate metric,
 %    periodic causal cycle). Nothing from System 2 onward and no
 %    companion-paper dynamics (Wilson loops, gravity strain,
@@ -66,10 +66,10 @@ Capacity contributes a D\textbf{irect Structural Cost} that prevents \emph{insta
 At the network speed limit ($c=1$), a signal can traverse at most one lattice spacing per cycle. To maintain a single coherent boundary over the full $\Delta$ cycle, a signal must complete a round trip from the defect’s center to its edge and back, bounding the causal radius to $\Delta/2$ and the diameter to $D = \Delta$.
 
 % Establish the metric and evaluation domain
-At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Unitarity (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
+At Quiescent Equilibrium, the substrate's footprint is evaluated on its native positive-definite (Euclidean) metric required by Conservation (\Cref{subsec:positive_definite}), with causal propagation restricted to a $(1+1)D$ plane $(x,\tau)$.
 
 % circumference
-By Homogeneity, macroscopic observables must be invariant under lattice orientation; the invariant envelope (the union of all valid closed $\Delta$-cycles, averaged over all orientations) is therefore a circle of circumference $\pi D$ evaluated on the native Euclidean metric. Because the defect interior is indistinguishable from the vacuum, the entropic cost is the boundary measure:
+By Homogeneity, macroscopic observables must be invariant under lattice orientation; any discrete anisotropy cancels in the orientation average. The invariant envelope (the union of all valid closed $\Delta$-cycles, averaged over all orientations) is therefore a continuous, isotropic disk of circumference $\pi D$ evaluated on the native Euclidean metric. Because the defect interior is indistinguishable from the vacuum, the entropic cost is the measure of its smooth boundary.
 
 \begin{equation}
     Z_{\mathrm{CAP}} = C = \pi D = \pi\Delta \approx \num{\AlphaInvCAPVal}
@@ -79,13 +79,13 @@ The dominant contribution to the vacuum impedance ($\approx 99.9\%$) originates 
 
 \subsection{Topological Boundary (Map)}
 \label{subsec:alpha_map}
-Map contributes a \textbf{Direct Structural Cost} that prevents \emph{boundary dissolution}. It is the absolute allocation of a topological boundary ($\chi = 2$) that prevents internal state data from leaking into the unquantized background.
+Map contributes a \textbf{Direct Structural Cost} that prevents \emph{boundary dissolution}. It is the absolute allocation of the topological boundary ($\chi = 2$) that prevents internal state data from leaking into the unquantized background.
 
-As established in \cref{sec:topological_boundary} by the combinatorial Gauss-Bonnet theorem (where total discrete curvature equates to $2\pi\chi$), any closed, regular surface must satisfy a topological boundary condition. To prevent boundaries with holes ($g \ge 1$), where non-contractible loops destroy the strict binary partition of `Inside' versus `Outside' and permit unquantized information flux, the boundary must be simply-connected. The unique simply-connected, closed 2D surface is the sphere ($S^2$), which is characterized by the unique maximum Euler characteristic:
+As derived in \Cref{sec:topological_boundary}, the minimal persistent defect is the simply-connected sphere ($S^2$), which carries the maximum Euler characteristic for any closed surface:
 \begin{equation}
     Z_{MAP} = +\chi = \AlphaInvMAPVal
 \end{equation}
-Because $\chi$, the Euler characteristic, is a pure topological invariant, it is an exact, indivisible integer. It is structurally forbidden from scaling, running, or acquiring continuous corrections.
+Because $\chi$ is a pure topological invariant, it is exact and structurally forbidden from scaling, running, or acquiring continuous corrections.
 
 
 \subsection{Alignment Efficiency (Protocol)}
@@ -98,20 +98,17 @@ The manifold resolution $R_M = D\Delta$ (\Cref{subsec:manifold_resolution}) is t
     C_{res} = R_M - \sigma = (4 \cdot 43) - 5 = 167
 \end{equation}
 
-Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport, and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\Cref{sec:entropic_balance_sheet}):
+Entropic impedance is the inverse of flow capacity. The greater the residual capacity, the lower the resistance to phase transport, and because efficient coordination reduces net dissipation, this contribution is an organizational gain, strictly negative per the Entropic Balance Sheet (\Cref{subsec:entropic_balance_sheet}):
 \begin{equation}
     Z_{PRO} = -\frac{1}{C_{res}} = -\frac{1}{167} \approx \num{\AlphaInvPROVal}
 \end{equation}
-The linear form is mandated by statelessness: the Protocol coordinates instantaneously, with no recursive memory that would permit higher-order couplings.
 
 
 \subsection{Stabilizing Potential (Governor)}
 \label{subsec:alpha_gov}
-Governor contributes an \textbf{Organizational Gain} that prevents \emph{feedback runaway}. It enforces the topological boundary as a stabilizing constraint distributed uniformly across the temporal loop. Its contribution is therefore the linear density of the boundary invariant to the loop length.
- 
-To satisfy the Homogeneity constraint, this boundary constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the fundamental causal loop of length $\Delta = 43$. 
+Governor contributes an \textbf{Organizational Gain} that prevents \emph{feedback runaway}. It is the uniform distribution of the topological boundary constraint across the fundamental causal loop, converting the static boundary invariant into a stabilizing density that suppresses unbounded divergence.
 
-Because the loop is closed and periodic, it possesses no endpoint boundaries (no ``fencepost'' corrections). To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density per step is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain that prevents entropic divergence, its contribution is negative:
+By Homogeneity, this constraint cannot be anchored to any preferred temporal coordinate; it must be distributed maximally uniformly across the loop of length $\Delta = 43$. To prevent non-linear self-interactions which would violate the vacuum's minimal interaction rule (the Toll constraint), the geometric coupling must be strictly first-order (linear). The exact stabilizing potential density is therefore the linear ratio of the boundary ($\chi = 2$) to the loop length ($\Delta = 43$). As an organizational gain, its contribution is negative:
 \begin{equation}
     Z_{GOV} = -\frac{\chi}{\Delta} = -\frac{2}{43} \approx \num{\AlphaInvGOVVal}
 \end{equation}
@@ -191,7 +188,7 @@ The Margin impedance is the reciprocal dilution factor: the fraction of the tota
 The total geometric impedance $Z_{\mathrm{geo}}$ is the exact linear combination of the six pillar impedances with unit coefficients. This additive form is not an approximation; it is the unique mathematical structure consistent with the existential requirements of System 0.
 
 \vspace{0.5em}
-\noindent\textit{Proof.} The theorem rests on four structural deductions forced by the Closure Constraint and the Quiescent Equilibrium baseline:
+\noindent\textit{Proof.} The theorem rests on four structural deductions forced by the Closure Constraint and the Quiescent Equilibrium:
 
 \subsubsection{Universal Currency (Dimensional Homogeneity)}
 Standard physics requires conversion constants ($c, \hbar, G$) to map heterogeneous phenomena into macroscopic unit conventions. The Closure Constraint forbids external reference frames, reducing all geometric measures to a single ontological currency: the dimensionless count of elementary state transitions. With the lattice spacing and fundamental clock tick structurally defined as unity ($a=1, \delta t=1$), spatial perimeter, topological boundaries, and state-space allocations map bijectively to state transitions. As counts of the identical primitive operation, their linear combination is mathematically well-defined without dimensional conversion factors.
@@ -200,7 +197,7 @@ Standard physics requires conversion constants ($c, \hbar, G$) to map heterogene
 In standard physics, fractional coefficients ($1/2$, $1/\sqrt{2}$) arise from external thermodynamic weights or internal kinematic projection norms. Here, the Closure Constraint forbids external thermal baths (Lagrange multipliers). Internally, because the $E_8$ substrate is strictly unimodular ($\text{vol}(\Lambda)=1$) and self-dual ($\Lambda = \Lambda^*$), the geometric inner-product norm between orthogonal basis generators is exactly unity. All combinatorial symmetries are fully internalized within each pillar's local phase-space calculation (e.g., the rational fractions in $Z_{\mathrm{TOL}}$ and $Z_{\mathrm{MAR}}$). Consequently, inter-pillar coupling coefficients are structurally locked to $s_i = \pm 1$.
 
 \subsubsection{Strict Orthogonality and Pure Partition Factorization}
-To combine these pillars without cross-terms ($Z_i Z_j$), the mutual information between them must vanish identically ($I(A;B)=0$). As established in the Entropic Balance Sheet (\cref{sec:entropic_balance_sheet}), mutual information between orthogonal domains vanishes at zero flux, yielding a factorized partition function ($\mathcal{Z}_{\mathrm{total}} = \prod_i \mathcal{Z}_i$). The resulting entropic action $S_\Phi \propto -\ln \mathcal{Z}_{\mathrm{total}} = \sum_i S_i$ is strictly additive. Defining total geometric impedance as this action per unit flux quantum ($Z_{\mathrm{geo}} \equiv S_\Phi / \Phi_{\mathrm{top}}$) maps this directly to $Z_{\mathrm{geo}} = \sum Z_i$, ensuring all higher-order cross-terms vanish.
+To combine these pillars without cross-terms ($Z_i Z_j$), the mutual information between them must vanish identically ($I(A;B)=0$). As established in the Entropic Balance Sheet (\cref{subsec:entropic_balance_sheet}), mutual information between orthogonal domains vanishes at zero flux, yielding a factorized partition function ($\mathcal{Z}_{\mathrm{total}} = \prod_i \mathcal{Z}_i$). The resulting entropic action $S_\Phi \propto -\ln \mathcal{Z}_{\mathrm{total}} = \sum_i S_i$ is strictly additive. Defining total geometric impedance as this action per unit flux quantum ($Z_{\mathrm{geo}} \equiv S_\Phi / \Phi_{\mathrm{top}}$) maps this directly to $Z_{\mathrm{geo}} = \sum Z_i$, ensuring all higher-order cross-terms vanish.
 
 \subsubsection{Sign Assignment via the Entropic Balance Sheet}
 The assignment of the signs $s_i \in \{+1, -1\}$ is uniquely determined by the Entropic Balance Sheet. Direct physical resource allocations and bounding constraints (Capacity, Map, Toll, Margin) strictly increase the total entropic action ($s_i = +1$). Conversely, coordination mechanisms (Protocol, Governor) that actively suppress uncoordinated dissipation enter as net action reductions ($s_i = -1$). 

@@ -1,0 +1,21 @@
+\section{The Selection Principle}
+% Define the cost metric before the principle invokes it.
+The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. 
+
+\begin{equation}\label{eq:entropic_action}
+    S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
+\end{equation}
+\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent measure of entropic losses. For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density.
+
+% State the Selection Principle and clarify its eliminative, non-teleological nature
+Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible $S_\Phi$ remain observable at timescales longer than those that don't. Configurations do not \emph{seek} minimization. The selection principle is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what persists is the minimal-action remainder. We formalize this as:
+
+\begin{samepage}
+\label{selection_principle}
+\begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
+    \noindent The \textbf{Selection Principle}: Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible \textbf{Entropic Action} ($S_\Phi$) remain observable.
+\end{mdframed}
+\end{samepage}
+
+% Contextualize open/closed systems and scope
+Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it. In the closed-system limit of \textbf{Quiescent Steady State}, no net energy enters or leaves the system, $Z_{IE}$ is constant, and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We bound the scope of this paper to establishing this quiescent baseline, leaving the dynamic evolution of persistent systems to future work.

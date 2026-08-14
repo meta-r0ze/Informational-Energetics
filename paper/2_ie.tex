@@ -1,38 +1,16 @@
 \section{Informational Energetics}
 \label{sec:IE}
-Any system that persists, from a fundamental physical vacuum to a complex biological organism, must solve the same existential problem: maintaining structural coherence against the thermodynamic current that erases distinction. IE is a theoretical framework designed to derive the minimal universal architecture required to solve this problem. By grounding thermodynamic phenomenology in  algorithmic information theory, IE shifts the analytical focus from empirical observation to first-principles structural deduction. Where complex systems research has historically relied on qualitative taxonomies, IE establishes a predictive mechanics of persistence governed by strict information-theoretic bounds.
-
-\subsection{The Selection Principle}
-% Define the cost metric before the principle invokes it.
-The \textbf{Entropic Action} $S_\Phi$ quantifies the total thermodynamic cost for a system to maintain structural coherence against environmental entropy over its persistence lifetime. 
-
-\begin{equation}\label{eq:entropic_action}
-    S_\Phi \equiv \int_0^{\tau} Z_{IE}(t) \, dt
-\end{equation}
-\noindent where $\tau$ is the system's lifetime and $Z_{IE}(t)$ is the instantaneous Net Entropic Impedance, the time-dependent measure of entropic losses. For spatially distributed systems, $Z_{IE}(t)$ integrates the local dissipation density.
-
-% State the Selection Principle and clarify its eliminative, non-teleological nature
-Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible $S_\Phi$ remain observable at timescales longer than those that don't. Configurations do not \emph{seek} minimization. The selection principle is an eliminative filter; what fails to minimize $S_\Phi$ leaves no detectable signal, and what persists is the minimal-action remainder. We formalize this as:
-
-\begin{samepage}
-\label{selection_principle}
-\begin{mdframed}[linewidth=1pt,linecolor=black,backgroundcolor=gray!10]
-    \noindent The \textbf{Selection Principle}: Among all configurations capable of encoding a given structural complexity, only those possessing the minimal possible \textbf{Entropic Action} ($S_\Phi$) remain observable.
-\end{mdframed}
-\end{samepage}
-
-% Contextualize open/closed systems and scope to Quiescent Equilibrium.
-Open systems (e.g., biological organisms) offset dissipation through external energy flux; closed systems minimize entropic action directly, as there is no external source to offset it. In the closed-system limit of \textbf{Quiescent Equilibrium}, no net energy enters or leaves the system, $Z_{IE}$ is constant, and $S_\Phi = Z_{IE} \cdot \tau$ is a strictly dimensionless count of elementary state transitions. We bound the scope of this paper to establishing this quiescent baseline, leaving the dynamic evolution of persistent systems to future work.
+Any system that persists, from a fundamental physical vacuum to a complex biological organism, must solve the same existential problem: maintaining structural coherence against the thermodynamic current that erases distinction. IE is a theoretical framework designed to derive the minimal universal architecture required to solve this problem. By grounding thermodynamic phenomenology in algorithmic information theory, IE shifts the analytical focus from empirical observation to first-principles structural deduction. Where complex systems research has historically relied on qualitative taxonomies, IE establishes a predictive mechanics of persistence governed by strict information-theoretic bounds.
 
 \subsection{The Universal Architecture of Persistence}
-\label{sec:universal_architecture_of_persistence}
-To persist, any system must solve three existential problems: \textbf{Finiteness} (bounded resources against divergence), \textbf{Unitarity} (conserved information against dissipation), and \textbf{Causality} (well-defined temporal evolution against ambiguity). Each requirement demands two modes of structural engagement: \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation).
+\label{subsec:universal_architecture_of_persistence}
+To persist, any system must solve three existential problems: \textbf{Finiteness} (bounded resources against divergence), \textbf{Conservation} (conserved information against dissipation), and \textbf{Causality} (well-defined temporal evolution against ambiguity). Each requirement demands two modes of structural engagement: \textbf{provision} (the resource must exist as an allocated stock) and \textbf{defense} (the allocation must survive its characteristic perturbation).
 
 \begin{center}
 \begin{tabular}{lcc}
  & \textbf{Provision} & \textbf{Defense} \\
 \textbf{Finiteness} & Capacity & Margin \\
-\textbf{Unitarity} & Map & Protocol \\
+\textbf{Conservation} & Map & Protocol \\
 \textbf{Causality} & Governor & Toll \\
 \end{tabular}
 \end{center}
@@ -68,13 +46,13 @@ IE extracts the logical skeleton underlying independent theorems across discipli
 
 Every system operates upon a \textbf{Substrate}: the medium imposing immutable limits (bandwidth, latency, noise floor) within which the six pillars function.
 
-An open-loop system ``does'': it follows a predetermined path. A closed-loop system ``remains'': it  maintains coherence against entropic pressure. This is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
+Open-loop systems follow predetermined paths; closed-loop systems maintain coherence against entropic pressure. IE concerns the latter. This is not agency in any teleological sense; it is a \textbf{structural filter}. In a high-entropy environment, only configurations implementing the six-pillar architecture survive observation; all others dissipate.
 
 IE describes the architecture of persistence but does not explain the transition from disorder to structure.
 
 % Describe how thermodynamics and IE are different
 \paragraph{Relation to Thermodynamics}
-\label{sec:thermodynamics}
+\label{subsec:thermodynamics}
 Algorithmic information theory provides the formal foundation of IE. Shannon entropy and Gibbs entropy are formally identical; the second law is the data processing inequality; and Landauer's principle states that information erasure carries an irreducible thermodynamic cost. The mapping 
 between the two frameworks is exact: \emph{information loss} corresponds to entropic dissipation, \emph{channel capacity} to thermodynamic availability, and \emph{information flux} to energy flux. We employ thermodynamic terminology where it provides operational intuition, but the framework requires no external thermal bath and remains well-defined for closed systems at zero flux.
 
@@ -83,13 +61,13 @@ between the two frameworks is exact: \emph{information loss} corresponds to entr
 % Explain why manufacturing history limited CT to 4+2 tunables rather than 6 existential pillars and link them to the IE pillars.
 % Frame CT as one physical instantiation that IE subsumes.
 \subsubsection{Relation to Control Theory} 
-\label{sec:control_theory}
+\label{subsec:control_theory}
 Classical control theory optimizes performance of existing systems, treating the plant, sensor, controller, and actuator as given.\cite{dorf_modern_2017} IE derives the minimal architecture required for existence itself. The six pillars subsume the classical components (Plant $\to$ Capacity, Reference $\to$ Map, Sensor/Feedback $\to$ Protocol, Controller $\to$ Governor) while elevating Toll and Margin from tuning parameters to structural necessities. This shift is foundational: control theory assumes the system exists; IE asks what architecture makes existence possible.
 
 
 % The primary job of this is to be an intuitive example that most people can get. We trade completeness for readability; experts may cringe at the compression, but the gist is correct and that is okay.
 \subsubsection{Universality Mapping}
-\label{sec:universality_mapping}
+\label{subsec:universality_mapping}
 The six pillars are identifiable across persistent systems of any substrate.  The following mappings are illustrative, not exhaustive:
 
 \begin{itemize}
@@ -104,7 +82,7 @@ Open systems implement the same six-pillar architecture, but environmental coupl
 
 
 \subsection{The Entropic Balance Sheet}
-\label{sec:entropic_balance_sheet}
+\label{subsec:entropic_balance_sheet}
 To quantify persistence, we distinguish between the \emph{direct} entropic cost of maintaining each pillar and the \emph{net} impedance that results when the pillars interact. All six pillars impose strictly positive structural costs: each requires finite channel capacity, state transitions, and boundary maintenance to exist. However, two pillars (Protocol and Governor) function as \emph{coordination investments}. They incur a direct cost, but their absence would cause a far larger uncoordinated dissipation (fragmentation for lack of Protocol, runaway divergence for lack of Governor). Their net contribution to the observable impedance is therefore the \emph{savings} relative to the uncoordinated baseline.
 
 \begin{itemize}
@@ -113,7 +91,7 @@ To quantify persistence, we distinguish between the \emph{direct} entropic cost 
     \item \textbf{Coordination Investments (net $Z_i < 0$):} Protocol and Governor incur direct costs, but their operational effect is to reduce the system's \emph{net} dissipation below the uncoordinated baseline. In the balance sheet, this appears as a negative contribution to $Z_{IE}$ because the organized system dissipates less than the disorganized one. In control theory, this is analogous to negative feedback: the controller consumes energy, but the loop's net dissipation is lower than the open-loop runaway.
 \end{itemize}
 
-In Quiescent Equilibrium, the six pillars operate on orthogonal, independent domains. Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. For independent probability spaces, the partition function factorizes multiplicatively ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$) 
+In Quiescent Steady State, the six pillars operate on orthogonal, independent domains. Algorithmic information theory requires independent channels to combine additively: cross-terms represent mutual information, which vanishes by orthogonality. For independent probability spaces, the partition function factorizes multiplicatively ($\mathcal{Z}_{\text{total}} = \prod_i \mathcal{Z}_i$) 
 \cite{jaynes_information_1957}; because $S_\Phi \propto -\ln \mathcal{Z}_{\text{total}}$, the entropic action is strictly additive. Multiplicativity would require cross-domain couplings 
 and a preferred direction, both forbidden at zero flux; therefore the linear form is unique.
 
@@ -122,13 +100,13 @@ The Net Entropic Impedance ($Z_{IE}$) is the algebraic sum of these contribution
 \begin{equation}
 \label{eq:entropic_balance}
 \begin{split}
-    Z_{IE} &= \underbrace{Z_{CAP} + Z_{MAP} + Z_{TOL} + Z_{MAR}}_{\text{Structural Costs}} \\
-           &+ \underbrace{Z_{PRO} + Z_{GOV}}_{\text{Organizational Gains}}
+    Z_{IE} &= \underbrace{Z_{CAP} + Z_{MAP} + Z_{TOL} + Z_{MAR}}_{\text{Structural Costs (}Z_i > 0\text{)}} \\
+    &+ \underbrace{Z_{PRO} + Z_{GOV}}_{\text{Coordination Gains (}Z_i < 0\text{)}}
 \end{split}
 \end{equation}
 
 \subsection{Necessity: System Failure Modes}
-\label{sec:proof_of_necessity}
+\label{subsec:pillars_necessity}
 The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{MAP},$ $\mathrm{PRO},$ $\mathrm{GOV},$ $\mathrm{TOL},$ $\mathrm{MAR}\}$ follows by analyzing the \textbf{Counterfactual Failure Mode} of a system whose architecture lacks exactly one pillar ($\mathbb{P}' = \mathbb{P} \setminus \{x\}$). In every case, the expected lifetime of the system $\tau$ tends to zero.
 \begin{itemize}
     \item \textbf{No Capacity (Starvation):} Lacks an energetic envelope to respond to perturbations; system lifetime drops $\tau \to 0$ via rapid decoherence.
@@ -142,9 +120,9 @@ The necessity of the set of pillars $\mathbb{P}$ $=$ $\{\mathrm{CAP},$ $\mathrm{
 Since the removal of any component results in termination, the set $\mathbb{P}$ is \textbf{Minimally Necessary}.
 
 \subsection{Sufficiency: System Preservation}
-\label{sec:sufficiency}
+\label{subsec:pillars_sufficiency}
 % Show that advanced capabilities are strict compositions of the six pillars, carrying no independent entropic budget.
 Advanced topologies (feedforward networks, state observers) extend the six-pillar structure but introduce no new primitive requirements for persistence. Capabilities traditionally cited as independent are strict compositions of the basis, carrying no independent entropic budget. \emph{Memory} is Map content provisioned against temporal variance by Margin. \emph{Prediction} is Map operation on incoming signal via Protocol. \emph{Repair} is Governor-triggered re-provisioning within the Margin reserve. \emph{Replication} is Protocol-mediated write of Map onto fresh Capacity.
 
 % Prove that at the zero-flux baseline, the six pillars exhaust the architecture; no additional primitive is admissible.
-At zero flux baseline (no energy/information entering or leaving the system), no external source exists to introduce a fourth irreducible requirement. In quiescent equilibrium, no third mode of operation exists: dynamics reduce to establishing a capability and defending it against variance. The six pillars therefore exhaust the architecture; any additional primitive would require either a new existential constraint or a new mode of structural engagement, neither of which the baseline admits.
+At zero flux baseline (no energy/information entering or leaving the system), no external source exists to introduce a fourth irreducible requirement. In quiescent steady state, no third mode of operation exists: dynamics reduce to establishing a capability and defending it against variance. The six pillars therefore exhaust the architecture; any additional primitive would require either a new existential constraint or a new mode of structural engagement, neither of which the baseline admits.

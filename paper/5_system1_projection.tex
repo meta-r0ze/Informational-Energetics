@@ -2,27 +2,27 @@
 \label{sec:system1_projection}
 System 1 applies the filters of System 0 to identify the unique geometry that satisfies all architectural requirements simultaneously. These requirements act as eliminative filters: they progressively remove every alternative until one structure remains. We first constrain the dimension and uniqueness of the lattice, then determine its projection into spacetime and internal symmetry, and finally fix the temporal period and topological invariants that prevent causal aliasing. The mathematical theorems function as black-box filters; what matters is that each constraint is forced by the persistence architecture, leaving no continuous parameter free.
 
-\subsection{The Lattice Selection (\texorpdfstring{$E_8$}{E8})}
+\subsection{The Lattice Constraint (\texorpdfstring{$E_8$}{E8})}
 \label{sec:lattice_selection}
 We first constrain the possible dimensions of the lattice, progressively eliminate every alternative until a unique geometry remains, and then determine how it partitions into the coordinate and state sectors required by Map and Capacity.
 
 \subsubsection{The \texorpdfstring{$n \equiv 0 \pmod 8$}{neq0mod8} Constraint}
 \label{sec:kneserstheorem}
-To prevent irreversible information loss during read/write operations, the substrate must be even and self-dual. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. (Note: while the 4D lattice $F_4$ is self-dual, it is not even; while $D_4$ is even, it is not self-dual. Only $n \ge 8$ yields lattices satisfying all Unitarity constraints simultaneously.) This immediately eliminates the majority of dimensionalities leaving only: 
+To prevent irreversible information loss during read/write operations, the substrate must be even and self-dual. A fundamental constraint from the theory of modular forms and lattices\cite{conway_sphere_1988}, states that even, self-dual lattices only exist in dimensions that are multiples of 8. (Note: while the 4D lattice $F_4$ is self-dual, it is not even; while $D_4$ is even, it is not self-dual. Only $n \ge 8$ yields lattices satisfying all Conservation constraints simultaneously.) This immediately eliminates the majority of dimensionalities leaving only: 
 % Note is for those that would make this simple mistake when reviewing
 
 \[ n \in \{8, 16, 24, \dots\} \]
 Consequently: a unitary, self-dual information substrate cannot mathematically exist in $n=4$. Therefore, the observed 4D spacetime cannot be the foundational hardware itself, but must strictly be an emergent projection of a higher-dimensional structure.
 
-Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Unitarity} (the requirement for an even, self-dual lattice). While continuous theories can recover Unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which violates the requirement that the substrate be strictly self-defining.
+Furthermore, this excludes $n = 10$ as a standalone geometric substrate. Because $10 \not\equiv 0 \pmod 8$, a 10-dimensional lattice cannot intrinsically satisfy \textit{Conservation} (the requirement for an even, self-dual lattice). While continuous theories can recover unitarity via auxiliary structures (e.g., Calabi-Yau compactifications), selecting a specific manifold requires external configuration memory, which violates the requirement that the substrate be strictly self-defining.
 
 \subsubsection{The Principle of Algorithmic Determinism}
 \label{sec:principleofalgorithmicdeterminism}
 
-To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be intrinsic and self-defining. It cannot depend on arbitrary selection parameters or external boundary conditions. The constraints on the possible dimensions eliminate all but one unique option:
+To satisfy \textbf{Map} and \textbf{Conservation}, the substrate geometry must be intrinsic and self-defining. It cannot depend on arbitrary selection parameters or external boundary conditions. The constraints on the possible dimensions eliminate all but one unique option:
 
 \begin{enumerate}
-    \item \textbf{Unitarity} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
+    \item \textbf{Conservation} mandates even, self-dual, unimodular lattices. By Kneser's theorem, such lattices exist only for $n \equiv 0 \pmod{8}$.
     
     \item By the Closure Constraint, the vacuum admits no external configuration memory. The algorithmic specification complexity of the substrate's geometry is therefore \textbf{zero bits} beyond the architectural constraints derived in System 0.
 
@@ -37,14 +37,14 @@ To satisfy \textbf{Map} and \textbf{Unitarity}, the substrate geometry must be i
 
 The $E_8$ lattice is strictly constrained by its low dimensionality and because it is the \textbf{only self-dual geometry that requires zero bits of selection information}. It is uniquely self-defining.
 
-This unique self-consistent solution is selected prior to the emergence of time, eliminating any argument of spontaneous symmetry breaking which would require fluctuations, transition rates, and a dynamical framework that does not yet exist and which the substrate must first generate.
+This unique self-consistent solution is strictly constrained prior to the emergence of time, eliminating any argument of spontaneous symmetry breaking which would require fluctuations, transition rates, and a dynamical framework that does not yet exist and which the substrate must first generate.
 
 The optimality of the $E_8$ lattice extends beyond self-duality. Viazovska's proof establishes it as the densest sphere packing in eight dimensions \cite{viazovska_sphere_2017}, representing the unique solution to a strict geometric extremization problem. This reinforces its status as the baseline substrate requiring zero selection information: $E_8$ is self-defining, algorithmically minimal, and geometrically optimal.
 
 \subsection{The Symmetric Decomposition}
 \label{sec:symmetric_decomposition}
 
-To process information, the substrate must distinguish coordinate addresses from internal state configurations. This requires breaking the parent $E_8$ symmetry into orthogonal sectors: one for spacetime addressing, one for node state. Any such decomposition must preserve the self-duality required by Unitarity ($\Lambda = \Lambda^*$), so the glue group must reconstruct the parent lattice from its orthogonal sublattices.
+To process information, the substrate must distinguish coordinate addresses from internal state configurations. This requires breaking the parent $E_8$ symmetry into orthogonal sectors: one for spacetime addressing, one for node state. Any such decomposition must preserve the self-duality required by Conservation ($\Lambda = \Lambda^*$), so the glue group must reconstruct the parent lattice from its orthogonal sublattices.
 
 \textbf{Candidate Rank-4 Subsectors.} 
 Because $E_8$ has rank 8, a bisection requires two orthogonal rank-4 sublattices. The irreducible rank-4 root systems are $A_4$, $B_4$, $C_4$, $D_4$, and $F_4$. $B_4$ and $C_4$ violate Evenness (roots of two distinct lengths). $F_4$, while even, is not self-dual. This leaves $A_4 \oplus A_4$ and $D_4 \oplus D_4$.
@@ -57,7 +57,7 @@ Because $E_8$ has rank 8, a bisection requires two orthogonal rank-4 sublattices
 
 The bare $D_4 \oplus D_4$ sublattice has volume 4 and is not self-dual; the four cosets of the glue group complete it to the full $E_8$ lattice, which is strictly unimodular ($\mathrm{vol}=1$) and self-dual. The substrate is the full $E_8$ lattice, not the bare orthogonal sum.
 
-Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} decomposition preserving global Unitarity while generating the chiral structure required for information processing. It partitions the 8 dimensions into two orthogonal sectors:
+Therefore, $E_8 \to D_4 \oplus D_4$ is the \textbf{strictly unique} decomposition preserving global Conservation while generating the chiral structure required for information processing. It partitions the 8 dimensions into two orthogonal sectors:
 
 \begin{enumerate}
     \item \textbf{Sector A (Coordinate Sector):} The first $D_4$ defines coordinate addresses. Rank 4 (four independent Cartan generators) projects naturally onto a 4-dimensional coordinate manifold, fixing $D=4$.
@@ -125,7 +125,7 @@ This integer $N = 32$ represents the total number of distinct state channels ava
 \subsection{The System Logic (\texorpdfstring{$\sigma$=5}{sigma=5} and \texorpdfstring{$\chi$=2}{chi=2})}
 \label{sec:the_system_logic}
 
-To satisfy the Map pillar, a persistent entity must distinguish its internal state from the ambient environment. But \textbf{Finiteness} and \textbf{Unitarity} demand homogeneity and self-duality, so its coordinate address and boundary topology must be orthogonal specifications. Geometrically, this requires a topological defect, a localized boundary separating a region from the vacuum without violating background homogeneity. The minimal embedding dimension for this orthogonal decomposition is $\sigma$, the geometric degrees of freedom available for state transition.
+To satisfy the Map pillar, a persistent entity must distinguish its internal state from the ambient environment. But \textbf{Finiteness} and \textbf{Conservation} demand homogeneity and self-duality, so its coordinate address and boundary topology must be orthogonal specifications. Geometrically, this requires a topological defect, a localized boundary separating a region from the vacuum without violating background homogeneity. The minimal embedding dimension for this orthogonal decomposition is $\sigma$, the geometric degrees of freedom available for state transition.
 
 \subsubsection{The Topological Boundary (\texorpdfstring{$\chi=2$}{chi=2})}
 \label{sec:topological_boundary}
@@ -175,17 +175,17 @@ Note: $\sigma=5$ represents the minimal spatial and boundary embedding dimension
 \subsection{The Fundamental Resonance (\texorpdfstring{$\Delta=43$}{Delta=43})}
 \label{sec:fundamental_resonance}
 
-For a system to reliably track its own history (Causality) without losing information (Unitarity), its fundamental clock cycle must map perfectly onto a closed, reversible mathematical loop. If the loop allows multiple distinct histories to produce the exact same current state, information is destroyed. The geometric period ($\Delta$) is therefore strictly constrained to structures that guarantees a unique, non-degenerate causal history.
+For a system to reliably track its own history (Causality) without losing information (Conservation), its fundamental clock cycle must map perfectly onto a closed, reversible mathematical loop. If the loop allows multiple distinct histories to produce the exact same current state, information is destroyed. The geometric period ($\Delta$) is therefore strictly constrained to structures that guarantees a unique, non-degenerate causal history.
 
 To derive the fundamental clocking period ($\Delta$) of the lattice's causal cycle we apply three independent constraints to uniquely isolate the substrate's resonant cycle:
 
 \begin{itemize}
-    \item Unitarity restricts $\Delta$ to the Stark--Heegner numbers.
+    \item Conservation (the unitarity dual) restricts $\Delta$ to the Stark--Heegner numbers.
     \item Causality requires $\Delta \geq N = 32$.
     \item Relational Time and Temporal Degeneracy requires $\Delta \leq 2N = 64$.
 \end{itemize}
 
-\subsubsection{Unitarity and the Class Number Constraint}
+\subsubsection{Conservation and the Class Number Constraint}
 \label{sec:fundamental_resonance_filter1}
 For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its causal history must be uniquely reconstructable: multiple distinct causal histories cannot blend into identical outcomes, or information is irreversibly lost. Paralleling our methodology of separating System 0 (Requirements) from System 1 (Substrate Selection), we first define the structural requirements of this causal loop, then apply the mathematical theorems that uniquely solve them.
 
@@ -209,7 +209,7 @@ For the vacuum to preserve quantum unitarity ($\hat{U}^\dagger\hat{U} = I$), its
     \item[\textbf{(M4)}] \emph{Baker--Heegner--Stark Enumeration.} To identify the exact temporal periods that satisfy all constraints, we apply the Baker--Heegner--Stark theorem. It proves there are exactly nine imaginary quadratic fields whose maximal order has $h=1$. Their fundamental discriminants uniquely restrict the universally available temporal periods to the Heegner numbers: $\Delta \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}$.
 \end{enumerate}
 
-The Unitarity requirements therefore strictly restrict the temporal modulus to:
+The Conservation requirements therefore strictly restrict the temporal modulus to:
 \begin{equation}
     \label{eq:heegner_modulus_set}
     \Delta \in \{3, 4, 7, 8, 11, 19, 43, 67, 163\}
